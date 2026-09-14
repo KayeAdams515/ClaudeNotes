@@ -1,0 +1,27 @@
+# 只收录课程笔记（*.md）与笔记附件（attachments/ 下的图片）
+
+# 一、非课程目录
+/大一/
+/_claude_tmp/
+/.git.old/
+
+# 二、Obsidian 配置（各 vault 均忽略）
+.obsidian/
+
+# 三、课件原件与转写稿
+courseware/
+pdfs/
+transscript/
+*.pdf
+*.pptx
+*.txt
+*.ipynb
+*.canvas
+*.base
+*.json
+
+# 四、系统与临时文件
+.DS_Store
+.ipynb_checkpoints/
+*.tmp
+*.pdf#

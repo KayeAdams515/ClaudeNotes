@@ -234,7 +234,7 @@ Ch.3 与 Ch.4/5 的分工由信号是否周期决定：
 > - **同一个客观对象（信号）**，在不同的"观察角度/坐标系"下呈现出完全不同的样子。
 > - 时域波形、频谱、s 域极点分布……都是同一个信号的**不同投影 (different projections / representations)**。
 > - **没有哪个投影更"真实"**，但对某个具体问题，某一个投影会**特别简单**。
->   - **【拓展】**例：求 LTI 系统输出，时域要做**卷积积分 (convolution integral)**，频域只是**相乘 (multiplication)** → $Y(j\omega)=X(j\omega)H(j\omega)$。
+>   - 例：求 LTI 系统输出，时域要做**卷积积分 (convolution integral)**，频域只是**相乘 (multiplication)** → $Y(j\omega)=X(j\omega)H(j\omega)$。
 > - 这就是"**变换 (transform)**"的全部动机：**换一个基 (basis) / 换一个域，把难算的运算变成好算的运算。**
 
 ```mermaid

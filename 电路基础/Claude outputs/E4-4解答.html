@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>4.4 最大功率传输例题解答</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+<style>
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.7;color:#222;background:#fafafa}
+  h1{font-size:22px;border-bottom:2px solid #333;padding-bottom:8px}
+  h2{font-size:18px;color:#1a4d8f;margin-top:36px}
+  .step{background:#fff;border:1px solid #ddd;border-radius:8px;padding:16px 20px;margin:12px 0}
+  .result{background:#eef7ee;border-left:4px solid #2e7d32;padding:12px 18px;margin:16px 0}
+  .final{background:#fff3e0;border:2px solid #e65100;border-radius:8px;padding:16px 20px;margin-top:24px;font-size:17px}
+  table{border-collapse:collapse;margin:10px 0}
+  td,th{border:1px solid #ccc;padding:6px 12px}
+</style>
+</head>
+<body>
+
+<h1>4.4 例题：可变电阻 R 取多大 — 独立解答</h1>
+<p>方法：先求出 a-b 端口以左整个含源网络的<b>戴维南等效电路</b>（\(U_{oc}\)、\(R_0\)），再用<b>最大功率传输定理</b>：\(R=R_0\) 时吸收功率最大，\(P_{max}=\dfrac{U_{oc}^2}{4R_0}\)。</p>
+
+<h2>第一步：标节点</h2>
+<div class="step">
+沿顶部导线从左到右标三个节点：
+<ul>
+<li>N1：两个 20Ω 电阻顶端的公共点</li>
+<li>N2：2A 电流源顶端</li>
+<li>N3：即端子 a（5Ω 电阻顶端，经导线直通 a）</li>
+</ul>
+底部整条导线是一个公共节点，取为参考地（0V），端子 b 就在这条线上。
+</div>
+
+<h2>第二步：求 \(R_0\)（独立源全部置零）</h2>
+<div class="step">
+电压源置零→短路，电流源置零→开路：
+<table>
+<tr><th>原支路</th><th>置零后</th></tr>
+<tr><td>15V + 20Ω</td><td>只剩 20Ω（N1–0）</td></tr>
+<tr><td>5V + 20Ω</td><td>只剩 20Ω（N1–0）</td></tr>
+<tr><td>2A 电流源</td><td>断开（N2 只剩两个 10Ω 相连）</td></tr>
+<tr><td>85V + 5Ω</td><td>只剩 5Ω（N3–0）</td></tr>
+</table>
+两个 20Ω 并联：\(20\parallel20=10\Omega\)（N1 到地）。
+
+<p>从 N3 看进去，有两条并联路径到地：</p>
+<ul>
+<li>直接：\(5\Omega\)</li>
+<li>绕一圈：\(N3\xrightarrow{10\Omega}N2\xrightarrow{10\Omega}N1\xrightarrow{10\Omega}0\)，串联 \(10+10+10=30\Omega\)</li>
+</ul>
+
+$$R_0=5\parallel30=\frac{5\times30}{5+30}=\frac{150}{35}=\frac{30}{7}\Omega\approx4.29\Omega$$
+</div>
+
+<h2>第三步：求 \(U_{oc}\)（a-b 开路，节点电压法）</h2>
+<div class="step">
+取地(0V)为参考，设 \(V_{N1},V_{N2},V_{N3}\)。每条"电阻+电压源"支路的电流：
+
+$$I=\frac{V_{\text{外节点}}-U_S}{R}$$
+
+（\(U_S\) 是该电压源正极所在内部节点的电位，因为理想源直接把内部节点电位钉死在 \(U_S\)）
+
+对 N1（两条支路+一条到N2的10Ω，电流之和为0）：
+$$\frac{V_{N1}-15}{20}+\frac{V_{N1}-5}{20}+\frac{V_{N1}-V_{N2}}{10}=0 \;\Rightarrow\; 2V_{N1}-V_{N2}=10 \quad (1)$$
+
+对 N2（2A 注入 + 来自N1的电流 = 流向N3的电流）：
+$$\frac{V_{N1}-V_{N2}}{10}+2=\frac{V_{N2}-V_{N3}}{10} \;\Rightarrow\; 2V_{N2}=V_{N1}+V_{N3}+20 \quad (2)$$
+
+对 N3（开路，无外部电流流出；来自N2的电流 = 流向85V支路的电流）：
+$$\frac{V_{N2}-V_{N3}}{10}=\frac{V_{N3}-85}{5} \;\Rightarrow\; V_{N2}=3V_{N3}-170 \quad (3)$$
+
+联立(1)(2)(3)，代入消元，解得：
+$$V_{N1}=40V,\quad V_{N2}=70V,\quad V_{N3}=80V$$
+
+<div class="result">
+$$U_{oc}=V_{N3}-0=\mathbf{80V}$$
+</div>
+
+验算（回代所有支路电流，核对每个节点 KCL）：
+$$I_1=\frac{40-15}{20}=1.25A,\ I_2=\frac{40-5}{20}=1.75A,\ I_5=\frac{40-70}{10}=-3A$$
+$$N1: 1.25+1.75+(-3)=0\ ✓$$
+$$I_6=\frac{70-80}{10}=-1A,\quad N2: -3+2=-1\ ✓$$
+$$I_4=\frac{80-85}{5}=-1A,\quad N3: I_6=I_4=-1\ ✓$$
+全部对上，\(U_{oc}=80V\) 可信。
+</div>
+
+<h2>第四步：代入最大功率传输公式</h2>
+<div class="final">
+$$R=R_0=\frac{30}{7}\Omega\approx4.29\Omega$$
+
+$$P_{max}=\frac{U_{oc}^2}{4R_0}=\frac{80^2}{4\times\frac{30}{7}}=\frac{6400}{\frac{120}{7}}=\frac{6400\times7}{120}=\frac{1120}{3}W\approx373.3W$$
+</div>
+
+</body>
+</html>

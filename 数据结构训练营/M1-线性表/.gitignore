@@ -1,0 +1,8 @@
+# 编译产物，不用提交
+sqlist
+sqlist_ref
+ll
+ll_ref
+*.o
+*.dSYM
+.DS_Store

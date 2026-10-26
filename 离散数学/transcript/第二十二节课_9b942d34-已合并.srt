@@ -1,0 +1,4507 @@
+1
+00:00:11,260 --> 00:00:11,800
+Thank you.
+
+2
+00:00:53,040 --> 00:00:53,760
+All right.
+
+3
+00:00:55,540 --> 00:01:04,000
+Welcome back to the discussion on the discrete mathematics in the last meetup.
+
+4
+00:01:04,240 --> 00:01:09,920
+And I would like to say thank you so much for those students who held here.
+
+5
+00:01:10,160 --> 00:01:20,560
+And I appreciate that for understanding my capabilities to discuss discrete mathematics.
+
+6
+00:01:20,560 --> 00:01:25,580
+and I really hope you will enjoy the class so far
+
+7
+00:01:25,580 --> 00:01:31,220
+and hope you can be successful for this course,
+
+8
+00:01:32,000 --> 00:01:34,220
+since we will still have another challenge,
+
+9
+00:01:34,360 --> 00:01:35,800
+which is a final examination
+
+10
+00:01:36,580 --> 00:01:39,760
+after the last homework assignment.
+
+11
+00:01:40,660 --> 00:01:43,560
+When I mentioned the final examination,
+
+12
+00:01:43,860 --> 00:01:47,780
+I have talked with our school
+
+13
+00:01:47,780 --> 00:01:52,500
+and the time and classroom has been arranged.
+
+14
+00:01:52,780 --> 00:01:57,900
+So the exact time will be 8.50 to 10.50
+
+15
+00:01:58,740 --> 00:02:01,040
+on November 19th, Thursday.
+
+16
+00:02:02,020 --> 00:02:03,220
+And let me write.
+
+17
+00:02:06,500 --> 00:02:06,620
+Okay.
+
+18
+00:02:12,940 --> 00:02:13,000
+Okay.
+
+19
+00:02:13,000 --> 00:02:19,060
+Okay, so it's two hour examination, which is Thursday.
+
+20
+00:02:20,600 --> 00:02:25,120
+And I guess he checked all the schedule of you guys,
+
+21
+00:02:27,340 --> 00:02:28,880
+so it should be good for that time.
+
+22
+00:02:29,160 --> 00:02:34,560
+And the place is 53A 210.
+
+23
+00:02:37,160 --> 00:02:40,560
+Okay, so keep that in mind.
+
+24
+00:02:40,560 --> 00:02:41,640
+Of course, no worries.
+
+25
+00:02:41,700 --> 00:02:45,020
+I will share the information in the QQ group.
+
+26
+00:02:45,240 --> 00:02:51,940
+Anyway, we will have four weeks to prepare for the final examination.
+
+27
+00:02:53,980 --> 00:02:56,440
+Four weeks is based on the survey.
+
+28
+00:02:57,060 --> 00:03:01,960
+Actually, I shared the results of the survey yesterday in the QQ group.
+
+29
+00:03:02,220 --> 00:03:06,580
+So as I mentioned, it depends on how the survey is selected.
+
+30
+00:03:07,520 --> 00:03:07,580
+Okay.
+
+31
+00:03:12,960 --> 00:03:13,540
+Okay.
+
+32
+00:03:15,340 --> 00:03:18,600
+Some students may not hear the news.
+
+33
+00:03:19,040 --> 00:03:26,280
+It's November 19th, Wednesday, 8.50 to 10.50, two hours of exam time.
+
+34
+00:03:29,240 --> 00:03:30,400
+Location, F3A210.
+
+35
+00:03:30,660 --> 00:03:31,060
+Okay.
+
+36
+00:03:32,800 --> 00:03:36,840
+That should be the two floors below us, the second floor.
+
+37
+00:03:36,860 --> 00:03:37,740
+We are on the fourth floor.
+
+38
+00:03:38,120 --> 00:03:38,700
+Okay.
+
+39
+00:03:44,380 --> 00:03:50,500
+Okay, that's most important information, and after that, we still have two more sections
+
+40
+00:03:50,500 --> 00:04:02,920
+to go through, which is nearly the last two important knowledge points in this chapter.
+
+41
+00:04:02,920 --> 00:04:12,560
+the first one we will spend most of time today is section 10.7 planner graph okay
+
+42
+00:04:12,560 --> 00:04:21,460
+a graph you know the English name but why is planner if you heard the words
+
+43
+00:04:21,460 --> 00:04:35,780
+plane right or planet because planet so they have similar description in the
+
+44
+00:04:35,780 --> 00:04:48,000
+words it stands for the surface of location so in Chinese pinyin pinyin
+
+45
+00:05:00,300 --> 00:05:04,240
+So what we will learn today is the planar graph.
+
+46
+00:05:06,600 --> 00:05:08,380
+So what is a planar graph?
+
+47
+00:05:08,600 --> 00:05:11,020
+Let's see the official definition first.
+
+48
+00:05:13,160 --> 00:05:18,440
+So planar graph is a graph can be drawn in the plane.
+
+49
+00:05:19,200 --> 00:05:21,280
+Very straightforward, right?
+
+50
+00:05:21,380 --> 00:05:26,040
+Without h crossing, that's most important part.
+
+51
+00:05:26,940 --> 00:05:28,000
+That's most important part.
+
+52
+00:05:29,080 --> 00:05:34,440
+Okay, it means if there are several different planes,
+
+53
+00:05:35,820 --> 00:05:39,560
+then the planar graph may be a little bit more difficult
+
+54
+00:05:42,060 --> 00:05:44,980
+to decide whether it is or not.
+
+55
+00:05:48,300 --> 00:05:49,060
+如果我们有几个不同的平面,
+
+56
+00:05:49,940 --> 00:05:50,700
+甚至相交的时候,
+
+57
+00:05:51,520 --> 00:05:53,680
+那这个 planar graph 是否还成立?
+
+58
+00:05:53,820 --> 00:05:56,680
+Then that's the question we may think about.
+
+59
+00:05:58,480 --> 00:06:02,400
+Okay, so a planar graph joined in the plane without edge crossing
+
+60
+00:06:02,400 --> 00:06:04,560
+is called a plane graph, 平面图,
+
+61
+00:06:05,220 --> 00:06:08,700
+and also named as a planar representation.
+
+62
+00:06:08,700 --> 00:06:18,100
+station so let's see some example here okay we only have four vertices and five
+
+63
+00:06:18,100 --> 00:06:26,840
+different edges here so as we can see this is planar graph right okay no
+
+64
+00:06:26,840 --> 00:06:35,720
+problem and a plane graph okay no problem as you can see a few things you
+
+65
+00:06:35,720 --> 00:06:42,320
+you should be cautious planner graph and the plane graph okay was the difference
+
+66
+00:06:42,320 --> 00:06:48,880
+let's see the difference through some example take exam more examples so that
+
+67
+00:06:48,880 --> 00:06:57,320
+you can stand especially the next one okay that's the graph we have learned
+
+68
+00:06:57,320 --> 00:07:00,660
+right and we have a name for that graph
+
+69
+00:07:06,820 --> 00:07:08,180
+这个是我们学过的一种图,而且我们还有一个名字来命名这种图。
+
+70
+00:07:09,120 --> 00:07:11,180
+Cube, right? If you still remember.
+
+71
+00:07:13,460 --> 00:07:15,400
+And what type of cube it is?
+
+72
+00:07:16,720 --> 00:07:21,780
+We have C and 3, right?
+
+73
+00:07:22,620 --> 00:07:26,340
+Okay, so it is not 8, not 8, C3.
+
+74
+00:07:26,340 --> 00:07:29,680
+So actually that's the knowledge we have already learned,
+
+75
+00:07:29,720 --> 00:07:33,200
+so I will not discuss why it is 3 instead of 8.
+
+76
+00:07:33,340 --> 00:07:44,200
+So my question for this graph is whether it's a planar graph.
+
+77
+00:07:46,020 --> 00:07:49,620
+Whether it is a planar graph or not.
+
+78
+00:07:50,360 --> 00:07:54,540
+Based on the definition, we said the planar graph
+
+79
+00:07:56,340 --> 00:08:01,700
+A graph in a plane without edge crossing, right?
+
+80
+00:08:04,420 --> 00:08:05,060
+就是它的边是不能相交的。
+
+81
+00:08:08,320 --> 00:08:10,960
+Okay, my answer is right.
+
+82
+00:08:12,400 --> 00:08:17,000
+As I mentioned, the planar graph is in the plane without edge crossing.
+
+83
+00:08:17,160 --> 00:08:23,740
+However, if you are seeing here, it has two edge crossing and for some others.
+
+84
+00:08:24,980 --> 00:08:32,940
+but if you see another graph I will show why the result will be the correct wait
+
+85
+00:08:32,940 --> 00:08:44,800
+a minute and whether is playing graph so based on playing graph in the play
+
+86
+00:08:44,800 --> 00:08:53,060
+without H jaw in the plate so is joy in the play right and it has without should
+
+87
+00:08:53,740 --> 00:08:56,660
+without edge crossing, but now as I just use
+
+88
+00:08:56,660 --> 00:09:01,540
+a red color pen to show you, it has edge crossing, right?
+
+89
+00:09:01,740 --> 00:09:02,940
+So it is not plain.
+
+90
+00:09:03,220 --> 00:09:05,220
+Okay, let's see why.
+
+91
+00:09:06,360 --> 00:09:12,140
+When we change to C3, sometimes it can be count as planner,
+
+92
+00:09:12,340 --> 00:09:15,600
+sometimes cannot be count as plain graph, why?
+
+93
+00:09:15,840 --> 00:09:18,180
+Let's use another example to help you.
+
+94
+00:09:19,060 --> 00:09:21,340
+So this one, as we just mentioned,
+
+95
+00:09:21,340 --> 00:09:32,080
+So C3, we have eight vertices, and I don't remember, one, two, three, four, or 12, I guess, 12 edges.
+
+96
+00:09:32,520 --> 00:09:37,980
+It can be drawn in another way in one plane.
+
+97
+00:09:38,740 --> 00:09:44,460
+And as you can see, in such plane, they are exactly the same, right?
+
+98
+00:09:44,780 --> 00:09:47,620
+But they have no edge crossing.
+
+99
+00:09:47,620 --> 00:09:56,640
+thing it's that can be jaw can be jaw you saw take oh hi Kui Bay Juan's or
+
+100
+00:09:56,640 --> 00:10:04,880
+fine chain ego pimea some male bien Sean Chowder she should also hold then these
+
+101
+00:10:04,880 --> 00:10:15,340
+two actually is equivalent and actually we learned such similarity with the name
+
+102
+00:10:15,340 --> 00:10:21,760
+right before oh I guess a few days before oh we share go so lanka you
+
+103
+00:10:21,760 --> 00:10:27,640
+shun sushi in the land of two in a you're going to slide me also top in
+
+104
+00:10:27,640 --> 00:10:36,600
+Chinese to Tonga ice I'm a fee then right I some of his if you still
+
+105
+00:10:36,600 --> 00:10:45,120
+remember to Tonga okay so this is kind of as morphic type graph okay so he said
+
+106
+00:10:45,340 --> 00:10:49,720
+can be draw play, so we can say these two are
+
+107
+00:10:49,720 --> 00:10:53,020
+exactly the same, so both are planar graph.
+
+108
+00:10:54,680 --> 00:10:56,780
+And let's see the second definition.
+
+109
+00:10:57,240 --> 00:10:59,140
+Draw in the play, so it not say,
+
+110
+00:10:59,260 --> 00:11:02,320
+when is draw in the play without edge crossing?
+
+111
+00:11:02,960 --> 00:11:04,940
+Okay, any edge crossing here?
+
+112
+00:11:05,080 --> 00:11:07,940
+No, good, all right, so it is okay.
+
+113
+00:11:08,180 --> 00:11:12,060
+And here, planar graph says draw in the play.
+
+114
+00:11:12,160 --> 00:11:14,760
+Now I'm drawing the play, edge crossing,
+
+115
+00:11:15,340 --> 00:11:19,000
+not okay let me summarize these two okay
+
+116
+00:11:24,380 --> 00:11:25,560
+简单来讲的话这两个为什么一个叫做planar graph
+
+117
+00:11:25,560 --> 00:11:34,040
+一个叫做 plane graph 呢当然 in the last year I tell my students
+
+118
+00:11:37,640 --> 00:11:38,600
+用中文如果你要一句话这个我刚讲了叫平面图是吧
+
+119
+00:11:39,660 --> 00:11:40,620
+没问题我们继续叫平面图
+
+120
+00:11:40,620 --> 00:11:43,540
+Plane graph 我就把它叫做平图
+
+121
+00:11:45,720 --> 00:11:46,840
+Okay, so,
+
+122
+00:11:48,260 --> 00:11:49,940
+简单一下,平面图,in Chinese,
+
+123
+00:11:55,260 --> 00:11:55,820
+就说它可以被画在一个平面上没有边相交的这种形式。
+
+124
+00:11:57,520 --> 00:11:58,640
+也许它有另外一种形式,它有边相交,
+
+125
+00:12:02,220 --> 00:12:02,780
+但是如果它可以被画成一种没有边相交的形式的时候,
+
+126
+00:12:02,940 --> 00:12:06,140
+then we call it as a planar graph, or 平面图。
+
+127
+00:12:06,900 --> 00:12:08,840
+But when you are seeing the plane,
+
+128
+00:12:09,780 --> 00:12:11,880
+the graph is drawn with crossing,
+
+129
+00:12:12,940 --> 00:12:15,040
+then, no problem, plane graph.
+
+130
+00:12:15,340 --> 00:12:17,160
+It's not a mat.
+
+131
+00:12:17,340 --> 00:12:21,320
+也就是说,平图的这个要求不能被满足,只要有香蕉。
+
+132
+00:12:24,160 --> 00:12:25,440
+不论它这个时候是否是可以换成另外一个形式不香蕉。
+
+133
+00:12:26,000 --> 00:12:26,080
+OK.
+
+134
+00:12:27,220 --> 00:12:29,320
+也就是说,平图是一种肤浅的看待方式。
+
+135
+00:12:29,940 --> 00:12:32,500
+只要它香蕉,不论怎么样你都可以判断了。
+
+136
+00:12:32,500 --> 00:12:35,840
+平面图,那你就得分析一下它有没有,
+
+137
+00:12:35,960 --> 00:12:39,820
+whether it has graph isomorphism type,
+
+138
+00:12:39,820 --> 00:12:45,680
+or another type, right, is isomorphic to such graph.
+
+139
+00:12:46,020 --> 00:12:46,440
+Okay.
+
+140
+00:12:46,920 --> 00:12:47,740
+Okay.
+
+141
+00:12:50,700 --> 00:12:51,040
+Okay.
+
+142
+00:12:53,340 --> 00:13:00,080
+So now we have already differentiated those two definitions.
+
+143
+00:13:00,400 --> 00:13:01,440
+No problem.
+
+144
+00:13:01,700 --> 00:13:03,340
+Okay, let's another one.
+
+145
+00:13:03,460 --> 00:13:05,560
+Wow, so many age crossing.
+
+146
+00:13:06,100 --> 00:13:08,940
+I will not discuss because time limit.
+
+147
+00:13:09,820 --> 00:13:17,300
+have much much information to discuss so I will give you the result this is a
+
+148
+00:13:17,300 --> 00:13:22,060
+easier definition we can define right this is a good engine and a直接 cut
+
+149
+00:13:22,060 --> 00:13:28,820
+a future no panda pinto comes ja future the ego panel just to see a pendulum
+
+150
+00:13:29,620 --> 00:13:33,320
+she already can tell me to bring when how the to congo okay
+
+151
+00:13:33,320 --> 00:13:35,940
+Okay, planar graph actually, isomorphism,
+
+152
+00:13:36,060 --> 00:13:39,160
+is kind of harder for us to define.
+
+153
+00:13:39,460 --> 00:13:49,600
+After all, you need a very strong 3D or more dimension imagination
+
+154
+00:13:50,160 --> 00:13:51,700
+to change the graph.
+
+155
+00:13:51,900 --> 00:13:54,520
+So usually it's much harder to define.
+
+156
+00:13:54,640 --> 00:13:58,680
+But here I can tell you it does not meet the planar graph.
+
+157
+00:13:58,680 --> 00:14:06,420
+or isomorphic graph still has h-crossing?
+
+158
+00:14:06,640 --> 00:14:07,260
+.
+
+159
+00:14:09,180 --> 00:14:10,900
+Okay, no problem, right?
+
+160
+00:14:11,440 --> 00:14:16,620
+So I just want you know, you still need to catch up
+
+161
+00:14:16,620 --> 00:14:19,240
+some slides after the class to review them
+
+162
+00:14:19,240 --> 00:14:23,520
+because we will have our new knowledge defined
+
+163
+00:14:23,520 --> 00:14:27,540
+or based on the previous knowledge we learned.
+
+164
+00:14:29,740 --> 00:14:30,420
+而且要及时去看那些slides,
+
+165
+00:14:31,420 --> 00:14:32,100
+因为我们现在新学的,
+
+166
+00:14:34,080 --> 00:14:34,760
+是其实基于前面我们学的一些道理。
+
+167
+00:14:34,760 --> 00:14:35,400
+Okay, anyway.
+
+168
+00:14:36,520 --> 00:14:38,920
+Alright, let's continue to see
+
+169
+00:14:39,620 --> 00:14:42,300
+what more properties the planar graph
+
+170
+00:14:42,300 --> 00:14:44,460
+we should understand.
+
+171
+00:14:45,760 --> 00:14:46,440
+Okay.
+
+172
+00:14:47,380 --> 00:14:48,960
+A graph that is drawn in the plane
+
+173
+00:14:48,960 --> 00:14:52,840
+is also said to be embedded in the plane.
+
+174
+00:14:53,000 --> 00:14:53,440
+Okay.
+
+175
+00:14:53,640 --> 00:14:54,320
+嵌入,
+
+176
+00:14:55,180 --> 00:14:55,860
+embedded,
+
+177
+00:14:56,260 --> 00:14:56,980
+嵌入,
+
+178
+00:14:57,700 --> 00:14:58,380
+这个嵌入式。
+
+179
+00:14:58,680 --> 00:14:58,880
+Okay.
+
+180
+00:15:01,800 --> 00:15:05,340
+A planar graph can be generated different plane graphs.
+
+181
+00:15:09,660 --> 00:15:09,940
+可以生成不同的plane graph.
+
+182
+00:15:10,100 --> 00:15:10,360
+Why?
+
+183
+00:15:11,720 --> 00:15:12,540
+一个很简单。
+
+184
+00:15:16,700 --> 00:15:17,520
+那是因为我们可以肆意地画我们的这个图。
+
+185
+00:15:17,520 --> 00:15:19,420
+I don't care, right?
+
+186
+00:15:20,720 --> 00:15:26,160
+Whether I only want the edge not crossing, right?
+
+187
+00:15:26,160 --> 00:15:32,660
+so I don't care the locations the names of all those vertices only to make sure
+
+188
+00:15:32,660 --> 00:15:40,940
+our edges are not crossing so let's see some examples a circuit layout problems
+
+189
+00:15:41,540 --> 00:15:49,360
+so this is an example we are seeing here and this plan example I can tell you it
+
+190
+00:15:49,360 --> 00:15:51,280
+It is planar graph, but not plane.
+
+191
+00:15:51,380 --> 00:15:57,080
+Not plane, the reason is we have the edge crossing, right?
+
+192
+00:15:57,500 --> 00:16:00,880
+And I just mentioned that it is planar graph.
+
+193
+00:16:01,020 --> 00:16:07,740
+It means we can draw the isomorphic type of that graph without the edge crossing.
+
+194
+00:16:09,960 --> 00:16:11,140
+比如说如果我告诉你了它是 planar graph,
+
+195
+00:16:12,520 --> 00:16:13,120
+那就必定有一种形式,
+
+196
+00:16:17,320 --> 00:16:17,920
+它可以保证它的边是不相交的一个图同构的形式。
+
+197
+00:16:19,540 --> 00:16:26,400
+what okay as we can see actually we can connect CD without a straight line or
+
+198
+00:16:26,400 --> 00:16:32,040
+job we own to see my bursa instead of straight line we use a curve okay
+
+199
+00:16:32,040 --> 00:16:43,240
+ah outside of the F right between C and D so now it becomes a plain graph and as
+
+200
+00:16:43,240 --> 00:16:45,820
+as I mentioned, always planar graph, right?
+
+201
+00:16:46,240 --> 00:16:50,400
+Actually, we can have more isomorphic type.
+
+202
+00:16:51,180 --> 00:16:52,440
+This is an example.
+
+203
+00:16:54,900 --> 00:16:57,560
+Since we want to change the crossing, right?
+
+204
+00:16:57,680 --> 00:16:58,920
+We want to change this intersection.
+
+205
+00:16:59,520 --> 00:17:02,380
+Then, instead of change CD, the straight line,
+
+206
+00:17:02,500 --> 00:17:06,020
+we can make the straight line between BE into a curve.
+
+207
+00:17:06,220 --> 00:17:11,140
+So, it is also plane graph as well as planar, okay.
+
+208
+00:17:11,140 --> 00:17:14,740
+Okay, all right, so I think it's very simple
+
+209
+00:17:14,740 --> 00:17:20,000
+to understand now to have more concrete idea
+
+210
+00:17:20,880 --> 00:17:24,840
+about the differentiation between planar graph
+
+211
+00:17:24,840 --> 00:17:26,060
+and plane graph.
+
+212
+00:17:27,800 --> 00:17:30,100
+Let's see some more new definitions here.
+
+213
+00:17:31,700 --> 00:17:35,020
+A plane graph splits a plane into different regions
+
+214
+00:17:37,120 --> 00:17:41,920
+and including exterior or unbounded region.
+
+215
+00:17:42,180 --> 00:17:42,920
+What does it mean?
+
+216
+00:17:43,000 --> 00:17:43,800
+Let's see it.
+
+217
+00:17:45,460 --> 00:17:46,540
+This is region one, right?
+
+218
+00:17:46,720 --> 00:17:51,500
+So it's just an area between A, B, E.
+
+219
+00:17:52,240 --> 00:17:53,200
+And this is another one.
+
+220
+00:17:53,760 --> 00:17:56,080
+Actually, we have not finished yet.
+
+221
+00:17:57,880 --> 00:17:59,800
+We have another unbounded region.
+
+222
+00:18:00,040 --> 00:18:01,860
+It means that the area,
+
+223
+00:18:01,860 --> 00:18:06,280
+the region area is infinite.
+
+224
+00:18:11,480 --> 00:18:16,900
+In such case, we call it as unbounded.
+
+225
+00:18:17,720 --> 00:18:20,340
+And usually we use up to substitute
+
+226
+00:18:20,340 --> 00:18:25,280
+how many region we will have, so the region is three.
+
+227
+00:18:26,280 --> 00:18:29,460
+Okay, for others, we will quickly go through them.
+
+228
+00:18:29,460 --> 00:18:34,700
+For this example, that's what type of graph we have learned.
+
+229
+00:18:34,860 --> 00:18:36,020
+We learned yesterday.
+
+230
+00:18:36,460 --> 00:18:37,340
+This is .
+
+231
+00:18:38,440 --> 00:18:40,180
+We learned here, tree, right?
+
+232
+00:18:40,360 --> 00:18:41,820
+That's what we just learned.
+
+233
+00:18:42,140 --> 00:18:47,600
+So for this type of tree, how many region we have?
+
+234
+00:18:48,600 --> 00:18:49,660
+Only one, right?
+
+235
+00:18:49,780 --> 00:18:55,760
+Because the all one are connected, so there is only one.
+
+236
+00:18:55,760 --> 00:18:59,700
+and the area of that region is unbounded.
+
+237
+00:19:00,080 --> 00:19:02,060
+Okay, let's see this example here.
+
+238
+00:19:02,920 --> 00:19:08,100
+Actually this example we used in the slides before,
+
+239
+00:19:09,000 --> 00:19:10,480
+and how many region we can count,
+
+240
+00:19:11,380 --> 00:19:12,260
+let's go through them together,
+
+241
+00:19:12,480 --> 00:19:13,860
+I will not ask you anymore.
+
+242
+00:19:14,440 --> 00:19:18,220
+R1, R2, R3, and unbounded, right?
+
+243
+00:19:18,320 --> 00:19:19,720
+So totally will be four.
+
+244
+00:19:19,940 --> 00:19:21,460
+So that's the region definition.
+
+245
+00:19:21,960 --> 00:19:22,840
+Let's see more.
+
+246
+00:19:22,840 --> 00:19:28,000
+Therefore, the vertices and edges of G are incident
+
+247
+00:19:28,000 --> 00:19:32,980
+with the region R for a subgraph of G.
+
+248
+00:19:33,120 --> 00:19:37,280
+And in such case, we call as a boundary of R.
+
+249
+00:19:38,200 --> 00:19:43,900
+Okay, actually is a new definition related to region.
+
+250
+00:19:44,180 --> 00:19:48,280
+It tell us if we have a region, right, R1, R2, R3.
+
+251
+00:19:48,280 --> 00:19:51,640
+So the bounded, what is the bounded?
+
+252
+00:19:51,840 --> 00:19:54,160
+Including both edges and the vertices.
+
+253
+00:19:54,480 --> 00:19:58,260
+So those will be called as the boundary of R.
+
+254
+00:19:59,360 --> 00:20:15,300
+For R1, R2, R3, and R4.
+
+255
+00:20:15,360 --> 00:20:17,200
+So let's see what is the boundary.
+
+256
+00:20:19,660 --> 00:20:27,680
+there's a boundary right okay a typo here as you can see sorry sometimes I
+
+257
+00:20:27,680 --> 00:20:36,220
+just copy and paste my to change the letter oh yes oh yo she type of
+
+258
+00:20:36,220 --> 00:20:42,300
+similar but I put food stand here to show you vertical paste and copy and
+
+259
+00:20:42,300 --> 00:20:48,080
+paste so I did forgot to change the name okay anyway so a B C E will be a
+
+260
+00:20:49,280 --> 00:20:49,700
+R1, right?
+
+261
+00:20:49,840 --> 00:20:55,200
+So similarly, you can see R2, R3, and R4.
+
+262
+00:20:56,320 --> 00:20:57,180
+Don't forget R4.
+
+263
+00:20:57,800 --> 00:21:01,240
+Every region has a boundary,
+
+264
+00:21:01,420 --> 00:21:06,200
+even the region is exterior region or unbounded region.
+
+265
+00:21:07,440 --> 00:21:09,640
+So unbounded region
+
+266
+00:21:14,220 --> 00:21:15,460
+also has a boundary.
+
+267
+00:21:17,660 --> 00:21:19,280
+So keep that in mind.
+
+268
+00:21:21,960 --> 00:21:25,400
+So this last one is what I want to emphasize.
+
+269
+00:21:25,680 --> 00:21:27,380
+Unbounded region also has a boundary.
+
+270
+00:21:27,600 --> 00:21:29,340
+Okay, so what's the boundary?
+
+271
+00:21:29,540 --> 00:21:31,880
+Okay, the full graph itself.
+
+272
+00:21:32,880 --> 00:21:37,060
+Okay, let's see some observation about the boundary.
+
+273
+00:21:37,520 --> 00:21:42,740
+Okay, cycle H belongs to the boundary of two regions.
+
+274
+00:21:42,740 --> 00:21:46,880
+regions, okay, and we call as cycle H, okay.
+
+275
+00:21:48,780 --> 00:21:52,320
+Okay, and we will go through there and we will discuss
+
+276
+00:21:52,320 --> 00:21:55,020
+through some examples, and there is a bridge.
+
+277
+00:21:56,220 --> 00:21:59,260
+Bridge on the boundary of only one region, okay.
+
+278
+00:21:59,860 --> 00:22:03,200
+Let's see what is cycle H and bridge.
+
+279
+00:22:03,520 --> 00:22:06,960
+Okay, that's the example we just used, right?
+
+280
+00:22:07,140 --> 00:22:10,720
+We used here again and to see what the definitions are.
+
+281
+00:22:12,800 --> 00:22:23,320
+let me type in choose a boundary name one two three four okay so here ABC EA
+
+282
+00:22:23,860 --> 00:22:34,060
+ABC EA as you can see is a cycle right so and we know a B BC a e belongs to r1
+
+283
+00:22:34,060 --> 00:22:38,380
+and R4 and C belongs to R1 and R2.
+
+284
+00:22:39,380 --> 00:22:44,500
+So it's that the cycle H can be the boundary of two region.
+
+285
+00:22:45,560 --> 00:22:48,440
+So which means they are always a boundary
+
+286
+00:22:48,440 --> 00:22:51,020
+of those two regions, A, B, C, A, E.
+
+287
+00:22:51,600 --> 00:22:51,820
+They are
+
+288
+00:22:51,820 --> 00:22:57,600
+because they are the H between two different boundary.
+
+289
+00:22:58,400 --> 00:23:00,160
+Similarly for the other example.
+
+290
+00:23:01,140 --> 00:23:05,260
+However, as you can see, EB is not a cycle,
+
+291
+00:23:06,060 --> 00:23:07,240
+just a bridge, why?
+
+292
+00:23:07,520 --> 00:23:12,400
+Because this is a boundary only belong to one region.
+
+293
+00:23:12,820 --> 00:23:17,240
+Okay, so usually it is an unbounded region.
+
+294
+00:23:19,140 --> 00:23:25,100
+So EF, this, okay, this is F, this is F, sorry.
+
+295
+00:23:25,100 --> 00:23:25,180
+Sorry.
+
+296
+00:23:28,580 --> 00:23:29,700
+This is F.
+
+297
+00:23:30,460 --> 00:23:34,080
+So EF belongs to R1, R4 only.
+
+298
+00:23:35,780 --> 00:23:39,060
+As you can see, when we say this is bridge,
+
+299
+00:23:39,180 --> 00:23:46,260
+it's definitely H belongs to unbounded region.
+
+300
+00:23:52,140 --> 00:23:53,800
+如果它是一条桥的话,那说明它一定是无限区域的这个 boundary.
+
+301
+00:23:53,960 --> 00:23:54,340
+Okay.
+
+302
+00:23:56,180 --> 00:24:00,940
+All right, we have learned some basic definition
+
+303
+00:24:00,940 --> 00:24:03,780
+related to the region and the planar graph
+
+304
+00:24:03,780 --> 00:24:09,680
+and we will use some examples to emphasize our understanding.
+
+305
+00:24:10,160 --> 00:24:12,160
+Okay, let's see the first one.
+
+306
+00:24:14,180 --> 00:24:16,240
+Whether this is a planar graph,
+
+307
+00:24:16,440 --> 00:24:18,320
+you are seeing on the right side,
+
+308
+00:24:23,180 --> 00:24:28,020
+even though as we can see it is not a play graph
+
+309
+00:24:29,060 --> 00:24:35,580
+but the harder part is we need to decide
+
+310
+00:24:35,580 --> 00:24:37,740
+whether it's planner instead of play.
+
+311
+00:24:37,960 --> 00:24:41,600
+Okay, let's give you the answer first
+
+312
+00:24:41,600 --> 00:24:46,460
+because I will not call any persons today.
+
+313
+00:24:48,380 --> 00:24:50,020
+In simple words, why?
+
+314
+00:24:50,240 --> 00:24:51,480
+Let's see the result.
+
+315
+00:24:51,680 --> 00:24:53,340
+Focus on AEDB.
+
+316
+00:24:54,720 --> 00:24:55,480
+As you can see here,
+
+317
+00:24:58,480 --> 00:25:00,520
+AEDB, this is crossing, right?
+
+318
+00:25:00,580 --> 00:25:04,160
+So we are trying to make sure whether we can change it.
+
+319
+00:25:05,560 --> 00:25:09,540
+And here, C connect to DEF.
+
+320
+00:25:09,620 --> 00:25:12,700
+There's a certain part we want to see.
+
+321
+00:25:12,960 --> 00:25:14,840
+Okay, let's help you.
+
+322
+00:25:15,020 --> 00:25:17,660
+Firstly, why I want to review them,
+
+323
+00:25:18,320 --> 00:25:23,420
+to understand the crossing whether we can change the crossing into some other
+
+324
+00:25:23,420 --> 00:25:29,440
+ways right just one yeah ah jiggle shun chow kai tema okay so we need to check
+
+325
+00:25:29,440 --> 00:25:37,620
+the crossing the H for the crossing and let's see F connect you ABC so this is
+
+326
+00:25:37,620 --> 00:25:46,140
+another way so that's the crossing we are really hard to change but let's see
+
+327
+00:25:46,140 --> 00:25:48,740
+see a more concrete example here.
+
+328
+00:25:50,560 --> 00:25:53,280
+AEDB, why we want to see that?
+
+329
+00:25:56,040 --> 00:26:02,120
+AEDB, we can change the red color in such place, right?
+
+330
+00:26:03,880 --> 00:26:05,520
+So that's the one we want to change.
+
+331
+00:26:05,820 --> 00:26:09,640
+And then we want to, there are two boundary.
+
+332
+00:26:10,640 --> 00:26:14,880
+And we know there is a region in the R1,
+
+333
+00:26:16,940 --> 00:26:20,120
+the vertical in the Waban, how to change it.
+
+334
+00:26:20,240 --> 00:26:23,060
+So, see whether we can move it inside.
+
+335
+00:26:23,400 --> 00:26:24,360
+That's the two type.
+
+336
+00:26:24,980 --> 00:26:28,140
+Either inside or outside, right?
+
+337
+00:26:29,400 --> 00:26:33,180
+Just what I want to help you is to find out
+
+338
+00:26:33,180 --> 00:26:35,080
+whether it's planar or not.
+
+339
+00:26:35,280 --> 00:26:37,020
+So, that's how I make it.
+
+340
+00:26:37,480 --> 00:26:40,060
+So, that's the first step type, right?
+
+341
+00:26:40,220 --> 00:26:43,600
+I make it first type, because I do not want to crossing.
+
+342
+00:26:43,800 --> 00:26:45,160
+So, that's how I make it.
+
+343
+00:26:46,140 --> 00:26:48,940
+Then I consider C adding 2.
+
+344
+00:26:49,120 --> 00:26:53,320
+So C either in the R1 or in R2.
+
+345
+00:26:53,440 --> 00:26:56,180
+So let's consider first scenario.
+
+346
+00:26:57,940 --> 00:26:58,780
+比如说这个C的这个vertical,
+
+347
+00:26:58,940 --> 00:27:00,280
+我们现在要加进来嘛,
+
+348
+00:27:00,320 --> 00:27:01,260
+要形成这个,
+
+349
+00:27:03,080 --> 00:27:03,920
+做到这个K33,
+
+350
+00:27:05,640 --> 00:27:06,480
+那形成这个graph.
+
+351
+00:27:08,740 --> 00:27:09,580
+那C要么在R1里面,
+
+352
+00:27:11,100 --> 00:27:11,940
+要么在R2,
+
+353
+00:27:13,780 --> 00:27:14,620
+这个H的外面嘛。
+
+354
+00:27:16,140 --> 00:27:23,360
+the first duration okay let's see see all right so we can further divide the
+
+355
+00:27:23,360 --> 00:27:35,460
+graph into several region and let's see the third step if f in r11 okay because
+
+356
+00:27:35,460 --> 00:27:42,460
+after we added the C and then we should consider F right so that all the
+
+357
+00:27:42,460 --> 00:27:44,760
+the vertices can be included.
+
+358
+00:27:45,100 --> 00:27:47,040
+You'll see all the vertices are included.
+
+359
+00:27:48,500 --> 00:27:52,680
+So F can be on this way, this way, and this way.
+
+360
+00:27:52,780 --> 00:27:55,240
+So let's see more situation.
+
+361
+00:27:55,460 --> 00:27:56,200
+That's the first one.
+
+362
+00:27:56,460 --> 00:27:58,740
+Okay, cross when connect to B.
+
+363
+00:27:58,880 --> 00:27:59,720
+Okay, fail.
+
+364
+00:28:01,260 --> 00:28:01,820
+Second.
+
+365
+00:28:04,360 --> 00:28:05,780
+In R1, 2.
+
+366
+00:28:05,940 --> 00:28:08,300
+Okay, also failed, unfortunately.
+
+367
+00:28:08,860 --> 00:28:10,800
+Let's see F in R2.
+
+368
+00:28:12,460 --> 00:28:15,060
+when connect to C, if it's here.
+
+369
+00:28:16,080 --> 00:28:19,620
+R2 is here, so if I want to connect to C,
+
+370
+00:28:20,260 --> 00:28:21,340
+that's what I require.
+
+371
+00:28:22,220 --> 00:28:24,040
+Definitely there is crossing.
+
+372
+00:28:25,280 --> 00:28:30,980
+In the scenario one and scenario also three possible
+
+373
+00:28:30,980 --> 00:28:36,360
+scenario all failed, so let's see the next scenario.
+
+374
+00:28:37,160 --> 00:28:40,980
+In R2, so something like that.
+
+375
+00:28:42,460 --> 00:28:45,340
+it must connect to D, E, F.
+
+376
+00:28:45,880 --> 00:28:49,320
+F we have not considered yet, so D, E.
+
+377
+00:28:49,420 --> 00:28:54,140
+Okay, so then we consider F in different region.
+
+378
+00:28:54,340 --> 00:28:55,500
+How many region we have here?
+
+379
+00:28:55,660 --> 00:28:56,300
+Let's count.
+
+380
+00:28:57,720 --> 00:28:58,820
+No problem, right?
+
+381
+00:28:59,420 --> 00:29:03,040
+There are three regions, so we consider F one by one.
+
+382
+00:29:04,420 --> 00:29:05,720
+Okay, field, right?
+
+383
+00:29:05,900 --> 00:29:06,740
+There is a crossing.
+
+384
+00:29:08,120 --> 00:29:08,860
+Field again.
+
+385
+00:29:10,220 --> 00:29:11,540
+Okay, field again.
+
+386
+00:29:12,460 --> 00:29:15,360
+So in those situation, all fail.
+
+387
+00:29:16,220 --> 00:29:18,620
+So no always crossing.
+
+388
+00:29:18,880 --> 00:29:23,120
+It means not a planner.
+
+389
+00:29:25,000 --> 00:29:29,420
+So through this way, it help us how to find out
+
+390
+00:29:29,420 --> 00:29:30,560
+the planner graph.
+
+391
+00:29:32,460 --> 00:29:35,540
+So that's a standard way for you to understand.
+
+392
+00:29:35,840 --> 00:29:37,880
+So if you want to design the planner,
+
+393
+00:29:37,880 --> 00:29:42,360
+remember how to decompose those components
+
+394
+00:29:42,360 --> 00:29:47,320
+and then divide the simple graph into several region
+
+395
+00:29:47,320 --> 00:29:52,560
+and consider the new vertices added one by one
+
+396
+00:29:52,560 --> 00:29:55,740
+and you will see whether it's a violate
+
+397
+00:29:55,740 --> 00:30:01,480
+the H no crossing rule, okay.
+
+398
+00:30:09,160 --> 00:30:11,240
+学年的期末考试,我又出了一道题。
+
+399
+00:30:16,040 --> 00:30:17,080
+因为这个是非常好出题的地方。
+
+400
+00:30:20,180 --> 00:30:23,500
+Okay, anyway, let's see more.
+
+401
+00:30:25,220 --> 00:30:32,060
+So, we have learned the definitions of the region,
+
+402
+00:30:33,700 --> 00:30:38,680
+age, including bridge, and cycle age, right?
+
+403
+00:30:38,880 --> 00:30:43,220
+and the boundary so there are so many different new definitions actually there
+
+404
+00:30:43,220 --> 00:30:51,140
+is a theorem related to the those new definitions it called as Euler
+
+405
+00:30:51,140 --> 00:31:00,280
+formula or a la conchette okay let's see it if G be a connected a planner simple
+
+406
+00:31:00,280 --> 00:31:10,260
+simple graph with e h v vertices and our region then we have such a relation R is
+
+407
+00:31:10,260 --> 00:31:16,980
+equivalent to e minus V plus 2 okay so this is a very important one so that we
+
+408
+00:31:16,980 --> 00:31:22,640
+can stand whether is connected planner simple graph what is connected in
+
+409
+00:31:22,640 --> 00:31:22,920
+in Chinese,
+
+410
+00:31:23,160 --> 00:31:30,200
+and we have learned the definition, right?
+
+411
+00:31:31,200 --> 00:31:36,340
+So if we have such graph, then we have such relation.
+
+412
+00:31:36,820 --> 00:31:41,000
+Okay, following we will use mathematical induction
+
+413
+00:31:41,000 --> 00:31:42,600
+to do the proof.
+
+414
+00:31:43,120 --> 00:31:45,540
+What is mathematical induction?
+
+415
+00:31:45,760 --> 00:31:46,300
+Induction,
+
+416
+00:32:41,640 --> 00:32:46,280
+So, that's the equation or relation we want to do.
+
+417
+00:32:46,300 --> 00:32:48,200
+to make sure whether it's correct or not.
+
+418
+00:32:48,600 --> 00:32:50,920
+This is what we are going to prove if it's correct or not.
+
+419
+00:32:50,960 --> 00:32:54,420
+Okay, let's see the premise,
+
+420
+00:32:54,700 --> 00:32:56,160
+and I just mentioned, right?
+
+421
+00:32:56,320 --> 00:32:58,340
+Connect your planner, a simple graph.
+
+422
+00:32:58,720 --> 00:33:00,880
+I skipped the simple.
+
+423
+00:33:01,820 --> 00:33:04,960
+Okay, if there is a sequence of subgraph,
+
+424
+00:33:05,760 --> 00:33:07,060
+g1, g2, to ge,
+
+425
+00:33:07,800 --> 00:33:12,120
+and the ge is just the exact same as g,
+
+426
+00:33:12,120 --> 00:33:15,700
+So we will have such relation, right?
+
+427
+00:33:17,140 --> 00:33:21,720
+GE is a subset for G2 and subset for the following part
+
+428
+00:33:21,720 --> 00:33:22,480
+to GE.
+
+429
+00:33:24,560 --> 00:33:27,720
+And the GI contains I edges, we assume.
+
+430
+00:33:28,820 --> 00:33:32,320
+Okay, N obtained from G and minus one
+
+431
+00:33:32,320 --> 00:33:35,400
+by arbitrarily adding an edge.
+
+432
+00:33:36,900 --> 00:33:38,960
+So all GI are planar.
+
+433
+00:33:38,960 --> 00:33:48,320
+so it means that no h-crossing right because there is implication you should
+
+434
+00:33:48,320 --> 00:33:52,260
+know subgraph of planar graph must be planner
+
+435
+00:33:52,260 --> 00:33:53,840
+this should be easy to understand
+
+436
+00:33:53,840 --> 00:33:59,760
+the paper of this plane is also a plane
+
+437
+00:33:59,760 --> 00:34:07,920
+why? because we required no h-crossing right so the subgraph definitely
+
+438
+00:34:08,960 --> 00:34:10,520
+no edge crossing anymore.
+
+439
+00:34:13,260 --> 00:34:16,080
+Okay, so after we understand this,
+
+440
+00:34:16,740 --> 00:34:18,720
+let's do the work one by one, all right?
+
+441
+00:34:18,860 --> 00:34:22,020
+As we just mentioned, what is mathematical induction?
+
+442
+00:34:23,680 --> 00:34:25,740
+From the simplest one, right?
+
+443
+00:34:25,900 --> 00:34:29,940
+And then a little bit difficult and more difficult.
+
+444
+00:34:30,800 --> 00:34:34,820
+And then we generalize the idea in Chinese.
+
+445
+00:34:44,560 --> 00:34:49,900
+So we start from G1, the simplest graph, right?
+
+446
+00:34:51,120 --> 00:34:52,980
+This is G1, okay?
+
+447
+00:34:54,460 --> 00:34:57,480
+E1, E1, V1.
+
+448
+00:34:59,740 --> 00:35:05,940
+V1 is not this vertical, means vertices number for G1.
+
+449
+00:35:06,100 --> 00:35:07,420
+Okay, keep that in mind.
+
+450
+00:35:09,620 --> 00:35:11,980
+vertex number two, okay.
+
+451
+00:35:12,120 --> 00:35:16,680
+So that's the simplest graph, right, so no problem.
+
+452
+00:35:17,200 --> 00:35:23,120
+And then let's see if to1, ton, right,
+
+453
+00:35:23,180 --> 00:35:24,920
+that's what we want to induce.
+
+454
+00:35:26,100 --> 00:35:28,640
+We want to do this inference.
+
+455
+00:35:28,940 --> 00:35:30,260
+Okay, let's see more.
+
+456
+00:35:31,580 --> 00:35:34,280
+Okay, continue to see whether this is true or not.
+
+457
+00:35:34,280 --> 00:35:40,380
+Then, let's see, a n plus one, b n plus one,
+
+458
+00:35:40,420 --> 00:35:43,940
+b is the h that is added to g n,
+
+459
+00:35:44,060 --> 00:35:46,960
+so that we will have g n plus one.
+
+460
+00:35:47,860 --> 00:35:52,380
+Okay, so as mentioned, we know the first one is right,
+
+461
+00:35:52,480 --> 00:35:56,740
+so we substitute the one with n, no problem, right?
+
+462
+00:36:04,280 --> 00:36:08,480
+Okay, so what I want to say, if it n become two
+
+463
+00:36:08,480 --> 00:36:12,220
+or become three, then you should add the h, right?
+
+464
+00:36:12,320 --> 00:36:19,060
+Add a h, so for gm, we should become to gm plus one.
+
+465
+00:36:19,780 --> 00:36:20,380
+No problem, right?
+
+466
+00:36:20,560 --> 00:36:21,800
+So let's see the case.
+
+467
+00:36:22,660 --> 00:36:29,400
+So, a n plus one, b n plus one, definitely in the gm.
+
+468
+00:36:29,400 --> 00:36:34,500
+and so one of a n plus one and b n plus one
+
+469
+00:36:34,500 --> 00:36:36,200
+is not in g one, okay.
+
+470
+00:36:36,340 --> 00:36:39,280
+So after we added, there's some situation here.
+
+471
+00:36:42,060 --> 00:36:44,220
+Both vertices in g n.
+
+472
+00:36:45,240 --> 00:36:47,760
+Maybe some not in g n.
+
+473
+00:36:49,020 --> 00:36:52,280
+Can I say, none of them in g n?
+
+474
+00:36:53,900 --> 00:36:54,880
+No need, right?
+
+475
+00:36:55,160 --> 00:36:57,520
+If none of them in the g n,
+
+476
+00:36:59,400 --> 00:37:01,160
+it is not g n plus one anymore.
+
+477
+00:37:01,360 --> 00:37:03,000
+It's back to g n, right?
+
+478
+00:37:03,160 --> 00:37:05,960
+So if we added the h,
+
+479
+00:37:07,220 --> 00:37:10,320
+definitely either both in the g n.
+
+480
+00:37:13,220 --> 00:37:15,040
+This should be g n plus one.
+
+481
+00:37:15,440 --> 00:37:15,960
+Okay.
+
+482
+00:37:18,860 --> 00:37:19,780
+Okay, sorry.
+
+483
+00:37:19,960 --> 00:37:24,540
+So either they are in the g n or one of them.
+
+484
+00:37:26,280 --> 00:37:27,760
+Only these two forms, right?
+
+485
+00:37:29,400 --> 00:37:34,840
+push your heart not yet I'm GM possible gamma so I don't know you know that we
+
+486
+00:37:34,840 --> 00:37:43,620
+just so you'll play the GM okay so let's see those two case so as we can see this
+
+487
+00:37:43,620 --> 00:37:53,020
+example we had it a new n plus one because and B plus one a new age added
+
+488
+00:37:53,020 --> 00:38:01,520
+right so let's see here so we have both here and we have only one here so that
+
+489
+00:38:02,300 --> 00:38:16,920
+they are in the GM 1 okay let's see the case 1 okay that's the first case since
+
+490
+00:38:16,920 --> 00:38:19,840
+Since we are both in this chain,
+
+491
+00:38:19,980 --> 00:38:21,980
+and we will have one edge added,
+
+492
+00:38:22,760 --> 00:38:25,880
+and the vertices still the same.
+
+493
+00:38:27,420 --> 00:38:33,000
+And if those two, this is the two new bound,
+
+494
+00:38:34,920 --> 00:38:36,520
+not on the bound of a common region,
+
+495
+00:38:36,720 --> 00:38:38,900
+then two edge crossing.
+
+496
+00:38:40,300 --> 00:38:40,360
+Why?
+
+497
+00:38:41,140 --> 00:38:44,300
+As you can see, if they are not on the boundary
+
+498
+00:38:44,300 --> 00:38:47,380
+of a common region is definitely crossing.
+
+499
+00:38:47,980 --> 00:38:50,740
+So there's a place you can grab.
+
+500
+00:38:51,040 --> 00:38:54,560
+And this definitely violate gm plus one is a planner.
+
+501
+00:38:55,600 --> 00:38:58,480
+Because we require it to be a planner, right?
+
+502
+00:38:59,220 --> 00:39:03,120
+Okay, therefore, must be the boundary, okay.
+
+503
+00:39:05,200 --> 00:39:07,700
+And as you can see the example here.
+
+504
+00:39:07,940 --> 00:39:11,180
+So the new H splits R into two regions.
+
+505
+00:39:12,360 --> 00:39:15,380
+So that's the result we can assume.
+
+506
+00:39:16,900 --> 00:39:21,940
+Okay, so in such way we have the region with that form.
+
+507
+00:39:22,080 --> 00:39:25,320
+How to say, since we have a new one and edit.
+
+508
+00:39:25,860 --> 00:39:29,080
+Okay, so in the case one we have it.
+
+509
+00:39:30,260 --> 00:39:33,980
+Okay, so as you can see we have minus one minus one
+
+510
+00:39:34,640 --> 00:39:35,860
+and you can see,
+
+511
+00:39:41,840 --> 00:39:42,520
+Okay.
+
+512
+00:39:43,740 --> 00:39:46,060
+Oh, yes, there is no problem.
+
+513
+00:39:49,960 --> 00:39:51,360
+There is no problem here.
+
+514
+00:39:53,360 --> 00:39:53,480
+Okay.
+
+515
+00:39:56,740 --> 00:40:00,480
+So as you can see, we substitute Rn
+
+516
+00:40:01,000 --> 00:40:03,840
+with Rn plus one minus one,
+
+517
+00:40:05,140 --> 00:40:07,880
+because Rn can, we know that,
+
+518
+00:40:07,880 --> 00:40:17,280
+so our n is our m plus 1 minus 1 right so we substitute here and similarly for
+
+519
+00:40:17,280 --> 00:40:25,980
+en we can substitute as well and where is yet in here and for the VM exact the
+
+520
+00:40:25,980 --> 00:40:32,940
+same right so we substitute here as you can see I am plus 1 is en plus 1 minus
+
+521
+00:40:32,940 --> 00:40:34,500
+minus vm plus one plus two.
+
+522
+00:40:35,280 --> 00:40:38,900
+So it means that as the number increase,
+
+523
+00:40:39,260 --> 00:40:43,940
+we can have that rule continue to exist.
+
+524
+00:40:44,660 --> 00:40:46,680
+So that's the case one.
+
+525
+00:40:46,900 --> 00:40:48,120
+Let's see case two.
+
+526
+00:40:48,920 --> 00:40:49,660
+Both are in GM.
+
+527
+00:40:55,340 --> 00:40:57,160
+There is a issue.
+
+528
+00:40:57,280 --> 00:40:59,020
+Only one, only one.
+
+529
+00:41:02,940 --> 00:41:03,820
+and paste the .
+
+530
+00:41:05,280 --> 00:41:09,180
+Only one in the case, so this is the situation, right?
+
+531
+00:41:09,340 --> 00:41:14,880
+And here I assume A is in the G1, B is not.
+
+532
+00:41:15,020 --> 00:41:17,180
+B is not, okay, let's see.
+
+533
+00:41:17,920 --> 00:41:21,940
+So in such case, how many H we added the more?
+
+534
+00:41:22,140 --> 00:41:24,440
+So H plus one, right?
+
+535
+00:41:25,340 --> 00:41:26,460
+No problem, right?
+
+536
+00:41:26,920 --> 00:41:30,340
+And the vertices, we have a new added vertices
+
+537
+00:41:30,340 --> 00:41:34,220
+because only one in the gm means gm plus one,
+
+538
+00:41:34,340 --> 00:41:39,680
+we have one vertical vertex added, right?
+
+539
+00:41:39,880 --> 00:41:44,140
+So vm plus one is vm plus one, okay?
+
+540
+00:41:44,280 --> 00:41:47,940
+So no new region is generated as you can see.
+
+541
+00:41:48,140 --> 00:41:49,880
+Any region generated here?
+
+542
+00:41:50,160 --> 00:41:51,620
+No, still the same, right?
+
+543
+00:41:53,160 --> 00:41:56,700
+How many R1 using the R2 and R3?
+
+544
+00:41:57,040 --> 00:41:59,940
+Okay, no more new region, okay.
+
+545
+00:42:00,340 --> 00:42:04,620
+So in such case, if we know if this is true,
+
+546
+00:42:04,740 --> 00:42:07,440
+and then whether n plus one is true, let's do the work.
+
+547
+00:42:08,760 --> 00:42:13,620
+Okay, this does not change, no new region, right?
+
+548
+00:42:13,680 --> 00:42:15,120
+So this does not change.
+
+549
+00:42:16,160 --> 00:42:20,080
+We know h plus one, so backwards,
+
+550
+00:42:20,340 --> 00:42:24,120
+so en is en plus one minus one,
+
+551
+00:42:24,840 --> 00:42:30,320
+and vn is vn plus one minus one, no problem, right?
+
+552
+00:42:30,340 --> 00:42:34,240
+Right, so we substitute and then it exists.
+
+553
+00:42:34,540 --> 00:42:38,220
+So for the n plus one situation, we have exist.
+
+554
+00:42:39,220 --> 00:42:43,880
+Okay, now we have proved this Euler formula is good.
+
+555
+00:42:45,080 --> 00:42:49,400
+Okay, let's see some example how to use the Euler formula.
+
+556
+00:42:49,720 --> 00:42:52,040
+Okay, I will go quickly with the example.
+
+557
+00:42:53,180 --> 00:42:55,520
+20 vertices, degree of three,
+
+558
+00:42:55,660 --> 00:42:58,740
+so how many regions does it have?
+
+559
+00:43:01,060 --> 00:43:03,640
+We have 20 vertices, right?
+
+560
+00:43:05,340 --> 00:43:08,680
+And one thing you should remember, degree.
+
+561
+00:43:08,880 --> 00:43:10,000
+How to use the degree?
+
+562
+00:43:10,560 --> 00:43:12,780
+Sum of the degree, and it was 60.
+
+563
+00:43:14,160 --> 00:43:15,800
+Remember, two E.
+
+564
+00:43:17,600 --> 00:43:21,340
+So as we remember, if it is connected,
+
+565
+00:43:21,580 --> 00:43:25,420
+the simple graph, we use, we learned another rule.
+
+566
+00:43:26,340 --> 00:43:27,920
+It is the double size of the H.
+
+567
+00:43:37,980 --> 00:43:41,140
+This is 2e, so e is 30.
+
+568
+00:43:41,920 --> 00:43:45,580
+Then we apply the equation here.
+
+569
+00:43:45,700 --> 00:43:48,180
+Then the region will be 12.
+
+570
+00:43:48,900 --> 00:43:50,700
+I don't think it's difficult.
+
+571
+00:43:50,840 --> 00:43:54,320
+The only part is connected simple graph.
+
+572
+00:43:54,440 --> 00:43:55,280
+There is a rule.
+
+573
+00:43:56,280 --> 00:43:58,060
+Let's recall that rule.
+
+574
+00:43:58,060 --> 00:44:04,100
+The double size of the total H will be the sum of all degrees.
+
+575
+00:44:10,900 --> 00:44:11,540
+如果对于连通简图的那个有一个定律就是说,
+
+576
+00:44:15,520 --> 00:44:16,160
+所有边的二倍是所有的度数之和,
+
+577
+00:44:16,260 --> 00:44:17,340
+if still remember.
+
+578
+00:44:19,700 --> 00:44:20,340
+还记得吧?
+
+579
+00:44:21,060 --> 00:44:21,700
+Degree.
+
+580
+00:44:25,100 --> 00:44:25,160
+I.
+
+581
+00:44:32,320 --> 00:44:39,820
+that's what we have learnt so we can buy those two equations together okay another
+
+582
+00:44:42,760 --> 00:44:43,880
+new corollary
+
+583
+00:44:58,060 --> 00:44:59,660
+You can see the words you use often.
+
+584
+00:45:00,140 --> 00:45:01,700
+If you read those meeting articles,
+
+585
+00:45:02,400 --> 00:45:02,840
+corollary,
+
+586
+00:45:02,900 --> 00:45:04,180
+it means that
+
+587
+00:45:04,820 --> 00:45:07,420
+you are really a corollary.
+
+588
+00:45:07,480 --> 00:45:08,880
+It depends on how good your paper is.
+
+589
+00:45:10,080 --> 00:45:11,020
+How many stars are there in the GitHub.
+
+590
+00:45:12,140 --> 00:45:12,580
+Anyway,
+
+591
+00:45:13,180 --> 00:45:14,880
+this is the term you often see.
+
+592
+00:45:14,960 --> 00:45:15,280
+Don't say,
+
+593
+00:45:16,480 --> 00:45:19,000
+this is not your specialization,
+
+594
+00:45:19,040 --> 00:45:20,480
+I don't know this.
+
+595
+00:45:20,520 --> 00:45:21,200
+Then you will
+
+596
+00:45:23,560 --> 00:45:25,160
+not have read the top article.
+
+597
+00:45:27,200 --> 00:45:33,920
+okay anyway back here if I connect okay let's take a rest and we will continue
+
+598
+00:45:33,920 --> 00:45:34,960
+our discussion later
+
+599
+00:46:15,300 --> 00:46:16,560
+Thank you.
+
+600
+00:47:16,180 --> 00:47:17,140
+Thank you.
+
+601
+00:47:43,080 --> 00:47:44,700
+Thank you.
+
+602
+00:48:22,540 --> 00:48:24,720
+Thank you.
+
+603
+00:48:53,640 --> 00:48:55,120
+Thank you.
+
+604
+00:49:27,260 --> 00:49:28,820
+Thank you.
+
+605
+00:50:55,840 --> 00:51:00,260
+But before I officially go to the lecture discussion
+
+606
+00:51:00,260 --> 00:51:06,720
+and since I just received a message from my student
+
+607
+00:51:06,720 --> 00:51:14,260
+He said he was going to go to the university of Hong Kong
+
+608
+00:51:14,260 --> 00:51:18,000
+So I just thought of this
+
+609
+00:51:18,000 --> 00:51:21,680
+Since you are sophomore
+
+610
+00:54:36,440 --> 00:54:37,840
+OK.
+
+611
+00:54:38,260 --> 00:54:40,280
+OK, anyway.
+
+612
+00:54:51,920 --> 00:54:54,840
+I just spent a few minutes to discuss.
+
+613
+00:54:55,740 --> 00:54:59,520
+I hope you can be successful not just in this course
+
+614
+00:54:59,520 --> 00:55:04,580
+but also in the future at least in your major.
+
+615
+00:55:04,920 --> 00:55:10,000
+All right, back to our discussion in our contents
+
+616
+00:55:10,000 --> 00:55:11,260
+of the last part today.
+
+617
+00:55:11,900 --> 00:55:14,260
+I will quickly go through the corollary
+
+618
+00:55:14,260 --> 00:55:15,660
+as I mentioned in Chinese,
+
+619
+00:55:15,900 --> 00:55:17,800
+yin li, tui li, dou kei.
+
+620
+00:55:18,160 --> 00:55:20,940
+Okay, so it's that for such graph,
+
+621
+00:55:21,680 --> 00:55:27,700
+not be repeated that she has a vertex of degree not exceeding five you're so you
+
+622
+00:55:27,700 --> 00:55:36,080
+take cutting tinto in the to so push over okay if connected a graph has eh and V
+
+623
+00:55:36,080 --> 00:55:43,720
+vertices and there's some V should be no more no smaller than three then we have
+
+624
+00:55:43,720 --> 00:55:49,880
+have E should be equivalent or larger than three V minus six.
+
+625
+00:55:50,680 --> 00:55:54,680
+Okay, if a connected graph has E, H and V vertices
+
+626
+00:55:54,680 --> 00:55:58,480
+with V larger than three, and then we have a new relation.
+
+627
+00:55:58,660 --> 00:56:01,140
+I will not repeat that, but I just want to say,
+
+628
+00:56:01,880 --> 00:56:04,120
+this is some corollary.
+
+629
+00:56:06,100 --> 00:56:10,420
+So you can imagine why usually corollary is more likely
+
+630
+00:56:10,420 --> 00:56:13,580
+to be used in the conference paper.
+
+631
+00:56:14,160 --> 00:56:14,720
+Why?
+
+632
+00:56:15,480 --> 00:56:16,860
+Because these rules
+
+633
+00:56:16,860 --> 00:56:18,120
+may not be able to be understood
+
+634
+00:56:18,120 --> 00:56:19,400
+by everyone, right?
+
+635
+00:56:19,760 --> 00:56:21,780
+Maybe it was this student or that team
+
+636
+00:56:21,780 --> 00:56:23,060
+that they pushed out.
+
+637
+00:56:23,540 --> 00:56:25,240
+So it's impossible to call yourself
+
+638
+00:56:25,240 --> 00:56:27,340
+an Euler theorem.
+
+639
+00:56:27,800 --> 00:56:30,360
+But they will use rules to push.
+
+640
+00:56:30,620 --> 00:56:31,180
+Why?
+
+641
+00:56:31,320 --> 00:56:32,600
+Corollary is more common than theory.
+
+642
+00:56:33,760 --> 00:56:35,780
+So if you see this word,
+
+643
+00:56:36,160 --> 00:56:36,480
+you will say,
+
+644
+00:56:36,540 --> 00:56:37,940
+oh, it's this reason.
+
+645
+00:56:38,180 --> 00:56:39,820
+Because he can't call himself
+
+646
+00:57:05,120 --> 00:57:10,080
+Okay, anyway, too many redundant words.
+
+647
+00:57:10,420 --> 00:57:12,240
+Let's back to the example.
+
+648
+00:57:12,680 --> 00:57:15,020
+As we just mentioned those query,
+
+649
+00:57:15,760 --> 00:57:18,100
+actually you don't have to remember those query.
+
+650
+00:57:18,600 --> 00:57:26,240
+But if it is theorem, actually you should remember that.
+
+651
+00:57:26,420 --> 00:57:29,060
+If it is the formula of Euler theorem,
+
+652
+00:57:30,660 --> 00:57:31,880
+then you must remember it.
+
+653
+00:57:31,960 --> 00:57:33,640
+So you see the importance of it,
+
+654
+00:57:33,660 --> 00:57:35,140
+there will be different names to represent it.
+
+655
+00:57:36,040 --> 00:57:36,560
+Okay.
+
+656
+00:57:36,560 --> 00:57:41,640
+Okay, K5, non-planner, and we have some example here.
+
+657
+00:57:41,880 --> 00:57:44,600
+I will not go into the details.
+
+658
+00:57:46,980 --> 00:57:50,260
+So whether it's non-plannery or not,
+
+659
+00:57:54,740 --> 00:57:58,980
+clearly it uses a collary here,
+
+660
+00:57:59,160 --> 00:58:03,200
+and if it's meet, that's relation,
+
+661
+00:58:04,480 --> 00:58:06,760
+then we can say it is planner.
+
+662
+00:58:06,980 --> 00:58:10,800
+But if not, then we can say it's non-planner.
+
+663
+00:58:11,120 --> 00:58:13,160
+I will not discuss the details.
+
+664
+00:58:13,780 --> 00:58:17,540
+This is a query, but usually it can help you
+
+665
+00:58:17,540 --> 00:58:23,940
+to decide some way to see whether it's planner or not.
+
+666
+00:58:24,120 --> 00:58:27,480
+As I just mentioned, why we want to use some query
+
+667
+00:58:27,480 --> 00:58:30,240
+or formula to decide, because as I mentioned,
+
+668
+00:58:31,160 --> 00:58:34,940
+Planner, you cannot decide it directly, right?
+
+669
+00:58:34,980 --> 00:58:35,920
+Unlike plane.
+
+670
+00:58:47,140 --> 00:58:48,460
+Okay, anyway.
+
+671
+00:58:49,060 --> 00:58:50,320
+Let's see more example.
+
+672
+00:58:51,020 --> 00:58:55,240
+Time limit, I guess I will not use the example directly,
+
+673
+00:58:55,360 --> 00:58:58,780
+but as you can see, you can use what you just learned
+
+674
+00:59:00,240 --> 00:59:06,760
+number into that formula so that you can decide is planner or not okay I will not
+
+675
+00:59:06,760 --> 00:59:17,360
+talk about in details all right another definitions here oh homeo morphic homeo
+
+676
+00:59:17,360 --> 00:59:22,840
+morphic home morphic homeo
+
+677
+00:59:27,520 --> 00:59:28,920
+这个因为我在美国待了十几年
+
+678
+00:59:28,920 --> 00:59:31,620
+看到这个一般先看了什么
+
+679
+00:59:31,620 --> 00:59:32,440
+同性
+
+680
+00:59:32,440 --> 00:59:34,580
+这个一般就是home
+
+681
+00:59:34,580 --> 00:59:36,620
+如果你看到train
+
+682
+00:59:36,620 --> 00:59:38,680
+怎么的一般是转性
+
+683
+00:59:38,680 --> 00:59:39,200
+OK
+
+684
+00:59:39,200 --> 00:59:41,100
+当然这个是homeomorphic
+
+685
+00:59:41,100 --> 00:59:42,480
+这个是home是吗
+
+686
+00:59:42,480 --> 00:59:44,860
+代表同的那个词根
+
+687
+00:59:44,860 --> 00:59:45,960
+morphic
+
+688
+00:59:45,960 --> 00:59:48,280
+这是一个生物的词
+
+689
+00:59:48,280 --> 00:59:50,240
+所以这叫同P
+
+690
+00:59:51,980 --> 00:59:54,660
+homomorphic graph, in Chinese.
+
+691
+00:59:56,700 --> 00:59:59,060
+Based on the definition, you can imagine actually
+
+692
+00:59:59,580 --> 01:00:04,000
+those two graph may have some similarities there, right?
+
+693
+01:00:04,160 --> 01:00:08,480
+But it's not like another one, what we have,
+
+694
+01:00:09,140 --> 01:00:12,000
+actually I just mentioned in the first half.
+
+695
+01:00:17,880 --> 01:00:20,080
+Isomorphism, isomorphism, as you can see.
+
+696
+01:00:20,240 --> 01:00:21,420
+Isomorphism.
+
+697
+01:00:21,820 --> 01:00:22,500
+Isomorphism.
+
+698
+01:00:24,120 --> 01:00:24,800
+说明了什么?
+
+699
+01:00:26,520 --> 01:00:27,200
+那个又是那个词根。
+
+700
+01:00:27,200 --> 01:00:27,800
+Okay, anyway.
+
+701
+01:00:29,540 --> 01:00:32,120
+Okay, what is homeomorphic?
+
+702
+01:00:32,520 --> 01:00:35,880
+If those graphs obtained from the same graph
+
+703
+01:00:35,880 --> 01:00:39,240
+by a sequence of elements subdivision.
+
+704
+01:00:39,500 --> 01:00:40,180
+Okay.
+
+705
+01:00:41,140 --> 01:00:42,040
+还是不理解,是吧?
+
+706
+01:00:42,120 --> 01:00:43,320
+Okay, in Chinese.
+
+707
+01:00:47,300 --> 01:00:47,980
+一个图可以通过一系列的sequence。
+
+708
+01:00:49,180 --> 01:00:51,300
+一个元素,what is the element?
+
+709
+01:00:51,540 --> 01:00:54,700
+In our graph, including vertices and edges,
+
+710
+01:01:00,080 --> 01:01:01,120
+比如说一系列的顶点和边的添加和删除操作,
+
+711
+01:01:01,160 --> 01:01:02,540
+变成了另外一个图。
+
+712
+01:01:03,620 --> 01:01:06,340
+Subdivision, division应该是吧?
+
+713
+01:01:07,620 --> 01:01:13,880
+除以啊,增加啊,添加啊,减少啊,增添的意思。
+
+714
+01:01:13,880 --> 01:01:15,620
+Sub当然就是减。
+
+715
+01:01:27,880 --> 01:01:28,320
+Okay.
+
+716
+01:01:28,880 --> 01:01:29,320
+Okay.
+
+717
+01:01:37,280 --> 01:01:38,080
+和顶点的度数都不变。
+
+718
+01:01:42,180 --> 01:01:42,980
+那么这个时候我们把它叫做同批图。
+
+719
+01:01:43,740 --> 01:01:46,320
+Okay, let's see some more idea.
+
+720
+01:01:46,520 --> 01:01:51,560
+Okay, if it is a planner and remove it, as I just mentioned,
+
+721
+01:01:52,360 --> 01:01:58,900
+adding with edges and for edge and vertex.
+
+722
+01:01:59,300 --> 01:02:02,700
+Okay, 也就是说增加减少,简单来讲。
+
+723
+01:02:02,880 --> 01:02:05,740
+Okay, let me use an example to help you to understand.
+
+724
+01:02:06,280 --> 01:02:09,460
+Okay, this is one graph example.
+
+725
+01:02:09,960 --> 01:02:14,060
+And as I mentioned, I changed to another one, right?
+
+726
+01:02:14,720 --> 01:02:18,420
+I can now tell you they are homeomorphic.
+
+727
+01:02:18,780 --> 01:02:21,940
+But how to do the operations I just mentioned?
+
+728
+01:02:23,620 --> 01:02:24,160
+如何做这些仪器的操作?
+
+729
+01:02:24,260 --> 01:02:24,620
+Let's see.
+
+730
+01:02:28,440 --> 01:02:29,520
+我直接已经告诉你了,他们是homeomorphic的图。
+
+731
+01:02:29,520 --> 01:02:29,920
+Okay.
+
+732
+01:02:29,920 --> 01:02:34,360
+Okay, so G from H, how do you open G from H?
+
+733
+01:02:35,460 --> 01:02:40,100
+Remove A, B, adding A, E, E, B.
+
+734
+01:02:40,560 --> 01:02:43,060
+Okay, for this one,
+
+735
+01:02:48,480 --> 01:02:49,520
+我应该是写反了,H。
+
+736
+01:02:52,700 --> 01:02:53,740
+应该是这个样子,看有些太破。
+
+737
+01:02:53,740 --> 01:02:58,760
+Okay, so remove A, B and add A, E, E, B.
+
+738
+01:02:59,920 --> 01:03:10,800
+two ages right okay remove AC and add AF FC and don't forget we have another one
+
+739
+01:03:10,800 --> 01:03:21,940
+so this is okay okay yes remove FC okay now I'm
+
+740
+01:03:21,940 --> 01:03:28,980
+I'm talking this one, at FG, CG, GC, okay.
+
+741
+01:03:31,660 --> 01:03:36,740
+So then we can create our isomorphic,
+
+742
+01:03:38,740 --> 01:03:40,900
+or homeomorphic graph.
+
+743
+01:03:42,180 --> 01:03:44,660
+So as you can see, the important part is
+
+744
+01:03:47,840 --> 01:03:51,480
+the general graph or form does not change.
+
+745
+01:03:51,940 --> 01:04:02,720
+importantly the degree for the original one does not change okay so that's the
+
+746
+01:04:02,720 --> 01:04:13,520
+important one okay let's see a new idea about kratosiki theory okay this one is
+
+747
+01:04:13,520 --> 01:04:20,660
+also help you to understand where how to decide is a planner or not a graph is
+
+748
+01:04:21,940 --> 01:04:25,280
+contains a non-planner subgraph, no problem, right?
+
+749
+01:04:26,780 --> 01:04:30,540
+So this theorem said, a graph is non-planner
+
+750
+01:04:30,540 --> 01:04:33,360
+if and only if it contains a subgraph,
+
+751
+01:04:34,620 --> 01:04:38,840
+homeomorphic, okay, QK33 or K5.
+
+752
+01:04:39,780 --> 01:04:40,420
+什么意思呢?
+
+753
+01:04:44,900 --> 01:04:46,180
+他讲的是一个图,它不是平面图,
+
+754
+01:04:48,460 --> 01:04:49,740
+当且井汤,他的子图里面
+
+755
+01:04:53,920 --> 01:04:54,920
+有K33和K5的同批图的时候。
+
+756
+01:04:56,740 --> 01:04:57,740
+同批图的时候。
+
+757
+01:04:59,740 --> 01:05:01,520
+Please remember that.
+
+758
+01:05:01,600 --> 01:05:05,140
+It emphasizes what is K33 and K5.
+
+759
+01:05:05,900 --> 01:05:06,380
+It is here.
+
+760
+01:05:09,940 --> 01:05:11,940
+这两个就K33,K5。
+
+761
+01:05:16,260 --> 01:05:17,260
+OK.
+
+762
+01:05:18,540 --> 01:05:19,540
+强调了。
+
+763
+01:05:19,740 --> 01:05:25,880
+简单来讲就是说这个 Kuratorsky theorem tells us
+
+764
+01:05:25,880 --> 01:05:34,800
+if you see some similarity of the subgraphs very similar to such thing,
+
+765
+01:05:35,720 --> 01:05:36,860
+not exactly the same,
+
+766
+01:05:38,500 --> 01:05:41,180
+then this graph definitely non-planner.
+
+767
+01:05:44,260 --> 01:05:45,320
+也就是说K5肯定不是一个平面图,
+
+768
+01:05:45,380 --> 01:05:49,640
+就是无论你怎么去做,它都有相交的crossing,
+
+769
+01:05:49,740 --> 01:05:52,320
+包括 k33也是香蕉的coursing
+
+770
+01:05:52,320 --> 01:05:55,740
+okay k33其实我们
+
+771
+01:05:55,740 --> 01:05:59,600
+I just use an example to discuss right
+
+772
+01:05:59,600 --> 01:06:04,440
+if you still remember we have proved step by step
+
+773
+01:06:10,000 --> 01:06:15,740
+here right this example I already proved step by step
+
+774
+01:06:15,740 --> 01:06:18,640
+now I use it why I want to use it
+
+775
+01:06:19,740 --> 01:06:22,400
+there is a theory emphasized it.
+
+776
+01:06:25,000 --> 01:06:25,680
+也就是说现在就有一个定理,
+
+777
+01:06:25,760 --> 01:06:26,940
+他就直接告诉你了。
+
+778
+01:06:29,520 --> 01:06:30,200
+如果你有类似于这样的和类似于K5的,
+
+779
+01:06:30,220 --> 01:06:35,920
+then no doubt it's definitely not a planner.
+
+780
+01:06:36,080 --> 01:06:38,900
+But of course, usually theory will have proof.
+
+781
+01:06:39,580 --> 01:06:42,940
+But of course, I'm not required to understand the proof here.
+
+782
+01:06:43,240 --> 01:06:44,600
+Okay, that's the example.
+
+783
+01:06:46,540 --> 01:06:47,220
+唯一的点就是说,
+
+784
+01:06:47,220 --> 01:06:52,940
+you should know what is homeomorphic you saw homeomorphic a general judge of
+
+785
+01:06:52,940 --> 01:06:59,660
+you go to a city ah ah that's an eaton can tally go beautiful add a vertex here
+
+786
+01:06:59,660 --> 01:07:06,500
+no problem it's still homeomorphic that's the example okay
+
+787
+01:07:06,500 --> 01:07:09,220
+Okay, K5, K33, no problem, right?
+
+788
+01:07:09,400 --> 01:07:11,240
+And we will design, okay.
+
+789
+01:07:15,360 --> 01:07:19,960
+So, as you can see, something very similar.
+
+790
+01:07:21,740 --> 01:07:22,000
+What's that?
+
+791
+01:07:22,320 --> 01:07:24,500
+It's definitely K5, right?
+
+792
+01:07:27,920 --> 01:07:33,020
+And GH are both non-planner
+
+793
+01:07:33,020 --> 01:07:35,880
+because it has isomorphic here.
+
+794
+01:07:40,560 --> 01:07:45,260
+H and K five okay that's morphic and G
+
+795
+01:07:45,260 --> 01:07:48,640
+contains subgraph of homer so now of
+
+796
+01:07:48,640 --> 01:07:52,600
+them are planner graph you saw kind of
+
+797
+01:07:52,600 --> 01:07:53,080
+take a chinko
+
+798
+01:07:53,080 --> 01:07:55,760
+gel pattern has a homeomorphic in
+
+799
+01:07:55,760 --> 01:07:59,040
+diggers later then you can say yeah not
+
+800
+01:07:59,040 --> 01:08:03,780
+planner okay very simple right kind of
+
+801
+01:08:03,780 --> 01:08:06,820
+but I will not tell you the details.
+
+802
+01:08:07,040 --> 01:08:09,480
+It has the information list here.
+
+803
+01:08:09,780 --> 01:08:15,040
+Okay, so now we finished this part of our discussion
+
+804
+01:08:15,040 --> 01:08:20,500
+and here we are now reaching the last part
+
+805
+01:08:20,500 --> 01:08:23,080
+I want to talk about, graph calorie.
+
+806
+01:08:23,380 --> 01:08:26,100
+Actually, this is a very interesting part
+
+807
+01:08:28,460 --> 01:08:31,060
+because we learned this idea
+
+808
+01:08:31,060 --> 01:08:36,060
+when we are actually elementary school students.
+
+809
+01:08:37,360 --> 01:08:37,580
+Why?
+
+810
+01:08:38,320 --> 01:08:42,380
+At least my children, elementary school students,
+
+811
+01:08:42,620 --> 01:08:43,380
+they have learned this.
+
+812
+01:08:43,500 --> 01:08:47,900
+Okay, so what is graph coloring?
+
+813
+01:08:49,820 --> 01:08:52,980
+Okay, this is a very interesting question.
+
+814
+01:08:53,280 --> 01:08:53,780
+Let's see.
+
+815
+01:08:54,080 --> 01:08:55,980
+Two regions share a border
+
+816
+01:08:56,840 --> 01:08:58,680
+and we should assign different color.
+
+817
+01:09:13,720 --> 01:09:16,100
+I guess some of you, if you learned,
+
+818
+01:09:17,360 --> 01:09:23,020
+I assume you definitely learned the kind of question before, right?
+
+819
+01:09:23,360 --> 01:09:23,840
+Okay.
+
+820
+01:09:24,440 --> 01:09:26,620
+So what do we call it as a geograph?
+
+821
+01:09:27,860 --> 01:09:28,760
+Represent the map.
+
+822
+01:09:28,760 --> 01:09:31,760
+okay so what we call as the geograph
+
+823
+01:09:34,760 --> 01:09:44,140
+do you just my actually you still if you learn if you take the took the middle
+
+824
+01:09:44,140 --> 01:09:53,400
+examination I guess it challenge you a lot right challenger do do to do to okay
+
+825
+01:09:53,400 --> 01:09:59,940
+Okay, here, since we are playing with a map, right,
+
+826
+01:10:00,000 --> 01:10:02,260
+a country map or region map, here,
+
+827
+01:10:02,380 --> 01:10:04,160
+vertex stands for the region,
+
+828
+01:10:04,460 --> 01:10:06,800
+H stands for the constraint,
+
+829
+01:10:07,000 --> 01:10:10,820
+because we require the neighbor in different color, right?
+
+830
+01:10:10,920 --> 01:10:13,100
+So if they are connect to each other,
+
+831
+01:10:13,140 --> 01:10:16,220
+means that they must be know same color.
+
+832
+01:10:17,020 --> 01:10:18,700
+Okay, here is example.
+
+833
+01:10:19,820 --> 01:10:21,720
+Okay, and that's the region.
+
+834
+01:10:23,400 --> 01:10:30,300
+we got a little okay as you can see different reaching we have different
+
+835
+01:10:30,300 --> 01:10:39,020
+vertex and if they are border connect to each other okay so map carry okay that's
+
+836
+01:10:39,020 --> 01:10:43,980
+what I already mentioned what the largest complete graph represented by a
+
+837
+01:10:43,980 --> 01:10:44,980
+map okay
+
+838
+01:10:44,980 --> 01:10:48,020
+Okay, this is very simple, I will give it a color,
+
+839
+01:10:48,180 --> 01:10:51,280
+the largest map, what is complement graph,
+
+840
+01:10:51,460 --> 01:10:53,940
+actually I mentioned that before, let's see.
+
+841
+01:10:54,120 --> 01:10:55,840
+If there is only one vertex,
+
+842
+01:10:58,480 --> 01:11:01,760
+okay, so it means that's the whole region, right?
+
+843
+01:11:01,920 --> 01:11:04,900
+Because we are talking about map coloring, okay.
+
+844
+01:11:05,060 --> 01:11:07,180
+It is a planner, no problem.
+
+845
+01:11:07,840 --> 01:11:11,080
+There's another very typical example we learned,
+
+846
+01:11:11,080 --> 01:11:18,160
+neighboring country or neighbor the regions okay it is planner okay triangle
+
+847
+01:11:18,160 --> 01:11:25,100
+so some map like that different color right so is planner how about this one
+
+848
+01:11:27,700 --> 01:11:37,080
+firstly we know it is not planner right so we definitely should add more color
+
+849
+01:11:37,080 --> 01:11:45,360
+here as you can see in the middle something like that okay and we can
+
+850
+01:11:45,360 --> 01:11:53,620
+change it how do you change and here right so there's another way but take
+
+851
+01:11:53,620 --> 01:11:55,600
+这个换到外面来,这个数目。
+
+852
+01:11:57,260 --> 01:11:58,700
+Okay, this one.
+
+853
+01:12:03,060 --> 01:12:06,000
+This is K5, right?
+
+854
+01:12:06,280 --> 01:12:10,640
+As I just mentioned, whether K5 is plan or not.
+
+855
+01:12:11,900 --> 01:12:18,240
+Okay, we cannot use coloring map to stand for it.
+
+856
+01:12:18,360 --> 01:12:23,020
+If limit,就说我们这个颜色不能小于它的景点数量,
+
+857
+01:12:25,760 --> 01:12:26,960
+你要是全部一样的话当然可以,不能小于它低点数量。
+
+858
+01:12:26,960 --> 01:12:29,740
+Okay, so here it is not planner.
+
+859
+01:12:29,940 --> 01:12:35,220
+So that's what we learned based on the knowledge we used for the planner.
+
+860
+01:12:35,420 --> 01:12:36,780
+Okay, let's see more.
+
+861
+01:12:39,040 --> 01:12:41,100
+What is graph coloring problem?
+
+862
+01:12:41,380 --> 01:12:42,940
+Let's summarize the problem here.
+
+863
+01:12:43,080 --> 01:12:47,220
+If we have graph, we need to have minimum number of colors
+
+864
+01:12:47,220 --> 01:12:50,180
+so that no two adjacent vertices get the same color.
+
+865
+01:12:52,820 --> 01:12:53,420
+比如说我们当时要限制我们的color的元素,
+
+866
+01:12:53,620 --> 01:12:54,060
+怎么现在?
+
+867
+01:12:55,840 --> 01:12:56,440
+是要小于等于它的顶点数量。
+
+868
+01:12:56,440 --> 01:12:56,880
+OK.
+
+869
+01:12:57,640 --> 01:12:58,240
+要不然大于等于,
+
+870
+01:12:59,540 --> 01:13:00,140
+那我们就没有这个问题了。
+
+871
+01:13:00,140 --> 01:13:00,740
+OK.
+
+872
+01:13:00,820 --> 01:13:01,600
+Let's see.
+
+873
+01:13:01,780 --> 01:13:02,780
+This example,
+
+874
+01:13:04,100 --> 01:13:05,340
+as we can see,
+
+875
+01:13:06,020 --> 01:13:06,840
+as I just mentioned,
+
+876
+01:13:06,940 --> 01:13:09,140
+how many we should use?
+
+877
+01:13:09,400 --> 01:13:10,380
+At most,
+
+878
+01:13:11,020 --> 01:13:12,480
+four different color, right?
+
+879
+01:13:12,580 --> 01:13:13,520
+No problem.
+
+880
+01:13:13,740 --> 01:13:15,320
+At most, four color.
+
+881
+01:13:15,660 --> 01:13:18,100
+Whether we can make it,
+
+882
+01:13:18,200 --> 01:13:19,580
+the color number smaller?
+
+883
+01:13:19,920 --> 01:13:20,520
+Yes.
+
+884
+01:13:20,860 --> 01:13:21,460
+OK.
+
+885
+01:13:21,720 --> 01:13:22,920
+So now it's three.
+
+886
+01:13:23,620 --> 01:13:26,720
+Whether we can continue to do that work?
+
+887
+01:13:27,660 --> 01:13:29,800
+Yes, so now is two.
+
+888
+01:13:31,420 --> 01:13:35,540
+And the smaller color, the same, it is one.
+
+889
+01:13:36,180 --> 01:13:41,500
+However, the two adjacent get the same color, right?
+
+890
+01:13:41,640 --> 01:13:45,780
+So it does not meet the graph color problem.
+
+891
+01:13:46,080 --> 01:13:50,900
+But here, we can have from at least one to four.
+
+892
+01:13:50,900 --> 01:13:56,780
+but if we require to meet the graph color problem the correct answer is here
+
+893
+01:13:57,920 --> 01:14:06,400
+all right Janaya to ran so to to so when he had a
+
+894
+01:14:06,400 --> 01:14:11,620
+y'all to just so what may you do you saw the jigger y'all so sure yeah
+
+895
+01:14:11,620 --> 01:14:16,000
+n'go ball jay-shan in the tinta we young answer yeah me to the answer so
+
+896
+01:14:16,000 --> 01:14:24,320
+okay so there's a requirement okay let's see some definition here chromatic
+
+897
+01:14:24,320 --> 01:14:37,200
+number chromatic number sunset okay take a job so so so okay chromatic number it
+
+898
+01:14:37,200 --> 01:14:42,400
+will require smallest number of colors need to produce a proper coloring of G
+
+899
+01:14:42,400 --> 01:14:49,740
+So what we need to calculate is xg, the chromatic number.
+
+900
+01:14:50,980 --> 01:15:00,320
+So what the number is, and the number should be the least number for coloring the map.
+
+901
+01:15:09,460 --> 01:15:11,180
+Let's see the example here.
+
+902
+01:15:13,220 --> 01:15:16,040
+cycle graph okay that's what we have
+
+903
+01:15:16,040 --> 01:15:19,060
+learned right a cycle okay this is cycle
+
+904
+01:15:19,060 --> 01:15:23,840
+okay how many number it will be okay X
+
+905
+01:15:23,840 --> 01:15:28,300
+is true so let's see another cycle how
+
+906
+01:15:28,300 --> 01:15:32,300
+many number we should see here one two
+
+907
+01:15:32,300 --> 01:15:37,680
+see one two three yellow or green blue
+
+908
+01:15:37,680 --> 01:15:39,900
+blue and red, so three.
+
+909
+01:15:41,040 --> 01:15:42,720
+And let's see wheel graph.
+
+910
+01:15:44,820 --> 01:15:46,620
+So this is a wheel, right?
+
+911
+01:15:47,280 --> 01:15:49,800
+And how many number we should have?
+
+912
+01:15:50,160 --> 01:15:54,900
+So red, blue and yellow, so number is three.
+
+913
+01:15:55,300 --> 01:15:57,000
+Okay, that's more complex.
+
+914
+01:15:57,280 --> 01:15:58,840
+How many number we will have?
+
+915
+01:15:59,000 --> 01:16:00,260
+Four, okay.
+
+916
+01:16:00,500 --> 01:16:04,600
+So here some simple problem actually we can do it
+
+917
+01:16:04,600 --> 01:16:05,480
+by hands, right?
+
+918
+01:16:05,480 --> 01:16:09,800
+but of course, this create mathematics
+
+919
+01:16:09,800 --> 01:16:12,660
+not required to do it by hand, but by computer.
+
+920
+01:16:18,880 --> 01:16:22,980
+Okay, so some more definitions we should learn here.
+
+921
+01:16:24,040 --> 01:16:26,980
+Let's see complete graph, that's what we have learned.
+
+922
+01:16:29,840 --> 01:16:33,580
+So, this one is n, this is n.
+
+923
+01:16:35,480 --> 01:16:37,420
+for this one, we can
+
+924
+01:16:37,420 --> 01:16:38,660
+not
+
+925
+01:16:41,040 --> 01:16:41,760
+consider
+
+926
+01:16:41,760 --> 01:16:43,620
+the graph with
+
+927
+01:16:43,620 --> 01:16:45,720
+a mean number and this number is
+
+928
+01:16:45,720 --> 01:16:47,720
+exactly the same
+
+929
+01:16:47,720 --> 01:16:48,320
+as
+
+930
+01:16:50,240 --> 01:16:51,680
+the vertices
+
+931
+01:16:51,680 --> 01:16:52,220
+number.
+
+932
+01:16:53,400 --> 01:16:55,560
+Exact same as the vertices
+
+933
+01:16:55,560 --> 01:16:57,760
+number. So y is
+
+934
+01:16:57,760 --> 01:16:59,180
+4 and y is 5.
+
+935
+01:17:00,640 --> 01:17:01,360
+对于全图来讲的话
+
+936
+01:17:01,360 --> 01:17:03,320
+k 你只能保证
+
+937
+01:17:03,320 --> 01:17:05,200
+它是这个图的
+
+938
+01:17:06,140 --> 01:17:06,820
+它是这个顶点的数量。
+
+939
+01:17:06,820 --> 01:17:07,740
+Let's see tree.
+
+940
+01:17:09,360 --> 01:17:11,460
+This is a typical tree, right?
+
+941
+01:17:12,420 --> 01:17:15,120
+From the bottom to up,
+
+942
+01:17:15,800 --> 01:17:18,620
+and you can use only two different colors.
+
+943
+01:17:18,820 --> 01:17:21,020
+You can stand for this one.
+
+944
+01:17:23,580 --> 01:17:25,400
+And the bipartite graph.
+
+945
+01:17:26,480 --> 01:17:29,500
+Let's see bipartite.
+
+946
+01:17:30,440 --> 01:17:31,120
+这个是什么?
+
+947
+01:17:33,320 --> 01:17:35,900
+R then two, that's what we have learned.
+
+948
+01:17:37,300 --> 01:17:39,800
+As we call, a graph is bipartite
+
+949
+01:17:39,800 --> 01:17:42,660
+if all vertices can be partitioned into two parts.
+
+950
+01:17:42,860 --> 01:17:46,740
+So any adjacent vertices are in different partition.
+
+951
+01:17:47,220 --> 01:17:48,060
+You should .
+
+952
+01:17:50,780 --> 01:17:53,520
+Which means how many colors we can have?
+
+953
+01:17:54,440 --> 01:17:58,820
+We can use only two for the bipartite graph.
+
+954
+01:18:00,200 --> 01:18:01,060
+Here is the example.
+
+955
+01:18:01,780 --> 01:18:07,620
+that's about part tight graph we have learnt right using example and so after
+
+956
+01:18:07,620 --> 01:18:13,740
+the change we can divide into two sides right and then only two color can be
+
+957
+01:18:13,740 --> 01:18:23,540
+used if a FDG so how to change it here so it will be something like that so
+
+958
+01:18:23,540 --> 01:18:30,220
+only two colors we can use only two colors who we can use for the bipartite
+
+959
+01:18:31,820 --> 01:18:40,180
+Actually, I'm using the example to talk about all those different types of graph you have learned.
+
+960
+01:18:40,920 --> 01:18:45,700
+And firstly, you decide which type of those graph are,
+
+961
+01:18:45,860 --> 01:18:49,820
+then you will know how many colors it could be.
+
+962
+01:18:57,260 --> 01:18:58,020
+比如说我刚刚是把所有的这一类的graph全部把它列出来。
+
+963
+01:19:00,860 --> 01:19:01,560
+但当然你要对所有的这种类型的定义去了解。
+
+964
+01:19:02,820 --> 01:19:03,520
+了解以后你就知道,
+
+965
+01:19:05,560 --> 01:19:06,260
+不同的图它可能最大的数量会不一样。
+
+966
+01:19:06,260 --> 01:19:10,180
+For example, by partite, you have 2,是吧?
+
+967
+01:19:10,900 --> 01:19:16,560
+But for complete, the number is the vertex number itself.
+
+968
+01:19:16,740 --> 01:19:17,880
+It is a tree.
+
+969
+01:19:17,960 --> 01:19:19,920
+It is 2, the number.
+
+970
+01:19:20,200 --> 01:19:22,880
+I will not go back more,
+
+971
+01:19:22,880 --> 01:19:29,200
+more but what I want to tell you is to summarize the rule for you so that you
+
+972
+01:19:29,200 --> 01:19:35,940
+can decide quickly how many num how many num how many colors it would be for
+
+973
+01:19:35,940 --> 01:19:44,760
+different types of graph okay all right so why I summarize like that actually I
+
+974
+01:19:44,760 --> 01:19:46,080
+I already mentioned here,
+
+975
+01:19:47,080 --> 01:19:51,640
+no formula for the chromatic number x.
+
+976
+01:19:51,940 --> 01:20:00,240
+So for example here, that's what we just saw, right?
+
+977
+01:20:01,260 --> 01:20:01,600
+What is that?
+
+978
+01:20:01,760 --> 01:20:06,100
+Complete, complete graph for this one.
+
+979
+01:20:07,380 --> 01:20:09,940
+And this is real graph, right?
+
+980
+01:20:10,280 --> 01:20:12,200
+W, complete K.
+
+981
+01:20:12,200 --> 01:20:14,860
+Okay, if they are belong to different,
+
+982
+01:20:15,520 --> 01:20:18,880
+then we will have different graphs, let's see.
+
+983
+01:20:20,020 --> 01:20:21,740
+Give a graph of size K.
+
+984
+01:20:24,620 --> 01:20:28,840
+If chromatic number larger than K is not possible, right?
+
+985
+01:20:29,520 --> 01:20:34,440
+Because the most number we can see is a vertex number itself.
+
+986
+01:20:34,440 --> 01:20:43,440
+self you so should India should the center sure yeah okay so X is K is a
+
+987
+01:20:43,440 --> 01:20:48,040
+complete graph that's what we just talked about so first you should see
+
+988
+01:20:48,040 --> 01:20:55,260
+whether it's complete or not and the smaller or other except the complete one
+
+989
+01:20:55,260 --> 01:21:03,360
+okay keep that mind if this graph is not complete graph then the color number
+
+990
+01:21:04,440 --> 01:21:08,640
+chromatic number chromatic number you have to check our number chromatic not
+
+991
+01:21:08,640 --> 01:21:21,600
+so so chromatic number must be then the vertex number okay okay so we should
+
+992
+01:21:21,600 --> 01:21:29,480
+analyze the subgraph of graph of a graph itself if subgraph is complete then we
+
+993
+01:21:29,480 --> 01:21:34,360
+we definitely know this X is larger than K,
+
+994
+01:21:34,660 --> 01:21:36,260
+or equivalent to K.
+
+995
+01:21:38,180 --> 01:21:39,200
+Let's see some example here.
+
+996
+01:21:41,380 --> 01:21:42,460
+This is what we saw, right?
+
+997
+01:21:44,800 --> 01:21:49,900
+We know it is a complete graph, right?
+
+998
+01:21:50,040 --> 01:21:51,000
+No problem, right?
+
+999
+01:21:52,660 --> 01:21:52,760
+Okay.
+
+1000
+01:21:54,900 --> 01:21:55,500
+And let's see more.
+
+1001
+01:21:56,820 --> 01:22:05,840
+since we have this part so what we just learned
+
+1002
+01:22:05,840 --> 01:22:14,140
+Tom P's ma home you're morphic homeomorphic homeomorphic right so
+
+1003
+01:22:14,140 --> 01:22:22,620
+because we see Tom P we learned this word again so we don't need to think
+
+1004
+01:22:22,620 --> 01:22:31,060
+more seconds we can purely decide how many because we added one more here
+
+1005
+01:22:31,060 --> 01:22:38,540
+right so the color number definitely will be fine okay that's here we add
+
+1006
+01:22:38,540 --> 01:22:46,760
+more but since it's not connection wall so number is for yours is equivalent or
+
+1007
+01:22:46,760 --> 01:22:52,140
+larger size at least to be for maybe larger but we don't know we should
+
+1008
+01:22:52,620 --> 01:22:55,380
+with the vertical new place.
+
+1009
+01:22:57,100 --> 01:22:57,780
+比如说我们新的一个部分需要判断。
+
+1010
+01:23:01,160 --> 01:23:03,100
+至少它要大于等于这个complete graph, okay.
+
+1011
+01:23:03,860 --> 01:23:05,760
+Alright, as you can see,
+
+1012
+01:23:05,820 --> 01:23:11,180
+we have the homeomorphic graph, subgraph here.
+
+1013
+01:23:11,360 --> 01:23:16,720
+So at least to be full, right, the chromatic number.
+
+1014
+01:23:17,520 --> 01:23:20,260
+And here, since the neighbor was that,
+
+1015
+01:23:23,300 --> 01:23:24,140
+What's that?
+
+1016
+01:23:26,000 --> 01:23:27,500
+Bridge, right?
+
+1017
+01:23:31,820 --> 01:23:32,840
+That's what we just learned.
+
+1018
+01:23:33,020 --> 01:23:35,040
+So number is four.
+
+1019
+01:23:36,500 --> 01:23:39,900
+Okay, so for here, you should understand
+
+1020
+01:23:40,600 --> 01:23:45,960
+whether there is a complete graph in the whole map.
+
+1021
+01:23:46,960 --> 01:23:48,320
+And if there is complete graph,
+
+1022
+01:23:50,260 --> 01:23:55,460
+the x should be no smaller than the size of the subgraph
+
+1023
+01:23:55,460 --> 01:23:58,000
+and then continue to see the other part.
+
+1024
+01:24:12,100 --> 01:24:14,700
+Let's see some application here.
+
+1025
+01:24:15,880 --> 01:24:19,020
+A flight needs a gate in an airport.
+
+1026
+01:24:50,260 --> 01:24:53,580
+It's not computer science, it's industrial engineering.
+
+1027
+01:24:55,800 --> 01:24:58,520
+So Georgia Tech is in the US Air Force.
+
+1028
+01:24:58,760 --> 01:25:02,500
+So the Air Force has one of the largest aviation companies in the United States,
+
+1029
+01:25:02,500 --> 01:25:03,140
+called Delta.
+
+1030
+01:25:03,820 --> 01:25:09,180
+And they hire a lot of computer science and industrial engineering students
+
+1031
+01:25:09,180 --> 01:25:11,760
+to do AI optimization.
+
+1032
+01:25:11,940 --> 01:25:15,620
+One of the most classic problems is gate arrangement.
+
+1033
+01:25:16,160 --> 01:25:20,020
+Because in the US, its airport is smaller than its number of planes.
+
+1034
+01:25:21,260 --> 01:25:26,760
+The airport in the United States is the world's largest airport with the largest traffic.
+
+1035
+01:25:28,440 --> 01:25:32,880
+Basically, every half hour, the gate will change a flight.
+
+1036
+01:25:33,260 --> 01:25:35,480
+So its traffic is particularly large.
+
+1037
+01:25:35,540 --> 01:25:40,200
+Because in the United States, the airport is on the same floor as the airport.
+
+1038
+01:25:40,200 --> 01:25:42,720
+That is, you can get on the plane or get off the plane.
+
+1039
+01:25:43,020 --> 01:25:46,640
+Many airports in China are separated by gates.
+
+1040
+01:25:47,000 --> 01:25:49,820
+You get on the plane and get off the plane, usually it's on the next floor.
+
+1041
+01:26:41,180 --> 01:26:44,000
+So that's why I want to use this example here.
+
+1042
+01:26:44,440 --> 01:26:45,920
+It's a very typical example.
+
+1043
+01:26:46,300 --> 01:26:48,900
+How many gates need to fill this flight schedule?
+
+1044
+01:26:48,900 --> 01:26:56,080
+schedule. So as you can see, the time, t, right, and the gates. And so we should make
+
+1045
+01:26:56,080 --> 01:27:06,060
+sure, firstly, the vertex, let's see, vertex is the flight, and I mentioned the h is constraint.
+
+1046
+01:27:07,100 --> 01:27:16,620
+Why is h? Share the same time slot. So we could not require the gate have two flights
+
+1047
+01:27:16,620 --> 01:27:21,640
+at same time right just a ego identical book and at home she'll young young
+
+1048
+01:27:21,640 --> 01:27:32,560
+faces as a dentist so and but we have several time window right so that's what
+
+1049
+01:27:32,560 --> 01:27:39,800
+we should know okay this is example conventionally we use a table sample out
+
+1050
+01:27:39,800 --> 01:27:46,900
+here actually it is a coloring map okay I do not describe the details but you
+
+1051
+01:27:46,900 --> 01:27:58,620
+can use that for you okay so ABCD the other flight and then in different time
+
+1052
+01:27:58,620 --> 01:28:06,140
+slots we can create and how to arrange it firstly we can see there there is a
+
+1053
+01:28:06,140 --> 01:28:14,700
+a partite right this is a partite and we can have ABC and ED into two parts so
+
+1054
+01:28:14,700 --> 01:28:24,080
+this can be true color and then we have F added so three of the color number a
+
+1055
+01:28:24,080 --> 01:28:31,180
+the X not not color numbers of chromatic number is X is three so that we can
+
+1056
+01:28:31,180 --> 01:28:42,280
+can arrange the same arrange the window time the time okay the time window for
+
+1057
+01:28:42,280 --> 01:28:52,760
+the flight okay and so at least there are three gates we definitely need it
+
+1058
+01:29:22,760 --> 01:29:26,440
+A, B, C, these three planes can use this gate.
+
+1059
+01:29:26,600 --> 01:29:28,540
+E, D can use the second gate.
+
+1060
+01:29:28,860 --> 01:29:32,120
+F, because of constraints, time.
+
+1061
+01:29:32,880 --> 01:29:36,260
+F's time is the same as A, B, and C.
+
+1062
+01:29:36,700 --> 01:29:38,780
+So it can't use their gate.
+
+1063
+01:29:38,980 --> 01:29:40,420
+So it's the same as E, D.
+
+1064
+01:29:40,760 --> 01:29:42,960
+So it has to change to the third gate.
+
+1065
+01:29:43,260 --> 01:29:48,560
+So the color of color, chromatic, is a gate number.
+
+1066
+01:29:48,560 --> 01:29:52,980
+Okay, so there's a very interesting question.
+
+1067
+01:29:53,900 --> 01:29:57,420
+But as you know, we only have how many?
+
+1068
+01:29:57,540 --> 01:30:02,760
+One, two, six flights and three gates and 24 hours.
+
+1069
+01:30:02,920 --> 01:30:06,900
+Actually, if you half hour, that's three hours.
+
+1070
+01:30:07,100 --> 01:30:07,980
+Very simple, right?
+
+1071
+01:30:08,140 --> 01:30:13,160
+But in a huge airport, there's hundreds of gates
+
+1072
+01:30:13,160 --> 01:30:17,860
+and thousands of flights and the time is limited, right?
+
+1073
+01:30:18,560 --> 01:30:24,600
+you will see the problem very difficult okay let's see another application here
+
+1074
+01:30:26,860 --> 01:30:31,660
+examination of subject conflict if students takes both subject to the
+
+1075
+01:30:31,660 --> 01:30:39,760
+cinema trees yeah sure if you have saw if you have the course at the same time
+
+1076
+01:30:39,760 --> 01:30:46,920
+unfortunately you have given another one right so how many different times loss
+
+1077
+01:30:48,560 --> 01:30:48,840
+should arrange.
+
+1078
+01:30:50,320 --> 01:30:51,120
+就说老师排课的时候,
+
+1079
+01:30:51,180 --> 01:30:52,560
+尽量的是要保证什么,
+
+1080
+01:30:53,880 --> 01:30:54,880
+那些课不要重合了,是吧?
+
+1081
+01:30:55,300 --> 01:31:00,060
+So here, vertex is a different course.
+
+1082
+01:31:01,160 --> 01:31:05,000
+H, a student take two course,
+
+1083
+01:31:05,120 --> 01:31:06,560
+definitely an H,是吧?
+
+1084
+01:31:08,960 --> 01:31:09,760
+学生不能在同一个时间学两门课。
+
+1085
+01:31:09,760 --> 01:31:10,420
+为什么?
+
+1086
+01:31:12,300 --> 01:31:13,900
+我们在学这个Cardinal,我们讲了,
+
+1087
+01:31:15,460 --> 01:31:16,260
+H在这里代表的是constraint.
+
+1088
+01:31:17,180 --> 01:31:17,980
+Constraint.
+
+1089
+01:31:26,280 --> 01:31:40,060
+So for this example, we have such a relation, A, C, D, J, similar to the last flight, A, B, C, D, E, F, similarly.
+
+1090
+01:31:43,780 --> 01:31:51,880
+similarly and then you'll see ABCD and the red one means okay I have the cost here okay
+
+1091
+01:31:51,880 --> 01:32:01,320
+so for example AD right AD they are connected because they are both red okay something like
+
+1092
+01:32:01,320 --> 01:32:09,140
+that and the AC they are connected right because and AD okay anyway so that's why they have
+
+1093
+01:32:10,060 --> 01:32:16,300
+time okay and my question is how many different time time slot we should
+
+1094
+01:32:16,300 --> 01:32:27,980
+assign okay here we firstly define the pop high tight okay then we just see to
+
+1095
+01:32:27,980 --> 01:32:33,760
+add in okay so how many three okay so pop high tight definitely to the X is
+
+1096
+01:32:33,760 --> 01:32:35,340
+is two and because we have three.
+
+1097
+01:32:36,020 --> 01:32:38,580
+So the final answer is three.
+
+1098
+01:32:40,040 --> 01:32:40,640
+Okay.
+
+1099
+01:32:41,720 --> 01:32:45,780
+For this one, since time limit, I will jump quickly.
+
+1100
+01:32:46,200 --> 01:32:49,860
+But it asks you to offer several course
+
+1101
+01:32:49,860 --> 01:32:52,300
+and student cannot take more than one.
+
+1102
+01:32:52,660 --> 01:32:57,240
+So similar to last one, so I will not have you issue here.
+
+1103
+01:32:58,900 --> 01:33:03,080
+So in simple words, firstly you should build up the map here
+
+1104
+01:33:03,760 --> 01:33:07,160
+and then you find the complete of here,
+
+1105
+01:33:07,280 --> 01:33:08,860
+the complete is K four.
+
+1106
+01:33:09,080 --> 01:33:10,120
+So you find it.
+
+1107
+01:33:10,280 --> 01:33:12,800
+So definitely the number should be no more than four.
+
+1108
+01:33:12,900 --> 01:33:17,860
+Then you can see that the new color one by one,
+
+1109
+01:33:17,920 --> 01:33:21,180
+and you see, and this is then you see the bipartite.
+
+1110
+01:33:22,680 --> 01:33:24,520
+Okay, so the number is four.
+
+1111
+01:33:24,900 --> 01:33:28,400
+So till here, we have finished all our discussion
+
+1112
+01:33:28,400 --> 01:33:29,940
+about discrete mathematics.
+
+1113
+01:33:29,940 --> 01:33:39,140
+As beginning you think is a little bit further away from the artificial intelligence and
+
+1114
+01:33:39,140 --> 01:33:45,620
+later on as you can see especially by this chapter you are seeing actually many graph
+
+1115
+01:33:46,920 --> 01:33:50,080
+related to theories and colloquy.
+
+1116
+01:33:50,160 --> 01:33:56,240
+They are very related to the artificial intelligence and help you to understand the algorithm,
+
+1117
+01:33:56,440 --> 01:33:58,680
+how to design the algorithm in the future.
+
+1118
+01:33:59,940 --> 01:34:04,220
+can be successful in the course and successful in your major.
+
+1119
+01:34:04,460 --> 01:34:10,300
+And I really appreciate your keep staying in the classroom with me.
+
+1120
+01:34:10,480 --> 01:34:11,200
+I appreciate that.
+
+1121
+01:34:11,220 --> 01:34:18,140
+If you have any questions or suggestions for me to improve my quality for this course,
+
+1122
+01:34:18,220 --> 01:34:19,080
+please let me know.
+
+1123
+01:34:19,320 --> 01:34:20,600
+Again, thank you so much.
+
+1124
+01:34:20,700 --> 01:34:24,020
+And that's the end of our course in this semester.
+
+1125
+01:34:24,220 --> 01:34:24,640
+Thank you.
+
+1126
+01:34:24,740 --> 01:34:25,320
+Bye-bye.
+
+1127
+01:35:12,940 --> 01:35:14,880
+Thank you.

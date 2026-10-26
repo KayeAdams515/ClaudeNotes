@@ -1,0 +1,5179 @@
+1
+00:00:57,460 --> 00:01:00,260
+Thank you.
+
+2
+00:01:20,060 --> 00:01:25,980
+Okay, let's back to our discussion of our discrete mathematics today.
+
+3
+00:01:26,280 --> 00:01:30,440
+And thank you for those who come on time on Saturday.
+
+4
+00:01:32,160 --> 00:01:37,380
+I appreciate that. So suggest by our college,
+
+5
+00:01:38,240 --> 00:01:47,680
+they checked attendance rate and I was told some students didn't show up during the class
+
+6
+00:01:47,680 --> 00:01:50,560
+and the college will take some actions there.
+
+7
+00:01:50,680 --> 00:01:57,120
+So I would strongly suggest you be in the class on time even though I personally do
+
+8
+00:01:57,120 --> 00:02:00,520
+not require you to do that in every class.
+
+9
+00:02:00,520 --> 00:02:09,320
+but as I mentioned sometimes our college will require us to attend the class so
+
+10
+00:02:10,300 --> 00:02:19,480
+they will take some actions if I receive any message there I will let you know
+
+11
+00:02:19,480 --> 00:02:28,100
+and change some rules for our class to improve the attendance rate required by
+
+12
+00:02:28,100 --> 00:02:28,800
+by the college.
+
+13
+00:03:28,840 --> 00:03:32,060
+So if you have created this credit,
+
+14
+00:03:32,380 --> 00:03:37,600
+and you didn't follow my instructions,
+
+15
+00:03:38,540 --> 00:03:42,160
+I hope you can understand.
+
+16
+00:03:42,320 --> 00:03:45,540
+Because I have already emphasized that the school requires us to do this.
+
+17
+00:03:46,420 --> 00:03:50,760
+So if you didn't come to class,
+
+18
+00:03:50,800 --> 00:03:52,980
+and the school found this phenomenon,
+
+19
+00:03:53,140 --> 00:03:53,920
+and the consequences are corresponding,
+
+20
+00:03:54,720 --> 00:03:57,440
+I may not be able to help you.
+
+21
+00:03:59,800 --> 00:04:01,200
+可能需要你跟学院去沟通。
+
+22
+00:04:01,200 --> 00:04:03,460
+当然我会提供一个畅通的渠道,
+
+23
+00:04:05,940 --> 00:04:07,340
+让你去跟学院去沟通相关的事情。
+
+24
+00:04:09,400 --> 00:04:10,800
+当然我强调这个也是因为学院要求我,
+
+25
+00:04:10,840 --> 00:04:14,080
+作为instructor of the discrete mathematics,
+
+26
+00:04:16,600 --> 00:04:18,000
+一定要把这个事情告诉给大家。
+
+27
+00:04:19,500 --> 00:04:20,900
+当然我绝对尊重大家的自由,
+
+28
+00:04:22,420 --> 00:04:23,820
+所以不会干涉大家个人的事情。
+
+29
+00:04:25,580 --> 00:04:26,980
+但是学院它有学院的要求,
+
+30
+00:04:28,600 --> 00:04:35,960
+Okay, back to the discussion of our discrete mathematics here.
+
+31
+00:04:36,240 --> 00:04:42,780
+Today we will wrap up our discussion for all the contents in Chapter 9.
+
+32
+00:04:43,700 --> 00:04:52,800
+And so today we will dive into the last section, Chapter 9.6, partial orderings.
+
+33
+00:04:53,440 --> 00:04:55,380
+And what does partial orderings here?
+
+34
+00:04:55,380 --> 00:04:58,120
+here, as you know, partial means sum, right?
+
+35
+00:04:58,260 --> 00:05:00,780
+And ordering means the sequence.
+
+36
+00:05:01,780 --> 00:05:09,020
+So it can be said, can be described as a .
+
+37
+00:05:23,540 --> 00:05:28,900
+Okay, some problem about the electronic pen here,
+
+38
+00:05:29,080 --> 00:05:34,380
+so I could not write down the Chinese characters here.
+
+39
+00:05:34,620 --> 00:05:35,840
+So sorry about that.
+
+40
+00:05:39,040 --> 00:05:40,560
+不过简单一下,我们今天要学的就是编序。
+
+41
+00:05:40,560 --> 00:05:44,300
+So what is order? What is sequence?
+
+42
+00:05:45,260 --> 00:05:48,100
+Here is an example in our normal life.
+
+43
+00:05:49,040 --> 00:05:55,380
+Usually if we go to the cafeteria at noon or by the evening,
+
+44
+00:05:55,480 --> 00:06:04,860
+we have to stay in the sequence in a line for the food ordering in the cafeteria.
+
+45
+00:06:07,320 --> 00:06:14,460
+Or, as you can see, there are some papers, there are some ranking sequence there.
+
+46
+00:06:14,640 --> 00:06:24,100
+So these alphabetical letters, they also can be seen as sequence.
+
+47
+00:06:26,860 --> 00:06:27,580
+简单来讲是有一个秩序的意思。
+
+48
+00:06:29,560 --> 00:06:36,680
+Okay, so two days ago we learned what is equivalence, right?
+
+49
+00:06:37,620 --> 00:06:45,560
+And it has been discussed by us by using those four or six different properties.
+
+50
+00:06:46,680 --> 00:06:52,580
+What are those six different properties such as reflexive, irreflexive, transitive,
+
+51
+00:06:55,320 --> 00:06:58,760
+symmetric, asymmetric, and anti-symmetric,
+
+52
+00:06:58,880 --> 00:07:00,640
+if you still remember, right?
+
+53
+00:07:00,780 --> 00:07:09,720
+And I mentioned if the equivalence class or relation,
+
+54
+00:07:09,920 --> 00:07:12,460
+if they meet three properties,
+
+55
+00:07:12,580 --> 00:07:18,000
+such as reflexive, symmetric, and transitive,
+
+56
+00:07:18,000 --> 00:07:22,220
+transitive, they are all counted as the equivalence
+
+57
+00:07:22,220 --> 00:07:25,940
+relation. So
+
+58
+00:07:25,940 --> 00:07:29,660
+here, the partial order or the order
+
+59
+00:07:29,660 --> 00:07:33,820
+is similar to the equivalence, but
+
+60
+00:07:33,820 --> 00:07:37,940
+unlike the equivalence, we consider the
+
+61
+00:07:37,940 --> 00:07:41,520
+larger or smaller side of
+
+62
+00:07:41,520 --> 00:07:44,960
+the comparison between two relations.
+
+63
+00:07:57,500 --> 00:08:03,840
+So for example here, bigger or equal, smaller or equal.
+
+64
+00:08:04,480 --> 00:08:12,480
+That's what we have learned the notations earlier when we were the middle school students.
+
+65
+00:08:12,740 --> 00:08:15,100
+And straightly, bigger or smaller.
+
+66
+00:08:15,100 --> 00:08:21,580
+smaller so in simple words the seek the equivalency is to help you to compare
+
+67
+00:08:21,580 --> 00:08:28,400
+the relation whether whether they are called similar or not same or not but
+
+68
+00:08:28,400 --> 00:08:36,740
+here order is help to us help us to compare the larger side of the relation
+
+69
+00:08:37,340 --> 00:08:43,720
+and the smaller side of the relation so in simple words all right let's see the
+
+70
+00:08:45,320 --> 00:08:52,860
+definitions of the order as I mentioned to define the order or partial order we
+
+71
+00:08:52,860 --> 00:09:02,300
+also apply those three or six properties for our comparison so currently you are
+
+72
+00:09:02,300 --> 00:09:11,860
+seeing the properties listed here so as we can see when we talk about the bigger
+
+73
+00:09:11,860 --> 00:09:21,780
+or equal smaller or equal so a very similar properties we actually have
+
+74
+00:09:21,780 --> 00:09:32,500
+already learnt before the holiday okay for here if we consider bigger or equal
+
+75
+00:09:32,500 --> 00:09:43,300
+at least we can exclude one property here that property is let's let me see
+
+76
+00:09:43,300 --> 00:09:45,460
+whether I can use the pin here not
+
+77
+00:09:45,460 --> 00:09:47,820
+not, still not good.
+
+78
+00:10:00,680 --> 00:10:05,320
+Okay, first one we can exclude it is the asymmetric.
+
+79
+00:10:05,580 --> 00:10:09,060
+Why, because asymmetric, as I mentioned
+
+80
+00:10:09,060 --> 00:10:10,640
+when I explained the property,
+
+81
+00:10:10,640 --> 00:10:18,840
+I said it's just like one direction or one way order.
+
+82
+00:10:20,260 --> 00:10:24,980
+So, and I use a parent and son's relation, right?
+
+83
+00:10:25,060 --> 00:10:33,360
+For example, if A is B's father, B is definitely not A's father, right?
+
+84
+00:10:36,940 --> 00:10:38,340
+讨论这个大于等于或小于等于的这个符号的时候,
+
+85
+00:10:41,320 --> 00:10:44,120
+我曾经提到过这个 asymmetric是绝对不能满足的。
+
+86
+00:10:44,640 --> 00:10:44,840
+为什么?
+
+87
+00:10:45,020 --> 00:10:49,120
+因为 asymmetric它要求你必须是这种绝对的,
+
+88
+00:10:49,160 --> 00:10:52,500
+strictly one direction order,
+
+89
+00:10:52,760 --> 00:10:55,260
+也就是说你没有这种点价的关系。
+
+90
+00:10:55,260 --> 00:11:00,080
+So actually asymmetric can be excluded
+
+91
+00:11:00,080 --> 00:11:04,160
+when we talking about the larger or equal,
+
+92
+00:11:04,300 --> 00:11:05,420
+smaller or equal.
+
+93
+00:11:06,520 --> 00:11:11,400
+And if the symmetric, because of the equal part,
+
+94
+00:11:11,640 --> 00:11:13,740
+we should exclude it.
+
+95
+00:11:13,860 --> 00:11:18,120
+It means that the symmetric property can be excluded.
+
+96
+00:11:18,500 --> 00:11:23,080
+So the same reflexive can be excluded.
+
+97
+00:11:24,220 --> 00:11:27,360
+So when we talk about larger or equal,
+
+98
+00:11:27,400 --> 00:11:28,820
+smaller or equal,
+
+99
+00:11:30,080 --> 00:11:33,080
+we only have three properties left,
+
+100
+00:11:33,360 --> 00:11:38,340
+so which are reflexive, transitive, and antisymmetric.
+
+101
+00:11:40,880 --> 00:11:44,180
+Okay, so when we are talking about the equal,
+
+102
+00:11:44,480 --> 00:11:47,960
+not equal, talk about smaller or larger,
+
+103
+00:11:49,320 --> 00:11:53,780
+and here we didn't consider the equivalence anymore,
+
+104
+00:11:54,060 --> 00:11:56,140
+so only one,
+
+105
+00:11:56,140 --> 00:12:01,900
+So here is unlike the smaller or equal or larger or equal.
+
+106
+00:12:02,640 --> 00:12:04,300
+Some others should be excluded.
+
+107
+00:12:04,620 --> 00:12:12,320
+Because here we require the absolute equivalence.
+
+108
+00:12:12,920 --> 00:12:21,720
+So if we talk about that, we will think about a symmetric to be qualified, right?
+
+109
+00:12:22,440 --> 00:12:23,700
+To meet the requirement.
+
+110
+00:12:23,700 --> 00:12:32,600
+and also we know transitive can meet the requirement why because transitive can
+
+111
+00:12:32,600 --> 00:12:41,760
+also have the ordering ranking right if we know a is smaller than B and the B
+
+112
+00:12:41,760 --> 00:12:47,940
+is smaller than C so we can definitely conclude that a is smaller than C so
+
+113
+00:12:47,940 --> 00:12:52,240
+So there's a definition for the property of transition.
+
+114
+00:12:52,560 --> 00:12:54,740
+So transitive is also qualified.
+
+115
+00:12:56,100 --> 00:12:58,520
+And u-reflexive definitely is good,
+
+116
+00:12:58,680 --> 00:13:01,900
+because u-reflexive means that we have
+
+117
+00:13:01,900 --> 00:13:04,340
+e-equivalence for those two sides.
+
+118
+00:13:05,440 --> 00:13:08,160
+And anti-symmetric also qualified here,
+
+119
+00:13:08,260 --> 00:13:10,520
+because anti-symmetric is just like
+
+120
+00:13:13,580 --> 00:13:16,380
+relaxed rule for a symmetric.
+
+121
+00:13:17,940 --> 00:13:24,800
+Here, we can exclude two properties for the smaller or larger notation.
+
+122
+00:13:25,300 --> 00:13:31,580
+Here, reflexive and symmetric should be excluded for the property
+
+123
+00:13:31,580 --> 00:13:36,880
+when we consider the larger notation or smaller notation.
+
+124
+00:13:38,820 --> 00:13:46,220
+So after we understand those properties for those notations, we have already known.
+
+125
+00:13:47,940 --> 00:13:52,480
+check the new definition and what properties they may have.
+
+126
+00:13:52,840 --> 00:13:56,120
+Partially ordered set, as I mentioned,
+
+127
+00:13:56,180 --> 00:14:00,080
+as a Chinese name, partially order means .
+
+128
+00:14:00,860 --> 00:14:05,880
+Okay, so partially ordered set here means .
+
+129
+00:14:09,140 --> 00:14:11,600
+Okay, still not, so I'll use the pen.
+
+130
+00:14:24,780 --> 00:14:25,500
+Okay.
+
+131
+00:14:28,740 --> 00:14:32,900
+So let's see the definition for the partial order set.
+
+132
+00:14:33,920 --> 00:14:37,080
+So if we have a relation, R,
+
+133
+00:14:37,400 --> 00:14:41,940
+and if R is a partial order,
+
+134
+00:14:42,240 --> 00:14:43,940
+then it should be written as,
+
+135
+00:14:43,940 --> 00:14:53,340
+firstly it meets the property reflexive so we have all elements a from the
+
+136
+00:14:53,340 --> 00:15:00,920
+relation can have the relation a with the element a with itself okay and also
+
+137
+00:15:00,920 --> 00:15:07,840
+it means meets the property anti symmetric fake which is anti symmetric
+
+138
+00:15:09,100 --> 00:15:15,280
+or foundation anti-symmetric of fundraising okay and this metric so
+
+139
+00:15:15,280 --> 00:15:22,420
+there's an anti-symmetric requirement and also we can have the transitive as
+
+140
+00:15:23,120 --> 00:15:33,280
+you can see because partial order you can simply you can see it as the larger
+
+141
+00:15:33,280 --> 00:15:40,600
+or equal smaller or equal outside so it's need to have those three properties
+
+142
+00:15:40,600 --> 00:15:46,600
+to meet reflexive and dysmetric and transitive general and ha ha ha she
+
+143
+00:15:46,600 --> 00:15:50,760
+cheetah to go pan de are you single or Nikki by high-sounding
+
+144
+00:15:50,760 --> 00:15:56,780
+take a show you do you die you do you okay also meet three properties
+
+145
+00:15:56,780 --> 00:15:59,400
+reflexive, antisymmetric, and transitive.
+
+146
+00:16:00,940 --> 00:16:04,040
+Okay, let's see some examples here.
+
+147
+00:16:04,960 --> 00:16:09,200
+There are three examples now based on the definitions
+
+148
+00:16:09,200 --> 00:16:14,080
+for those properties which are partial orders
+
+149
+00:16:14,800 --> 00:16:15,540
+and which are not.
+
+150
+00:16:16,940 --> 00:16:20,540
+Okay, based on the definition, the properties
+
+151
+00:16:20,540 --> 00:16:23,860
+for this definition.
+
+152
+00:16:32,540 --> 00:16:33,020
+根据我们刚讲的概念所必须有的性质,
+
+153
+00:16:35,580 --> 00:16:36,060
+然后我们来判断这三个relation,
+
+154
+00:16:36,180 --> 00:16:38,380
+of course in a graphical way,
+
+155
+00:16:39,040 --> 00:16:43,480
+to understand which are partially ordered, which are not.
+
+156
+00:17:00,920 --> 00:17:02,940
+Liu Shiyang
+
+157
+00:17:04,780 --> 00:17:06,180
+Okay
+
+158
+00:17:08,880 --> 00:17:11,120
+Liu Sirui
+
+159
+00:17:13,500 --> 00:17:14,900
+Okay
+
+160
+00:17:17,960 --> 00:17:19,700
+Ren Xiang
+
+161
+00:17:24,040 --> 00:17:26,100
+Wang Baishu
+
+162
+00:17:26,920 --> 00:17:27,720
+Okay.
+
+163
+00:17:32,120 --> 00:17:35,400
+So can you help me to understand whether the first one
+
+164
+00:17:35,400 --> 00:17:37,800
+is partial order or not?
+
+165
+00:17:40,940 --> 00:17:45,140
+I define the whether this one meets
+
+166
+00:17:45,140 --> 00:17:47,080
+all those three properties.
+
+167
+00:17:52,720 --> 00:17:54,580
+Okay, very good.
+
+168
+00:17:54,580 --> 00:17:59,040
+so it does not meet the properties for transitive
+
+169
+00:17:59,580 --> 00:18:02,280
+so it is not partial order, right?
+
+170
+00:18:02,440 --> 00:18:04,040
+Okay, thank you, very good.
+
+171
+00:18:04,420 --> 00:18:08,280
+Okay, so the first one, I think we are very clear.
+
+172
+00:18:08,600 --> 00:18:11,420
+Definitely does not meet the transitive.
+
+173
+00:18:12,140 --> 00:18:15,600
+When we read the graphical relation,
+
+174
+00:18:21,660 --> 00:18:29,420
+for example here we cannot have the factory B or factory a right so it's not
+
+175
+00:18:29,420 --> 00:18:41,020
+transiting and let's see the second one okay whether this is partial order or
+
+176
+00:18:41,020 --> 00:18:43,140
+not okay second one
+
+177
+00:18:48,600 --> 00:18:50,120
+Xia Chunqiu.
+
+178
+00:18:54,980 --> 00:18:56,620
+Zhu Zhiwen.
+
+179
+00:19:01,440 --> 00:19:03,040
+Huang Yuekang.
+
+180
+00:19:06,200 --> 00:19:07,740
+Huang Zhuyan.
+
+181
+00:19:09,000 --> 00:19:09,280
+Okay.
+
+182
+00:19:09,320 --> 00:19:09,800
+Okay.
+
+183
+00:19:13,620 --> 00:19:16,660
+So can you help me translate with the second one?
+
+184
+00:19:25,420 --> 00:19:27,500
+Is a partial order or not?
+
+185
+00:19:37,020 --> 00:19:40,660
+So firstly, do you know whether it meets the reflexive?
+
+186
+00:19:44,860 --> 00:19:45,460
+你先说一下它是否满足这个自反的性质。
+
+187
+00:19:46,240 --> 00:19:47,200
+Reflexive property.
+
+188
+00:19:48,700 --> 00:19:50,100
+自反的性质
+
+189
+00:19:55,480 --> 00:19:56,880
+判断这个偏序
+
+190
+00:19:59,020 --> 00:20:00,420
+就是看它符不符合这三个性质
+
+191
+00:20:00,420 --> 00:20:02,400
+那我们肯定就要一个一个来
+
+192
+00:20:04,240 --> 00:20:05,640
+首先判断它是否满足自反的性质
+
+193
+00:20:10,060 --> 00:20:11,460
+满足吗
+
+194
+00:20:13,680 --> 00:20:15,080
+不满足自反的性质
+
+195
+00:20:15,080 --> 00:20:16,160
+OK
+
+196
+00:20:19,240 --> 00:20:20,040
+满足antisymmetric的性质吗?
+
+197
+00:20:30,660 --> 00:20:31,460
+在那个以图的形式来表述的时候,
+
+198
+00:20:31,720 --> 00:20:32,440
+自反是什么?
+
+199
+00:20:32,960 --> 00:20:34,420
+应该是有self loop,是吧?
+
+200
+00:20:34,500 --> 00:20:36,500
+Every vertical has a self loop.
+
+201
+00:20:40,020 --> 00:20:40,820
+那么我们看到每个顶点,
+
+202
+00:20:43,500 --> 00:20:44,300
+它是否有那个自己到自己的这个环呢?
+
+203
+00:20:47,200 --> 00:20:48,600
+Okay.
+
+204
+00:21:14,340 --> 00:21:18,100
+So firstly, we can, let's go come back here.
+
+205
+00:21:18,260 --> 00:21:22,480
+We can see it meets the reflexive, right?
+
+206
+00:21:22,680 --> 00:21:28,200
+Because every vertical here, we have it self loop.
+
+207
+00:21:28,640 --> 00:21:32,960
+And antisymmetric, so whether it meets the antisymmetric.
+
+208
+00:21:39,780 --> 00:21:40,420
+So,
+
+209
+00:21:49,820 --> 00:21:52,580
+So here, antisymmetric, we require,
+
+210
+00:21:52,740 --> 00:21:58,620
+so it means that when we want to,
+
+211
+00:22:00,800 --> 00:22:03,000
+when we want to decide it,
+
+212
+00:22:03,620 --> 00:22:09,200
+so we need to check whether the every vertical here,
+
+213
+00:22:09,200 --> 00:22:14,160
+Here, for example, AB is from R and BA is from R.
+
+214
+00:22:14,480 --> 00:22:16,620
+And if they are from R,
+
+215
+00:22:16,700 --> 00:22:19,820
+and we can have the equivalence, right?
+
+216
+00:22:20,580 --> 00:22:23,680
+And here we could not have the equivalence here,
+
+217
+00:22:23,840 --> 00:22:26,760
+so it does not meet the antisymmetric
+
+218
+00:22:27,500 --> 00:22:29,480
+and similarly transitive,
+
+219
+00:22:29,580 --> 00:22:31,320
+so I will not explain that anymore.
+
+220
+00:22:31,900 --> 00:22:36,380
+So for here, it is not a partial order,
+
+221
+00:22:36,520 --> 00:22:38,280
+but I write it down.
+
+222
+00:22:51,160 --> 00:22:56,380
+So for the last one, it is partial order.
+
+223
+00:22:56,520 --> 00:22:56,820
+Why?
+
+224
+00:22:57,160 --> 00:22:59,600
+To save your time, I will not go through them
+
+225
+00:22:59,600 --> 00:23:04,140
+in detail, but clearly it means reflexive
+
+226
+00:23:04,140 --> 00:23:08,200
+and also anti-symmetric, transitive, definitely good.
+
+227
+00:23:09,200 --> 00:23:22,780
+it is partial order okay let's see next definition here here to help you
+
+228
+00:23:22,780 --> 00:23:29,740
+understand the partial order set we are adopt a new definition here or post set
+
+229
+00:23:29,740 --> 00:23:38,400
+ah it means in Chinese our PNC because post set as you can see it just a simple
+
+230
+00:23:40,020 --> 00:23:43,000
+for partially ordered set.
+
+231
+00:23:45,200 --> 00:23:48,420
+Here, P as the first letter in the partially,
+
+232
+00:23:48,700 --> 00:23:51,540
+O as the first letter for ordered and set.
+
+233
+00:23:51,760 --> 00:23:54,500
+So sometimes we call it as a poset.
+
+234
+00:23:56,660 --> 00:24:00,580
+And here, if it is a poset,
+
+235
+00:24:00,580 --> 00:24:04,500
+so how to express the expression
+
+236
+00:24:05,120 --> 00:24:07,620
+in the discrete mathematics, let's see.
+
+237
+00:24:09,200 --> 00:24:19,280
+is a partial order relation then we use a is smaller or equal to be with the
+
+238
+00:24:19,280 --> 00:24:26,840
+partial order okay if I want to say it seems all the language you saw man
+
+239
+00:24:26,840 --> 00:24:34,280
+take a photo of them like you'll so just a smaller or equivalent to be under
+
+240
+00:24:34,280 --> 00:24:36,720
+under partial order or with partial order.
+
+241
+00:24:37,000 --> 00:24:39,060
+Okay, so that's how we pronounce it.
+
+242
+00:24:39,300 --> 00:24:43,140
+And how to express that such relation.
+
+243
+00:24:45,200 --> 00:24:47,580
+We have a pair of parentheses,
+
+244
+00:24:48,880 --> 00:24:54,600
+and the first one is a letter stand for the relation A,
+
+245
+00:24:54,780 --> 00:24:59,060
+and the second one is a notation for partial order.
+
+246
+00:24:59,940 --> 00:25:03,280
+So A, partial order, is a post set.
+
+247
+00:25:04,280 --> 00:25:04,480
+and A,
+
+248
+00:25:04,600 --> 00:25:08,040
+if you translate it into Chinese,
+
+249
+00:25:08,080 --> 00:25:08,560
+you can describe it like this.
+
+250
+00:25:09,240 --> 00:25:12,260
+Okay, now in the future when you are seeing
+
+251
+00:25:13,160 --> 00:25:15,020
+those notations in your homework
+
+252
+00:25:15,020 --> 00:25:17,100
+or in the final examination,
+
+253
+00:25:17,440 --> 00:25:20,100
+you can see what it means.
+
+254
+00:25:20,980 --> 00:25:23,380
+All right, let's see some examples
+
+255
+00:25:23,380 --> 00:25:28,960
+to understand the partial orders for the relations.
+
+256
+00:25:31,180 --> 00:25:38,460
+as here we have mentioned that greater than or equal use that notation right is
+
+257
+00:25:38,460 --> 00:25:46,940
+a partial orders for the integers here this is a comparison between those
+
+258
+00:25:46,940 --> 00:25:53,960
+integers why because the those are relation also meets such properties or
+
+259
+00:25:53,960 --> 00:25:55,860
+one by one, let's see those properties.
+
+260
+00:25:56,220 --> 00:25:57,720
+First one, reflexive.
+
+261
+00:26:00,360 --> 00:26:04,280
+A is greater than or equal to A, right?
+
+262
+00:26:04,360 --> 00:26:08,280
+No problem, for every integer, antisymmetric.
+
+263
+00:26:09,400 --> 00:26:12,640
+If A is greater or equivalent to B,
+
+264
+00:26:12,760 --> 00:26:14,620
+and B does not equal to A,
+
+265
+00:26:14,760 --> 00:26:20,060
+then we do not have A larger or equivalent to B, right?
+
+266
+00:26:20,160 --> 00:26:21,820
+So it is not antisymmetric.
+
+267
+00:26:21,820 --> 00:26:26,400
+It is antisymmetric and transitive.
+
+268
+00:26:26,580 --> 00:26:31,160
+We can definitely have that relation, right?
+
+269
+00:26:31,320 --> 00:26:36,360
+So in simple words, to express that integer,
+
+270
+00:26:36,580 --> 00:26:39,040
+we usually use z to stand for.
+
+271
+00:26:39,900 --> 00:26:43,240
+And this notation is a post set.
+
+272
+00:26:46,520 --> 00:26:48,100
+Okay, let's see more examples here.
+
+273
+00:26:48,100 --> 00:26:48,200
+here.
+
+274
+00:26:51,580 --> 00:26:55,640
+So z plus, it means the positive integer.
+
+275
+00:26:56,120 --> 00:26:58,520
+And there is a stick here.
+
+276
+00:27:03,580 --> 00:27:07,100
+So here is or not a poset.
+
+277
+00:27:07,280 --> 00:27:10,500
+If we want to decide whether it's a poset or not,
+
+278
+00:27:10,620 --> 00:27:13,800
+we need to also understand those properties,
+
+279
+00:27:14,040 --> 00:27:15,140
+whether it's meet or not.
+
+280
+00:27:15,140 --> 00:27:25,620
+but of course firstly what is take sugar right so in the in the English it means
+
+281
+00:27:25,620 --> 00:27:31,640
+that the divisibility relation you're so good could food is is divisibility
+
+282
+00:27:31,640 --> 00:27:42,380
+case who okay so if we know this meaning of those this notation ah this is a
+
+283
+00:27:42,380 --> 00:27:42,820
+a poset.
+
+284
+00:27:43,720 --> 00:27:45,820
+Because this visibility relation
+
+285
+00:27:45,820 --> 00:27:48,040
+is a partial reorder on the side of
+
+286
+00:27:48,040 --> 00:27:48,900
+positive integer.
+
+287
+00:27:50,320 --> 00:27:50,860
+For example, if two
+
+288
+00:27:52,020 --> 00:27:53,960
+positive integers are removed,
+
+289
+00:27:54,700 --> 00:27:56,080
+it will definitely get
+
+290
+00:27:56,080 --> 00:27:57,960
+a result. And this result
+
+291
+00:27:57,960 --> 00:27:59,020
+still has a
+
+292
+00:27:59,640 --> 00:28:01,280
+partial reorder. Why?
+
+293
+00:28:01,500 --> 00:28:03,940
+In addition to the after, it can
+
+294
+00:28:03,940 --> 00:28:05,380
+compare the size. No problem.
+
+295
+00:28:05,620 --> 00:28:07,100
+The size has a transmissibility.
+
+296
+00:28:07,240 --> 00:28:08,880
+And it can also be greater than or equal to.
+
+297
+00:28:09,100 --> 00:28:11,780
+So, yes, it is a poset.
+
+298
+00:28:13,660 --> 00:28:17,000
+For example, A divides B, okay.
+
+299
+00:28:19,140 --> 00:28:23,620
+Let's see, PS, okay, and the second part
+
+300
+00:28:24,260 --> 00:28:26,880
+is a notation for subset, right?
+
+301
+00:28:27,020 --> 00:28:30,580
+So it's subset, whether it's or not a poset.
+
+302
+00:28:33,600 --> 00:28:35,040
+Subset, okay.
+
+303
+00:28:38,000 --> 00:28:40,840
+Yes, it is also a poset.
+
+304
+00:28:42,500 --> 00:28:50,520
+so PS what does PS mean it means a relation right so inclusive relation
+
+305
+00:28:51,320 --> 00:28:55,540
+subset is a partial order on the power set of a set S
+
+306
+00:28:56,200 --> 00:29:05,040
+this is what we have learned in the last lesson so for example A is a subset of B but if we
+
+307
+00:29:05,040 --> 00:29:06,500
+we change to absolute,
+
+308
+00:29:10,720 --> 00:29:12,900
+if we change to the
+
+309
+00:29:19,420 --> 00:29:21,020
+absolute subset,
+
+310
+00:29:23,220 --> 00:29:25,780
+then it is not a poset anymore
+
+311
+00:29:26,620 --> 00:29:28,500
+because it doesn't meet the antisymmetric.
+
+312
+00:29:29,540 --> 00:29:30,540
+All right.
+
+313
+00:29:31,300 --> 00:29:34,800
+Let's see another new definition for the partial order.
+
+314
+00:29:35,140 --> 00:29:37,660
+So as we know that partial order means
+
+315
+00:29:37,660 --> 00:29:39,640
+that we need to do the comparison, right?
+
+316
+00:29:39,860 --> 00:29:43,840
+So it is that, so now we can do the comparison
+
+317
+00:29:43,840 --> 00:29:46,600
+between the relations here.
+
+318
+00:29:46,800 --> 00:29:48,680
+Let's see the comparability.
+
+319
+00:29:49,600 --> 00:29:50,220
+Okay.
+
+320
+00:29:53,940 --> 00:29:57,080
+So if we have the elements A and B of a post set,
+
+321
+00:29:57,080 --> 00:30:05,420
+and then we can do the we can say it is comparable if either a is smaller we
+
+322
+00:30:05,420 --> 00:30:10,980
+couldn't you be under partial order or B is smaller or equivalent to a under
+
+323
+00:30:10,980 --> 00:30:18,780
+partial order otherwise they are not comparable you saw Rugo take a post at
+
+324
+00:30:18,780 --> 00:30:23,580
+the Nemean to copy she no one that we don't die so leon go you and so now
+
+325
+00:30:24,840 --> 00:30:25,680
+然后来比较这两个元素的大小。
+
+326
+00:30:28,260 --> 00:30:29,100
+如果这两个元素能够比较出大小的话,
+
+327
+00:30:31,340 --> 00:30:32,180
+那么我们可以称呼为可比性。
+
+328
+00:30:32,180 --> 00:30:35,000
+如果不能的话,那就不具有可比性。
+
+329
+00:30:35,000 --> 00:30:37,140
+Okay, let's see an example here.
+
+330
+00:30:37,500 --> 00:30:43,380
+There's an example similar to the examples in the last slide.
+
+331
+00:30:43,660 --> 00:30:46,540
+So z plus means a positive integer,
+
+332
+00:30:47,340 --> 00:30:49,980
+and there is a straight stick.
+
+333
+00:30:49,980 --> 00:30:53,200
+it means that divisibility, .
+
+334
+00:30:54,140 --> 00:30:59,220
+Okay, so because we know that this is a post-set, right,
+
+335
+00:30:59,340 --> 00:31:02,720
+that's what we have talked about a few minutes ago,
+
+336
+00:31:03,460 --> 00:31:06,720
+and now let's see whether three and nine
+
+337
+00:31:07,260 --> 00:31:08,520
+are comparable or not.
+
+338
+00:31:11,400 --> 00:31:14,100
+This is comparable, right, because three
+
+339
+00:31:16,120 --> 00:31:19,000
+can divide by nine, right,
+
+340
+00:31:19,980 --> 00:31:23,100
+this is comparable or not based on the definition post that
+
+341
+00:31:24,440 --> 00:31:28,540
+no, right, because five and seven cannot,
+
+342
+00:31:28,720 --> 00:31:33,620
+five cannot be, seven cannot be dividable by five.
+
+343
+00:31:35,360 --> 00:31:36,120
+Okay.
+
+344
+00:31:41,620 --> 00:31:46,140
+So here it means that those two says
+
+345
+00:31:46,740 --> 00:31:48,360
+even though they are positive integer
+
+346
+00:31:49,980 --> 00:31:54,660
+do not have the similar properties or common features,
+
+347
+00:31:56,140 --> 00:31:59,000
+we cannot have the comparable relation.
+
+348
+00:32:02,000 --> 00:32:02,400
+For example,
+
+349
+00:32:05,620 --> 00:32:09,640
+let's imagine we have different roles
+
+350
+00:32:10,260 --> 00:32:13,100
+in this university, at CUT.
+
+351
+00:32:13,920 --> 00:32:16,500
+Okay, me as a teacher and you as a student.
+
+352
+00:32:16,500 --> 00:32:26,480
+And if we are talking about the partial order as the role in the university, then we are comparable, right?
+
+353
+00:32:26,620 --> 00:32:35,260
+Because teacher and student, okay, so comparable in their role by the order.
+
+354
+00:32:37,660 --> 00:32:43,960
+But if we are talking about two different majors,
+
+355
+00:32:43,960 --> 00:32:47,100
+For example, if you are from the AI major,
+
+356
+00:32:47,860 --> 00:32:52,260
+and another student is from the big data,
+
+357
+00:32:52,460 --> 00:32:57,620
+and then analytics, okay.
+
+358
+00:32:57,900 --> 00:33:01,700
+Then, even though they are both students from the SUT,
+
+359
+00:33:01,900 --> 00:33:05,100
+but since they are in different class,
+
+360
+00:33:05,180 --> 00:33:08,480
+or in different major, they might not be comparable.
+
+361
+00:33:08,480 --> 00:33:13,420
+So it all depends on the post-set definition.
+
+362
+00:33:13,520 --> 00:33:16,820
+So the second feature, whether they meet or not.
+
+363
+00:33:19,200 --> 00:33:20,000
+All right.
+
+364
+00:33:21,760 --> 00:33:24,780
+And as I mentioned, a partial order sometimes
+
+365
+00:33:24,780 --> 00:33:28,720
+can be strictly because we can know that
+
+366
+00:33:28,720 --> 00:33:33,900
+we have the larger or equal, or even we only have larger.
+
+367
+00:33:34,100 --> 00:33:35,960
+So it means that the partial order
+
+368
+00:33:35,960 --> 00:33:42,180
+have two type of partial order why is strict for why is non-strict for so
+
+369
+00:33:42,720 --> 00:33:48,620
+different types may have different features let's see the comparison first
+
+370
+00:33:48,620 --> 00:33:58,020
+one is non-strict partial order say you go can shoot here we have those
+
+371
+00:33:58,020 --> 00:34:06,280
+properties reflexive anti symmetric and transitive because for the non-strict
+
+372
+00:34:07,700 --> 00:34:17,300
+partial order it also means it has a reflexive non-strict means we have such
+
+373
+00:34:17,300 --> 00:34:29,360
+relation or not such a relationship we can include the equivalence we can
+
+374
+00:34:29,360 --> 00:34:36,840
+include the equivalence as our comparison however for the strict
+
+375
+00:34:36,840 --> 00:34:44,380
+partial order we have the equivalence notation out of this one
+
+376
+00:34:44,380 --> 00:34:47,580
+one notation, so we only have the irreflexive.
+
+377
+00:34:49,240 --> 00:34:54,300
+So A is smaller than B on the partial order,
+
+378
+00:34:55,380 --> 00:34:58,140
+but A is not equivalent to B.
+
+379
+00:34:58,880 --> 00:35:02,140
+So here the property is irreflexive,
+
+380
+00:35:02,140 --> 00:35:03,700
+and symmetric and transitive.
+
+381
+00:35:04,540 --> 00:35:06,980
+So the only difference for those two,
+
+382
+00:35:08,180 --> 00:35:13,020
+as you can see, one is a reflexive,
+
+383
+00:35:14,380 --> 00:35:15,960
+whether it's irreflexive.
+
+384
+00:35:18,620 --> 00:35:23,220
+And also, if it is irreflexive and antisymmetric,
+
+385
+00:35:23,460 --> 00:35:27,500
+it can be concluded as asymmetric .
+
+386
+00:35:42,280 --> 00:35:45,800
+So that's why we have a symmetric conclusion here.
+
+387
+00:35:47,400 --> 00:35:50,580
+But in general, when we are talking about the partial order,
+
+388
+00:35:50,580 --> 00:35:58,780
+we often refer to this non-strict partial order.
+
+389
+00:35:58,900 --> 00:36:01,660
+If we only discuss the post set,
+
+390
+00:36:02,100 --> 00:36:05,280
+we usually refer to non-strict partial order,
+
+391
+00:36:05,380 --> 00:36:09,380
+unless we are intentionally talking about
+
+392
+00:36:09,900 --> 00:36:11,240
+the strict partial order.
+
+393
+00:36:13,080 --> 00:36:16,720
+In simple words, if we want to easily remember it,
+
+394
+00:36:16,720 --> 00:36:18,780
+This is a partial order.
+
+395
+00:36:23,240 --> 00:36:25,420
+严格的这种符号的话,那就是strict partial order.
+
+396
+00:36:28,700 --> 00:36:29,400
+其实就是一个两个元素大小比较。
+
+397
+00:36:33,480 --> 00:36:34,880
+而这里为什么要变成一个新的变化呢,新的符号呢?
+
+398
+00:36:36,380 --> 00:36:37,080
+仅仅是因为我们要比较这个relation.
+
+399
+00:36:38,120 --> 00:36:38,260
+Okay.
+
+400
+00:36:41,080 --> 00:36:44,640
+And also, after understanding the partial order,
+
+401
+00:36:44,640 --> 00:36:47,960
+we also have some other kind of comparison.
+
+402
+00:36:48,260 --> 00:36:52,020
+Here is this one, total ordered, .
+
+403
+00:36:54,120 --> 00:36:58,320
+Total order means that all the elements in the relation
+
+404
+00:36:58,880 --> 00:36:59,900
+we may want to compare.
+
+405
+00:37:00,240 --> 00:37:02,960
+Okay, let's see the official definition.
+
+406
+00:37:04,660 --> 00:37:07,760
+Here, S is a post set, and it says
+
+407
+00:37:07,760 --> 00:37:10,580
+every two elements are comparable.
+
+408
+00:37:10,580 --> 00:37:18,660
+and here s is called the total ordered usual for me also so the usual全部
+
+409
+00:37:18,660 --> 00:37:25,920
+adding every element can be comparable can be compared with others so we can
+
+410
+00:37:25,920 --> 00:37:33,740
+say that's total order in your order or simple order in this case we can say s R
+
+411
+00:37:33,740 --> 00:37:35,400
+R is called chain.
+
+412
+00:37:36,660 --> 00:37:43,240
+Here, S is, S here is relation.
+
+413
+00:37:43,600 --> 00:37:46,840
+R is relation requirement.
+
+414
+00:37:47,880 --> 00:37:49,100
+You also need a relation function.
+
+415
+00:37:52,080 --> 00:37:59,100
+Here we have already know those examples I just mentioned.
+
+416
+00:38:00,240 --> 00:38:02,720
+And now after that we want to see
+
+417
+00:38:03,740 --> 00:38:05,580
+is total order or not.
+
+418
+00:38:20,100 --> 00:38:23,800
+That's the first example, the most left one.
+
+419
+00:38:25,140 --> 00:38:26,560
+It is not partial order, right?
+
+420
+00:38:26,680 --> 00:38:27,880
+That's what we have mentioned.
+
+421
+00:38:28,860 --> 00:38:30,620
+And whether it's total order or not.
+
+422
+00:38:33,740 --> 00:38:38,700
+Total order requires us every element can be comparable.
+
+423
+00:38:39,900 --> 00:38:45,740
+However, we can see A and C can be comparable, right?
+
+424
+00:38:45,840 --> 00:38:47,960
+A to B, B to C.
+
+425
+00:38:48,920 --> 00:38:51,040
+However, the problem is
+
+426
+00:38:55,780 --> 00:39:00,400
+C and D cannot be comparable, right?
+
+427
+00:39:00,400 --> 00:39:04,840
+So it does not meet every element to be comparable,
+
+428
+00:39:05,120 --> 00:39:09,580
+the requirement by the total order.
+
+429
+00:39:09,720 --> 00:39:11,860
+So it is not total order.
+
+430
+00:39:12,140 --> 00:39:14,040
+Okay, let's see this example.
+
+431
+00:39:15,420 --> 00:39:17,080
+Whether this is comparable or not.
+
+432
+00:39:18,320 --> 00:39:21,540
+I think if I have mentioned the first example,
+
+433
+00:39:21,760 --> 00:39:26,220
+it should be straightforward for the first example.
+
+434
+00:39:26,220 --> 00:39:36,980
+example easy and straightforward for the second example Lee Ho Chan not here
+
+435
+00:39:41,280 --> 00:39:42,680
+预期号。
+
+436
+00:39:48,020 --> 00:39:48,580
+OK.
+
+437
+00:39:52,200 --> 00:39:53,600
+点的这些名字是因为已经有几次没有达到了。
+
+438
+00:39:53,600 --> 00:39:56,940
+因为我讲了只要达到一次,你就能达到这些credit。
+
+439
+00:39:59,440 --> 00:40:00,840
+OK.
+
+440
+00:40:05,660 --> 00:40:07,060
+这就是为什么我点的名字里面有很多人是没有达到的原因。
+
+441
+00:40:07,060 --> 00:40:09,340
+因为他可能是有几次已经没来了。
+
+442
+00:40:11,020 --> 00:40:14,660
+Okay, anyway, so let's see this example.
+
+443
+00:40:15,300 --> 00:40:17,220
+A and C cannot be comparable.
+
+444
+00:40:18,080 --> 00:40:20,440
+We can select A and C,
+
+445
+00:40:22,060 --> 00:40:25,640
+or A and D, not comparable, right?
+
+446
+00:40:25,840 --> 00:40:31,080
+So it does not meet every two elements
+
+447
+00:40:31,080 --> 00:40:34,500
+comparable this requirement, so it's not a total order.
+
+448
+00:40:35,440 --> 00:40:39,720
+And for the last one, I will leave it for you
+
+449
+00:40:41,020 --> 00:40:49,700
+the answer is it is total ordered okay let's see some examples here we have a
+
+450
+00:40:49,700 --> 00:40:58,680
+post set Z as integers and smaller or equivalent the side so whether this is
+
+451
+00:40:58,680 --> 00:41:08,420
+totally ordered or not take a post set hash man to you change
+
+452
+00:41:18,900 --> 00:41:20,300
+这个应该比较好理解吧。
+
+453
+00:41:22,820 --> 00:41:24,220
+简单翻译成中文就是说,
+
+454
+00:41:27,100 --> 00:41:28,500
+对于全部为整数的这个集里面,
+
+455
+00:41:29,180 --> 00:41:32,220
+然后呢,我们要求是有大小的比较。
+
+456
+00:41:37,000 --> 00:41:38,400
+全序级要求每个元素都必须能够比较出大小。
+
+457
+00:41:45,040 --> 00:41:53,260
+so if not it will not be totally ordered okay
+
+458
+00:42:04,160 --> 00:42:05,160
+Li Dong Shu.
+
+459
+00:42:07,880 --> 00:42:10,920
+So whether this is total order or not.
+
+460
+00:42:12,220 --> 00:42:13,660
+Okay, very good, thank you.
+
+461
+00:42:14,240 --> 00:42:17,240
+Clearly, yes, right, because every integer
+
+462
+00:42:17,240 --> 00:42:21,340
+can be comparable with a larger size and a smaller size,
+
+463
+00:42:21,340 --> 00:42:23,700
+So I think it's really straightforward.
+
+464
+00:42:24,980 --> 00:42:28,620
+And for the second one, actually we use that as an example
+
+465
+00:42:28,620 --> 00:42:31,460
+when we are talking about the partially ordered.
+
+466
+00:42:31,820 --> 00:42:34,140
+Some are partially ordered and some are not.
+
+467
+00:42:35,020 --> 00:42:37,240
+So whether this is totally ordered or not.
+
+468
+00:42:39,520 --> 00:42:40,900
+Clearly not, right?
+
+469
+00:42:41,940 --> 00:42:44,220
+Because we can find out five and seven.
+
+470
+00:42:45,960 --> 00:42:48,100
+Five divides by seven.
+
+471
+00:42:49,880 --> 00:42:52,540
+is not a totally order, right?
+
+472
+00:42:52,700 --> 00:42:58,940
+So it is not a totally order, also not a partial order.
+
+473
+00:42:59,240 --> 00:43:00,540
+So how about this one?
+
+474
+00:43:05,140 --> 00:43:07,900
+So whether this is a total or not.
+
+475
+00:43:09,260 --> 00:43:12,440
+The answer is it is not a totally order
+
+476
+00:43:12,440 --> 00:43:16,500
+because we don't know whether it is A belongs to B
+
+477
+00:43:18,100 --> 00:43:19,760
+when we talk about the case.
+
+478
+00:43:23,700 --> 00:43:25,800
+So new definition here is,
+
+479
+00:43:26,860 --> 00:43:28,560
+let's call graphical order.
+
+480
+00:43:30,280 --> 00:43:33,020
+Let's call graphic here means .
+
+481
+00:43:34,440 --> 00:43:37,280
+So in Chinese .
+
+482
+00:43:39,600 --> 00:43:40,920
+So what is the order of letter?
+
+483
+00:43:41,920 --> 00:43:43,240
+Okay, let's see a comparison.
+
+484
+00:43:43,900 --> 00:43:46,800
+A is smaller than C, or C is smaller than A.
+
+485
+00:43:49,840 --> 00:43:54,400
+We have 26 letters, right?
+
+486
+00:43:54,560 --> 00:43:58,420
+And we know A shows up first, then C.
+
+487
+00:43:58,620 --> 00:44:02,680
+So we can say A smaller than C.
+
+488
+00:44:02,780 --> 00:44:04,480
+So the first one is correct.
+
+489
+00:44:04,820 --> 00:44:10,540
+So there's alphabetical order or lexicographic order.
+
+490
+00:44:12,940 --> 00:44:14,600
+And for the lexicographic order,
+
+491
+00:44:14,600 --> 00:44:18,380
+order, we can also have our word as a comparison.
+
+492
+00:44:20,260 --> 00:44:22,040
+So, let's see.
+
+493
+00:44:22,240 --> 00:44:25,460
+It is a generalization of alphabetical order.
+
+494
+00:44:27,080 --> 00:44:28,100
+There are question.
+
+495
+00:44:29,000 --> 00:44:31,760
+So whether discrete and another discrete,
+
+496
+00:44:32,520 --> 00:44:33,860
+which one comes first?
+
+497
+00:44:34,960 --> 00:44:35,080
+Okay.
+
+498
+00:44:35,980 --> 00:44:38,080
+So in simple words, we compare
+
+499
+00:44:40,700 --> 00:44:41,500
+every
+
+500
+00:44:43,440 --> 00:44:46,340
+every letter in the word one by one.
+
+501
+00:44:46,480 --> 00:44:49,480
+Okay, as you can see, D is the same,
+
+502
+00:44:49,540 --> 00:44:56,660
+I is same, S same, until this one and this one and this one,
+
+503
+00:44:56,760 --> 00:44:57,640
+T and E.
+
+504
+00:44:58,700 --> 00:45:00,920
+So that's how we do the comparison,
+
+505
+00:45:01,160 --> 00:45:03,720
+and we can see which one comes first.
+
+506
+00:45:06,460 --> 00:45:08,640
+And here is another example.
+
+507
+00:45:08,640 --> 00:45:17,280
+discrete and the discreteness so as we can see the first seven or first eight
+
+508
+00:45:18,160 --> 00:45:24,820
+letters they are exact the same as the last one compare with the empty one so
+
+509
+00:45:24,820 --> 00:45:30,920
+which one comes first if there is an empty one they usually it should be
+
+510
+00:45:30,920 --> 00:45:36,780
+larger okay so let's see some cases here
+
+511
+00:45:39,000 --> 00:45:44,160
+lexicographic order is a generalization of the alphabetical order is what's the
+
+512
+00:45:44,160 --> 00:45:48,140
+issue she take a solution to the ego oh good fun
+
+513
+00:45:48,140 --> 00:45:54,140
+how to say the alphabetical order compares the letter and the lexicographic
+
+514
+00:45:54,140 --> 00:45:57,800
+the graphic order compares the letters in the words.
+
+515
+00:45:59,140 --> 00:46:02,180
+So you can also say as a lexical order.
+
+516
+00:46:02,820 --> 00:46:06,760
+Okay, let's take a break and we will continue
+
+517
+00:46:06,760 --> 00:46:07,660
+our discussion later.
+
+518
+00:46:34,180 --> 00:46:34,760
+Thank you.
+
+519
+00:47:24,900 --> 00:47:26,520
+Thank you.
+
+520
+00:48:22,260 --> 00:48:24,120
+Thank you.
+
+521
+00:49:25,920 --> 00:49:27,380
+Thank you.
+
+522
+00:49:59,700 --> 00:50:01,320
+Thank you.
+
+523
+00:50:46,400 --> 00:50:47,420
+Thank you.
+
+524
+00:51:17,820 --> 00:51:20,520
+Okay, let's back to our discussion.
+
+525
+00:51:24,520 --> 00:51:28,960
+So if we have two post sets and we want to
+
+526
+00:51:28,960 --> 00:51:34,140
+construct a text graphical order and here is our work,
+
+527
+00:51:34,320 --> 00:51:38,200
+so we will do the element comparison one by one.
+
+528
+00:51:38,440 --> 00:51:45,580
+And if the first ranking letter is compared and it is equivalent,
+
+529
+00:51:45,580 --> 00:51:47,420
+and we will go to the second one.
+
+530
+00:51:48,940 --> 00:51:50,540
+So that's the example.
+
+531
+00:51:50,740 --> 00:51:54,400
+As you can see here, x1 compare with x2.
+
+532
+00:51:54,560 --> 00:51:58,320
+And the comparison, we have a smaller notation
+
+533
+00:51:58,320 --> 00:52:04,000
+and with a side, number one in the right bottom corner.
+
+534
+00:52:04,380 --> 00:52:07,020
+Okay, and then we do the second one
+
+535
+00:52:07,020 --> 00:52:09,840
+if the first one are equivalent to each other.
+
+536
+00:52:14,000 --> 00:52:20,020
+let's see the comparison as example here because there are several examples but time limit I will
+
+537
+00:52:20,020 --> 00:52:28,400
+not talk about everyone so here let's see the tax of graphical order first first one is to
+
+538
+00:52:28,400 --> 00:52:35,120
+for second line is to eight so there are two relation and here we first did you compare the
+
+539
+00:52:35,120 --> 00:52:39,620
+the first two, right?
+
+540
+00:52:39,800 --> 00:52:40,720
+They are the same.
+
+541
+00:52:40,860 --> 00:52:44,080
+If they are the same, we have not concluded the results,
+
+542
+00:52:44,320 --> 00:52:47,780
+so we will go to the second pair, four and eight.
+
+543
+00:52:47,980 --> 00:52:51,060
+And we definitely know four is smaller than eight.
+
+544
+00:52:51,260 --> 00:52:56,140
+So for this one, we know that the first relation
+
+545
+00:52:56,140 --> 00:52:57,400
+is smaller than second one.
+
+546
+00:52:57,780 --> 00:53:02,220
+So based on the requirement, this is rule.
+
+547
+00:53:02,220 --> 00:53:07,620
+Rule, firstly, we cannot have the result yet, right?
+
+548
+00:53:08,440 --> 00:53:10,420
+Because two and two is equivalent.
+
+549
+00:53:10,740 --> 00:53:13,840
+And then we do the second pair comparison.
+
+550
+00:53:14,240 --> 00:53:14,800
+.
+
+551
+00:53:16,640 --> 00:53:18,700
+No problem, we can get the conclusion, right?
+
+552
+00:53:19,220 --> 00:53:21,660
+Four divides eight, right?
+
+553
+00:53:21,800 --> 00:53:25,300
+So that's why we can have such relation comparison.
+
+554
+00:53:25,840 --> 00:53:28,580
+And I will not go through each one,
+
+555
+00:53:28,700 --> 00:53:30,880
+so you will see them later.
+
+556
+00:53:33,500 --> 00:53:35,220
+And some general case.
+
+557
+00:53:37,600 --> 00:53:40,500
+So general case means that we will do the comparison
+
+558
+00:53:41,200 --> 00:53:46,580
+A1 and AB, A2 and B2, and TOAN and BN.
+
+559
+00:53:46,720 --> 00:53:48,400
+So that's how we do the comparison.
+
+560
+00:53:48,760 --> 00:53:53,140
+If the first field, if we cannot get the result,
+
+561
+00:53:53,300 --> 00:53:54,460
+we will go to the next one.
+
+562
+00:53:55,600 --> 00:53:58,620
+Okay, so in simple words, we use that rule
+
+563
+00:53:58,620 --> 00:54:00,400
+to conduct our comparison.
+
+564
+00:54:05,580 --> 00:54:06,340
+这个规则去来定义我们怎么去比较。
+
+565
+00:54:06,340 --> 00:54:10,560
+也就是说从第一个开始,whether we can get the result or not.
+
+566
+00:54:12,780 --> 00:54:16,260
+如果我们不能得到结论,那么走到下一个,一直走到我们能得到结论。
+
+567
+00:54:18,280 --> 00:54:23,040
+如果到最后一个letter我们都不能比较出结论,then we can say they are exactly the same.
+
+568
+00:54:25,120 --> 00:54:27,600
+Okay, so let's see an example here.
+
+569
+00:54:27,600 --> 00:54:37,500
+Here, firstly, this is the set we want to compare, z plus.
+
+570
+00:54:41,340 --> 00:54:43,860
+比如说这个集合,我们现在要比较所有的positive integer, okay?
+
+571
+00:54:44,000 --> 00:54:46,420
+And what relation we want to compare?
+
+572
+00:54:46,840 --> 00:54:50,000
+Relation is divisible or device.
+
+573
+00:54:54,660 --> 00:54:56,020
+可以被除,所以我们要考虑它们是否有被除的关系。
+
+574
+00:54:56,020 --> 00:54:56,940
+Okay, let's see.
+
+575
+00:54:57,680 --> 00:54:59,620
+Let's see the first one, okay.
+
+576
+00:54:59,820 --> 00:55:03,500
+We are now here, compare this one and this one.
+
+577
+00:55:04,460 --> 00:55:06,920
+2, 2, whether it's comparable or not.
+
+578
+00:55:08,000 --> 00:55:10,780
+No, because they are exactly the same,
+
+579
+00:55:10,840 --> 00:55:12,580
+so we cannot conclude the results.
+
+580
+00:55:13,400 --> 00:55:16,220
+2, 2 and 3, 3, okay.
+
+581
+00:55:16,640 --> 00:55:18,300
+This is comparable or not?
+
+582
+00:55:18,720 --> 00:55:20,960
+Okay, still not yet, right?
+
+583
+00:55:21,220 --> 00:55:23,180
+So we have to go to the next one.
+
+584
+00:55:24,840 --> 00:55:28,240
+2, 2 and 3, 3, they are exact same, right?
+
+585
+00:55:28,680 --> 00:55:35,300
+So let's see the third pair comparison.
+
+586
+00:55:36,140 --> 00:55:38,480
+第三对的比较,4 and 8, yes.
+
+587
+00:55:38,720 --> 00:55:43,140
+They are 4 divides 8.
+
+588
+00:55:45,100 --> 00:55:50,320
+4可以被,8可以被4整除,4可以除以8,因此这个是comparer.
+
+589
+00:55:51,640 --> 00:55:54,480
+OK, 为什么你,可能你说,
+
+590
+00:55:54,620 --> 00:55:55,920
+诶,在我们这个地方,
+
+591
+00:55:56,080 --> 00:55:57,520
+为什么你说这个order,
+
+592
+00:55:59,940 --> 00:56:01,020
+三可以被三正出啊?
+
+593
+00:56:01,820 --> 00:56:02,900
+为什么在你这里说不行啊?
+
+594
+00:56:03,100 --> 00:56:04,180
+大家要注意。
+
+595
+00:56:04,180 --> 00:56:07,600
+This is strictly partial order.
+
+596
+00:56:09,740 --> 00:56:10,820
+也就是说如果你是这个样子的话,
+
+597
+00:56:12,180 --> 00:56:13,260
+那它是可以被比较的。
+
+598
+00:56:13,260 --> 00:56:16,600
+But now we require the strict order.
+
+599
+00:56:16,600 --> 00:56:19,180
+order instead of
+
+600
+00:56:21,340 --> 00:56:23,240
+unstricted partial order.
+
+601
+00:56:23,440 --> 00:56:26,900
+So that's why we have to go one by one.
+
+602
+00:56:27,960 --> 00:56:28,920
+也就是说在这里equivalence
+
+603
+00:56:28,920 --> 00:56:30,660
+它是不满足这个
+
+604
+00:56:30,660 --> 00:56:33,580
+strict partial order的这个要求的。
+
+605
+00:56:34,140 --> 00:56:34,940
+所以一定要注意。
+
+606
+00:56:34,940 --> 00:56:36,220
+Let's call graphic order
+
+607
+00:56:36,220 --> 00:56:38,300
+它是要求strict partial order。
+
+608
+00:56:39,840 --> 00:56:40,800
+所以这个是大家要注意的。
+
+609
+00:56:41,400 --> 00:56:44,900
+Please be watching out the notation.
+
+610
+00:56:47,840 --> 00:56:48,960
+如果R可以被R整除,没问题是吧?
+
+611
+00:56:49,280 --> 00:56:52,500
+因为结果是1,但是那是等于的关系啊。
+
+612
+00:56:54,400 --> 00:56:55,520
+所以在这个地方,大家要严格注意。
+
+613
+00:56:55,520 --> 00:57:02,380
+Okay, so that's why till the third pair, we can now get the results.
+
+614
+00:57:03,140 --> 00:57:07,960
+And for the last one, whether we need to do comparison or not, no, no need anymore.
+
+615
+00:57:08,100 --> 00:57:10,140
+Stop there, stop by the third pair.
+
+616
+00:57:10,280 --> 00:57:16,120
+So by here, we get our result, and then we can compare the left and right.
+
+617
+00:57:16,600 --> 00:57:19,120
+Okay, so that's how to compare.
+
+618
+00:57:19,420 --> 00:57:22,280
+For the second example, I will not list the,
+
+619
+00:57:22,360 --> 00:57:25,420
+talk about the details, you can check after class.
+
+620
+00:57:27,800 --> 00:57:27,920
+Okay.
+
+621
+00:57:30,100 --> 00:57:34,160
+And the last example we want to see is
+
+622
+00:57:34,160 --> 00:57:35,400
+the string comparison.
+
+623
+00:57:36,980 --> 00:57:37,020
+.
+
+624
+00:57:38,820 --> 00:57:40,800
+Okay, because when we talk about words,
+
+625
+00:57:40,980 --> 00:57:43,940
+definitely we will talk about string.
+
+626
+00:57:43,940 --> 00:57:47,800
+because the next graphical order can definitely
+
+627
+00:57:48,620 --> 00:57:50,560
+work for a string, okay.
+
+628
+00:57:51,740 --> 00:57:55,540
+So how to compare the string, different strings,
+
+629
+00:57:56,640 --> 00:58:00,800
+A1, A2, and A and, watch out here,
+
+630
+00:58:00,960 --> 00:58:05,700
+A1 here is not number anymore, but the letters,
+
+631
+00:58:05,980 --> 00:58:06,780
+,
+
+632
+00:58:09,540 --> 00:58:10,900
+because string
+
+633
+00:58:15,360 --> 00:58:20,940
+But anyway, in the G3G language, the number is also in the dictionary.
+
+634
+00:58:20,940 --> 00:58:24,020
+But those numbers are not the comparison between number and number.
+
+635
+00:58:25,020 --> 00:58:29,240
+Instead, the number behind it, for example, if it is 32,
+
+636
+00:58:29,660 --> 00:58:30,640
+it is 64.
+
+637
+00:58:31,040 --> 00:58:33,260
+That corresponds to the comparison between the two.
+
+638
+00:58:33,860 --> 00:58:34,680
+Okay, anyway.
+
+639
+00:58:36,500 --> 00:58:40,580
+So I will not talk about how we do the comparison in detail.
+
+640
+00:58:40,580 --> 00:58:45,840
+detail but anyway you need to remember when we talk about the stream or
+
+641
+00:58:45,840 --> 00:58:51,140
+lexicographic order compare we are using the alphabetical order you saw
+
+642
+00:58:51,140 --> 00:58:58,220
+zoom against more the pichot zoom sushi say that's a shot okay let's see example
+
+643
+00:58:58,220 --> 00:59:03,920
+here this is example let's see how do you then compare that come home you
+
+644
+00:59:03,920 --> 00:59:09,440
+with so you go the question mark but we have not concluded yet which one is
+
+645
+00:59:10,580 --> 00:59:12,780
+Although we just compared and got this example,
+
+646
+00:59:12,900 --> 00:59:15,220
+we didn't give you the conclusion, right?
+
+647
+00:59:15,440 --> 00:59:17,020
+Let's see how to do comparison.
+
+648
+00:59:19,220 --> 00:59:21,700
+Here, we do the comparison one by one.
+
+649
+00:59:21,920 --> 00:59:24,100
+Firstly, we have the same letter, right?
+
+650
+00:59:24,500 --> 00:59:25,780
+That's our first example.
+
+651
+00:59:26,100 --> 00:59:27,960
+So, first pair compare.
+
+652
+00:59:29,620 --> 00:59:30,760
+Okay, first pair.
+
+653
+00:59:30,940 --> 00:59:32,240
+And second, the same.
+
+654
+00:59:32,360 --> 00:59:33,220
+Third, the same.
+
+655
+00:59:33,400 --> 00:59:34,260
+Fourth, the same.
+
+656
+00:59:34,940 --> 00:59:35,760
+Sixth, the same.
+
+657
+00:59:35,960 --> 00:59:37,860
+And until this one,
+
+658
+00:59:37,860 --> 00:59:40,560
+Now we know they are different, right?
+
+659
+00:59:40,640 --> 00:59:41,660
+T and E.
+
+660
+00:59:42,040 --> 00:59:47,160
+And we know T is a letter behind E,
+
+661
+00:59:47,360 --> 00:59:49,420
+after E or behind E.
+
+662
+00:59:50,660 --> 00:59:55,000
+So we can say E is come out first.
+
+663
+00:59:55,200 --> 00:59:58,060
+So we hear E is more than T.
+
+664
+00:59:58,780 --> 01:00:00,240
+You say we can know.
+
+665
+01:00:00,740 --> 01:00:02,380
+Here we get the conclusion.
+
+666
+01:00:02,800 --> 01:00:04,160
+We just gave the conclusion,
+
+667
+01:00:04,220 --> 01:00:04,960
+we haven't given the conclusion yet.
+
+668
+01:00:12,580 --> 01:00:15,140
+So our conclusion is here.
+
+669
+01:00:15,300 --> 01:00:16,700
+E is smaller than T.
+
+670
+01:00:17,380 --> 01:00:19,780
+So we can have our conclusion.
+
+671
+01:00:20,280 --> 01:00:22,160
+Discrete is smaller than discrete.
+
+672
+01:00:22,600 --> 01:00:23,500
+First, discrete.
+
+673
+01:00:25,440 --> 01:00:26,660
+And for the last one,
+
+674
+01:00:28,940 --> 01:00:31,440
+we do not need compare anymore.
+
+675
+01:00:31,580 --> 01:00:31,880
+Why?
+
+676
+01:00:32,080 --> 01:00:33,860
+Because there's a rule.
+
+677
+01:00:34,960 --> 01:00:39,800
+we can do the comparison we stop here oh yeah I'm a fashion you're you take a
+
+678
+01:00:39,800 --> 01:00:45,600
+cheap job on that's a bitch yes oh okay all right let's see example here
+
+679
+01:00:49,060 --> 01:00:55,900
+simply we can do the comparison and here okay the first of you are alphabetical
+
+680
+01:00:55,900 --> 01:01:02,860
+letter is that the same right and to the nice one are the joke oh we found why is
+
+681
+01:01:02,860 --> 01:01:04,760
+is empty, y is a letter e.
+
+682
+01:01:05,440 --> 01:01:06,560
+Here, we can say
+
+683
+01:01:06,560 --> 01:01:08,700
+empty is smaller than
+
+684
+01:01:09,240 --> 01:01:09,760
+e.
+
+685
+01:01:10,240 --> 01:01:11,040
+在这里。
+
+686
+01:01:13,900 --> 01:01:14,700
+理论上
+
+687
+01:01:15,540 --> 01:01:16,340
+如果前面f是一样的,
+
+688
+01:01:18,060 --> 01:01:18,860
+当然我们第一个就可以比较出来了。
+
+689
+01:01:18,860 --> 01:01:19,940
+但是在这个地方,
+
+690
+01:01:20,900 --> 01:01:21,700
+如果前面都一样的话,
+
+691
+01:01:23,020 --> 01:01:24,100
+相当于是一个empty part
+
+692
+01:01:24,100 --> 01:01:25,920
+smaller than e.
+
+693
+01:01:26,080 --> 01:01:28,640
+理论上,前面的就要小于
+
+694
+01:01:28,640 --> 01:01:29,120
+后面的。
+
+695
+01:01:29,120 --> 01:01:32,480
+I should change with
+
+696
+01:01:33,520 --> 01:01:35,720
+change to be the same.
+
+697
+01:01:35,840 --> 01:01:37,380
+For example, this should be D.
+
+698
+01:01:37,560 --> 01:01:40,260
+I will change my typo here.
+
+699
+01:01:40,960 --> 01:01:41,880
+Okay, anyway.
+
+700
+01:01:42,740 --> 01:01:44,340
+So for the question here,
+
+701
+01:01:44,660 --> 01:01:45,620
+for the example,
+
+702
+01:01:45,620 --> 01:01:48,060
+I will not go through them in the detail.
+
+703
+01:01:48,480 --> 01:01:51,000
+We'll come to check them after class.
+
+704
+01:01:52,760 --> 01:01:53,360
+这个同样的道理,
+
+705
+01:01:55,780 --> 01:01:56,380
+也就是说一个一个的去比较。
+
+706
+01:01:57,020 --> 01:01:57,240
+Okay.
+
+707
+01:01:58,660 --> 01:01:59,440
+All right.
+
+708
+01:02:00,540 --> 01:02:08,740
+for the second half part of our discussion today is a very important new
+
+709
+01:02:08,740 --> 01:02:15,020
+definition Hassen diagram and we will use all our left part to talk about
+
+710
+01:02:15,020 --> 01:02:21,360
+Hassen diagram you saw me share Toyota high-tech Hassen diagram actually is
+
+711
+01:02:21,360 --> 01:02:29,100
+also ordered appear however is not to pair compare the numbers or the
+
+712
+01:02:29,440 --> 01:02:38,540
+anymore is to help to compare the relation and as we know the vertice of
+
+713
+01:02:38,540 --> 01:02:46,780
+verticals or vertices they are connected with many directed many arrows right
+
+714
+01:02:46,780 --> 01:02:54,240
+directed arrows so it means the those vertices definitely can be ranked with
+
+715
+01:02:54,240 --> 01:02:54,980
+with some orders.
+
+716
+01:02:56,500 --> 01:02:57,180
+就说为什么要考虑这个呢?
+
+717
+01:03:00,200 --> 01:03:00,880
+因为在我们的某一个关系图里面
+
+718
+01:03:00,880 --> 01:03:02,040
+或者relation里面
+
+719
+01:03:04,020 --> 01:03:04,700
+我们都知道那些顶点是由
+
+720
+01:03:07,740 --> 01:03:08,420
+有向箭头去连立的
+
+721
+01:03:09,840 --> 01:03:10,520
+那么也意味着有向箭头
+
+722
+01:03:12,480 --> 01:03:13,160
+显然是有一个先后的顺序
+
+723
+01:03:13,160 --> 01:03:13,600
+是吧?
+
+724
+01:03:14,180 --> 01:03:15,600
+谁先到,谁后到
+
+725
+01:03:15,600 --> 01:03:17,840
+Then, Haas and Diagram
+
+726
+01:03:17,840 --> 01:03:18,840
+Or Haas and Diagram
+
+727
+01:03:18,840 --> 01:03:19,780
+I agree with them
+
+728
+01:03:20,940 --> 01:03:21,620
+可以告诉我们
+
+729
+01:03:22,960 --> 01:03:23,640
+先去哪一个顶点
+
+730
+01:03:26,320 --> 01:03:26,980
+迅速地找到你的路径。
+
+731
+01:03:26,980 --> 01:03:33,040
+So in simple words, partial order is not help us to do a simple order comparison,
+
+732
+01:03:33,320 --> 01:03:36,820
+but to help us to find out the best routing way.
+
+733
+01:03:41,020 --> 01:03:41,680
+最简单其实哈森代贯为什么很重要,
+
+734
+01:03:43,600 --> 01:03:44,260
+就是因为我们讨论这种偏序,
+
+735
+01:03:47,840 --> 01:03:48,500
+其实所有的东西就是为了找到我们AI对常用的,
+
+736
+01:03:49,360 --> 01:03:50,020
+要找到最优路径。
+
+737
+01:04:01,640 --> 01:04:02,180
+Okay.
+
+738
+01:04:02,180 --> 01:04:02,720
+Okay.
+
+739
+01:04:12,100 --> 01:04:14,000
+So anyway, let's see.
+
+740
+01:04:14,840 --> 01:04:15,580
+Partial order.
+
+741
+01:04:16,020 --> 01:04:18,020
+Here, we are doing the graph.
+
+742
+01:04:18,260 --> 01:04:18,800
+Okay.
+
+743
+01:04:20,020 --> 01:04:21,760
+example, a smaller than b
+
+744
+01:04:21,760 --> 01:04:23,960
+for the set 1, 2, 3, 4.
+
+745
+01:04:24,200 --> 01:04:26,000
+比如说,如果我们要找到
+
+746
+01:04:26,740 --> 01:04:27,300
+两个元素之间
+
+747
+01:04:27,300 --> 01:04:29,500
+random 元素, random
+
+748
+01:04:29,500 --> 01:04:29,940
+elements,
+
+749
+01:04:31,720 --> 01:04:33,140
+how to do the comparison?
+
+750
+01:04:33,400 --> 01:04:35,300
+I don't know. If there are so many
+
+751
+01:04:35,300 --> 01:04:37,580
+different vertices,就是如果
+
+752
+01:04:37,580 --> 01:04:39,900
+你的这个 relation 里面有非常多的
+
+753
+01:04:39,900 --> 01:04:41,940
+顶点,但是你就要揪出这两个顶点,
+
+754
+01:04:43,160 --> 01:04:43,720
+谁先抵达,
+
+755
+01:04:43,780 --> 01:04:45,780
+是吧,快递员谁先送货,
+
+756
+01:04:46,600 --> 01:04:47,160
+谁后送货,
+
+757
+01:04:48,120 --> 01:04:48,680
+它是有一定规则的,
+
+758
+01:04:50,880 --> 01:04:51,480
+续述要找到这两个元素的大小,
+
+759
+01:04:52,660 --> 01:04:53,260
+那你肯定就是有个路径嘛。
+
+760
+01:04:54,460 --> 01:04:55,060
+但是大家都知道,
+
+761
+01:04:57,080 --> 01:04:58,280
+我们真实生活,路网是非常复杂的,
+
+762
+01:05:01,860 --> 01:05:02,460
+那你怎么迅速地来找到这两个快递点的投递呢?
+
+763
+01:05:02,740 --> 01:05:05,400
+Haas and Daiguan will do the help, okay?
+
+764
+01:05:05,800 --> 01:05:07,240
+Because it's too complicated.
+
+765
+01:05:07,560 --> 01:05:09,640
+So we need to do the simplification.
+
+766
+01:05:10,000 --> 01:05:11,180
+Let's see the example.
+
+767
+01:05:12,540 --> 01:05:14,300
+There are many routes, right?
+
+768
+01:05:14,440 --> 01:05:18,640
+You can imagine those arrows as the routing ways, or the road.
+
+769
+01:05:20,580 --> 01:05:24,800
+home you should send delivery order.
+
+770
+01:05:25,680 --> 01:05:26,280
+要送你的快递。
+
+771
+01:05:26,280 --> 01:05:28,720
+But as you can see, many orders.
+
+772
+01:05:29,020 --> 01:05:31,480
+So which one first, which one later?
+
+773
+01:05:32,160 --> 01:05:32,660
+Okay.
+
+774
+01:05:33,480 --> 01:05:36,320
+We need to do the simplification for the graph.
+
+775
+01:05:37,380 --> 01:05:37,980
+这是一个关系图。
+
+776
+01:05:38,960 --> 01:05:39,820
+那我们现在要用Hassan diagram
+
+777
+01:05:42,100 --> 01:05:42,700
+去把我们的关系图做这个简化,
+
+778
+01:05:44,220 --> 01:05:44,820
+然后来理清我们的这个顺序。
+
+779
+01:05:44,820 --> 01:05:47,140
+一二三个停点,一二三四个停点的顺序。
+
+780
+01:05:47,140 --> 01:05:47,500
+Let's see.
+
+781
+01:05:48,880 --> 01:05:52,220
+Firstly, partial order must be reflexive.
+
+782
+01:05:58,300 --> 01:05:58,340
+比如说如果它这个已经有这个偏序集了,
+
+783
+01:05:59,460 --> 01:06:00,060
+这个关系是偏序集,
+
+784
+01:06:00,660 --> 01:06:03,040
+we definitely need to have a reflexive.
+
+785
+01:06:03,120 --> 01:06:06,380
+So for the self-loop, we can kick it off.
+
+786
+01:06:07,780 --> 01:06:09,860
+Loops are not necessary.
+
+787
+01:06:11,100 --> 01:06:12,300
+OK, 这是第一点。
+
+788
+01:06:12,300 --> 01:06:14,080
+So we can simplify our order.
+
+789
+01:06:14,780 --> 01:06:15,380
+比如说你送快递,
+
+790
+01:06:18,020 --> 01:06:20,800
+So, self-loop can be kicked off.
+
+791
+01:06:20,960 --> 01:06:21,440
+Next slide.
+
+792
+01:06:21,800 --> 01:06:25,240
+Partial ordering set must be transitive.
+
+793
+01:06:25,360 --> 01:06:25,880
+Okay.
+
+794
+01:06:27,020 --> 01:06:27,660
+Transitive.
+
+795
+01:06:28,940 --> 01:06:29,860
+也就是说你的路径不能是一个死路,是吧?
+
+796
+01:06:30,120 --> 01:06:30,760
+死胡同。
+
+797
+01:06:32,500 --> 01:06:33,140
+要不然你就没法形成你的快递。
+
+798
+01:06:33,140 --> 01:06:35,120
+So, that must be transitive.
+
+799
+01:06:35,260 --> 01:06:37,340
+So, we do the simplification.
+
+800
+01:06:37,540 --> 01:06:40,640
+Some edges can be unnecessary.
+
+801
+01:06:42,020 --> 01:06:42,720
+It can be removed.
+
+802
+01:06:42,920 --> 01:06:44,260
+So, one, two, three, four.
+
+803
+01:06:45,380 --> 01:06:51,140
+And another requirement, assuming all edges are pointed upward.
+
+804
+01:06:55,500 --> 01:06:56,240
+当然这个就是一个特殊要求了。
+
+805
+01:06:56,240 --> 01:07:00,800
+If you want to form the Hassan diagram, the first one comes first.
+
+806
+01:07:00,980 --> 01:07:05,420
+And the first vertical should be at the bottom of your diagram.
+
+807
+01:07:06,940 --> 01:07:07,060
+Okay.
+
+808
+01:07:08,040 --> 01:07:12,460
+Then we kick off the arrows, remove the arrows.
+
+809
+01:07:12,920 --> 01:07:13,660
+我们把箭头去掉。
+
+810
+01:07:13,660 --> 01:07:14,240
+Okay.
+
+811
+01:07:15,380 --> 01:07:17,720
+Now, our relation, conventional relation,
+
+812
+01:07:18,000 --> 01:07:20,000
+is a very complicated map.
+
+813
+01:07:20,660 --> 01:07:21,820
+Simplify to such.
+
+814
+01:07:22,300 --> 01:07:22,960
+Hassan's diagram.
+
+815
+01:07:23,160 --> 01:07:25,560
+Now you can see the form of Hassan's diagram.
+
+816
+01:07:26,340 --> 01:07:26,800
+Okay.
+
+817
+01:07:28,280 --> 01:07:29,640
+Hassan's diagram is definitely...
+
+818
+01:07:29,640 --> 01:07:31,120
+Of course, I know now,
+
+819
+01:07:31,880 --> 01:07:32,180
+to say a word,
+
+820
+01:07:32,520 --> 01:07:35,000
+many students want to make a large model, right?
+
+821
+01:07:35,360 --> 01:07:37,920
+But in fact, AI not only has a large model,
+
+822
+01:07:38,060 --> 01:07:40,300
+AI has a lot of traditional operating methods.
+
+823
+01:07:42,080 --> 01:07:43,440
+So 1, 2, 3, 4,
+
+824
+01:08:15,380 --> 01:08:18,880
+learning the change she the cheese who just shared a go you ha you know by
+
+825
+01:08:18,880 --> 01:08:24,620
+need a motion can come okay anyway so based on the definition here we can now
+
+826
+01:08:24,620 --> 01:08:31,920
+change your complex to a relation into a Hassan diagram okay so the last form is
+
+827
+01:08:31,920 --> 01:08:40,080
+a Hassan diagram okay let's make a simplification how to make a Hassan
+
+828
+01:08:40,080 --> 01:08:44,300
+diagram from a partial order set you so much a night I can watch a
+
+829
+01:08:51,100 --> 01:08:51,540
+如何利用我们的编序集合制作一张哈桑图。
+
+830
+01:08:51,540 --> 01:08:51,940
+Okay.
+
+831
+01:08:54,660 --> 01:08:56,460
+Firstly, it must be a post-set.
+
+832
+01:08:57,720 --> 01:09:01,060
+简单讲,第一个,它必须要判断是一个编序集,
+
+833
+01:09:03,360 --> 01:09:04,240
+如果它不是编序集的话,你显然就不能制作哈桑图了。
+
+834
+01:09:04,240 --> 01:09:05,000
+这就是什么?
+
+835
+01:09:05,240 --> 01:09:11,560
+The first half of our discussion is to talk about which one is partial order, which one is not.
+
+836
+01:09:11,800 --> 01:09:14,720
+If it is not partial order, we cannot make a Hassam diagram.
+
+837
+01:09:15,380 --> 01:09:18,940
+So first step, to decide it is Hasen diagram or not.
+
+838
+01:09:19,060 --> 01:09:23,040
+Secondly, eliminate all the unnecessary loops.
+
+839
+01:09:28,880 --> 01:09:32,440
+Thirdly, eliminate all redundant acts.
+
+840
+01:09:33,920 --> 01:09:35,260
+所有的这种ages or acts.
+
+841
+01:09:35,320 --> 01:09:35,940
+ax是什么?
+
+842
+01:09:38,520 --> 01:09:39,880
+弧或者ages,线条。
+
+843
+01:09:40,740 --> 01:09:42,880
+Start to eliminate from the top.
+
+844
+01:09:42,880 --> 01:09:44,260
+from the very beginning,
+
+845
+01:09:44,420 --> 01:09:45,260
+from the very top.
+
+846
+01:09:46,820 --> 01:09:47,640
+The last one,
+
+847
+01:09:48,120 --> 01:09:49,940
+it limits the direction of the edges,
+
+848
+01:09:50,080 --> 01:09:52,660
+or get rid of the arrows,
+
+849
+01:09:52,860 --> 01:09:53,520
+that is, remove the arrow,
+
+850
+01:09:54,160 --> 01:09:55,520
+and change the order.
+
+851
+01:09:56,040 --> 01:09:57,840
+If you go to the first door,
+
+852
+01:09:57,940 --> 01:10:02,500
+to deliver your package,
+
+853
+01:10:03,040 --> 01:10:04,860
+then it will add the border
+
+854
+01:10:04,860 --> 01:10:05,700
+of the hasn't diagram,
+
+855
+01:10:05,900 --> 01:10:07,100
+then next one, next one.
+
+856
+01:10:09,920 --> 01:10:11,540
+Let's see some exercise here.
+
+857
+01:10:12,880 --> 01:10:21,140
+construct the Hassan diagram for this pole set,
+
+858
+01:10:21,260 --> 01:10:28,260
+ABC, we have several different vertices
+
+859
+01:10:28,260 --> 01:10:31,860
+and the ranking requirement is subset.
+
+860
+01:10:35,080 --> 01:10:39,380
+So how many subset we can have?
+
+861
+01:10:40,040 --> 01:10:40,360
+Let's see.
+
+862
+01:10:41,960 --> 01:10:46,780
+empty set right ABC a B a C B C and ABC
+
+863
+01:10:48,040 --> 01:10:51,880
+so we can now have our diagram something
+
+864
+01:10:51,880 --> 01:10:52,500
+like that
+
+865
+01:10:53,700 --> 01:10:56,220
+this is what we go post that we use
+
+866
+01:10:56,220 --> 01:11:03,060
+okay so very complex right and firstly
+
+867
+01:11:04,260 --> 01:11:07,000
+we should know how to do the
+
+868
+01:11:08,060 --> 01:11:08,540
+cleanliness,
+
+869
+01:11:11,160 --> 01:11:13,420
+as we have just mentioned.
+
+870
+01:11:13,600 --> 01:11:15,320
+First step, what is the first step?
+
+871
+01:11:16,640 --> 01:11:18,780
+Confirm is a Hassen diagram, right?
+
+872
+01:11:18,980 --> 01:11:20,700
+But it says it's a post-set,
+
+873
+01:11:20,800 --> 01:11:25,340
+so we don't need to say whether it is post-set or not.
+
+874
+01:11:31,800 --> 01:11:34,600
+Second, eliminate all the loops, okay?
+
+875
+01:11:34,820 --> 01:11:35,540
+Self-loop,
+
+876
+01:11:38,420 --> 01:11:39,440
+Okay.
+
+877
+01:11:41,220 --> 01:11:42,240
+我这里好像没有去掉。
+
+878
+01:11:42,760 --> 01:11:43,220
+Let's see.
+
+879
+01:11:43,420 --> 01:11:43,940
+Okay.
+
+880
+01:11:45,960 --> 01:11:50,780
+Third, eliminate or redundant loop.
+
+881
+01:11:51,780 --> 01:11:53,660
+And then eliminate the direction of the edges.
+
+882
+01:11:55,100 --> 01:11:56,120
+简单一下。
+
+883
+01:11:59,160 --> 01:12:00,180
+这个就是我们现在这个哈桑图的一个终极形式。
+
+884
+01:12:00,180 --> 01:12:00,680
+Okay.
+
+885
+01:12:04,660 --> 01:12:06,700
+当然怎么去limit的时候,我这里就快速地跳过去了。
+
+886
+01:12:09,060 --> 01:12:11,900
+Let's see more detailed examples here.
+
+887
+01:12:12,160 --> 01:12:12,600
+Okay.
+
+888
+01:12:13,940 --> 01:12:15,740
+This is a post-set.
+
+889
+01:12:15,840 --> 01:12:16,680
+A, B.
+
+890
+01:12:16,760 --> 01:12:17,280
+Okay.
+
+891
+01:12:17,360 --> 01:12:18,320
+A divides B.
+
+892
+01:12:19,720 --> 01:12:20,280
+这里有个要求。
+
+893
+01:12:22,440 --> 01:12:23,000
+我们有两个元素的比较。
+
+894
+01:12:23,000 --> 01:12:23,900
+如何比较呢?
+
+895
+01:12:23,960 --> 01:12:24,560
+Let's see.
+
+896
+01:12:24,640 --> 01:12:25,560
+A divides B.
+
+897
+01:12:28,740 --> 01:12:29,300
+A跟B能够被A整除。
+
+898
+01:12:29,840 --> 01:12:29,980
+Okay.
+
+899
+01:12:31,240 --> 01:12:31,800
+哪些元素呢?
+
+900
+01:12:31,880 --> 01:12:32,360
+Okay.
+
+901
+01:12:32,480 --> 01:12:34,780
+1, 2, 3, 4, 6, 8, 12.
+
+902
+01:12:35,200 --> 01:12:35,760
+Okay.
+
+903
+01:12:36,900 --> 01:12:37,460
+这是这么多元素。
+
+904
+01:12:38,000 --> 01:12:40,260
+Now we can list all the
+
+905
+01:12:42,220 --> 01:12:43,320
+division here.
+
+906
+01:12:46,620 --> 01:12:47,380
+在这个地方
+
+907
+01:12:49,380 --> 01:12:50,140
+跟上一题有个不一样的就是
+
+908
+01:12:50,140 --> 01:12:52,300
+partial order set
+
+909
+01:12:52,300 --> 01:12:53,860
+as I mentioned
+
+910
+01:12:53,860 --> 01:12:55,940
+it is unstricted
+
+911
+01:12:55,940 --> 01:12:57,160
+for orders
+
+912
+01:12:59,000 --> 01:12:59,760
+我已经讲了是非严格的
+
+913
+01:12:59,760 --> 01:13:00,780
+partial order, right?
+
+914
+01:13:01,380 --> 01:13:01,440
+So
+
+915
+01:13:03,520 --> 01:13:05,360
+it should be
+
+916
+01:13:05,360 --> 01:13:07,400
+something like that, right? The notation.
+
+917
+01:13:08,000 --> 01:13:11,180
+That's why we have cell loop because one can be,
+
+918
+01:13:12,040 --> 01:13:13,780
+one device one, no problem, right?
+
+919
+01:13:14,080 --> 01:13:18,400
+And three device three itself.
+
+920
+01:13:18,700 --> 01:13:20,980
+So every element as you can see,
+
+921
+01:13:21,160 --> 01:13:24,660
+I have one element left here, it should be one.
+
+922
+01:13:26,480 --> 01:13:28,760
+So one, two, three, four, six, eight, 12.
+
+923
+01:13:29,020 --> 01:13:36,320
+And everyone, for someone, we can have the device here.
+
+924
+01:13:38,000 --> 01:13:45,260
+one device eight three bar Tauyi yoga gentle doctor okay that home in the
+
+925
+01:13:45,260 --> 01:13:52,240
+channel is gentle ma three Egan bar three party you gentle so the relation
+
+926
+01:13:52,240 --> 01:13:59,760
+we can do something like that firstly let's get rid of the loops no problem
+
+927
+01:13:59,760 --> 01:14:09,200
+right and then get rid of unnecessary elements unless three elements
+
+928
+01:14:09,200 --> 01:14:14,360
+so anyway
+
+929
+01:14:24,140 --> 01:14:35,980
+So anyway, so after cleaning the unnecessary, the final work is, this is a Hassan diagram.
+
+930
+01:14:35,980 --> 01:14:40,400
+Okay, so one, two, three, four, six, eight, 12.
+
+931
+01:14:40,640 --> 01:14:45,040
+And now we can know they have very clean diagram,
+
+932
+01:14:46,340 --> 01:14:47,220
+very straightforward.
+
+933
+01:14:48,300 --> 01:14:50,300
+And here, as I just mentioned,
+
+934
+01:14:51,120 --> 01:14:56,440
+usually the first one should be at the bottom
+
+935
+01:14:56,440 --> 01:15:00,280
+and the later one should be at the top, right?
+
+936
+01:15:00,440 --> 01:15:02,980
+But here we can see two and three,
+
+937
+01:15:02,980 --> 01:15:04,900
+they are in the same height.
+
+938
+01:15:06,820 --> 01:15:07,380
+二跟三他们是在同一高度。
+
+939
+01:15:08,020 --> 01:15:10,440
+Then which one is first or which one is later?
+
+940
+01:15:10,540 --> 01:15:11,600
+It doesn't matter.
+
+941
+01:15:15,660 --> 01:15:16,220
+也就是说在这个地方二跟三是同样的一个级别。
+
+942
+01:15:18,440 --> 01:15:19,000
+我们刚刚之前讲了哈桑图是要求
+
+943
+01:15:20,860 --> 01:15:21,420
+第一个到的顶点必须放在下面,
+
+944
+01:15:22,660 --> 01:15:23,220
+最后到的顶点放在上面。
+
+945
+01:15:23,900 --> 01:15:26,300
+As you can see, they have different forms.
+
+946
+01:15:28,060 --> 01:15:28,620
+比如说当你制作哈桑图的时候,
+
+947
+01:15:31,500 --> 01:15:32,060
+你可能有不同的形式。
+
+948
+01:15:59,940 --> 01:16:01,340
+Okay.
+
+949
+01:16:03,580 --> 01:16:04,340
+Okay.
+
+950
+01:16:14,460 --> 01:16:16,100
+So let's see.
+
+951
+01:16:17,860 --> 01:16:22,680
+The second part of our Hassan diagram,
+
+952
+01:16:22,880 --> 01:16:24,420
+covering relation.
+
+953
+01:16:26,020 --> 01:16:27,600
+What is covering relation in Chinese?
+
+954
+01:16:28,760 --> 01:16:32,000
+Okay, let's see the definition.
+
+955
+01:16:34,920 --> 01:16:37,380
+If this is a poset,
+
+956
+01:16:37,420 --> 01:16:41,380
+a smaller or equivalent under the partial order,
+
+957
+01:16:41,640 --> 01:16:44,000
+x, y, such that y covers x,
+
+958
+01:16:44,180 --> 01:16:46,160
+is called the cover relation.
+
+959
+01:16:47,760 --> 01:16:48,440
+简单一下。
+
+960
+01:16:54,080 --> 01:16:54,760
+一个集合的元素被另一个集合的元素所覆盖的关系,
+
+961
+01:16:55,660 --> 01:16:56,340
+就叫做覆盖关系。
+
+962
+01:16:59,480 --> 01:17:00,160
+覆盖关系在偏序里面,
+
+963
+01:17:03,260 --> 01:17:04,060
+他其实是相当于负与子的关系。
+
+964
+01:17:04,680 --> 01:17:06,500
+就是说,简单来讲,
+
+965
+01:17:08,300 --> 01:17:09,100
+中间是没有代差。
+
+966
+01:17:11,280 --> 01:17:12,080
+回到我们刚刚这个关系。
+
+967
+01:17:14,920 --> 01:17:15,720
+二跟一,
+
+968
+01:17:17,240 --> 01:17:18,540
+他们这个叫covering relation。
+
+969
+01:17:18,540 --> 01:17:22,340
+However, four and one is not covering.
+
+970
+01:17:22,440 --> 01:17:23,920
+Four and three is not covering.
+
+971
+01:17:24,080 --> 01:17:24,540
+OK.
+
+972
+01:17:27,740 --> 01:17:28,540
+就是他们有直接的这种负与子的关系。
+
+973
+01:17:31,580 --> 01:17:32,100
+其实是因为他们已经有这个代差了嘛。
+
+974
+01:17:32,100 --> 01:17:33,100
+Okay, anyway.
+
+975
+01:17:33,820 --> 01:17:35,620
+So if x smaller than y,
+
+976
+01:17:35,740 --> 01:17:40,660
+and there is no element z between them for the comparison,
+
+977
+01:17:40,880 --> 01:17:42,720
+for example, x smaller than z,
+
+978
+01:17:42,780 --> 01:17:43,640
+点在y,
+
+979
+01:17:45,640 --> 01:17:46,160
+也就是说它中间如果中间有了一个代差,
+
+980
+01:17:46,920 --> 01:17:47,440
+那在这个时候,
+
+981
+01:17:48,820 --> 01:17:50,260
+我们不能把它叫做 covering relation.
+
+982
+01:17:51,340 --> 01:17:52,020
+All right.
+
+983
+01:17:53,040 --> 01:17:54,960
+Actually, I have just used an example
+
+984
+01:17:54,960 --> 01:17:56,640
+to explain with you in Chinese.
+
+985
+01:17:56,860 --> 01:17:58,460
+Let's see a more detailed one.
+
+986
+01:17:58,760 --> 01:17:59,280
+Okay.
+
+987
+01:18:00,160 --> 01:18:04,520
+This one is example we just discussed, right?
+
+988
+01:18:06,200 --> 01:18:09,300
+So whether this one is there is a covering relation.
+
+989
+01:18:11,140 --> 01:18:15,060
+But we will use to discuss the covering relation.
+
+990
+01:18:15,860 --> 01:18:17,080
+First one, AB.
+
+991
+01:18:20,720 --> 01:18:22,200
+AB and A.
+
+992
+01:18:23,500 --> 01:18:25,320
+Okay, let's see where is AB and A.
+
+993
+01:18:25,500 --> 01:18:27,240
+Okay, AB is here.
+
+994
+01:18:28,660 --> 01:18:30,340
+A is here.
+
+995
+01:18:31,720 --> 01:18:34,320
+Okay, I just mentioned
+
+996
+01:18:34,320 --> 01:18:39,980
+they are directly associated with H, right?
+
+997
+01:18:41,280 --> 01:18:42,220
+直接是有一个H来联系。
+
+998
+01:18:42,220 --> 01:18:45,460
+But whether it's covered relation or not.
+
+999
+01:18:49,780 --> 01:18:51,660
+我刚刚讲了,它是直接有一个联系在一起,
+
+1000
+01:18:51,740 --> 01:18:53,440
+一条棍子把它连接了。
+
+1001
+01:18:53,440 --> 01:18:55,200
+但是它是covered relation or not?
+
+1002
+01:18:55,340 --> 01:18:56,240
+No.
+
+1003
+01:18:57,480 --> 01:19:03,200
+Okay, because carbon relation has the order under the pair of the parentheses.
+
+1004
+01:19:06,860 --> 01:19:07,500
+也就是说这个括弧它是有先后的顺序的。
+
+1005
+01:19:08,060 --> 01:19:12,560
+Why? Because AB is the father for the set A,
+
+1006
+01:19:12,700 --> 01:19:15,700
+so it should be a letter Y, not the first one.
+
+1007
+01:19:17,400 --> 01:19:18,040
+它需要放在后面而不是放在前面。
+
+1008
+01:19:18,580 --> 01:19:22,980
+So, 也就是说如果 AB和A这两个集合倒过来,
+
+1009
+01:19:23,040 --> 01:19:24,100
+那它就有 carbon relation.
+
+1010
+01:19:25,020 --> 01:19:28,640
+because A is smaller than AB.
+
+1011
+01:19:29,000 --> 01:19:31,380
+So even though they are directly related,
+
+1012
+01:19:31,460 --> 01:19:32,860
+but they are not cover relation.
+
+1013
+01:19:33,300 --> 01:19:34,660
+Okay, let's see this one.
+
+1014
+01:19:35,520 --> 01:19:37,060
+Clearly it is, right?
+
+1015
+01:19:37,320 --> 01:19:39,780
+Oh, so no problem.
+
+1016
+01:19:41,180 --> 01:19:42,100
+Let's see this one.
+
+1017
+01:19:43,100 --> 01:19:44,940
+I think it's very straightforward, right?
+
+1018
+01:19:45,300 --> 01:19:48,040
+The empty set and AB.
+
+1019
+01:19:50,360 --> 01:19:52,740
+I think I don't need to ask someone to help me, right?
+
+1020
+01:19:54,100 --> 01:19:56,640
+It is not covering relation, why?
+
+1021
+01:19:56,840 --> 01:20:02,240
+Because we have a middle ranking part here, right?
+
+1022
+01:20:05,060 --> 01:20:09,180
+Because it's not direct connected, so it is not.
+
+1023
+01:20:10,400 --> 01:20:11,020
+So how about AA?
+
+1024
+01:20:14,480 --> 01:20:15,340
+Two set AA.
+
+1025
+01:20:18,600 --> 01:20:22,080
+Please remember that what notation this is.
+
+1026
+01:20:22,080 --> 01:20:26,820
+is strictly order, strictly partial order.
+
+1027
+01:20:36,200 --> 01:20:39,280
+Sometimes we talk about strict partial order.
+
+1028
+01:20:39,400 --> 01:20:43,020
+So we require strictly partial order, it means no,
+
+1029
+01:20:43,120 --> 01:20:46,940
+because AA is equivalent, those two set.
+
+1030
+01:20:46,940 --> 01:20:51,500
+So it is not strictly meet the requirement.
+
+1031
+01:20:51,740 --> 01:20:55,660
+So covering or ration has some requirements
+
+1032
+01:20:55,660 --> 01:20:57,580
+you should strictly meet.
+
+1033
+01:20:59,500 --> 01:21:02,620
+Okay, so that's how we talk about that.
+
+1034
+01:21:02,900 --> 01:21:04,920
+All right, let's see some new definition.
+
+1035
+01:21:05,320 --> 01:21:07,040
+Minimum and maximum elements.
+
+1036
+01:21:10,700 --> 01:21:13,300
+We talked about the elements,
+
+1037
+01:21:13,460 --> 01:21:15,100
+they have different ranking order, right?
+
+1038
+01:21:16,940 --> 01:21:19,740
+and then one by one, one level by another level.
+
+1039
+01:21:19,900 --> 01:21:23,420
+We said it means that we need to find out definitely
+
+1040
+01:21:24,220 --> 01:21:26,220
+there is a mini one and the maximum one.
+
+1041
+01:21:26,420 --> 01:21:27,860
+So how to define them?
+
+1042
+01:21:34,740 --> 01:21:36,520
+So let's see the example.
+
+1043
+01:21:39,300 --> 01:21:42,100
+For this one, ABC, okay.
+
+1044
+01:21:42,600 --> 01:21:44,520
+Which one has a maximum element
+
+1045
+01:21:44,520 --> 01:21:47,520
+and which one has a minimum element here.
+
+1046
+01:21:47,780 --> 01:21:52,140
+If we consider A, where's A, B, C?
+
+1047
+01:21:52,320 --> 01:21:58,140
+Let's, A is here, B is here, C is here.
+
+1048
+01:22:01,000 --> 01:22:04,880
+Okay, so when we doing the comparison for those three,
+
+1049
+01:22:05,640 --> 01:22:07,120
+which one is the minimum?
+
+1050
+01:22:07,320 --> 01:22:10,040
+I just said, the one below should be the smallest, right?
+
+1051
+01:22:10,160 --> 01:22:11,320
+Because it has a ranking.
+
+1052
+01:22:11,320 --> 01:22:14,200
+a level, level by level.
+
+1053
+01:22:14,480 --> 01:22:20,000
+So we can say the maximum is B, the minimum is C.
+
+1054
+01:22:20,700 --> 01:22:21,920
+Let's see this example.
+
+1055
+01:22:22,220 --> 01:22:24,900
+I want to compare A, B, C, D, E.
+
+1056
+01:22:25,020 --> 01:22:27,720
+So which one is minimum, which one is maximum?
+
+1057
+01:22:28,280 --> 01:22:31,720
+It means A, B, C, D, all the elements,
+
+1058
+01:22:31,840 --> 01:22:34,320
+all the verticals I want to compare.
+
+1059
+01:22:36,300 --> 01:22:37,960
+Maximum, the top one, right?
+
+1060
+01:22:38,680 --> 01:22:39,780
+This is maximum.
+
+1061
+01:22:40,100 --> 01:22:41,860
+And which one is minimum?
+
+1062
+01:22:43,840 --> 01:22:45,060
+Which one is minimum?
+
+1063
+01:22:48,740 --> 01:22:49,340
+我刚刚讲了最下层可能是有几个是吧?
+
+1064
+01:22:49,480 --> 01:22:51,920
+So the minimum we have two answer,
+
+1065
+01:22:52,640 --> 01:22:53,820
+two elements as answer.
+
+1066
+01:22:55,220 --> 01:22:58,020
+One element is C and the other one is E.
+
+1067
+01:22:58,260 --> 01:23:00,260
+Because they are in the same height,
+
+1068
+01:23:01,000 --> 01:23:01,600
+在同样的高度,
+
+1069
+01:23:01,680 --> 01:23:04,220
+so they are the same.
+
+1070
+01:23:05,980 --> 01:23:06,580
+用中文来解释,
+
+1071
+01:23:08,800 --> 01:23:10,320
+minimum element叫极小元,
+
+1072
+01:23:10,500 --> 01:23:12,420
+maximum element叫极大元,
+
+1073
+01:23:15,800 --> 01:23:16,560
+极小元就是说没有比这个元素更小的了,
+
+1074
+01:23:19,640 --> 01:23:20,400
+极大元叫没有元素比它更大,
+
+1075
+01:23:22,580 --> 01:23:23,340
+但是它们可能有同样大小的,
+
+1076
+01:23:23,540 --> 01:23:26,160
+所以,so that's why for this one,
+
+1077
+01:23:26,300 --> 01:23:29,060
+we have two elements as a final answer.
+
+1078
+01:23:30,700 --> 01:23:31,460
+Okay.
+
+1079
+01:23:33,080 --> 01:23:35,020
+Now let's see some new,
+
+1080
+01:23:35,980 --> 01:23:37,120
+least element.
+
+1081
+01:23:37,960 --> 01:23:38,760
+Greatest element.
+
+1082
+01:23:39,020 --> 01:23:42,820
+Oh, very similar definition, right?
+
+1083
+01:23:45,020 --> 01:23:47,520
+坦诚家,中文我也收了。
+
+1084
+01:23:48,080 --> 01:23:50,220
+好像也叫极小圆或者极大圆。
+
+1085
+01:23:50,800 --> 01:23:55,320
+但我自己反正,所以我们最好是。
+
+1086
+01:23:59,460 --> 01:24:02,260
+当然这里我把它叫做最小圆或者最大圆,为了区分开来。
+
+1087
+01:24:04,280 --> 01:24:07,080
+但实际上大家都知道你翻成极小或极大,最大其实没有任何区别。
+
+1088
+01:24:08,000 --> 01:24:11,780
+in our class, if you want to compare the difference.
+
+1089
+01:24:15,240 --> 01:24:15,920
+我们把这里定义为最小元和最大元。
+
+1090
+01:24:15,920 --> 01:24:16,300
+Okay.
+
+1091
+01:24:17,740 --> 01:24:19,020
+Let's see the definition.
+
+1092
+01:24:22,800 --> 01:24:27,580
+If this element B is the least element of S,
+
+1093
+01:24:27,760 --> 01:24:31,560
+if and only if this relation for every X,
+
+1094
+01:24:32,320 --> 01:24:33,360
+what is X?
+
+1095
+01:24:33,360 --> 01:24:35,040
+elements in the S.
+
+1096
+01:24:35,240 --> 01:24:37,920
+It is unique if it exists.
+
+1097
+01:24:39,800 --> 01:24:40,720
+这有个要求。
+
+1098
+01:24:41,380 --> 01:24:42,080
+Unique.
+
+1099
+01:24:43,780 --> 01:24:44,040
+什么意思?
+
+1100
+01:24:44,280 --> 01:24:48,520
+We can have no other elements together.
+
+1101
+01:24:52,280 --> 01:24:53,200
+也就是说我们在这里是绝对不能要求有同样大小的地位了。
+
+1102
+01:24:53,200 --> 01:24:53,820
+OK.
+
+1103
+01:24:56,560 --> 01:24:57,480
+这里就有区别了跟刚刚的像。
+
+1104
+01:24:58,440 --> 01:24:59,660
+刚刚是可以共享,是吧?
+
+1105
+01:24:59,900 --> 01:25:00,820
+这里不能共享。
+
+1106
+01:25:00,820 --> 01:25:04,340
+Let's see, use same answer here, ABC.
+
+1107
+01:25:06,780 --> 01:25:13,200
+Okay, the same as last slide, greatest element, okay, B.
+
+1108
+01:25:13,340 --> 01:25:15,420
+No problem, right, least element, C.
+
+1109
+01:25:15,680 --> 01:25:18,780
+Okay, that's the second one, ABCD.
+
+1110
+01:25:19,780 --> 01:25:22,560
+Greatest element, B, okay.
+
+1111
+01:25:23,300 --> 01:25:25,280
+So what is the least element?
+
+1112
+01:25:25,500 --> 01:25:26,540
+What is the least element?
+
+1113
+01:25:26,540 --> 01:25:31,180
+As I mentioned, you should share the position, right?
+
+1114
+01:25:31,540 --> 01:25:35,000
+Share the role in the comparison in the Hassel diagram.
+
+1115
+01:25:35,760 --> 01:25:39,960
+But for the last, when we talk about the
+
+1116
+01:25:39,960 --> 01:25:44,560
+minimum element, we have two elements, right?
+
+1117
+01:25:44,700 --> 01:25:45,440
+C and E.
+
+1118
+01:25:45,620 --> 01:25:49,660
+But here, what's the result?
+
+1119
+01:25:51,800 --> 01:25:52,180
+No result.
+
+1120
+01:25:53,140 --> 01:25:55,280
+There is no answer for the question.
+
+1121
+01:25:57,060 --> 01:25:57,760
+永远是不能共存的。
+
+1122
+01:25:57,760 --> 01:25:59,240
+Cannot share the role.
+
+1123
+01:25:59,420 --> 01:25:59,880
+也就是说,
+
+1124
+01:26:01,680 --> 01:26:02,380
+最小元和最大元
+
+1125
+01:26:04,260 --> 01:26:06,540
+must be unique.
+
+1126
+01:26:07,220 --> 01:26:08,860
+If it cannot be unique,
+
+1127
+01:26:09,060 --> 01:26:12,160
+then it does not exist.
+
+1128
+01:26:15,140 --> 01:26:15,840
+简单讲,
+
+1129
+01:26:17,180 --> 01:26:17,880
+刚刚我们讲的,
+
+1130
+01:26:17,920 --> 01:26:19,280
+上一张slide讲的
+
+1131
+01:26:19,280 --> 01:26:20,440
+极小元和极大元,
+
+1132
+01:26:20,520 --> 01:26:20,780
+是吧?
+
+1133
+01:26:22,420 --> 01:26:23,120
+大家可以看到这个ranking。
+
+1134
+01:26:23,120 --> 01:26:23,780
+这里,
+
+1135
+01:26:24,560 --> 01:26:25,260
+最小元跟最大元
+
+1136
+01:26:30,060 --> 01:26:30,800
+但是如果你发现他们具有同样的地位的话,
+
+1137
+01:26:33,700 --> 01:26:34,440
+那么这个时候它是不能共享这个结果的,
+
+1138
+01:26:34,500 --> 01:26:35,840
+所以它是不存在的。
+
+1139
+01:26:37,740 --> 01:26:38,480
+但如果它们是独特的话,
+
+1140
+01:26:38,640 --> 01:26:48,340
+那么then the result will be exact same as the minimum element and the maximum element.
+
+1141
+01:26:48,640 --> 01:26:52,980
+So sometimes they can be the same, but sometimes cannot be.
+
+1142
+01:26:53,360 --> 01:26:54,100
+Okay.
+
+1143
+01:26:55,240 --> 01:26:56,280
+Let's see more.
+
+1144
+01:26:56,540 --> 01:26:59,200
+some exercise, let me see.
+
+1145
+01:27:01,220 --> 01:27:03,240
+I don't know whether we have much time here.
+
+1146
+01:27:04,900 --> 01:27:05,540
+Okay.
+
+1147
+01:27:07,520 --> 01:27:11,920
+Okay, I will let you do the practice later after class
+
+1148
+01:27:12,480 --> 01:27:14,100
+to save our time.
+
+1149
+01:27:19,040 --> 01:27:23,160
+Okay, let's see another definition here.
+
+1150
+01:27:26,780 --> 01:27:28,540
+Upper and lower bound.
+
+1151
+01:27:30,220 --> 01:27:32,740
+上界,下界,这个就好理解,是吧?
+
+1152
+01:27:32,780 --> 01:27:33,300
+Upper bound.
+
+1153
+01:27:33,580 --> 01:27:34,180
+Okay.
+
+1154
+01:27:35,480 --> 01:27:38,180
+Let's directly use the answer to help us.
+
+1155
+01:27:38,760 --> 01:27:40,700
+Upper bound, A and B.
+
+1156
+01:27:41,320 --> 01:27:42,620
+A and D.
+
+1157
+01:27:43,820 --> 01:27:45,180
+With A here.
+
+1158
+01:27:49,400 --> 01:27:51,140
+A and D.
+
+1159
+01:27:51,360 --> 01:27:51,960
+Okay.
+
+1160
+01:27:53,520 --> 01:27:55,440
+Upper bound for A and D.
+
+1161
+01:27:55,520 --> 01:27:55,840
+Okay.
+
+1162
+01:27:57,360 --> 01:27:59,800
+Okay, yes, it is the B.
+
+1163
+01:27:59,920 --> 01:28:01,480
+And the lower one, C.
+
+1164
+01:28:01,760 --> 01:28:07,400
+Okay, for every element, every X element,
+
+1165
+01:28:08,340 --> 01:28:10,540
+they have something upper to them.
+
+1166
+01:28:10,640 --> 01:28:13,560
+They have something lower down to them.
+
+1167
+01:28:13,660 --> 01:28:14,820
+So they have the bound.
+
+1168
+01:28:15,200 --> 01:28:19,100
+Okay, and here let's see C, D, E.
+
+1169
+01:28:20,360 --> 01:28:21,520
+Where is C, D, E?
+
+1170
+01:28:22,100 --> 01:28:23,680
+Okay, there are those one.
+
+1171
+01:28:26,740 --> 01:28:29,800
+Upper bound, let's see where is the upper bound.
+
+1172
+01:28:30,380 --> 01:28:35,220
+C, D, E, here it has the upper bound, something like that.
+
+1173
+01:28:35,420 --> 01:28:36,320
+D and B.
+
+1174
+01:28:37,940 --> 01:28:41,280
+For this part, actually it has two answers.
+
+1175
+01:28:42,580 --> 01:28:43,280
+This part.
+
+1176
+01:28:45,940 --> 01:28:47,240
+And for the lower bound.
+
+1177
+01:28:48,700 --> 01:28:51,240
+Whether we have something lower than it.
+
+1178
+01:28:53,100 --> 01:28:56,360
+Yes, CIE are both vary at the bottom
+
+1179
+01:28:56,360 --> 01:29:00,420
+But they are the same, right?
+
+1180
+01:29:01,020 --> 01:29:01,720
+In the same level
+
+1181
+01:29:01,720 --> 01:29:03,580
+So we do not share
+
+1182
+01:29:06,720 --> 01:29:07,360
+简单来讲就是我们这个元素里面
+
+1183
+01:29:12,160 --> 01:29:12,800
+要么比所有元素最根最大的相等
+
+1184
+01:29:14,020 --> 01:29:14,660
+要么比所有元素更大
+
+1185
+01:29:14,660 --> 01:29:15,540
+什么意思?
+
+1186
+01:29:17,660 --> 01:29:18,300
+比如说你考虑DCE的时候
+
+1187
+01:29:18,300 --> 01:29:19,540
+要么是它最大的
+
+1188
+01:29:37,140 --> 01:29:38,980
+lower bound, we do not have low bound.
+
+1189
+01:29:41,600 --> 01:29:46,720
+And we have the greatest lower and least upper bound.
+
+1190
+01:29:47,580 --> 01:29:50,740
+It's just like a more complex one.
+
+1191
+01:29:51,440 --> 01:29:54,580
+Greatest lower bound is called the largest lower bound.
+
+1192
+01:29:55,300 --> 01:29:57,780
+Least upper bound is called the smallest upper bound.
+
+1193
+01:29:59,580 --> 01:30:00,960
+Why do we discuss this?
+
+1194
+01:30:00,960 --> 01:30:07,480
+是因为 sometimes we can have some several elements to be the upper bound, right?
+
+1195
+01:30:07,620 --> 01:30:13,700
+So for the upper bound, we can do the comparison for those elements.
+
+1196
+01:30:17,860 --> 01:30:18,500
+也就是说对于作为上界的那些元素里面,
+
+1197
+01:30:19,760 --> 01:30:21,040
+你们有greatest,也有least.
+
+1198
+01:30:21,220 --> 01:30:23,680
+So that's what we want to define.
+
+1199
+01:30:23,860 --> 01:30:27,860
+Here, the importance is unique.
+
+1200
+01:30:29,820 --> 01:30:30,460
+也就是说这个时候他强调不能共享,
+
+1201
+01:30:32,540 --> 01:30:39,120
+Okay, so the blue color box is what we just defined
+
+1202
+01:30:39,120 --> 01:30:40,940
+for the upper bound and the lower bound.
+
+1203
+01:30:41,140 --> 01:30:46,020
+And clearly it is a higher level definition, right?
+
+1204
+01:30:47,220 --> 01:30:54,540
+Okay, for this one because they are unique, right?
+
+1205
+01:30:54,620 --> 01:30:56,520
+No problem to copy and paste here.
+
+1206
+01:30:57,500 --> 01:30:59,880
+And I just said you must be unique,
+
+1207
+01:31:00,960 --> 01:31:03,120
+B or one, she selected.
+
+1208
+01:31:03,440 --> 01:31:05,100
+You should be sure you go patient, right?
+
+1209
+01:31:05,220 --> 01:31:06,120
+B or D.
+
+1210
+01:31:07,100 --> 01:31:09,680
+When we talk about least upper bound,
+
+1211
+01:31:09,840 --> 01:31:11,400
+that just so, upper bound
+
+1212
+01:31:11,400 --> 01:31:14,320
+then we can say it is D.
+
+1213
+01:31:14,940 --> 01:31:18,480
+And because we have no lower bound for ACDE,
+
+1214
+01:31:18,580 --> 01:31:20,320
+then clearly,
+
+1215
+01:31:20,520 --> 01:31:21,620
+the lower bound
+
+1216
+01:31:21,620 --> 01:31:26,040
+Okay, no problem.
+
+1217
+01:31:27,300 --> 01:31:37,480
+For the small exercise, I will jump quickly, so you can go through them later.
+
+1218
+01:31:38,020 --> 01:31:38,200
+Okay.
+
+1219
+01:31:38,580 --> 01:31:41,320
+New definition here, lattice.
+
+1220
+01:31:42,820 --> 01:31:46,280
+Lattice in Chinese, 叫格, 山格.
+
+1221
+01:31:46,640 --> 01:31:47,200
+Okay.
+
+1222
+01:31:47,780 --> 01:31:49,700
+Lattice, 山格.
+
+1223
+01:31:49,880 --> 01:31:50,460
+Okay.
+
+1224
+01:31:51,100 --> 01:31:52,460
+So what is lattice?
+
+1225
+01:31:53,240 --> 01:31:57,900
+Clearly, there is some definition related to the definition we just mentioned.
+
+1226
+01:31:59,500 --> 01:32:05,140
+For the partial order set, if it has both least upper bound and greatest lower bound,
+
+1227
+01:32:05,280 --> 01:32:07,680
+then we call this post set as latest.
+
+1228
+01:32:09,960 --> 01:32:10,600
+就是一个进阶的一个状态。
+
+1229
+01:32:19,420 --> 01:32:20,060
+比如说如果这个偏序集它既有最小上界和最大下界的话,
+
+1230
+01:32:24,020 --> 01:32:26,460
+So this is post-head lattice, why?
+
+1231
+01:32:26,620 --> 01:32:32,320
+Because we have F and A to be the lower bound.
+
+1232
+01:32:34,300 --> 01:32:37,120
+Lower bound B, C, D, okay, no problem.
+
+1233
+01:32:38,460 --> 01:32:39,920
+No problem, no problem.
+
+1234
+01:32:40,200 --> 01:32:43,240
+Okay, this is not because upper bound,
+
+1235
+01:32:43,420 --> 01:32:45,620
+no least upper bound, okay.
+
+1236
+01:32:47,000 --> 01:32:49,280
+This is not because the upper bound,
+
+1237
+01:32:50,060 --> 01:32:56,600
+together to share D and E so this does not meet the requirement okay this
+
+1238
+01:32:56,600 --> 01:33:05,960
+means so you can change the practice later after class and some examples I
+
+1239
+01:33:05,960 --> 01:33:13,680
+will not go through the examples because of time limit okay and for the latest
+
+1240
+01:33:13,680 --> 01:33:17,400
+there are some theory and some definitions
+
+1241
+01:33:17,400 --> 01:33:19,620
+we should go through them, okay.
+
+1242
+01:33:20,360 --> 01:33:23,940
+If L is a lattice, then least upper bound
+
+1243
+01:33:23,940 --> 01:33:28,720
+and greatest upper bound can be defined as A or B
+
+1244
+01:33:29,340 --> 01:33:30,640
+and A and B.
+
+1245
+01:33:31,440 --> 01:33:34,740
+Here, O and N satisfy the foreign properties.
+
+1246
+01:33:35,080 --> 01:33:35,420
+Ah,
+
+1247
+01:33:35,540 --> 01:33:42,440
+community of laws, associative laws,
+
+1248
+01:33:43,680 --> 01:33:45,840
+content loss and absorption loss.
+
+1249
+01:33:50,140 --> 01:33:53,180
+Even though I mentioned the O and,
+
+1250
+01:33:54,100 --> 01:33:56,620
+but not necessarily to be the O and
+
+1251
+01:33:57,360 --> 01:34:00,860
+for the discussion we talked about earlier.
+
+1252
+01:34:02,960 --> 01:34:07,340
+It can be any binary operations with fulfill
+
+1253
+01:34:08,620 --> 01:34:12,480
+those properties.
+
+1254
+01:34:16,420 --> 01:34:16,980
+如果只要满足这些关系的话,
+
+1255
+01:34:21,340 --> 01:34:21,900
+那我们就可以把它称为有这么一个性质。
+
+1256
+01:34:25,620 --> 01:34:26,740
+当然,这里or和and,
+
+1257
+01:34:28,200 --> 01:34:28,760
+它是针对的主要还是正常,
+
+1258
+01:34:28,860 --> 01:34:30,500
+logical or和logical and,
+
+1259
+01:34:33,200 --> 01:34:34,320
+但是它是并不一定是有or and的形式。
+
+1260
+01:34:39,040 --> 01:34:40,820
+Okay, here are some examples.
+
+1261
+01:34:40,980 --> 01:34:43,160
+I will not go through them in details.
+
+1262
+01:34:43,680 --> 01:35:04,720
+you will need to read them read through them later of course okay and let's see
+
+1263
+01:35:04,720 --> 01:35:10,860
+a distribute distributive latest as an example we want to check so take us
+
+1264
+01:35:10,860 --> 01:35:13,900
+这是讲说,what is distributive in Chinese?
+
+1265
+01:35:14,160 --> 01:35:14,920
+分配,是吧?
+
+1266
+01:35:15,800 --> 01:35:18,220
+分配三格,分配格,OK.
+
+1267
+01:35:19,340 --> 01:35:24,800
+A lattice is distributive if the foreign identity holds for all ABC,OK.
+
+1268
+01:35:25,060 --> 01:35:27,740
+Firstly, we should have such relation.
+
+1269
+01:35:31,460 --> 01:35:32,260
+也就是说我们要满足这种分配率的这种形式的话。
+
+1270
+01:35:34,420 --> 01:35:35,220
+如果这个格满足这种形式,
+
+1271
+01:35:35,380 --> 01:35:38,320
+then we can say it is distributive.
+
+1272
+01:35:39,640 --> 01:35:40,720
+So here is an example.
+
+1273
+01:35:42,060 --> 01:35:44,080
+Are they distributive or not?
+
+1274
+01:35:46,480 --> 01:35:47,080
+比如说在这个
+
+1275
+01:35:49,640 --> 01:35:50,240
+现在我们不叫做这个poset
+
+1276
+01:35:50,240 --> 01:35:51,420
+我们叫做lattice了
+
+1277
+01:35:53,640 --> 01:35:54,240
+在这个格的这种relation里面
+
+1278
+01:35:55,840 --> 01:35:56,440
+然后呢我们要找到
+
+1279
+01:35:57,060 --> 01:35:57,660
+有三个
+
+1280
+01:35:57,660 --> 01:35:59,900
+Three different vertices
+
+1281
+01:35:59,900 --> 01:36:02,840
+And those different vertices can meet the requirement
+
+1282
+01:36:02,840 --> 01:36:05,420
+Then we can say it is distributive lattice
+
+1283
+01:36:05,420 --> 01:36:06,500
+If not
+
+1284
+01:36:06,500 --> 01:36:08,420
+Then we can say it is not
+
+1285
+01:36:08,420 --> 01:36:09,020
+Not
+
+1286
+01:36:09,020 --> 01:36:09,680
+Okay
+
+1287
+01:36:10,860 --> 01:36:14,080
+So let's stop here and we have a few slides left
+
+1288
+01:36:14,080 --> 01:36:17,060
+and I will share the slides after the class
+
+1289
+01:36:17,060 --> 01:36:18,860
+and you are free to check them
+
+1290
+01:36:18,860 --> 01:36:23,220
+but I will continue to finish this part next week, okay.
+
+1291
+01:36:23,780 --> 01:36:25,200
+That's the end of our class today.
+
+1292
+01:36:25,360 --> 01:36:26,280
+Thank you so much for your coming.
+
+1293
+01:36:46,640 --> 01:36:48,340
+All right.
+
+1294
+01:37:25,920 --> 01:37:27,640
+Thank you.
+
+1295
+01:37:40,860 --> 01:37:41,500
+Thank you.

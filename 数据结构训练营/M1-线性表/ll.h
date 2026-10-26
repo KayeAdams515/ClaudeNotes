@@ -24,46 +24,48 @@
 
 #ifndef LL_H
 #define LL_H
-
+#include <iostream>
+#include <utility>
 #include <cstdlib>
 
 template <typename T>
-struct Node {
-    T data;      // 数据域
-    Node* next;  // 指针域：下一结点的地址
+struct Node
+{
+    T data;     // 数据域
+    Node *next; // 指针域：下一结点的地址
 };
 
 template <typename T>
-class LL {
+class LL
+{
 public:
-    LL();                       // 初始化：head = tail = NULL, length = 0
-    ~LL();                      // 销毁：逐个 delete，注意"留住后路"
+    LL();  // 初始化：head = tail = NULL, length = 0
+    ~LL(); // 销毁：逐个 delete，注意"留住后路"
 
-    bool empty();               // 判空
-    int getLength();            // 求长度
+    bool empty();    // 判空
+    int getLength(); // 求长度
 
-    T get(int index);           // Retrieve：取第 index 个元素的数据
-    Node<T>* find(T x);         // Find：返回第一个值为 x 的【结点指针】，找不到返回 NULL
+    T get(int index);   // Retrieve：取第 index 个元素的数据
+    Node<T> *find(T x); // Find：返回第一个值为 x 的【结点指针】，找不到返回 NULL
 
     bool insert(T x, int index); // 在下标 index 之前插入
     void erase(int index);       // 删除下标 index 处的结点
 
-    void clear();                // 清空（必须真的释放每个结点！）
+    void clear(); // 清空（必须真的释放每个结点！）
 
     // ---- 进阶关（L5）----
-    void reverse();              // 就地反转整条链表
-    int josephus(int n, int m);  // 约瑟夫环：n 个人报数，每数到 m 出列，返回幸存者（0 基下标）
+    void reverse(); // 就地反转整条链表
 
     // ---- 只读访问器（已给你实现，不用改）----
     // 真实项目不暴露 head/tail，否则外面能随意改动内部指针；
     // 但测试要核对"尾巴有没有接对"，所以给两个"看得见、改不动"的入口。
-    Node<T>* headNode() const { return head; }
-    Node<T>* tailNode() const { return tail; }
+    Node<T> *headNode() const { return head; }
+    Node<T> *tailNode() const { return tail; }
 
 private:
     int length;
-    Node<T>* head;
-    Node<T>* tail;
+    Node<T> *head;
+    Node<T> *tail;
 };
 
 // ============================================================
@@ -73,20 +75,34 @@ private:
 // ---------- L1：骨架、遍历、查找 ----------
 
 template <typename T>
-LL<T>::LL() {
+LL<T>::LL()
+{
+    length = 0;
+    head = nullptr;
+    tail = nullptr;
     // TODO 1: 空表的三个成员怎么初始化？
     // 想一想：head 和 tail 都要初始化吗？
     //
     // 下面三行是【临时占位】，只是为了让你在写完之前程序也能安全地跑起来、
     // 看到一条条红灯，而不是一上来就段错误。
     // 写完 TODO 1 之后，请把这三行删掉，改成你自己写的代码。
-    this->head = NULL;
-    this->tail = NULL;
-    this->length = 0;
 }
 
 template <typename T>
-LL<T>::~LL() {
+LL<T>::~LL()
+{
+    Node<T> *p = head;
+    Node<T> *temp = nullptr;
+    while (p != nullptr)
+    {
+        temp = p->next;
+        delete p;
+        p = temp;
+    }
+    length = 0;
+    p = nullptr;
+    tail = nullptr;
+    head = nullptr;
     // TODO 2: 逐个释放所有结点。
     // ★ 关键：不能直接 delete head; head = head->next;
     //   因为 delete 之后 head 指向的内存已经没了，再读 head->next 就是悬垂指针。
@@ -98,19 +114,32 @@ LL<T>::~LL() {
 }
 
 template <typename T>
-bool LL<T>::empty() {
-    // TODO 3: 判空。
-    return true;
+bool LL<T>::empty()
+{
+
+    return length == 0;
 }
 
 template <typename T>
-int LL<T>::getLength() {
+int LL<T>::getLength()
+{
+    return length;
     // TODO 4: 返回长度（O(1)，因为 length 一直被维护着）。
-    return 0;
+    // return 0;
 }
 
 template <typename T>
-Node<T>* LL<T>::find(T x) {
+Node<T> *LL<T>::find(T x)
+{
+    Node<T> *p = head;
+    while (p)
+    {
+        if (p->data == x)
+        {
+            return p;
+        }
+        p = p->next;
+    }
     // TODO 5: 从头遍历，找到值等于 x 的结点就返回它的指针；走完还没找到返回 NULL。
     // ★ 循环条件必须是 ptr != NULL —— 忘了判 NULL 就是段错误。
     // ★ 这是遍历链表的【标准写法】，后面每一关都要用到。
@@ -120,7 +149,19 @@ Node<T>* LL<T>::find(T x) {
 // ---------- L2：定位 ----------
 
 template <typename T>
-T LL<T>::get(int index) {
+T LL<T>::get(int index)
+{
+    if (index < 0 || index >= length)
+    {
+        exit(EXIT_FAILURE);
+    }
+    Node<T> *p = head;
+    for (int i = 0; i < index; i++)
+    {
+        p = p->next;
+    }
+    return p->data;
+
     // TODO 6: 取下标 index 处结点里的数据。
     // (a) 合法性：index < 0 或 index >= length 时 exit(EXIT_FAILURE) 结束程序
     // (b) 从 head 出发，走 index 步（不是 index+1 步，head 自己就是下标 0）
@@ -128,14 +169,54 @@ T LL<T>::get(int index) {
     //
     // 下面这行是【临时占位】，防止你在写完之前程序段错误。
     // 写完 TODO 6 之后请删掉它。
-    if (this->head == NULL) return T();
-    return T();
+    // if (this->head == NULL) return T();
+    // return T();
 }
 
 // ---------- L3：插入 ----------
 
 template <typename T>
-bool LL<T>::insert(T x, int index) {
+bool LL<T>::insert(T x, int index)
+{
+    if (index < 0 || index > length) // 注意这里要支持尾插，即认为index等于length也合法
+    {
+        return false;
+    }
+    Node<T> *nd = new Node<T>();
+    nd->data = x;
+    nd->next = nullptr;
+    Node<T> *p = head;
+    if (index == 0)
+    {
+        nd->next = head;
+        head = nd;
+        if (length == 0)
+        {
+            tail = nd;
+        }
+    }
+
+    else
+    {
+        for (int i = 0; i < index - 1; i++)
+        {
+            p = p->next;
+        }
+        if (p->next == nullptr)
+        {
+            p->next = nd;
+            tail = nd;
+        }
+        else
+        {
+            nd->next = p->next;
+            p->next = nd;
+        }
+    }
+    length++;
+
+    return true;
+
     // TODO 7: 在下标 index 之前插入值为 x 的新结点。
     // 步骤：
     //   (a) 合法性：index < 0 或 index > length 时返回 false
@@ -157,7 +238,43 @@ bool LL<T>::insert(T x, int index) {
 // ---------- L4：删除 ----------
 
 template <typename T>
-void LL<T>::erase(int index) {
+void LL<T>::erase(int index)
+{
+
+    if (index < 0 || index >= length)
+    {
+        return;
+    }
+    Node<T> *p = head;
+    Node<T> *temp = nullptr;
+
+    if (index == 0)
+    {
+        temp = head;
+        head = head->next;
+        delete temp;
+        temp = nullptr;
+        if (head == nullptr)
+        {
+            tail = nullptr;
+        }
+    }
+    else
+    {
+        for (int i = 0; i < index - 1; i++)
+        {
+            p = p->next;
+        }
+        temp = p->next;
+        p->next = temp->next;
+        delete temp;
+        temp = nullptr;
+        if (p->next == nullptr)
+        {
+            tail = p;
+        }
+    }
+    length--;
     // TODO 8: 删除下标 index 处的结点。
     // (a) 合法性：index < 0 或 index >= length 时直接 return
     // (b) 删【头结点】：要改 head 本身。
@@ -174,7 +291,19 @@ void LL<T>::erase(int index) {
 // ---------- 收尾：清空 ----------
 
 template <typename T>
-void LL<T>::clear() {
+void LL<T>::clear()
+{
+    Node<T> *p = head;
+    Node<T> *temp = nullptr;
+    while (p)
+    {
+        temp = p;
+        p = p->next;
+        delete temp;
+    }
+    length = 0;
+    head = nullptr;
+    tail = nullptr;
     // TODO 9: 释放所有结点，把表恢复到刚构造完的状态。
     // ★ 和 SqList::clear() 完全不同：顺序表只是 length = 0（数据还在内存里），
     //   链表必须真的 delete 每个结点，否则内存泄漏。
@@ -184,7 +313,18 @@ void LL<T>::clear() {
 // ---------- L5：进阶 ----------
 
 template <typename T>
-void LL<T>::reverse() {
+void LL<T>::reverse()
+{
+    Node<T> *pre = nullptr;
+    Node<T> *cur = head;
+    while (cur)
+    {
+        Node<T> *temp = cur->next;
+        cur->next = pre;
+        pre = cur;
+        cur = temp;
+    }
+    std::swap(head, tail);
     // TODO 10: 就地反转整条链表，不能新建结点。
     // 标准三指针写法：
     //   Node<T>* prev = NULL;
@@ -200,13 +340,87 @@ void LL<T>::reverse() {
     // 试着先自己画一遍三个指针的移动过程，再动手写。
 }
 
-template <typename T>
-int LL<T>::josephus(int n, int m) {
-    // TODO 11: 约瑟夫环，返回幸存者的下标（0 基）。
-    // n = 8, m = 3 时答案应该是 6（也就是第 7 个人）。
+// 独立算法：只依赖 n、m，不依赖任何已有 LL 对象。
+// 定义放在头文件中，因此用 inline 避免多个源文件包含时重复定义。
+inline int josephus(int n, int m)
+{
+    if (n <= 0 || m <= 0)
+    {
+        return -1;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    // n>=2
+    Node<int> *head = nullptr;
+    Node<int> *tail = nullptr;
+    Node<int> *p = new Node<int>();
+    int length = n;
+    p->data = 1;
+    head = p;
+    for (int i = 1; i < n; i++)
+    {
+        Node<int> *temp = p;
+        p = new Node<int>;
+        temp->next = p;
+        p->data = i + 1;
+    }
+    tail = p;
+    tail->next = head;
+
+    p = head; // p is the cursor;
+    while (length > 1)
+    {
+        Node<int> *toBeExcuted = nullptr;
+        if (m == 1)
+        {
+            toBeExcuted = head;
+        }
+        else
+        {
+            for (int i = 0; i < m - 2; i++)
+            {
+                p = p->next;
+            }
+            Node<int> *temp = p->next;
+            p->next = p->next->next;
+            toBeExcuted = temp;
+        }
+
+        std::cout << toBeExcuted->data << "is executed.";
+
+        if (toBeExcuted == head)
+        {
+            head = toBeExcuted->next;
+            tail->next = head;
+        }
+        else if (toBeExcuted == tail)
+        {
+            tail = p;
+        }
+        delete toBeExcuted;
+        toBeExcuted = nullptr;
+        if (m == 1)
+        {
+            p = head; // head 已更新为下一位
+        }
+        else
+        {
+            p = p->next; // p 是仍然存在的前驱
+        }
+        length--;
+    }
+    int ans = head->data;
+    delete head;
+    head = nullptr;
+    return ans;
+
+    // TODO 11: 约瑟夫环，返回幸存者的编号（从 1 开始）；n 或 m 非正时返回 -1。
+    // n = 8, m = 3 时答案应该是 7（也就是第 7 个人）。
     //
     // 思路（讲义 [[C2.5 单链表实现]] 十三节）：
-    //   1. 造一条【循环】链表：n 个结点，编号 0..n-1，
+    //   1. 造一条【循环】链表：n 个结点，编号 1..n，
     //      最后让 tail->next = head，首尾接上
     //   2. 让 tail 指向"当前起点"的前一个结点
     //   3. 循环直到只剩一个结点：
@@ -214,6 +428,9 @@ int LL<T>::josephus(int n, int m) {
     //        然后删掉 tail->next（数到第 m 个的人）
     //   4. 剩下那个结点的 data 就是答案，释放它之后返回
     //
+    // ★ 若用 circle 管理结点，接环后须在返回前恢复普通链表结构及正确的
+    //   head/tail/length；不要手动释放结点后又让 circle 析构重复释放。
+    //   也可自行用局部 Node<int>* first/last 建环并负责释放，不使用 LL 对象。
     // ★ 循环链表的终止条件不能用 ptr == NULL（永远不成立，会死循环），
     //   要用"剩几个结点"来数。
     // ★ 数 m-1 步时别数错：从当前起点开始数 1，数到 m 出列，
@@ -221,4 +438,4 @@ int LL<T>::josephus(int n, int m) {
     return -1;
 }
 
-#endif  // LL_H
+#endif // LL_H

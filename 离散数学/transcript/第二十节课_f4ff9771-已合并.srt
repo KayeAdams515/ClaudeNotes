@@ -1,0 +1,4263 @@
+1
+00:01:10,960 --> 00:01:12,800
+Thank you.
+
+2
+00:01:26,860 --> 00:01:28,920
+Thank you.
+
+3
+00:02:08,580 --> 00:02:11,380
+Thank you.
+
+4
+00:02:34,840 --> 00:02:35,860
+Thank you.
+
+5
+00:02:57,920 --> 00:03:00,720
+Thank you.
+
+6
+00:03:59,040 --> 00:03:59,700
+Thank you.
+
+7
+00:04:32,620 --> 00:04:35,420
+Thank you.
+
+8
+00:05:02,940 --> 00:05:04,720
+Thank you.
+
+9
+00:05:36,240 --> 00:05:39,040
+Thank you.
+
+10
+00:06:03,000 --> 00:06:05,560
+Thank you.
+
+11
+00:06:36,980 --> 00:06:39,780
+Thank you.
+
+12
+00:07:16,540 --> 00:07:19,340
+Thank you.
+
+13
+00:07:42,840 --> 00:07:44,980
+Thank you.
+
+14
+00:08:17,460 --> 00:08:20,260
+Thank you.
+
+15
+00:08:40,820 --> 00:08:43,620
+Thank you.
+
+16
+00:09:33,320 --> 00:09:34,700
+Thank you.
+
+17
+00:09:46,460 --> 00:09:46,820
+Thank you.
+
+18
+00:10:25,880 --> 00:10:28,340
+Thank you.
+
+19
+00:11:09,080 --> 00:11:10,720
+Thank you.
+
+20
+00:11:53,100 --> 00:11:55,900
+Thank you.
+
+21
+00:12:28,300 --> 00:12:30,080
+Thank you.
+
+22
+00:13:03,160 --> 00:13:04,240
+Thank you.
+
+23
+00:13:44,140 --> 00:13:45,040
+Thank you.
+
+24
+00:14:31,820 --> 00:14:34,620
+Thank you.
+
+25
+00:15:13,360 --> 00:15:16,160
+Thank you.
+
+26
+00:15:44,600 --> 00:15:46,140
+Thank you.
+
+27
+00:16:05,340 --> 00:16:07,180
+Thank you.
+
+28
+00:17:30,400 --> 00:17:33,200
+Thank you.
+
+29
+00:17:47,560 --> 00:17:49,060
+Thank you.
+
+30
+00:18:43,900 --> 00:18:48,300
+So, we can say, how many days do we need to wait for the data to be sent?
+
+31
+00:18:48,740 --> 00:18:53,380
+And what time is the time for the data to be sent?
+
+32
+00:18:53,600 --> 00:18:57,760
+And some special ones, isolated vertex.
+
+33
+00:18:58,500 --> 00:19:03,700
+You can use 2-bit, isolated, 2-bit, 2-bit.
+
+34
+00:19:05,700 --> 00:19:10,600
+As you can see, isolated vertex means there is no good
+
+35
+00:19:10,600 --> 00:19:13,000
+So, what is connected to it,
+
+36
+00:19:13,120 --> 00:19:16,220
+like, so the green will be the neuron.
+
+37
+00:19:18,020 --> 00:19:21,480
+And the penicillin vertex, penicillin,
+
+38
+00:19:22,720 --> 00:19:25,620
+Xuan Gua, in Chinese,
+
+39
+00:19:25,820 --> 00:19:27,320
+is called as Xuan Gua.
+
+40
+00:19:27,860 --> 00:19:31,920
+As you can see, something only one related to the,
+
+41
+00:19:32,080 --> 00:19:36,540
+and we like to use rope to connect that vertex.
+
+42
+00:19:37,540 --> 00:19:37,920
+That's magic.
+
+43
+00:19:37,920 --> 00:19:39,740
+a rope next to that vertex.
+
+44
+00:19:40,680 --> 00:19:41,720
+If you don't understand, you can
+
+45
+00:19:42,580 --> 00:19:43,680
+tell the particular thing.
+
+46
+00:19:44,040 --> 00:19:46,520
+So, that's why you put a two vertex.
+
+47
+00:19:46,800 --> 00:19:48,560
+If there is only one rope,
+
+48
+00:19:48,660 --> 00:19:50,700
+you mean, you really need to find it.
+
+49
+00:19:50,920 --> 00:19:52,320
+Okay, some next case.
+
+50
+00:19:54,140 --> 00:19:55,540
+Now, let's see an example here.
+
+51
+00:19:55,900 --> 00:19:58,920
+The degree for vertex C.
+
+52
+00:19:59,340 --> 00:20:00,980
+I think it's very straightforward,
+
+53
+00:20:01,120 --> 00:20:04,600
+so I will still, I will straightforwardly
+
+54
+00:20:05,480 --> 00:20:06,500
+talk about the answer.
+
+55
+00:20:07,920 --> 00:20:15,900
+problem right because we have three ages okay this is a directed graph your
+
+56
+00:20:15,900 --> 00:20:25,540
+shampoo for direct graph as we know some directions right there's a part we
+
+57
+00:20:25,540 --> 00:20:36,020
+should be cautious first one is in direct in in degree they do okay and so
+
+58
+00:20:37,920 --> 00:20:46,800
+another type of degree out degree why do okay in degree means in bound H number
+
+59
+00:20:48,300 --> 00:20:54,080
+sony son pata chisholm had a function so in bound found that your source on to
+
+60
+00:20:54,080 --> 00:21:00,660
+the function you okay H number outbound H number is the definition for all the
+
+61
+00:21:00,660 --> 00:21:06,960
+degree anyway it means that the direction of the arrows you will need to
+
+62
+00:21:07,920 --> 00:21:14,320
+the direction the edge point to right and then we can count the number of the
+
+63
+00:21:14,320 --> 00:21:24,240
+degree okay still use the Z as an example firstly degree minus means in
+
+64
+00:21:24,240 --> 00:21:33,820
+degree degrees plus means out degree okay as I just mentioned point to point
+
+65
+00:21:33,820 --> 00:21:37,140
+Point two or adjacent two, in degree, in bound.
+
+66
+00:21:37,400 --> 00:21:38,340
+Just like that.
+
+67
+00:21:38,560 --> 00:21:40,920
+Because I understand Chinese better than this.
+
+68
+00:21:41,520 --> 00:21:43,040
+Like this, like himself.
+
+69
+00:21:44,020 --> 00:21:46,220
+So we will see how many arrows here.
+
+70
+00:21:49,080 --> 00:21:50,440
+Two arrows, point two, right?
+
+71
+00:21:50,600 --> 00:21:51,700
+So what's the number?
+
+72
+00:21:51,840 --> 00:21:52,260
+Two.
+
+73
+00:21:52,700 --> 00:21:56,400
+And I think it's easier for us to translate out degree.
+
+74
+00:21:56,580 --> 00:21:57,440
+No problem, right?
+
+75
+00:21:59,380 --> 00:22:01,400
+So the answer is one, okay.
+
+76
+00:22:01,400 --> 00:22:03,380
+Okay, all right.
+
+77
+00:22:03,540 --> 00:22:06,180
+So that's the definition for the degree.
+
+78
+00:22:06,720 --> 00:22:15,820
+You can see it is a little bit always complex for directed graph than undirected graph.
+
+79
+00:22:20,980 --> 00:22:21,580
+也就是说对于有像图总是有一点点更多的麻烦。
+
+80
+00:22:23,360 --> 00:22:27,180
+Okay, let's use an example to do our practice here.
+
+81
+00:22:27,660 --> 00:22:29,680
+Degrees for the following vertices.
+
+82
+00:22:31,740 --> 00:22:36,780
+and you are seeing different letters stand for different vertex so was a
+
+83
+00:22:36,780 --> 00:22:37,560
+degree for a
+
+84
+00:22:43,920 --> 00:22:45,720
+Li Haocheng
+
+85
+00:22:50,940 --> 00:22:52,680
+Yu Qihao
+
+86
+00:22:58,100 --> 00:22:59,280
+Okay
+
+87
+00:22:59,280 --> 00:23:00,840
+Zhu Zhiyuan
+
+88
+00:23:00,840 --> 00:23:03,520
+I'm helping you
+
+89
+00:23:03,520 --> 00:23:03,940
+Because you
+
+90
+00:23:03,940 --> 00:23:08,980
+你点几次,目前是还有三次,被画了差。
+
+91
+00:23:10,020 --> 00:23:12,240
+OK, so what's the degree for A?
+
+92
+00:23:19,280 --> 00:23:21,880
+你直接说,degree,这个就是一个number。
+
+93
+00:23:22,500 --> 00:23:24,000
+OK, B.
+
+94
+00:23:24,120 --> 00:23:24,500
+B.
+
+95
+00:23:28,180 --> 00:23:29,980
+Say the number, OK.
+
+96
+00:23:30,780 --> 00:23:31,540
+说数字就可以。
+
+97
+00:23:32,880 --> 00:23:33,120
+B是2。
+
+98
+00:23:35,580 --> 00:23:36,980
+你要看不清可以往前看一下。
+
+99
+00:23:41,820 --> 00:23:43,220
+我觉得这个应该是最简单的吧。
+
+100
+00:23:43,220 --> 00:23:45,200
+C
+
+101
+00:23:47,420 --> 00:23:48,820
+D
+
+102
+00:23:51,500 --> 00:23:52,900
+Okay.
+
+103
+00:23:53,620 --> 00:23:53,640
+E
+
+104
+00:23:56,280 --> 00:23:57,680
+Okay.
+
+105
+00:23:58,700 --> 00:23:58,760
+S
+
+106
+00:24:03,940 --> 00:24:04,460
+Okay.
+
+107
+00:24:06,760 --> 00:24:08,440
+Degree minus for G.
+
+108
+00:24:13,320 --> 00:24:14,960
+Degree minus for H.
+
+109
+00:24:19,160 --> 00:24:19,920
+Okay.
+
+110
+00:24:21,320 --> 00:24:21,640
+For I.
+
+111
+00:24:21,800 --> 00:24:22,360
+Okay.
+
+112
+00:24:25,160 --> 00:24:25,920
+J.
+
+113
+00:24:28,800 --> 00:24:30,680
+J is what?
+
+114
+00:24:30,680 --> 00:24:34,660
+这个我写错了,这个应该是你。
+
+115
+00:24:34,660 --> 00:24:39,460
+K, yes.
+
+116
+00:24:41,500 --> 00:24:44,380
+这里是,对,我这里应该是两个写反了,OK。
+
+117
+00:24:46,520 --> 00:24:49,360
+L,这好像是没有,是吧?
+
+118
+00:24:50,940 --> 00:24:54,880
+那我应该是,我这里,OK,好。
+
+119
+00:24:54,880 --> 00:24:58,000
+G, positive.
+
+120
+00:25:00,680 --> 00:25:01,000
+H
+
+121
+00:25:03,840 --> 00:25:04,380
+Yes
+
+122
+00:25:05,200 --> 00:25:05,740
+I
+
+123
+00:25:08,620 --> 00:25:09,160
+J
+
+124
+00:25:12,000 --> 00:25:12,540
+Yes
+
+125
+00:25:12,540 --> 00:25:12,920
+I wrote it wrong.
+
+126
+00:25:13,040 --> 00:25:13,820
+This is you.
+
+127
+00:25:16,620 --> 00:25:17,160
+Yes
+
+128
+00:25:18,700 --> 00:25:19,240
+Okay.
+
+129
+00:25:19,440 --> 00:25:20,580
+This should be gone.
+
+130
+00:25:20,640 --> 00:25:21,180
+Okay.
+
+131
+00:25:21,280 --> 00:25:22,100
+Thank you so much.
+
+132
+00:25:28,720 --> 00:25:29,260
+Okay.
+
+133
+00:25:31,580 --> 00:25:32,360
+Okay.
+
+134
+00:25:34,560 --> 00:25:36,020
+Let's see another one.
+
+135
+00:25:36,120 --> 00:25:37,240
+Degree sequence.
+
+136
+00:25:39,540 --> 00:25:41,900
+So since we know the degrees, right,
+
+137
+00:25:42,020 --> 00:25:46,080
+and the different vertex have different degrees.
+
+138
+00:25:47,100 --> 00:25:49,680
+Some are larger, some are smaller, right?
+
+139
+00:25:50,400 --> 00:25:53,440
+So for the scientists,
+
+140
+00:25:53,760 --> 00:25:58,420
+they will rank those vertex based on the degree numbers.
+
+141
+00:25:58,420 --> 00:26:05,200
+so let's see the definition for degree sequence down to a jiao zhou jie ge du
+
+142
+00:26:05,200 --> 00:26:13,160
+shi li okay degrees to ma si quen shi li du shi li so it says that rank the
+
+143
+00:26:13,160 --> 00:26:18,400
+number of the degree right so what kind of rank rule some young don't need a
+
+144
+00:26:18,400 --> 00:26:25,360
+parachute the crazy no monotonic non-increase sequence okay you saw
+
+145
+00:26:25,360 --> 00:26:28,660
+单调递减,简单一下,non-increasing,
+
+146
+00:26:28,720 --> 00:26:29,960
+比如说你可以等于嘛,
+
+147
+00:26:31,060 --> 00:26:32,260
+比如说单调递减,OK,
+
+148
+00:26:33,000 --> 00:26:35,600
+简单一下,if you want to remember that,
+
+149
+00:26:35,760 --> 00:26:37,620
+and also is for what?
+
+150
+00:26:37,740 --> 00:26:39,460
+For undirected graph,
+
+151
+00:26:42,160 --> 00:26:42,880
+对于非有像图。
+
+152
+00:26:44,620 --> 00:26:46,480
+OK, let's see this example.
+
+153
+00:26:47,520 --> 00:26:49,040
+And we already know that
+
+154
+00:26:49,040 --> 00:26:53,400
+that's the number we just mentioned, right,
+
+155
+00:26:53,480 --> 00:26:55,040
+and have the result.
+
+156
+00:26:55,360 --> 00:26:59,840
+just one gong-gong the jiggy example okay as you can see we have different
+
+157
+00:26:59,840 --> 00:27:05,040
+number large different size of the numbers right it means that we can rank
+
+158
+00:27:05,580 --> 00:27:15,220
+the degree so here it is not more than monotonic are now increasing so it's not
+
+159
+00:27:15,220 --> 00:27:24,420
+degree sequence right to the push up not so if we rank from larger size to a
+
+160
+00:27:25,360 --> 00:27:34,800
+and now we can say it is degree sequence okay no problem right and now let's see
+
+161
+00:27:34,800 --> 00:27:43,200
+the this example here actually we have already used that example a few minutes
+
+162
+00:27:43,200 --> 00:27:45,900
+ago so I will write the degree directly
+
+163
+00:27:45,900 --> 00:27:54,320
+so I directly write down and as you can see we can write down the degree
+
+164
+00:27:55,360 --> 00:27:56,920
+right, three three two two two.
+
+165
+00:27:57,120 --> 00:28:01,560
+And here, we do not rank which one is first,
+
+166
+00:28:02,680 --> 00:28:05,200
+which one is later, only needs it to be
+
+167
+00:28:05,200 --> 00:28:09,640
+a non-increasing sequence or decreasing sequence.
+
+168
+00:28:10,980 --> 00:28:15,200
+So if such is the case, then we can say
+
+169
+00:28:15,980 --> 00:28:16,840
+is the degree sequence.
+
+170
+00:28:18,680 --> 00:28:23,180
+All right, let's see a related theorem about degree.
+
+171
+00:28:23,180 --> 00:28:30,860
+okay one thing is hand shaking theory okay in Chinese jiazhuo washou yanni
+
+172
+00:28:31,580 --> 00:28:37,460
+okay so what is hand shaking huh handshaking touches roba shake hands
+
+173
+00:28:37,460 --> 00:28:47,640
+you're so who's on the washo let's see the official definition for this theory
+
+174
+00:28:47,640 --> 00:28:51,260
+For any undirected graph G, we would have
+
+175
+00:28:52,880 --> 00:28:55,820
+the H number and the degree, they have some relation.
+
+176
+00:28:57,480 --> 00:29:01,480
+This is the total H number, this is the degree
+
+177
+00:29:01,480 --> 00:29:04,740
+for every vertex in the graph.
+
+178
+00:29:05,600 --> 00:29:07,000
+They have such relation.
+
+179
+00:29:08,300 --> 00:29:08,980
+What kind of relation?
+
+180
+00:29:09,200 --> 00:29:09,940
+Let's use language.
+
+181
+00:29:10,420 --> 00:29:12,980
+Twice number of H's is equivalent
+
+182
+00:29:12,980 --> 00:29:17,420
+to all the sum of the degrees, graph.
+
+183
+00:29:17,640 --> 00:29:17,960
+It's that simple.
+
+184
+00:29:19,320 --> 00:29:22,440
+For example, for an image, it has a definition.
+
+185
+00:29:22,660 --> 00:29:25,020
+The definition is called the Worshipping Definition.
+
+186
+00:29:25,300 --> 00:29:30,840
+It says that all the A-bass on the image is the sum of all the degrees.
+
+187
+00:29:31,900 --> 00:29:32,540
+It's that simple.
+
+188
+00:29:34,420 --> 00:29:35,720
+Why is it called the Worshipping Definition?
+
+189
+00:29:36,480 --> 00:29:39,420
+It's because in Chinese, it's in the United States,
+
+190
+00:29:39,500 --> 00:29:40,740
+they like to have parties, right?
+
+191
+00:29:41,120 --> 00:29:44,520
+They say that the sum of the numbers of all the people in the party
+
+192
+00:29:45,680 --> 00:29:46,900
+must be a number.
+
+193
+00:29:47,640 --> 00:29:48,780
+Okay, just some general.
+
+194
+00:29:51,020 --> 00:29:52,800
+Let's see more definitions here.
+
+195
+00:29:53,020 --> 00:29:56,600
+Each edge maps to two vertices, start and end.
+
+196
+00:29:56,760 --> 00:30:00,220
+So it also applies to multiple edges and the loop.
+
+197
+00:30:04,720 --> 00:30:09,360
+All right, let's see an example here.
+
+198
+00:30:10,940 --> 00:30:13,760
+This is an example we just used, right,
+
+199
+00:30:14,520 --> 00:30:15,920
+to count the degree numbers.
+
+200
+00:30:17,640 --> 00:30:20,660
+which we are seeing here, totally they are five.
+
+201
+00:30:20,860 --> 00:30:24,300
+So technically we can know the total number
+
+202
+00:30:24,300 --> 00:30:27,160
+of the degree would be 10, right?
+
+203
+00:30:27,460 --> 00:30:27,760
+You saw,
+
+204
+00:30:32,120 --> 00:30:34,460
+So let's see whether it's true or not.
+
+205
+00:30:35,360 --> 00:30:38,600
+Because we have already count the number of the degree
+
+206
+00:30:38,600 --> 00:30:41,780
+for each vertex through a student I just asked.
+
+207
+00:30:42,100 --> 00:30:44,400
+So let's list them all here.
+
+208
+00:30:44,400 --> 00:30:50,420
+here as you can see ABCDEF and that's the number
+
+209
+00:30:50,420 --> 00:30:54,660
+we just listed to the students help, right?
+
+210
+00:30:54,780 --> 00:31:00,200
+So you can sum all the numbers up and you will be 10.
+
+211
+00:31:00,760 --> 00:31:05,120
+All right, so this is a handshaking definition
+
+212
+00:31:06,280 --> 00:31:09,460
+and let's see example to digest this theory.
+
+213
+00:31:10,420 --> 00:31:16,460
+How many edges are there in a graph with 10 vertices, each of degree 6?
+
+214
+00:31:23,560 --> 00:31:26,260
+Okay, let me translate into Chinese.
+
+215
+00:31:27,240 --> 00:31:33,180
+一个图,十个顶点,哪个顶点,看一下了,它的度是多少,16。
+
+216
+00:31:37,180 --> 00:31:38,940
+所以在这里,你一定能保证找到这个边的数量。
+
+217
+00:31:39,460 --> 00:31:43,020
+Okay, based on the handshake, handshaking theory.
+
+218
+00:31:44,680 --> 00:31:46,620
+As I mentioned, the total number of the degrees
+
+219
+00:31:46,620 --> 00:31:49,120
+will be the double size of the edges, right?
+
+220
+00:31:50,340 --> 00:31:55,480
+As here we can see 10 vertices, six degree for each.
+
+221
+00:31:56,980 --> 00:31:59,100
+So total degree will be 60.
+
+222
+00:32:00,080 --> 00:32:01,980
+And according to handshaking theory,
+
+223
+00:32:02,260 --> 00:32:04,200
+double size of the edges, right?
+
+224
+00:32:04,360 --> 00:32:08,260
+So I can put sure the edge number
+
+225
+00:32:09,460 --> 00:32:11,520
+no matter how you design the graph.
+
+226
+00:32:12,420 --> 00:32:12,440
+OK.
+
+227
+00:32:14,040 --> 00:32:14,600
+比如说无论如何你怎么去设计,
+
+228
+00:32:17,920 --> 00:32:18,480
+你一定要保证肯定有三十条边。
+
+229
+00:32:19,340 --> 00:32:19,640
+All right.
+
+230
+00:32:20,000 --> 00:32:23,100
+Let's see another example to help you to be more familiar with.
+
+231
+00:32:26,620 --> 00:32:27,180
+OK.
+
+232
+00:32:27,380 --> 00:32:29,380
+Either a graph with degree sequence.
+
+233
+00:32:32,180 --> 00:32:32,740
+这个我们来讨论。
+
+234
+00:32:33,260 --> 00:32:33,760
+这个graph,
+
+235
+00:32:38,440 --> 00:32:39,000
+它是不是有一个度序列?
+
+236
+00:32:39,460 --> 00:32:39,820
+Okay.
+
+237
+00:32:42,500 --> 00:32:45,700
+Let's see first line example and go through with me.
+
+238
+00:32:46,180 --> 00:32:46,480
+Okay.
+
+239
+00:32:48,100 --> 00:32:48,920
+Two, two, two, right?
+
+240
+00:32:49,380 --> 00:32:52,360
+Every vertex have degree two.
+
+241
+00:32:53,940 --> 00:32:55,080
+And we can rank it.
+
+242
+00:32:55,320 --> 00:32:57,920
+And this rank, two, two, two,
+
+243
+00:32:57,980 --> 00:33:00,320
+definitely is a degree sequence, right?
+
+244
+00:33:00,660 --> 00:33:03,320
+Non-increasing, right?
+
+245
+00:33:03,380 --> 00:33:04,600
+Non-increasing sequence.
+
+246
+00:33:05,420 --> 00:33:07,020
+Okay, so it's, yes.
+
+247
+00:33:07,020 --> 00:33:10,400
+Yes, it is with a degree sequence.
+
+248
+00:33:12,640 --> 00:33:13,360
+也就是说这个图确实是有一个度序列。
+
+249
+00:33:14,060 --> 00:33:16,500
+Okay, let's see this example.
+
+250
+00:33:17,960 --> 00:33:21,880
+Whether this has a degree sequence for the graph.
+
+251
+00:33:23,700 --> 00:33:24,420
+这个图是否有一个度序列。
+
+252
+00:33:25,040 --> 00:33:26,340
+Okay, no problem, right?
+
+253
+00:33:27,180 --> 00:33:29,680
+Every vertex has a degree 3.
+
+254
+00:33:30,300 --> 00:33:32,980
+Yes, and how about this one?
+
+255
+00:33:34,020 --> 00:33:34,740
+221.
+
+256
+00:33:34,740 --> 00:33:35,580
+Okay.
+
+257
+00:33:40,900 --> 00:33:43,460
+So is this a degree sequence or not?
+
+258
+00:33:47,660 --> 00:33:51,160
+And as you can see, the edge does not connect
+
+259
+00:33:51,160 --> 00:33:55,100
+two ends of the vertex, right.
+
+260
+00:33:55,280 --> 00:34:04,640
+Even though it's in a non-increase monotonic sequence,
+
+261
+00:34:10,040 --> 00:34:13,500
+but because it's not a graph,
+
+262
+00:34:13,700 --> 00:34:16,060
+so it is not an even graph,
+
+263
+00:34:17,060 --> 00:34:20,140
+so not mention a graph with degree sequence.
+
+264
+00:34:21,260 --> 00:34:22,420
+Okay, let's see this one.
+
+265
+00:34:23,600 --> 00:34:27,260
+Okay, unlike the other three graphs,
+
+266
+00:34:28,140 --> 00:34:29,880
+we have self loops here.
+
+267
+00:34:31,760 --> 00:34:36,760
+So how to consider their graph with degree sequence?
+
+268
+00:34:36,780 --> 00:34:43,040
+sequence you're so difficult to continue beyond one
+
+269
+00:34:43,040 --> 00:34:55,160
+to legal to you you go self looped into okay I would say the answer yes here
+
+270
+00:34:55,160 --> 00:35:01,880
+please remember even the self loop we can also count it as a degree you're so
+
+271
+00:35:08,700 --> 00:35:14,940
+And more than that, because self loop, as you can see, connect to self.
+
+272
+00:35:15,720 --> 00:35:18,020
+So how many we can consider degree?
+
+273
+00:35:18,320 --> 00:35:20,640
+One, two, three, four, five.
+
+274
+00:35:22,480 --> 00:35:27,300
+So it means if we have vertex V, if it connects itself,
+
+275
+00:35:27,300 --> 00:35:33,180
+itself, it means in such case, the degree number will be
+
+276
+00:35:34,560 --> 00:35:37,360
+two instead of one, okay.
+
+277
+00:35:38,440 --> 00:35:42,780
+So in simple words, this answer is correct.
+
+278
+00:35:42,980 --> 00:35:47,140
+A graph with degree sequence and the sequence is five,
+
+279
+00:35:47,200 --> 00:35:49,360
+five, four, okay, keep that in mind.
+
+280
+00:35:49,860 --> 00:35:54,660
+If it is self-loop, it's the edge connect to itself,
+
+281
+00:35:54,660 --> 00:35:58,960
+so we will have the degree to be two instead of one.
+
+282
+00:35:59,180 --> 00:36:00,780
+Okay, that is a special case.
+
+283
+00:36:01,020 --> 00:36:02,760
+Okay, keep that in mind.
+
+284
+00:36:03,740 --> 00:36:05,860
+All right, let's see more.
+
+285
+00:36:07,540 --> 00:36:12,120
+Handshaking theory, let's see how to consider the number.
+
+286
+00:36:13,700 --> 00:36:14,480
+It also says,
+
+287
+00:36:15,280 --> 00:36:18,740
+un-directed graph has an even number of vertices
+
+288
+00:36:18,740 --> 00:36:20,740
+of odd degree.
+
+289
+00:36:21,100 --> 00:36:22,860
+Okay, in Chinese translation,
+
+290
+00:36:28,540 --> 00:36:29,640
+中度数为基数的顶点一定有偶数个。
+
+291
+00:36:30,280 --> 00:36:33,140
+Okay, let's digest this sentence together.
+
+292
+00:36:35,940 --> 00:36:39,160
+Vertices have all degree,
+
+293
+00:36:40,860 --> 00:36:49,100
+and such type of vertices must be even number in this indirect graph.
+
+294
+00:36:53,460 --> 00:36:54,560
+比如说它描述了一种具有特殊性质的一种顶点,
+
+295
+00:36:56,200 --> 00:36:56,960
+这种顶点有什么性质呢?
+
+296
+00:36:57,000 --> 00:36:58,180
+What property it has?
+
+297
+00:36:59,080 --> 00:37:03,200
+Such vertices have odd degree.
+
+298
+00:37:05,200 --> 00:37:05,960
+奇数个度。
+
+299
+00:37:11,900 --> 00:37:12,660
+然后这种奇数度的这种顶点有多少个呢?
+
+300
+00:37:13,300 --> 00:37:14,740
+Has an even number.
+
+301
+00:37:14,900 --> 00:37:15,660
+有数个。
+
+302
+00:37:15,660 --> 00:37:16,240
+Okay.
+
+303
+00:37:18,120 --> 00:37:20,020
+Let's see this example here.
+
+304
+00:37:20,020 --> 00:37:20,020
+
+
+305
+00:37:21,980 --> 00:37:24,520
+Firstly, let's see how many,
+
+306
+00:37:26,520 --> 00:37:30,740
+what vertices are the vertices with odd degree.
+
+307
+00:37:32,240 --> 00:37:32,920
+Okay.
+
+308
+00:37:38,740 --> 00:37:39,920
+This one, right?
+
+309
+00:37:40,780 --> 00:37:41,220
+Yeah, it's three.
+
+310
+00:37:42,740 --> 00:37:44,700
+And this, none of this one.
+
+311
+00:37:44,940 --> 00:37:46,280
+So this one,
+
+312
+00:37:46,280 --> 00:37:51,740
+One, two, two, okay, and this one, not this one, okay.
+
+313
+00:37:52,640 --> 00:37:55,000
+Let me make the graph clearly.
+
+314
+00:38:04,040 --> 00:38:04,980
+So how many?
+
+315
+00:38:06,540 --> 00:38:07,760
+We have two, right?
+
+316
+00:38:08,120 --> 00:38:09,940
+What is the order of the degree?
+
+317
+00:38:10,160 --> 00:38:14,320
+So the total number is even number.
+
+318
+00:38:16,280 --> 00:38:22,760
+and those who show sugar okay let's see the second one this is three three three
+
+319
+00:38:22,760 --> 00:38:28,180
+three right that's the example we just saw in the last slide so how many okay
+
+320
+00:38:28,820 --> 00:38:34,900
+one two three four okay four vertices meet the vertices with odd degree so
+
+321
+00:38:34,900 --> 00:38:40,340
+what is of order degrees four and about this one that's the example we just saw
+
+322
+00:38:41,260 --> 00:38:42,660
+And you still remember?
+
+323
+00:38:44,280 --> 00:38:47,240
+How many, this is five, right?
+
+324
+00:38:47,360 --> 00:38:48,580
+How many degree?
+
+325
+00:38:48,780 --> 00:38:50,080
+Five, four, five, five, four.
+
+326
+00:38:50,180 --> 00:38:51,540
+That's what we just saw, right?
+
+327
+00:38:51,720 --> 00:38:55,760
+So how many vertices with odd degree?
+
+328
+00:38:55,960 --> 00:38:57,020
+Those two, right?
+
+329
+00:38:57,180 --> 00:38:58,400
+So the number is two.
+
+330
+00:38:59,100 --> 00:39:03,820
+And as you can see, all the graphs we list here
+
+331
+00:39:03,820 --> 00:39:05,900
+need that theorem.
+
+332
+00:39:07,800 --> 00:39:16,000
+theory okay let's see more explanations and let's see why it is true that's very
+
+333
+00:39:16,000 --> 00:39:28,140
+interesting part okay proof that theory is true okay firstly let's say were not
+
+334
+00:39:28,140 --> 00:39:33,900
+and the way will be the odd and even degree are separately you so I'm from
+
+335
+00:39:35,900 --> 00:39:37,480
+of vertices in the graph.
+
+336
+00:39:37,960 --> 00:39:41,040
+First type, the vertices with odd degree,
+
+337
+00:39:41,240 --> 00:39:46,360
+and second type, the vertices with even degree.
+
+338
+00:39:47,360 --> 00:39:49,040
+And based on the handshaking theory,
+
+339
+00:39:49,260 --> 00:39:53,820
+well, we can definitely say this, right?
+
+340
+00:39:53,940 --> 00:39:57,360
+Because we divide into two types, no problem, right?
+
+341
+00:39:58,060 --> 00:39:59,760
+We definitely can meet that requirement.
+
+342
+00:40:00,240 --> 00:40:04,240
+Total number, okay, and the number definitely is even,
+
+343
+00:40:06,320 --> 00:40:08,100
+the double size of the H,
+
+344
+00:40:09,020 --> 00:40:11,160
+and those also be even,
+
+345
+00:40:12,860 --> 00:40:14,080
+must be even,
+
+346
+00:40:14,960 --> 00:40:16,320
+because two,
+
+347
+00:40:18,200 --> 00:40:23,340
+if you have two numbers calculated together to be even,
+
+348
+00:40:24,500 --> 00:40:27,460
+if this is odd, this must be odd,
+
+349
+00:40:27,600 --> 00:40:30,000
+if this is even, this must be even.
+
+350
+00:40:30,400 --> 00:40:31,740
+He wants to express this meaning.
+
+351
+00:40:31,740 --> 00:40:38,240
+you saw me are in the table and go young young Joe Sanja you watch you know you
+
+352
+00:40:38,240 --> 00:40:42,200
+go see Jesus not many guys can you see Jesus Jesus you go so some legal
+
+353
+00:40:42,200 --> 00:40:50,940
+control so we want to do the proof following okay as some ratio of even
+
+354
+00:40:50,940 --> 00:41:01,480
+degree is even okay what because it says it is even right this man uh do you
+
+355
+00:41:18,720 --> 00:41:23,380
+So we have achieved the result, okay.
+
+356
+00:41:25,460 --> 00:41:31,840
+So, I didn't explain through this type of following
+
+357
+00:41:32,940 --> 00:41:36,740
+sequence and you can check the proof later of class.
+
+358
+00:41:37,740 --> 00:41:40,620
+All right, that is the third theory.
+
+359
+00:41:41,480 --> 00:41:44,760
+For any direct graph, now we are talking about
+
+360
+00:41:44,760 --> 00:41:45,820
+your .
+
+361
+00:41:47,540 --> 00:41:54,020
+It says the total H number will be the in degree,
+
+362
+00:41:55,040 --> 00:42:00,460
+total in degree and also equivalent to the total number of
+
+363
+00:42:01,080 --> 00:42:06,480
+okay, out degree, this is in degree, this is out degree.
+
+364
+00:42:06,480 --> 00:42:07,200
+Okay.
+
+365
+00:42:08,720 --> 00:42:08,980
+It says,
+
+366
+00:42:10,620 --> 00:42:11,340
+什么意思?
+
+367
+00:42:15,560 --> 00:42:16,280
+就说我所有的内度之和等于它的边,
+
+368
+00:42:18,600 --> 00:42:19,320
+所有的外度之和等于它的边。
+
+369
+00:42:19,320 --> 00:42:19,900
+Okay.
+
+370
+00:42:19,960 --> 00:42:21,360
+边的个数,what I'm saying.
+
+371
+00:42:21,500 --> 00:42:22,040
+Okay.
+
+372
+00:42:24,900 --> 00:42:28,460
+And also applies to multiple edges and loop.
+
+373
+00:42:29,160 --> 00:42:29,880
+这个也加了。
+
+374
+00:42:32,520 --> 00:42:33,460
+如果你有多条边连向一个定点或者这种self loop,
+
+375
+00:42:33,460 --> 00:42:36,340
+this theory also valid.
+
+376
+00:42:37,960 --> 00:42:39,520
+Let's see this example here.
+
+377
+00:42:40,920 --> 00:42:46,400
+Okay, as we can see, the total H number will be what?
+
+378
+00:42:47,240 --> 00:42:48,180
+Four, right?
+
+379
+00:42:48,340 --> 00:42:50,180
+Total H number will be four.
+
+380
+00:42:50,680 --> 00:42:54,420
+And what we need to do is consider all the in degree
+
+381
+00:42:54,420 --> 00:42:56,320
+and all the out degree, right?
+
+382
+00:42:56,780 --> 00:42:58,720
+Let's see, firstly, out degree.
+
+383
+00:42:58,720 --> 00:43:03,420
+I will list them and will not talk about in details.
+
+384
+00:43:03,620 --> 00:43:07,400
+And as you can see, the sum up of all the out degree
+
+385
+00:43:07,400 --> 00:43:09,660
+will be four, exact same.
+
+386
+00:43:10,480 --> 00:43:15,020
+And this is the in degree list and you can sum up
+
+387
+00:43:15,020 --> 00:43:17,480
+all the together and this number will be four.
+
+388
+00:43:17,620 --> 00:43:20,900
+So four is equal to four to four.
+
+389
+00:43:21,180 --> 00:43:24,200
+So that's the handshake theory of three.
+
+390
+00:43:24,200 --> 00:43:24,260
+Three.
+
+391
+00:43:26,300 --> 00:43:29,820
+Till here, we have already shared all the information
+
+392
+00:43:29,820 --> 00:43:32,700
+about handshaking theory one, two, three.
+
+393
+00:43:33,340 --> 00:43:34,560
+Let's review them.
+
+394
+00:43:34,680 --> 00:43:38,020
+First one, the total number of the H,
+
+395
+00:43:38,900 --> 00:43:41,900
+of course, double size of the total number of H
+
+396
+00:43:41,900 --> 00:43:45,960
+will be the degrees sum up.
+
+397
+00:43:46,180 --> 00:43:48,280
+Okay, so that's handshaking theory one.
+
+398
+00:43:49,200 --> 00:43:50,660
+Handshaking theory two,
+
+399
+00:43:50,660 --> 00:44:03,340
+are saying that our degree will be the odd number
+
+400
+00:44:03,340 --> 00:44:09,780
+and for the undirected graph, of course,
+
+401
+00:44:11,080 --> 00:44:18,400
+our vertexes with the odd degree will be even number.
+
+402
+00:44:18,400 --> 00:44:22,180
+Okay, so that's what we know about handshaking theory two.
+
+403
+00:44:22,680 --> 00:44:24,060
+For the theory three,
+
+404
+00:44:25,520 --> 00:44:28,980
+though is related to the direct graph,
+
+405
+00:44:29,260 --> 00:44:32,500
+number of H is equivalent to the in-degree number
+
+406
+00:44:32,500 --> 00:44:35,360
+and also equivalent to the out-degree number.
+
+407
+00:44:35,680 --> 00:44:36,780
+Okay, so that's it.
+
+408
+00:44:39,600 --> 00:44:43,500
+And next, we will talk about some graph operation.
+
+409
+00:44:43,860 --> 00:44:47,440
+So how to compile the graph together?
+
+410
+00:44:49,920 --> 00:44:53,940
+Okay, till the last week of our cheese crate mathematics,
+
+411
+00:44:54,520 --> 00:44:57,180
+we talk about the operation many times, right?
+
+412
+00:44:57,300 --> 00:44:58,940
+You're sure that one thing you're whole,
+
+413
+00:44:58,960 --> 00:45:00,200
+you told more,
+
+414
+00:45:00,240 --> 00:45:01,220
+.
+
+415
+00:45:05,460 --> 00:45:09,820
+For the proposition, for the relation,
+
+416
+00:45:10,720 --> 00:45:12,720
+for the function, if you still remember,
+
+417
+00:45:12,880 --> 00:45:17,660
+and also we have operations for graph, okay?
+
+418
+00:45:18,400 --> 00:45:19,880
+I will list them quickly.
+
+419
+00:45:20,940 --> 00:45:23,740
+Similarly, we have complimentary, okay.
+
+420
+00:45:24,140 --> 00:45:25,900
+G1 bar, okay.
+
+421
+00:45:27,800 --> 00:45:31,520
+And I will not read through all the definitions.
+
+422
+00:45:31,780 --> 00:45:33,900
+You will go through and get the up class.
+
+423
+00:45:35,160 --> 00:45:37,580
+Okay, let's take a rest and we will continue.
+
+424
+00:46:28,180 --> 00:46:30,960
+Thank you.
+
+425
+00:46:51,300 --> 00:46:52,780
+Thank you.
+
+426
+00:47:29,080 --> 00:47:31,880
+Thank you.
+
+427
+00:48:50,900 --> 00:48:52,580
+Thank you.
+
+428
+00:49:20,980 --> 00:49:23,360
+Thank you.
+
+429
+00:49:45,560 --> 00:49:46,520
+Thank you.
+
+430
+00:50:49,940 --> 00:50:56,940
+all right let's back to the discussion here we are talking about the graph operation
+
+431
+00:50:59,300 --> 00:51:04,960
+so I will not least talk about the details how to define those operations
+
+432
+00:51:04,960 --> 00:51:12,580
+but you can check them later after the class yeah those type of graph we have
+
+433
+00:51:12,580 --> 00:51:18,660
+complementary graph intersection graph union graph join them together join is
+
+434
+00:51:18,660 --> 00:51:24,640
+the same as add them together like g1 plus g2 and Cartesian product
+
+435
+00:51:25,720 --> 00:51:31,280
+product Cartesian product is a little bit special in Chinese Cartesian you
+
+436
+00:51:31,280 --> 00:51:37,980
+already know how to declare so Cartesian product means the currency okay it says
+
+437
+00:51:37,980 --> 00:51:46,980
+that we have if we have those two graph connect together we will have all the
+
+438
+00:51:46,980 --> 00:51:52,260
+vertex connect together and how to connect them as you can see the vertex
+
+439
+00:51:52,260 --> 00:51:57,500
+context u1, u2, and v1, v2, you have the u1 connect with
+
+440
+00:51:58,820 --> 00:52:02,780
+v1 and u2 connect with v2.
+
+441
+00:52:02,940 --> 00:52:06,280
+So in such way, you have some new edges
+
+442
+00:52:06,280 --> 00:52:08,900
+to form the Cartesian product.
+
+443
+00:52:09,980 --> 00:52:11,880
+And no worries, we will talk about them
+
+444
+00:52:12,460 --> 00:52:13,680
+with some examples here.
+
+445
+00:52:15,660 --> 00:52:16,460
+This is the first one.
+
+446
+00:52:18,920 --> 00:52:26,440
+okay I list them all together here so that's the graphs we have seen and the
+
+447
+00:52:26,440 --> 00:52:31,040
+definitions for all those different operations okay what I want to talk
+
+448
+00:52:31,040 --> 00:52:37,400
+about by using the left part left part examples the graph examples to do those
+
+449
+00:52:37,400 --> 00:52:43,140
+operations okay yes omisha de la chen yi la in ju jia jia jia graph the leads
+
+450
+00:52:44,820 --> 00:52:45,420
+然后去做这种operations.
+
+451
+00:52:45,600 --> 00:52:46,360
+Let's see what.
+
+452
+00:52:46,520 --> 00:52:47,000
+Okay.
+
+453
+00:52:47,460 --> 00:52:48,220
+First one.
+
+454
+00:52:48,720 --> 00:52:52,620
+This is a complementary graph.
+
+455
+00:52:53,000 --> 00:52:56,720
+Clearly, for those with no H connection,
+
+456
+00:52:56,980 --> 00:52:57,580
+you add H.
+
+457
+00:52:57,740 --> 00:52:59,460
+For those with H connection,
+
+458
+00:52:59,760 --> 00:53:00,600
+you have no H.
+
+459
+00:53:00,860 --> 00:53:03,180
+So that's a complementary one.
+
+460
+00:53:06,420 --> 00:53:07,020
+比如说对于图的补给,
+
+461
+00:53:09,860 --> 00:53:10,460
+那就说右边地方把它变成没边,
+
+462
+00:53:11,820 --> 00:53:12,420
+没边地方加上边。
+
+463
+00:53:12,420 --> 00:53:12,880
+Okay.
+
+464
+00:53:13,140 --> 00:53:21,100
+vertex does not change so there's a complementary this is a intersect with B
+
+465
+00:53:21,100 --> 00:53:27,860
+so we can see the a we can see the B and was the intersection the comments
+
+466
+00:53:27,860 --> 00:53:35,820
+ah general a job shun Tong de if our comments the comments are shun Tong da
+
+467
+00:53:35,820 --> 00:53:42,620
+okay so what the comments here we have a we have C here so vertex comments and H
+
+468
+00:53:43,140 --> 00:53:51,580
+vertex comments age comments so we have it left okay let's see the union this is
+
+469
+00:53:51,580 --> 00:53:59,300
+the union was a union not just comments but their special part for each one add
+
+470
+00:53:59,300 --> 00:54:02,100
+them together you so put your shishun home the benzene
+
+471
+00:54:02,100 --> 00:54:09,520
+chi ho who told up naked if I you about how fun to me okay so there's a union
+
+472
+00:54:09,520 --> 00:54:18,700
+let's see this one join that's a very a little bit special one okay see join
+
+473
+00:54:18,700 --> 00:54:27,220
+with the graph C join with D let's see firstly we add them together for example
+
+474
+00:54:27,220 --> 00:54:34,820
+CD we add first add them together and then while it join for every vertex from
+
+475
+00:54:34,820 --> 00:54:43,480
+From one graph has H adding with each vertex in the other graph in Chinese.
+
+476
+00:54:51,560 --> 00:54:52,320
+其中一个graph的一个顶点跟另外一个graph每个顶点连上边。
+
+477
+00:54:52,320 --> 00:54:56,360
+So Y1, Y2, Y3, no problem, right?
+
+478
+00:54:57,060 --> 00:55:00,000
+点Z1, Z2, Z3, okay.
+
+479
+00:55:00,920 --> 00:55:01,680
+点到。
+
+480
+00:55:02,180 --> 00:55:04,060
+So in simple words, 简单来讲,
+
+481
+00:55:04,820 --> 00:55:14,100
+add H for every new vertexes okay let's see this one course okay see course
+
+482
+00:55:14,100 --> 00:55:19,600
+deep down for the crosses she when you wanna come out in Asia to share the car
+
+483
+00:55:19,600 --> 00:55:27,100
+G okay see cross multiply cross course much like deep okay unlike the other
+
+484
+00:55:27,100 --> 00:55:35,100
+type unlike the other type we have new vertices here you're so can channel
+
+485
+00:55:35,100 --> 00:55:38,740
+one can be a woman she's a wine to your single India but how to do that
+
+486
+00:55:39,400 --> 00:55:46,100
+VZ right two and three so two times three so we will have six different new
+
+487
+00:55:46,100 --> 00:55:52,960
+vertices and we named as we want we to with three and then the ones into the
+
+488
+00:55:52,960 --> 00:55:55,000
+and connect them all together.
+
+489
+00:55:55,500 --> 00:55:57,580
+Okay, how to connect them all together?
+
+490
+00:55:57,900 --> 00:56:01,600
+Why still connect Z, why connect Z, why connect Z, right?
+
+491
+00:56:01,780 --> 00:56:05,900
+And then one connect two, one connect two here,
+
+492
+00:56:06,120 --> 00:56:08,540
+and one connect three, no problem,
+
+493
+00:56:08,700 --> 00:56:13,260
+and two connect three, and still the same for the others.
+
+494
+00:56:15,980 --> 00:56:17,860
+As you can see, this is this type,
+
+495
+00:56:18,840 --> 00:56:20,720
+kind of change of the C,
+
+496
+00:56:20,720 --> 00:56:28,200
+and this is kind of change of D so tonight John Tom's our shindig India
+
+497
+00:56:28,200 --> 00:56:31,960
+dicey bien de guanxi hasia okay
+
+498
+00:56:31,960 --> 00:56:37,540
+how does India in Russia see ya okay missing horse I quickly go through them
+
+499
+00:56:37,540 --> 00:56:42,960
+and maybe you could not digest all of them immediately so I will strongly
+
+500
+00:56:42,960 --> 00:56:50,420
+suggest you to do the work later and actually another bonus here I will
+
+501
+00:56:50,720 --> 00:56:56,120
+I very likely to do the final exam question here.
+
+502
+00:56:56,640 --> 00:56:56,820
+Okay.
+
+503
+00:56:57,180 --> 00:57:02,540
+But as I mentioned, how to do the operation
+
+504
+00:57:03,380 --> 00:57:05,020
+and consider the degree.
+
+505
+00:57:05,960 --> 00:57:06,040
+Okay.
+
+506
+00:57:09,740 --> 00:57:10,580
+Anyway.
+
+507
+00:57:13,400 --> 00:57:15,440
+Okay, for the example two,
+
+508
+00:57:15,640 --> 00:57:18,100
+I will not go to the details
+
+509
+00:57:18,100 --> 00:57:21,960
+and strongly suggest you to go through it together.
+
+510
+00:57:24,340 --> 00:57:25,020
+第二个example我就不列了,
+
+511
+00:57:27,560 --> 00:57:28,240
+因为基本上就是把它变得更加复杂一点了。
+
+512
+00:57:28,240 --> 00:57:31,600
+但是all the examples, both examples,
+
+513
+00:57:31,880 --> 00:57:33,760
+I just want to help you to do the practice,
+
+514
+00:57:33,840 --> 00:57:35,900
+how to do the graph operation,
+
+515
+00:57:36,100 --> 00:57:39,980
+especially the join and Cartesian product.
+
+516
+00:57:42,080 --> 00:57:43,440
+简单一讲,如果要把你为难的话,
+
+517
+00:57:44,500 --> 00:57:47,940
+显然join和Cartesian product is more likely to challenge you.
+
+518
+00:57:48,100 --> 00:57:52,100
+But I didn't say it's necessary to be the question,
+
+519
+00:57:52,940 --> 00:57:55,080
+but I have mentioned that it will be the scope.
+
+520
+00:57:56,080 --> 00:57:59,380
+All right, let's see some new definitions here.
+
+521
+00:58:01,180 --> 00:58:03,280
+Complete graph, okay.
+
+522
+00:58:04,020 --> 00:58:04,380
+In Chinese,
+
+523
+00:58:04,600 --> 00:58:08,420
+so in Chinese,
+
+524
+00:58:08,560 --> 00:58:10,800
+so how to define it?
+
+525
+00:58:11,460 --> 00:58:14,800
+We usually use KN, K as a complete,
+
+526
+00:58:14,800 --> 00:58:19,960
+and n as the bottom right notation here.
+
+527
+00:58:20,200 --> 00:58:21,560
+So how to understand?
+
+528
+00:58:21,840 --> 00:58:24,020
+n is the number of vertices.
+
+529
+00:58:26,960 --> 00:58:27,760
+简单讲为什么要加个n在右下角是标记,
+
+530
+00:58:27,860 --> 00:58:28,820
+它有多少个顶点?
+
+531
+00:58:28,920 --> 00:58:31,340
+Okay, let's see what is the definition.
+
+532
+00:58:31,960 --> 00:58:34,920
+An edge between every pair of vertices.
+
+533
+00:58:35,820 --> 00:58:39,900
+So every pair of vertices have an edge to connect.
+
+534
+00:58:43,320 --> 00:58:44,120
+也就是说每个顶点之间
+
+535
+00:58:46,760 --> 00:58:47,880
+这个边来连接,这样的图,
+
+536
+00:58:47,920 --> 00:58:50,580
+we call it as, in Chinese, 完全图,
+
+537
+00:58:50,620 --> 00:58:52,320
+or complete graph, and KN.
+
+538
+00:58:53,000 --> 00:58:53,560
+为什么呢?
+
+539
+00:58:54,360 --> 00:58:56,120
+Why we use KN?
+
+540
+00:58:56,320 --> 00:58:59,360
+Because if, it means,
+
+541
+00:58:59,500 --> 00:59:01,420
+if there is a sentence to describe,
+
+542
+00:59:01,560 --> 00:59:04,000
+or if there is a notation, K5,
+
+543
+00:59:05,240 --> 00:59:07,280
+technically you can draw the graph
+
+544
+00:59:07,280 --> 00:59:08,880
+without seeing the graph.
+
+545
+00:59:09,060 --> 00:59:10,320
+也就是说,如果你看到K5,
+
+546
+00:59:10,440 --> 00:59:12,100
+理论上,你就可以把这个图
+
+547
+00:59:13,020 --> 00:59:13,580
+完全地画出来了。
+
+548
+00:59:17,140 --> 00:59:17,780
+这就为什么说我们要用这个数字来标记。
+
+549
+00:59:17,780 --> 00:59:18,820
+Let's see example here.
+
+550
+00:59:19,960 --> 00:59:21,540
+Complete undirect graph.
+
+551
+00:59:22,060 --> 00:59:27,340
+Every pair of vertices has a connection, right?
+
+552
+00:59:27,520 --> 00:59:30,700
+You can, I will not go through with you together,
+
+553
+00:59:30,820 --> 00:59:35,020
+but it means how to make the notation here.
+
+554
+00:59:35,160 --> 00:59:37,860
+The notation is k, how many vertices here?
+
+555
+00:59:38,060 --> 00:59:38,840
+Four, right?
+
+556
+00:59:38,940 --> 00:59:40,100
+So it says k4.
+
+557
+00:59:42,040 --> 00:59:43,320
+也就是说,只要你看到k4,
+
+558
+00:59:46,460 --> 00:59:47,380
+That's simple.
+
+559
+00:59:48,220 --> 00:59:49,840
+Okay, complete direct graph.
+
+560
+00:59:53,020 --> 00:59:56,320
+Okay, as you can see, only special part.
+
+561
+00:59:57,880 --> 01:00:01,200
+We do not only have A adjacent to B,
+
+562
+01:00:01,360 --> 01:00:03,740
+but also backward, backward.
+
+563
+01:00:04,880 --> 01:00:08,200
+B is also adjacent to A.
+
+564
+01:00:09,700 --> 01:00:12,540
+With the special part, you have forward
+
+565
+01:00:12,540 --> 01:00:14,620
+Forward and backward direction for the arrows.
+
+566
+01:00:15,600 --> 01:00:17,480
+This is K4 for directed graph.
+
+567
+01:00:20,400 --> 01:00:25,280
+Okay, all right.
+
+568
+01:00:26,300 --> 01:00:28,300
+Let's see some new graph here.
+
+569
+01:00:30,860 --> 01:00:33,720
+Both are K4, okay, but one is for directed,
+
+570
+01:00:33,800 --> 01:00:35,180
+one is for undirected.
+
+571
+01:00:35,520 --> 01:00:37,700
+Another one, cycle graph.
+
+572
+01:00:39,820 --> 01:00:40,660
+Cycle graph.
+
+573
+01:00:44,780 --> 01:00:45,500
+录谱环都可以。
+
+574
+01:00:46,520 --> 01:00:49,660
+Similarly to the complete graph,
+
+575
+01:00:49,840 --> 01:00:56,040
+we can also use a notation to define the graph
+
+576
+01:00:56,040 --> 01:01:00,660
+and you can draw the graph only by using the notation.
+
+577
+01:01:01,380 --> 01:01:02,100
+也就是说同样道理,
+
+578
+01:01:03,060 --> 01:01:03,780
+只要看到notation,
+
+579
+01:01:03,920 --> 01:01:04,600
+你同样可以,
+
+580
+01:01:06,140 --> 01:01:06,860
+理论上是可以画出这个图。
+
+581
+01:01:06,860 --> 01:01:07,940
+Okay, so what's that?
+
+582
+01:01:08,100 --> 01:01:08,660
+Let's see.
+
+583
+01:01:09,400 --> 01:01:18,780
+A circular graph with vertices where vertex i is connected to i plus 1 to i plus 1,
+
+584
+01:01:18,920 --> 01:01:20,780
+mode n and mode n.
+
+585
+01:01:21,000 --> 01:01:24,740
+Okay, I will not repeat that.
+
+586
+01:01:25,020 --> 01:01:30,280
+And I would like to use a serious example to help you.
+
+587
+01:01:31,220 --> 01:01:32,440
+In simple words, like polygon.
+
+588
+01:01:32,620 --> 01:01:33,380
+What is polygon?
+
+589
+01:01:37,580 --> 01:01:38,260
+Polygon.
+
+590
+01:01:38,660 --> 01:01:41,320
+like a polygon, 多边形, polygon, okay.
+
+591
+01:01:41,560 --> 01:01:44,340
+Poly, 多嘛, 杠, 是吧,
+
+592
+01:01:47,260 --> 01:01:48,580
+Pentagon, 那个五角大楼, 是吧,
+
+593
+01:01:48,620 --> 01:01:50,920
+Pentagon, 就五角大楼,
+
+594
+01:01:51,020 --> 01:01:52,900
+Polygon means 多边形,
+
+595
+01:01:53,900 --> 01:01:56,220
+Poly 一般是 多,
+
+596
+01:01:56,880 --> 01:01:57,720
+Okay, anyway,
+
+597
+01:01:58,600 --> 01:02:00,800
+so this is what C1,
+
+598
+01:02:01,580 --> 01:02:03,140
+okay, only one vertex,
+
+599
+01:02:04,560 --> 01:02:05,080
+也就是说你看到C1,
+
+600
+01:02:05,160 --> 01:02:05,960
+when you see C1,
+
+601
+01:02:06,040 --> 01:02:07,380
+you can definitely draw the graph.
+
+602
+01:02:09,460 --> 01:02:12,220
+So clearly, C2, right?
+
+603
+01:02:12,820 --> 01:02:13,440
+Huan Tu.
+
+604
+01:02:16,020 --> 01:02:16,940
+C3, right?
+
+605
+01:02:19,020 --> 01:02:20,060
+And C4.
+
+606
+01:02:21,120 --> 01:02:25,180
+Okay, as you can see, imagine like .
+
+607
+01:02:28,440 --> 01:02:29,480
+So, .
+
+608
+01:02:33,000 --> 01:02:34,840
+But since too many words,
+
+609
+01:02:34,920 --> 01:02:37,060
+and I don't want to read through with you together,
+
+610
+01:02:38,660 --> 01:02:40,740
+I would like to use an example to help you.
+
+611
+01:02:58,440 --> 01:02:59,480
+Okay, anyway.
+
+612
+01:03:01,720 --> 01:03:04,120
+Next type, wheel graph.
+
+613
+01:03:08,940 --> 01:03:11,420
+Wheel, I think easy for you to understand.
+
+614
+01:03:11,640 --> 01:03:16,180
+轮子,车轮, so in Chinese we call it 车轮图.
+
+615
+01:03:20,700 --> 01:03:25,560
+Clearly it's kind of related to cycle graph, right?
+
+616
+01:03:26,960 --> 01:03:28,880
+So it's kind of cycle graph,
+
+617
+01:03:29,040 --> 01:03:33,180
+but with an extra vertex in the middle.
+
+618
+01:03:35,080 --> 01:03:35,720
+比如说它有一个顶点在中间,
+
+619
+01:03:37,240 --> 01:03:38,520
+就是我们的环嘛,像一个轮子。
+
+620
+01:03:40,320 --> 01:03:45,420
+If you are seeing such graph, it will be the real graph.
+
+621
+01:03:45,640 --> 01:03:47,600
+So how to define more officially?
+
+622
+01:03:47,900 --> 01:03:49,520
+Let's see some examples.
+
+623
+01:03:49,840 --> 01:03:54,660
+So this is W1.
+
+624
+01:03:56,700 --> 01:03:58,260
+Instead of W2,
+
+625
+01:03:58,340 --> 01:04:04,800
+because we move out the extra graph vertex in the middle.
+
+626
+01:04:04,940 --> 01:04:06,800
+So who is in the middle?
+
+627
+01:04:06,920 --> 01:04:07,140
+B.
+
+628
+01:04:08,660 --> 01:04:11,020
+B is in the middle for W1.
+
+629
+01:04:12,040 --> 01:04:12,780
+This is W2.
+
+630
+01:04:15,540 --> 01:04:17,120
+As you can see, we have B,
+
+631
+01:04:17,240 --> 01:04:20,640
+and B connect every extra vertex.
+
+632
+01:04:21,960 --> 01:04:23,900
+So how to define this kind of cycle?
+
+633
+01:04:24,160 --> 01:04:28,480
+If you remove the B and the connection related to B,
+
+634
+01:04:28,640 --> 01:04:32,880
+it will change to be a cycle graph.
+
+635
+01:04:32,880 --> 01:04:34,340
+of, okay.
+
+636
+01:04:36,120 --> 01:04:39,240
+It's more straightforward as we have the number
+
+637
+01:04:39,240 --> 01:04:40,500
+of the vertex increase.
+
+638
+01:04:45,940 --> 01:04:50,600
+Here, D is the middle part, middle vertex,
+
+639
+01:04:51,940 --> 01:04:55,740
+and is W3, and E is the middle vertex,
+
+640
+01:04:56,640 --> 01:04:57,600
+and this is W4.
+
+641
+01:04:58,520 --> 01:05:02,120
+So in simple words, we have a cycle graph,
+
+642
+01:05:02,880 --> 01:05:06,260
+we have a vertex in the middle and the vertex in the middle
+
+643
+01:05:06,260 --> 01:05:10,400
+connect with every vertex in the cycle, okay.
+
+644
+01:05:14,220 --> 01:05:20,280
+So for such BBDE, they are called as middle vertex
+
+645
+01:05:22,400 --> 01:05:24,000
+or in Chinese,
+
+646
+01:05:24,120 --> 01:05:24,880
+okay.
+
+647
+01:05:24,880 --> 01:05:27,060
+中心点,中心点,OK.
+
+648
+01:05:29,560 --> 01:05:31,040
+Let's see some more.
+
+649
+01:05:32,620 --> 01:05:34,440
+Cube, OK.
+
+650
+01:05:35,720 --> 01:05:37,160
+Cubic, cube.
+
+651
+01:05:38,640 --> 01:05:40,580
+三次方,是吧,我们经常,
+
+652
+01:05:41,220 --> 01:05:42,260
+is cube, cube.
+
+653
+01:05:43,420 --> 01:05:46,040
+所以在这里,方是什么,立方。
+
+654
+01:05:49,820 --> 01:05:53,980
+So this type of graph named as cube,立方体。
+
+655
+01:05:54,880 --> 01:05:55,160
+define it.
+
+656
+01:05:55,700 --> 01:05:59,520
+N cubed QN is defined recursively.
+
+657
+01:06:00,300 --> 01:06:02,880
+Firstly we have Q naught of vertex
+
+658
+01:06:03,640 --> 01:06:07,960
+and then we got by taking two copies of QN
+
+659
+01:06:07,960 --> 01:06:13,240
+by drawing other vertex together by copy V prime.
+
+660
+01:06:13,580 --> 01:06:16,120
+A little bit complex to understand, right?
+
+661
+01:06:17,100 --> 01:06:17,960
+Let's see the example.
+
+662
+01:06:20,640 --> 01:06:22,860
+Only one vertex, okay.
+
+663
+01:06:22,860 --> 01:06:26,000
+Okay, no other to connect with.
+
+664
+01:06:26,220 --> 01:06:28,260
+This is Q naught or Q0.
+
+665
+01:06:28,780 --> 01:06:31,340
+Okay, A and A prime.
+
+666
+01:06:31,500 --> 01:06:33,780
+Now we have something to copy, right?
+
+667
+01:06:34,480 --> 01:06:36,940
+So this is Q1, that's more.
+
+668
+01:06:37,700 --> 01:06:41,000
+This is Q2, something copy, okay?
+
+669
+01:06:41,320 --> 01:06:43,380
+A have A prime to copy it.
+
+670
+01:06:43,500 --> 01:06:45,260
+B have P prime to copy it.
+
+671
+01:06:46,180 --> 01:06:50,140
+Okay, more like a cubic, real cubic, right?
+
+672
+01:06:50,140 --> 01:06:58,860
+so this is q3 we have a B C D and we have a pricey B prime C prime and D
+
+673
+01:06:58,860 --> 01:07:10,340
+prime and this is q4 so as you can see we have the size increase right and
+
+674
+01:07:10,340 --> 01:07:16,460
+And actually, it's more like an abstract idea.
+
+675
+01:07:18,820 --> 01:07:19,660
+更像一个抽象的概念。
+
+676
+01:07:23,920 --> 01:07:27,200
+简单来讲的话,相对来说它是二的三次方,二的四次方。
+
+677
+01:07:29,780 --> 01:07:33,140
+Okay, if you use that to understand,
+
+678
+01:07:33,500 --> 01:07:39,720
+it will be easier to help you to make up the cubic graph.
+
+679
+01:07:42,260 --> 01:07:44,660
+You can easier to make up the graph.
+
+680
+01:07:47,520 --> 01:07:50,300
+This notation on the bottom right is
+
+681
+01:07:50,300 --> 01:07:56,260
+how many elements or vertices you will have.
+
+682
+01:07:56,560 --> 01:08:06,540
+You can calculate all the vertices number.
+
+683
+01:08:06,780 --> 01:08:07,380
+Okay.
+
+684
+01:08:07,380 --> 01:08:10,720
+Okay, all right, let's see more graph.
+
+685
+01:08:12,180 --> 01:08:14,740
+Bipartite graph, okay.
+
+686
+01:08:17,000 --> 01:08:19,000
+Bipartite, bi, ah, shi ba?
+
+687
+01:08:20,020 --> 01:08:21,180
+Ah, sen pu.
+
+688
+01:08:23,540 --> 01:08:26,320
+Okay, let's see, what is the bi?
+
+689
+01:08:29,020 --> 01:08:32,400
+So graph is bipartite if all vertices can be separated
+
+690
+01:08:32,400 --> 01:08:37,040
+into two partitions, and any two adjacent vertices
+
+691
+01:08:37,380 --> 01:08:38,340
+in different partition.
+
+692
+01:08:48,500 --> 01:08:50,400
+Let's see example here.
+
+693
+01:08:53,540 --> 01:08:58,420
+As you can see, this is a typical bipartite graph.
+
+694
+01:08:59,220 --> 01:09:05,000
+You can see this can be partitioned into two,
+
+695
+01:09:05,000 --> 01:09:13,420
+right the right and left and so what type we is called by partisan V of G
+
+696
+01:09:13,420 --> 01:09:26,840
+that's the part you should be cautious here a F G D D are one type a F G D okay
+
+697
+01:09:26,840 --> 01:09:32,920
+and B E H C they are another type you saw me不能
+
+698
+01:09:34,600 --> 01:09:35,320
+它不能简单地把它认为是对称的。
+
+699
+01:09:35,320 --> 01:09:40,360
+For here, any two adjacent vertices are in different participle.
+
+700
+01:09:41,500 --> 01:09:42,220
+也就是说它们相邻的话,
+
+701
+01:09:45,240 --> 01:09:45,960
+理论上它们应该就属于不同的两块,
+
+702
+01:09:47,560 --> 01:09:48,280
+相邻属于不同两块。
+
+703
+01:09:49,160 --> 01:09:51,280
+A is not adjacent to F,
+
+704
+01:09:52,600 --> 01:09:54,040
+F is not adjacent to G,
+
+705
+01:09:54,200 --> 01:09:56,000
+and G is not to D.
+
+706
+01:09:56,780 --> 01:10:00,340
+Clearly, D can be called one part,
+
+707
+01:10:00,480 --> 01:10:02,280
+and B is C.
+
+708
+01:10:02,920 --> 01:10:06,340
+they are not adjacent to each other in this group.
+
+709
+01:10:06,540 --> 01:10:12,220
+So, B, E, H, C, they are in another part of the graph.
+
+710
+01:10:12,460 --> 01:10:15,400
+So, that's why there are two types.
+
+711
+01:10:15,860 --> 01:10:19,140
+And how to make they are in one type,
+
+712
+01:10:19,240 --> 01:10:22,660
+two adjacent vertices are not in different vertices.
+
+713
+01:10:23,920 --> 01:10:28,920
+So, in other way, we can change the graph
+
+714
+01:10:28,920 --> 01:10:30,200
+right in another form.
+
+715
+01:10:31,960 --> 01:10:32,920
+AFDG BCH.
+
+716
+01:10:41,500 --> 01:10:45,860
+Clearly you can see AF is not connected, right?
+
+717
+01:10:46,160 --> 01:10:49,400
+FD, DG, they are not connected to each other.
+
+718
+01:10:49,580 --> 01:10:52,080
+So you can move them to one side
+
+719
+01:10:52,640 --> 01:10:55,280
+and the same for the blue vertices,
+
+720
+01:10:55,500 --> 01:10:56,980
+we can move to the right side.
+
+721
+01:10:57,980 --> 01:11:01,360
+So actually in the right bottom graph
+
+722
+01:11:01,360 --> 01:11:03,460
+is easier for you to understand
+
+723
+01:11:03,460 --> 01:11:06,940
+why they are called as bipartite graph in Chinese.
+
+724
+01:11:21,360 --> 01:11:25,240
+Okay, there's some theory for the bipartite graph.
+
+725
+01:11:25,400 --> 01:11:26,080
+Let's see them.
+
+726
+01:11:27,080 --> 01:11:31,400
+A simple graph is bipartite if and only if
+
+727
+01:11:32,180 --> 01:11:34,480
+two different colors to each
+
+728
+01:11:34,480 --> 01:11:37,840
+so that no two adjacent are assigned the same color.
+
+729
+01:11:39,540 --> 01:11:40,740
+其实很简单,就是说
+
+730
+01:11:44,580 --> 01:11:45,320
+如果一个图我们可以把它当作十二分图的话
+
+731
+01:11:46,820 --> 01:11:47,560
+那我们肯定是可以画成
+
+732
+01:11:50,140 --> 01:11:50,880
+右边的这个形象
+
+733
+01:11:52,340 --> 01:11:53,080
+就这么简单
+
+734
+01:11:53,080 --> 01:11:56,120
+I just want to Chinese help you to understand
+
+735
+01:11:57,500 --> 01:12:00,440
+If this graph is bipartite,
+
+736
+01:12:00,660 --> 01:12:04,400
+then we can definitely draw the graph in such form.
+
+737
+01:12:04,560 --> 01:12:05,360
+What form?
+
+738
+01:12:06,200 --> 01:12:08,440
+The red color is not adjacent to each.
+
+739
+01:12:08,620 --> 01:12:11,140
+The blue color is not adjacent to each.
+
+740
+01:12:11,280 --> 01:12:12,220
+Such form.
+
+741
+01:12:14,080 --> 01:12:14,760
+比如说如果图是二分图,
+
+742
+01:12:16,200 --> 01:12:16,880
+那肯定就能变成右边这个形式。
+
+743
+01:12:17,900 --> 01:12:19,520
+Alright, let's see an example.
+
+744
+01:12:22,480 --> 01:12:23,820
+Is CN bipartite?
+
+745
+01:12:23,980 --> 01:12:24,540
+Okay.
+
+746
+01:12:26,020 --> 01:12:26,700
+这里来讲。
+
+747
+01:12:26,980 --> 01:12:28,640
+When A is even, yes.
+
+748
+01:12:30,940 --> 01:12:31,580
+在这里就很有意思了。
+
+749
+01:12:34,260 --> 01:12:35,660
+他这里问的是刚刚我们学的环图,是吧,CN.
+
+750
+01:12:36,540 --> 01:12:38,520
+A is even, it is bipartite.
+
+751
+01:12:39,360 --> 01:12:45,580
+When A is odd, then it is not bipartite, except A is 1.
+
+752
+01:12:46,060 --> 01:12:46,700
+Okay.
+
+753
+01:12:47,340 --> 01:12:52,760
+I directly give the information for you so that we can see the example one by one,
+
+754
+01:12:52,820 --> 01:12:55,540
+so that we can quickly digest the definition.
+
+755
+01:12:57,960 --> 01:12:59,600
+这个结果给你,因为我们需要快一点消化。
+
+756
+01:12:59,600 --> 01:13:00,020
+Okay.
+
+757
+01:13:02,000 --> 01:13:02,680
+Let's see this one.
+
+758
+01:13:03,380 --> 01:13:06,100
+Clearly this is C1, right?
+
+759
+01:13:06,220 --> 01:13:07,060
+Cycle graph.
+
+760
+01:13:08,380 --> 01:13:08,680
+It is.
+
+761
+01:13:09,460 --> 01:13:09,600
+Okay.
+
+762
+01:13:12,240 --> 01:13:13,060
+在对这个来讲的话,
+
+763
+01:13:14,300 --> 01:13:16,800
+A is odd, so it is not.
+
+764
+01:13:19,020 --> 01:13:19,820
+N is 1.
+
+765
+01:13:20,420 --> 01:13:21,240
+这个应该是yes。
+
+766
+01:13:21,240 --> 01:13:22,700
+我这里写错了。
+
+767
+01:13:22,700 --> 01:13:23,200
+Okay.
+
+768
+01:13:23,200 --> 01:13:28,200
+Okay, A is one and odd, then it is bipartite.
+
+769
+01:13:29,160 --> 01:13:30,720
+Okay, no problem.
+
+770
+01:13:31,000 --> 01:13:34,160
+And let's see this one, it's even, right?
+
+771
+01:13:34,640 --> 01:13:35,660
+So it's yes.
+
+772
+01:13:36,640 --> 01:13:39,780
+We can change it to two.
+
+773
+01:13:42,480 --> 01:13:45,160
+And this is how many vertices?
+
+774
+01:13:45,500 --> 01:13:47,500
+Three, so it's not bipartite.
+
+775
+01:13:47,740 --> 01:13:50,360
+Because we can never assign it in two parts.
+
+776
+01:13:50,960 --> 01:13:57,020
+because there are three parts right so it's not you and this is true no
+
+777
+01:13:57,020 --> 01:14:07,600
+problem so this is true true true okay let's see another example to see this
+
+778
+01:14:07,600 --> 01:14:14,920
+example whether this is Papa of apartheid usual when ha homo
+
+779
+01:14:17,880 --> 01:14:18,360
+我们是否可以把它分为两边的这种二分图。
+
+780
+01:14:18,360 --> 01:14:19,040
+Okay.
+
+781
+01:14:20,260 --> 01:14:21,260
+Let's see this one.
+
+782
+01:14:26,980 --> 01:14:28,900
+I think it's very straightforward.
+
+783
+01:14:31,380 --> 01:14:31,860
+非常简单。
+
+784
+01:14:32,800 --> 01:14:35,020
+What you only see is check this one.
+
+785
+01:14:35,200 --> 01:14:35,660
+Okay.
+
+786
+01:14:36,660 --> 01:14:37,540
+我建议你去check this one.
+
+787
+01:14:38,060 --> 01:14:40,680
+I will have one student to help me.
+
+788
+01:14:43,200 --> 01:14:43,680
+Okay.
+
+789
+01:14:44,920 --> 01:14:46,040
+to think about that first.
+
+790
+01:15:39,760 --> 01:15:42,040
+Since I have asked all the students,
+
+791
+01:15:42,040 --> 01:15:45,720
+and those students who didn't show up
+
+792
+01:15:45,720 --> 01:15:47,760
+and I couldn't ask them to help me
+
+793
+01:15:47,760 --> 01:15:49,960
+so let me go through with you together.
+
+794
+01:15:53,260 --> 01:15:55,100
+Again, as I just mentioned,
+
+795
+01:15:55,220 --> 01:15:57,180
+we need to check vertex A, right?
+
+796
+01:15:57,720 --> 01:16:01,360
+So as you can see, A is neighbor to all, right?
+
+797
+01:16:01,960 --> 01:16:04,440
+So it's not about part time.
+
+798
+01:16:04,960 --> 01:16:06,620
+For example, consider ABC.
+
+799
+01:16:07,380 --> 01:16:09,060
+So generally, okay.
+
+800
+01:16:09,060 --> 01:16:12,780
+Okay, two adjacent vertices are assigned to the same color
+
+801
+01:16:13,400 --> 01:16:14,840
+if only two colors are allowed.
+
+802
+01:16:16,120 --> 01:16:19,580
+So it is not partite.
+
+803
+01:16:20,720 --> 01:16:25,380
+Okay, let's see some more complex type of graph.
+
+804
+01:16:26,020 --> 01:16:28,640
+Complete partite graph.
+
+805
+01:16:30,480 --> 01:16:33,320
+We learned complete graph, one, two, two.
+
+806
+01:16:33,400 --> 01:16:35,980
+We learned, just learned about partites.
+
+807
+01:16:35,980 --> 01:16:38,020
+So what type of partite?
+
+808
+01:16:39,060 --> 01:16:39,720
+Firstly in Chinese,
+
+809
+01:16:43,540 --> 01:16:47,900
+Well all possible edges exist in a simple bar partite
+
+810
+01:16:47,900 --> 01:16:51,440
+graph with n and n vertices in two partition.
+
+811
+01:16:51,780 --> 01:16:59,000
+And then the graph is called as complete bar partite.
+
+812
+01:16:59,400 --> 01:17:04,040
+And here we use k and n to stand for,
+
+813
+01:17:04,160 --> 01:17:07,720
+means that there are two type of the vertices here.
+
+814
+01:17:10,860 --> 01:17:16,360
+A, B, C, D, F, and you can see there are two parts, right?
+
+815
+01:17:16,520 --> 01:17:22,660
+And those two colors are not adjacent to each other.
+
+816
+01:17:22,760 --> 01:17:24,220
+So this is K, two, four.
+
+817
+01:17:25,040 --> 01:17:26,980
+And this is another example.
+
+818
+01:17:29,040 --> 01:17:31,280
+There are four red color vertices
+
+819
+01:17:31,280 --> 01:17:34,460
+and five red color vertexes.
+
+820
+01:17:34,560 --> 01:17:36,200
+So the answer would be
+
+821
+01:17:37,1000 --> 01:17:50,100
+k for k for five so in simple words for the first part the red color part the
+
+822
+01:17:50,100 --> 01:17:55,220
+vertices are not connected with each other through the ages you saw the
+
+823
+01:17:55,220 --> 01:18:01,000
+you can't support that one can get some a little bit and for the blue part we
+
+824
+01:18:01,000 --> 01:18:06,280
+we have no H to connect for all those vertices either, right?
+
+825
+01:18:06,520 --> 01:18:09,800
+So for this part, M is four,
+
+826
+01:18:09,960 --> 01:18:12,860
+and for this part, N is five.
+
+827
+01:18:15,420 --> 01:18:19,540
+So that's how we call them as K for five, all right.
+
+828
+01:18:23,480 --> 01:18:26,040
+And let's see some new definitions.
+
+829
+01:18:26,500 --> 01:18:30,480
+Subgraph, I think it's very simple to understand.
+
+830
+01:18:31,000 --> 01:18:32,420
+sub, zi, subset,
+
+831
+01:18:32,660 --> 01:18:33,200
+.
+
+832
+01:18:34,300 --> 01:18:36,520
+So zi tu in Chinese.
+
+833
+01:18:38,160 --> 01:18:41,900
+If we have g component with v and e,
+
+834
+01:18:42,660 --> 01:18:44,540
+h component with w, f,
+
+835
+01:18:45,420 --> 01:18:47,800
+and those g, h are both graphs.
+
+836
+01:18:48,660 --> 01:18:52,440
+And here we say h is subgraph of g.
+
+837
+01:18:52,580 --> 01:18:56,180
+If w is a subset of v,
+
+838
+01:18:56,280 --> 01:19:00,000
+and f is a subset of e,
+
+839
+01:19:06,760 --> 01:19:11,620
+比如说,H的边都是这个G的边的子集,H的顶点都是G的顶点的子集。
+
+840
+01:19:12,340 --> 01:19:15,580
+In such case, we call the graph a subgraph.
+
+841
+01:19:15,920 --> 01:19:18,540
+Okay, is the graph inside another one?
+
+842
+01:19:19,980 --> 01:19:26,980
+Is a proper subgraph, is a proper subgraph of G if H does not G?
+
+843
+01:19:31,100 --> 01:19:32,440
+比如说我们知道自己是自己的子集,是吧?
+
+844
+01:19:32,840 --> 01:19:36,640
+同样的道理,子图也可以是自己这个图的子图。
+
+845
+01:19:37,180 --> 01:19:45,340
+But if H 跟 G is not equivalent, in such subgraph we call it a proper subgraph.
+
+846
+01:19:47,160 --> 01:19:48,120
+正确子图。
+
+847
+01:19:49,880 --> 01:19:51,800
+比如说自己肯定也是自己的子图嘛,跟子集的概念一样。
+
+848
+01:19:53,660 --> 01:19:55,580
+但是说如果它跟它自己不一样的话,那么叫做正确子图。
+
+849
+01:19:57,940 --> 01:19:59,560
+Let's see an example here.
+
+850
+01:20:01,140 --> 01:20:04,840
+This is the example we have already used many times, right?
+
+851
+01:20:06,420 --> 01:20:10,120
+And this is a subgraph, A, B, C, no problem.
+
+852
+01:20:11,780 --> 01:20:12,900
+And how about this one?
+
+853
+01:20:15,580 --> 01:20:17,540
+We have A, B, C, D here, right?
+
+854
+01:20:18,500 --> 01:20:20,540
+But whether this is a subgraph or not,
+
+855
+01:20:22,800 --> 01:20:25,660
+here, because of this one, it's not a subgraph.
+
+856
+01:20:26,980 --> 01:20:28,720
+Right, let's see more, this one.
+
+857
+01:20:30,860 --> 01:20:32,200
+Exactly the same, right?
+
+858
+01:20:33,420 --> 01:20:35,300
+It is a subgraph as I just mentioned.
+
+859
+01:20:37,120 --> 01:20:42,240
+Yes, right, this is a subgraph because like subset,
+
+860
+01:20:42,840 --> 01:20:47,520
+subset can be, the subset is for itself, right, the same.
+
+861
+01:20:47,860 --> 01:20:52,400
+But clearly it is not a proper subgraph.
+
+862
+01:20:53,220 --> 01:20:55,040
+So it is subgraph but not,
+
+863
+01:20:59,700 --> 01:21:01,040
+Not proper.
+
+864
+01:21:08,380 --> 01:21:10,180
+D, subgraph, no problem.
+
+865
+01:21:11,680 --> 01:21:16,240
+So if we select one vertex out of the graph in a subgraph,
+
+866
+01:21:16,360 --> 01:21:17,080
+how about this one?
+
+867
+01:21:19,560 --> 01:21:23,800
+We have the vertex out, we have the edge out,
+
+868
+01:21:23,800 --> 01:21:26,540
+and whether it is a subgraph or not.
+
+869
+01:21:30,840 --> 01:21:34,000
+No, it is not even a graph.
+
+870
+01:21:37,140 --> 01:21:39,420
+So it is not a subgraph.
+
+871
+01:21:40,340 --> 01:21:46,200
+So what I want to say, this case should be cautious.
+
+872
+01:21:47,960 --> 01:21:50,300
+Okay, let's see some more examples here.
+
+873
+01:21:50,300 --> 01:21:56,060
+here, how many different Q2 subgraphs does Q3 have?
+
+874
+01:21:59,340 --> 01:22:01,100
+Still remember what is Q, right?
+
+875
+01:22:02,260 --> 01:22:02,740
+What is Q?
+
+876
+01:22:04,080 --> 01:22:05,760
+QB, cube, right?
+
+877
+01:22:07,280 --> 01:22:07,380
+Cube.
+
+878
+01:22:08,780 --> 01:22:12,100
+So Q means how many vertices we will have?
+
+879
+01:22:13,220 --> 01:22:13,260
+Four.
+
+880
+01:22:14,140 --> 01:22:16,360
+How many vertices we have for the Q3?
+
+881
+01:22:17,960 --> 01:22:20,040
+Q3's power, eight.
+
+882
+01:22:21,740 --> 01:22:23,100
+So who is Q3?
+
+883
+01:22:25,240 --> 01:22:26,160
+Remember this one, right?
+
+884
+01:22:27,520 --> 01:22:30,120
+So this is Q2, this is Q3.
+
+885
+01:22:30,280 --> 01:22:32,740
+So now I'm asking you,
+
+886
+01:22:35,800 --> 01:22:38,680
+how many Q2 subgraphs does Q3 have?
+
+887
+01:22:49,620 --> 01:22:50,300
+一个立方形的这个图给拿出来去讨论。
+
+888
+01:22:50,300 --> 01:22:53,500
+What's the relation between cube 2 and cube 3?
+
+889
+01:22:54,340 --> 01:22:54,420
+Okay.
+
+890
+01:22:57,880 --> 01:23:02,000
+If in more straightforward, how many sides of the cube?
+
+891
+01:23:04,300 --> 01:23:04,980
+比如说一个立方形有多少个面?
+
+892
+01:23:05,300 --> 01:23:05,980
+Okay.
+
+893
+01:23:06,440 --> 01:23:07,320
+Let's see.
+
+894
+01:23:08,260 --> 01:23:13,860
+1, top, bottom, left, right, front, and back.
+
+895
+01:23:14,060 --> 01:23:14,400
+Right.
+
+896
+01:23:14,440 --> 01:23:14,860
+How many?
+
+897
+01:23:17,360 --> 01:23:17,520
+Okay.
+
+898
+01:23:23,700 --> 01:23:25,100
+All right.
+
+899
+01:23:26,940 --> 01:23:30,840
+So till here, we have learned all the definitions
+
+900
+01:23:30,840 --> 01:23:34,680
+for the graphs, of course the base graphs,
+
+901
+01:23:35,540 --> 01:23:37,780
+like the directed and undirected,
+
+902
+01:23:37,800 --> 01:23:40,660
+and some definitions related to graph,
+
+903
+01:23:40,720 --> 01:23:43,180
+like the degree and the handshaking theorem,
+
+904
+01:23:43,180 --> 01:23:47,680
+and many, many different types of the graphs, right?
+
+905
+01:23:50,020 --> 01:23:52,580
+And till here we can use all the definitions
+
+906
+01:23:52,580 --> 01:23:59,740
+to learn some new things in the following part.
+
+907
+01:24:00,100 --> 01:24:09,500
+So till here, we will now go into section 3.3.
+
+908
+01:24:09,500 --> 01:24:13,540
+we will talk about the representative graph
+
+909
+01:24:13,540 --> 01:24:15,540
+and graph isomorphism.
+
+910
+01:24:17,000 --> 01:24:19,520
+Represented graph means .
+
+911
+01:24:20,560 --> 01:24:23,640
+Graph isomorphism, isomorphism,
+
+912
+01:24:23,740 --> 01:24:25,820
+I have mentioned, right, .
+
+913
+01:24:28,020 --> 01:24:28,840
+So .
+
+914
+01:24:30,120 --> 01:24:30,580
+Let's see them.
+
+915
+01:24:34,600 --> 01:24:37,960
+Graph isomorphism, firstly, is a foreign graph
+
+916
+01:24:41,840 --> 01:24:42,480
+This one.
+
+917
+01:24:45,520 --> 01:24:47,820
+I want to go through with the example,
+
+918
+01:24:47,940 --> 01:24:49,560
+help you to understand whether they are
+
+919
+01:24:50,080 --> 01:24:52,080
+the graph isomorphism or not.
+
+920
+01:24:53,520 --> 01:24:55,340
+Here, structure is that the same,
+
+921
+01:24:55,440 --> 01:25:00,860
+but only the description for the vertex are different,
+
+922
+01:25:01,080 --> 01:25:01,240
+right?
+
+923
+01:25:05,480 --> 01:25:07,420
+ABCD becomes one, two, three, four.
+
+924
+01:25:07,420 --> 01:25:11,800
+So whether this is graph isomorphism, yes.
+
+925
+01:25:11,980 --> 01:25:15,600
+Because only the description change it.
+
+926
+01:25:17,480 --> 01:25:21,360
+So different labels, no problem.
+
+927
+01:25:21,640 --> 01:25:25,080
+They are still as graph isomorphism.
+
+928
+01:25:26,860 --> 01:25:27,740
+And how about this one?
+
+929
+01:25:30,000 --> 01:25:31,540
+The labels are the same.
+
+930
+01:25:33,140 --> 01:25:36,380
+And there's some age connection, connect to each other.
+
+931
+01:25:37,420 --> 01:25:40,920
+but whether they are graph isomorphism
+
+932
+01:25:40,920 --> 01:25:43,020
+for those two or not, okay.
+
+933
+01:25:46,400 --> 01:25:52,920
+My answer still yes, because only in different position
+
+934
+01:25:53,640 --> 01:25:59,480
+for those vertex, D, not on the bottom left, but here.
+
+935
+01:26:01,460 --> 01:26:05,360
+So if only the vertex position changed
+
+936
+01:26:05,360 --> 01:26:12,200
+and these you have the same relation by using the age connected then and they
+
+937
+01:26:12,200 --> 01:26:19,640
+have they have the same vertexes at least in the graph yes they are still
+
+938
+01:26:19,640 --> 01:26:28,680
+the same so those two graphs they are counted as graph isomorphism and how
+
+939
+01:26:28,680 --> 01:26:29,440
+How about this one?
+
+940
+01:26:32,780 --> 01:26:36,700
+Labor description changes, position changes.
+
+941
+01:26:45,500 --> 01:26:49,880
+Yes, because if only labor and position change,
+
+942
+01:26:50,060 --> 01:26:52,620
+but the connections, the edge connections
+
+943
+01:26:52,620 --> 01:26:57,640
+are still the same, then we can say they are the same.
+
+944
+01:26:58,700 --> 01:27:04,180
+So let me use official language to describe
+
+945
+01:27:04,180 --> 01:27:06,260
+the definition of graph isomorphism.
+
+946
+01:27:09,160 --> 01:27:12,920
+We compare two different graph and we have the same number
+
+947
+01:27:12,920 --> 01:27:15,440
+of graph vertices and the connection,
+
+948
+01:27:15,660 --> 01:27:16,780
+they are in the same way.
+
+949
+01:27:17,640 --> 01:27:21,060
+Then we can say those two are isomorphic.
+
+950
+01:27:23,820 --> 01:27:27,100
+Isomorphic, keep that in mind the notation.
+
+951
+01:27:28,680 --> 01:27:36,300
+So firstly, we can check in fingerprint, testing molecules.
+
+952
+01:27:37,440 --> 01:27:37,780
+对对对。
+
+953
+01:27:44,360 --> 01:27:46,600
+两个应用的范围,这个指纹和那个分子的格式。
+
+954
+01:27:47,680 --> 01:27:52,920
+In Chinese, 两个图在结构上完全的相同,
+
+955
+01:27:55,220 --> 01:27:56,340
+只是顶点的名字和画法不一样的话,
+
+956
+01:27:59,460 --> 01:28:00,340
+那么这两个图依旧是具有同构性。
+
+957
+01:28:00,880 --> 01:28:01,000
+Okay.
+
+958
+01:28:06,960 --> 01:28:15,260
+Alright, let's see some more definitions about the graph isomorphism by using some examples.
+
+959
+01:28:16,640 --> 01:28:21,400
+If G1 and G2 are isomorphic, do they have the same number of vertices?
+
+960
+01:28:24,920 --> 01:28:27,500
+Yes, right, based on the definition.
+
+961
+01:28:29,660 --> 01:28:31,820
+The same number of ages, yes.
+
+962
+01:28:33,420 --> 01:28:36,160
+The same degree sequence, of course.
+
+963
+01:28:36,720 --> 01:28:38,640
+Okay, no problem, right?
+
+964
+01:28:42,500 --> 01:28:45,720
+So, G1 and G2, if they are,
+
+965
+01:28:47,040 --> 01:28:50,480
+if we want them to be graph isomorphism,
+
+966
+01:28:51,400 --> 01:28:55,580
+or isomorphic if they have the same number of vertices?
+
+967
+01:28:58,900 --> 01:28:58,940
+No.
+
+968
+01:29:00,260 --> 01:29:01,800
+The same number of edges?
+
+969
+01:29:02,060 --> 01:29:02,380
+No.
+
+970
+01:29:04,580 --> 01:29:05,220
+Okay.
+
+971
+01:29:10,620 --> 01:29:12,140
+Let me see.
+
+972
+01:29:29,620 --> 01:29:50,860
+这个我先暂停一下,应该是yes,但是我这里写了no,OK, this is this example here, oh, OK, this ask you if they have the same number of vertices, R, G1 and G2, isomorphic,它是这个意思,
+
+973
+01:29:55,160 --> 01:29:55,800
+就是如果他们有同样的树木的顶点,
+
+974
+01:29:58,940 --> 01:29:59,580
+那这两个图是否属于图的同构?
+
+975
+01:30:00,080 --> 01:30:01,320
+Answer is no.
+
+976
+01:30:02,100 --> 01:30:04,960
+If they have the same number of edges,
+
+977
+01:30:05,360 --> 01:30:08,840
+are G1 and G2 are isomorphic?
+
+978
+01:30:08,900 --> 01:30:09,680
+Of course no.
+
+979
+01:30:10,620 --> 01:30:12,780
+If they have the same degree sequence,
+
+980
+01:30:13,640 --> 01:30:14,280
+度序列,
+
+981
+01:30:15,180 --> 01:30:19,380
+are those two graphs isomorphic?
+
+982
+01:30:21,400 --> 01:30:21,520
+No.
+
+983
+01:30:23,020 --> 01:30:23,900
+Why?
+
+984
+01:30:24,060 --> 01:30:29,820
+Because we should have all the requirements to exist at the same time.
+
+985
+01:30:29,920 --> 01:30:33,160
+Then we can have such relation.
+
+986
+01:30:35,720 --> 01:30:36,600
+比如说单独的要求成立的话,
+
+987
+01:30:40,060 --> 01:30:40,940
+你并不能使它满足这种图同构。
+
+988
+01:30:42,420 --> 01:30:43,300
+但如果图同构满足的话,
+
+989
+01:30:45,120 --> 01:30:46,000
+一定满足各自的这种要求。
+
+990
+01:30:46,000 --> 01:30:46,460
+OK.
+
+991
+01:30:52,500 --> 01:30:54,780
+Okay, let's see the example here.
+
+992
+01:30:57,880 --> 01:31:01,860
+We have vertex to be the total number to be six,
+
+993
+01:31:02,080 --> 01:31:05,420
+H four, and that's a degree sequence,
+
+994
+01:31:05,700 --> 01:31:06,920
+and let's see this one.
+
+995
+01:31:10,620 --> 01:31:12,640
+Clearly, as you can see,
+
+996
+01:31:12,760 --> 01:31:15,940
+all the number information exists separately.
+
+997
+01:31:20,280 --> 01:31:21,680
+这两个不是纯粹细胞
+
+998
+01:31:23,700 --> 01:31:25,100
+这就是它的意思
+
+999
+01:31:28,680 --> 01:31:30,080
+比如说如果它们有分别的结构的话
+
+1000
+01:31:30,080 --> 01:31:32,520
+但是为什么它们不是一样
+
+1001
+01:31:39,020 --> 01:31:40,420
+结构改变了
+
+1002
+01:31:47,580 --> 01:31:51,000
+As you can see, this is a typical example.
+
+1003
+01:31:51,420 --> 01:31:54,700
+Vertex is the same, H is the same, I mean number.
+
+1004
+01:31:55,500 --> 01:31:56,860
+And the sequence is the same.
+
+1005
+01:31:56,920 --> 01:32:00,340
+However, they are not isomorphic.
+
+1006
+01:32:02,620 --> 01:32:03,260
+他们不是一个图同构。
+
+1007
+01:32:05,880 --> 01:32:08,280
+So, watch out the difference.
+
+1008
+01:32:10,580 --> 01:32:14,100
+比如说,你满足了这些,未必是图同构。
+
+1009
+01:32:15,980 --> 01:32:17,260
+但如果你是图同构的话,必定要满足。
+
+1010
+01:32:19,160 --> 01:32:21,900
+In this example, structure totally different,
+
+1011
+01:32:22,100 --> 01:32:22,840
+so they are not.
+
+1012
+01:32:24,140 --> 01:32:25,580
+Okay, let's see more.
+
+1013
+01:32:29,080 --> 01:32:33,320
+There are two graphs and they are isomorphic.
+
+1014
+01:32:33,780 --> 01:32:36,780
+If there is a bijective function,
+
+1015
+01:32:39,000 --> 01:32:40,340
+what is bijective function?
+
+1016
+01:32:40,540 --> 01:32:42,380
+That's actually what we have learned, right?
+
+1017
+01:32:42,680 --> 01:32:44,160
+When we learned a function.
+
+1018
+01:32:49,680 --> 01:32:50,160
+Okay.
+
+1019
+01:32:52,480 --> 01:32:53,580
+If they are biject function,
+
+1020
+01:32:54,520 --> 01:32:59,660
+such that for all UV from E1,
+
+1021
+01:33:00,600 --> 01:33:04,860
+and we will have UV from E1,
+
+1022
+01:33:05,660 --> 01:33:08,680
+if all the function also from E2.
+
+1023
+01:33:10,600 --> 01:33:14,200
+It is edge preserving vertex matching.
+
+1024
+01:33:17,460 --> 01:33:20,960
+首先,它这个顶点之间,准确来讲,存在一个映射。
+
+1025
+01:33:22,080 --> 01:33:22,800
+顶点之间存在映射。
+
+1026
+01:33:24,460 --> 01:33:29,580
+If there is an edge in the original graph, there is an edge after mapping.
+
+1027
+01:33:33,740 --> 01:33:35,180
+简单来讲,它的边也是需要映射的一个边。
+
+1028
+01:33:36,840 --> 01:33:40,200
+This is a feature for the graph isomorphism.
+
+1029
+01:33:40,620 --> 01:33:45,140
+比如说,顶点是有映射的,边也有映射的。
+
+1030
+01:33:47,320 --> 01:33:48,300
+简单来讲的话。
+
+1031
+01:33:50,160 --> 01:33:56,860
+From this feature, we know that structure is important.
+
+1032
+01:33:57,280 --> 01:34:00,240
+However, how to decide the structure?
+
+1033
+01:34:00,920 --> 01:34:01,220
+The same.
+
+1034
+01:34:01,320 --> 01:34:05,380
+We use this feature to define the structure.
+
+1035
+01:34:06,560 --> 01:34:08,040
+Use Chinese.
+
+1036
+01:34:09,220 --> 01:34:10,200
+根据刚刚我们来判断。
+
+1037
+01:34:11,660 --> 01:34:13,620
+边数相同,顶点数相同。
+
+1038
+01:34:18,060 --> 01:34:18,780
+甚至degree的这个度序列都相同,
+
+1039
+01:34:20,400 --> 01:34:21,120
+并不代表它们是图同构。
+
+1040
+01:34:21,900 --> 01:34:22,060
+为什么?
+
+1041
+01:34:22,260 --> 01:34:24,640
+Because based on the information,
+
+1042
+01:34:24,720 --> 01:34:26,380
+we know structure is important.
+
+1043
+01:34:27,300 --> 01:34:29,240
+But how to define the structure?
+
+1044
+01:34:29,360 --> 01:34:30,000
+The same.
+
+1045
+01:34:30,140 --> 01:34:32,340
+Here is the structure to define.
+
+1046
+01:34:37,920 --> 01:34:39,360
+结构相同,但顶点标签可以不同。
+
+1047
+01:34:39,900 --> 01:34:40,760
+没问题,是吧?
+
+1048
+01:34:42,260 --> 01:34:42,980
+但是在这里我们讲到了,
+
+1049
+01:34:45,160 --> 01:34:45,660
+它的顶点有那个映射的关系。
+
+1050
+01:34:46,320 --> 01:34:48,900
+然后,映射后的两个顶点,
+
+1051
+01:34:53,540 --> 01:34:54,040
+映射之前这两个顶点之间的边在原图,
+
+1052
+01:34:58,180 --> 01:34:58,680
+那么对应映射后两个顶点对应的那个边也可以映射到。
+
+1053
+01:34:58,680 --> 01:34:59,240
+Okay.
+
+1054
+01:35:00,300 --> 01:35:01,200
+Complex, right?
+
+1055
+01:35:01,860 --> 01:35:04,160
+Let's use some example to help you to understand.
+
+1056
+01:35:06,040 --> 01:35:06,540
+Alright.
+
+1057
+01:35:07,220 --> 01:35:08,440
+Here is the example.
+
+1058
+01:35:08,440 --> 01:35:13,480
+As you can see, we have different descriptions of the labels.
+
+1059
+01:35:14,580 --> 01:35:16,260
+Even the positions are changed.
+
+1060
+01:35:17,780 --> 01:35:23,680
+But those two graphs are exactly graph isomorphic.
+
+1061
+01:35:25,080 --> 01:35:25,980
+大家可以看到这个例子。
+
+1062
+01:35:27,920 --> 01:35:29,720
+顶点描述不一样了,边的位置不一样了。
+
+1063
+01:35:33,560 --> 01:35:35,360
+但是可以看到,它们完全是一个图同构。
+
+1064
+01:35:37,040 --> 01:35:37,940
+提前下课。
+
+1065
+01:35:38,440 --> 01:35:47,700
+okay oh I have only two slides left but we will wrap up tomorrow and I will
+
+1066
+01:35:47,700 --> 01:35:49,760
+share the slides together with you okay

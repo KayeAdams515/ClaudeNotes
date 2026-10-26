@@ -1,21 +1,22 @@
----
-title: "C1 复习提纲 Review Outline"
-course: 离散数学 Discrete Mathematics
-chapter: "1 基础：逻辑与证明 The Foundations: Logic and Proofs"
-type: 复习提纲
-tags:
-  - 离散数学
-  - 复习提纲
-  - 逻辑
-  - 证明
-  - 期中复习
-created: 2026-09-18
----
+\---  
+title: "C1 复习提纲 Review Outline"  
+course: 离散数学 Discrete Mathematics  
+chapter: "1 基础：逻辑与证明 The Foundations: Logic and Proofs"  
+type: 复习提纲  
+tags:  
+  \- 离散数学  
+  \- 复习提纲  
+  \- 逻辑  
+  \- 证明  
+  \- 期中复习  
+created: 2026-09-18  
+\---
 
 # C1 复习提纲 Review Outline（完整版·不漏知识点）
 
-> [!abstract] 使用说明
+> [!abstract] 使用说明  
 > 本提纲由第一章全部笔记（[[C1 基础：逻辑与证明 MOC]] + C1.1–C1.8）整理而成，**覆盖全部知识点**，按“考试极简版 → 知识地图 → 分节详解 → 三张必背表 → 术语表”组织。
+>
 > - 标注 **⭐** = 老师明示的考点或往年真题；
 > - 标注 **（拓展）** = 课堂上未讲、教材补充内容，期中前按主干掌握即可。
 > - 考试情报与答题规范详见 [[C1 基础：逻辑与证明 MOC]]，本提纲开篇摘要。
@@ -51,20 +52,22 @@ graph TD
 ## 2. §1.1 命题逻辑 Propositional Logic（[[C1.1 命题逻辑 Propositional Logic]]）
 
 ### 2.1 核心概念
+
 - **命题 (proposition)**：陈述句，具有**唯一真值**（真 T / 假 F）。疑问句、感叹句、祈使句、悖论不是命题。
 - **命题变量 (propositional variable)**：用小写字母 $p,q,r,s,\dots$ 表示命题。
 - **原子命题 (atomic proposition)**：不能再分解的命题；**复合命题 (compound proposition)**：由原子命题经逻辑运算符连接而成。
 - **真值表 (truth table)**：$n$ 个变元的复合命题有 **$2^n$ 行**；列变元时按“折半交替”填 T/F（第一个变元前一半 T 后一半 F，逐列减半），中间列**按优先级由内向外**逐列添加，最后一列为整个复合命题真值。
 
 ### 2.2 六个逻辑联结词（必背真值表）
-| 联结词 | 名称 | 读法 | 真值要点 |
-|---|---|---|---|
-| $\neg p$ | 否定 negation | 非 p | 取反 |
-| $p \wedge q$ | 合取 conjunction | p 且 q | 仅两者皆真为真 |
-| $p \vee q$ | 析取 disjunction（**含或**） | p 或 q | 两者皆假才假（相容或） |
-| $p \oplus q$ | 异或 exclusive or | p 异或 q | 恰一真为真（不相容或） |
-| $p \to q$ | 蕴涵 implication | 若 p 则 q | 仅 p 真 q 假时为假；**假前提蕴涵任何结论为真**（空真） |
-| $p \leftrightarrow q$ | 双条件 biconditional | p 当且仅当 q | 同真同假为真 |
+
+| 联结词                   | 名称                     | 读法       | 真值要点                             |
+| --------------------- | ---------------------- | -------- | -------------------------------- |
+| $\neg p$              | 否定 negation            | 非 p      | 取反                               |
+| $p \wedge q$          | 合取 conjunction         | p 且 q    | 仅两者皆真为真                          |
+| $p \vee q$            | 析取 disjunction（**含或**） | p 或 q    | 两者皆假才假（相容或）                      |
+| $p \oplus q$          | 异或 exclusive or        | p 异或 q   | 恰一真为真（不相容或）                      |
+| $p \to q$             | 蕴涵 implication         | 若 p 则 q  | 仅 p 真 q 假时为假；**假前提蕴涵任何结论为真**（空真） |
+| $p \leftrightarrow q$ | 双条件 biconditional      | p 当且仅当 q | 同真同假为真                           |
 
 - **蕴涵术语**：$p$ 是**前提/前件 (hypothesis/premise/antecedent)**，$q$ 是**结论/后件 (conclusion/consequence)**。
   - **逆命题 (converse)** $q \to p$；**逆否命题 (contrapositive)** $\neg q \to \neg p$；**反命题 (inverse)** $\neg p \to \neg q$。
@@ -72,14 +75,16 @@ graph TD
 - **$p\to q$ 的常见英文说法**（翻译题必备）：if $p$, then $q$ · $p$ implies $q$ · $p$ only if $q$ · $q$ if $p$ · $q$ when/whenever $p$ · $p$ is sufficient for $q$ · $q$ is necessary for $p$ · $q$ follows from $p$ · $q$ unless $\neg p$。
 - **充分条件 sufficient condition / 必要条件 necessary condition**：sufficient 的放箭头左边，necessary 的放箭头右边。
 
-> [!bug] 模拟卷错题（2026-09-23）
+> [!bug] 模拟卷错题（2026-09-23）  
 > “Li gets an A **only if** he passes … and submits …”我写成了 $r\leftrightarrow(p\wedge q)$。only if 是单向的，应为 $r\to(p\wedge q)$；只有 if and only if 才是 $\leftrightarrow$。
 
 - **双条件**的常用说法：“p 当且仅当 q”（p if and only if q，简写 p iff q）、“p 是 q 的充要条件”（p is necessary and sufficient for q）。
 - **位运算 bit operations**：T=1、F=0，对**位串 bit string** 做按位 bitwise AND/OR/XOR 与 $\wedge/\vee/\oplus$ 对应。
 
 ### 2.3 运算符优先级 Precedence of Logical Operators（⭐ 老师版，考试以此为准）
-$$\boxed{\neg\ (1)\ >\ \wedge\ (2)\ >\ \vee,\ \oplus\ (3)\ >\ \to\ (4)\ >\ \leftrightarrow\ (5)}$$
+
+$\boxed{\neg\ (1)\ >\ \wedge\ (2)\ >\ \vee,\ \oplus\ (3)\ >\ \to\ (4)\ >\ \leftrightarrow\ (5)}$
+
 - 教材 Table 8 **没有列 $\oplus$**；老师课件把 **$\oplus$ 与 $\vee$ 并列为第 3 级**——**以课件为准**。
 - 同级运算符**从左到右**结合；加括号的通用算法：**按优先级 1→5 逐级扫描，每级把该级运算连同操作数括起来**，最外层（$\leftrightarrow$）不加。
 - 例：$p \vee q \wedge r$ = $p \vee (q \wedge r)$；$\neg s \wedge f$ = $(\neg s)\wedge f$；$A \leftrightarrow f \to b$ = $A \leftrightarrow (f \to b)$。
@@ -87,6 +92,7 @@ $$\boxed{\neg\ (1)\ >\ \wedge\ (2)\ >\ \vee,\ \oplus\ (3)\ >\ \to\ (4)\ >\ \left
 - ⭐ 课堂原话：“优先级这种东西太容易出成考题了”，闭卷必须背下。
 
 ### 2.4 构建复合命题真值表 Constructing Truth Tables 的实操要点（课件强调）
+
 1. 数变元 $n$ → $2^n$ 行；2. 变元列折半交替填；3. **中间列按优先级顺序添加，不跳步，每列只算一个运算符**；4. 算某列时只看它依赖的两列；5. 最后一列是整个复合命题。
 
 ---
@@ -94,17 +100,21 @@ $$\boxed{\neg\ (1)\ >\ \wedge\ (2)\ >\ \vee,\ \oplus\ (3)\ >\ \to\ (4)\ >\ \left
 ## 3. §1.2 命题逻辑的应用 Applications（[[C1.2 命题逻辑的应用 Applications of Propositional Logic]]）
 
 ### 3.1 翻译自然语言句子 Translating English Sentences
+
 - 把自然语言句翻译成命题逻辑表达式：识别原子命题、选择联结词（注意 but / however = ∧；“$q$ unless $p$” ≡ $\neg p\to q$）、处理“或”的歧义（含或 inclusive or vs 异或 exclusive or）。
 - 例：微积分/计算机选课、“成龙：歌手 **or** 演员（$\vee$）；男 **or** 女（$\oplus$）”。
 
 ### 3.2 系统规约与一致性 System Specifications and Consistency
+
 - **系统规约 (system specifications)**：用命题表达系统应满足的规则；一个规约是**一致的 (consistent)**，如果**存在一组真值赋值使所有规约命题同时为真**。
 - 判断一致性：列出所有命题 → 真值表/推理找满足赋值；不一致即无解。
 
 ### 3.3 布尔搜索 Boolean Searches
+
 - 网页搜索用布尔运算符 $\wedge$（AND）、$\vee$（OR）、$\neg$（NOT）组合关键词，如 "AI AND (ML OR DL) AND NOT (1950)"。
 
 ### 3.4 逻辑电路 Logic Circuits
+
 - **逻辑门 logic gates**：反相器 inverter（NOT）、与门 AND gate、或门 OR gate；异或门 XOR gate、与非 NAND / 或非 NOR 等。
 - **组合电路 (combinational circuit)**：输入经门网络得到输出；电路输出与命题表达式对应，**等价电路 = 逻辑等价的表达式**（衔接 §1.3）。
 
@@ -113,6 +123,7 @@ $$\boxed{\neg\ (1)\ >\ \wedge\ (2)\ >\ \vee,\ \oplus\ (3)\ >\ \to\ (4)\ >\ \left
 ## 4. §1.3 命题等价 Propositional Equivalences（[[C1.3 命题等价 Propositional Equivalences]]）
 
 ### 4.1 三个基本概念 Tautology / Contradiction / Contingency（⭐ 必背定义）
+
 - **永真式 (tautology)**：**所有真值赋值下都为真**的复合命题（去年期末考过“什么是 tautology”）。
 - **矛盾式 (contradiction)**：所有真值赋值下都为假。
 - **可能式 (contingency)**：既不是永真式也不是矛盾式（教材术语，定义题可能用到）。
@@ -120,34 +131,38 @@ $$\boxed{\neg\ (1)\ >\ \wedge\ (2)\ >\ \vee,\ \oplus\ (3)\ >\ \to\ (4)\ >\ \left
 - **SAT 问题（可满足性问题 satisfiability problem）**：判定命题公式是否可满足，是 **NP-完全 (NP-complete)** 问题（课件/教材提，了解即可）。
 
 > [!bug] 模拟卷错题（2026-09-23）
+>
 > - contingency 我写成“can either be true or false”，太含糊，任何命题都能这么说。应写：neither a tautology nor a contradiction。
 > - 判断 tautology / contradiction / contingency 时只写了结论，没写理由，题目要 justify 就会扣分。
 > - 证“$A$ 矛盾 ⇒ $\neg A$ 永真”时只写了 $A=F$，漏了关键词 **under every truth assignment**。
 
 ### 4.2 逻辑等价 Logical Equivalence
+
 - **定义**：$p$ 与 $q$ 逻辑等价（记 $p \equiv q$ 或 $p \Leftrightarrow q$），当且仅当对**所有真值赋值**，$p$ 与 $q$ 真值相同；等价于 $p \leftrightarrow q$ 是**永真式**。
 - 证明方法：① **真值表法 truth tables**（两列逐行相同）；② **等价推导法 a series of logical equivalences**（从一边用已知等价律推到另一边）。
 
 ### 4.3 ⭐ 常用逻辑等价律（必背，推导题直接使用）
-**同一律 Identity laws**：$p\wedge \mathbf T \equiv p$，$p\vee \mathbf F \equiv p$
-**支配律 Domination laws**：$p\vee \mathbf T \equiv \mathbf T$，$p\wedge \mathbf F \equiv \mathbf F$
-**幂等律 Idempotent laws**：$p\vee p \equiv p$，$p\wedge p \equiv p$
-**双重否定律 Double negation law**：$\neg(\neg p) \equiv p$
-**交换律 Commutative laws**：$p\vee q \equiv q\vee p$，$p\wedge q \equiv q\wedge p$
-**结合律 Associative laws**：$(p\vee q)\vee r \equiv p\vee(q\vee r)$，$(p\wedge q)\wedge r \equiv p\wedge(q\wedge r)$
-**分配律 Distributive laws**：$p\vee(q\wedge r) \equiv (p\vee q)\wedge(p\vee r)$，$p\wedge(q\vee r) \equiv (p\wedge q)\vee(p\wedge r)$
-**德摩根律 De Morgan's laws**：$\neg(p\wedge q) \equiv \neg p\vee \neg q$，$\neg(p\vee q) \equiv \neg p\wedge \neg q$
-==**吸收律 Absorption laws**：$p\vee(p\wedge q) \equiv p$，$p\wedge(p\vee q) \equiv p$==
+
+**同一律 Identity laws**：$p\wedge \mathbf T \equiv p$，$p\vee \mathbf F \equiv p$  
+**支配律 Domination laws**：$p\vee \mathbf T \equiv \mathbf T$，$p\wedge \mathbf F \equiv \mathbf F$  
+**幂等律 Idempotent laws**：$p\vee p \equiv p$，$p\wedge p \equiv p$  
+**双重否定律 Double negation law**：$\neg(\neg p) \equiv p$  
+**交换律 Commutative laws**：$p\vee q \equiv q\vee p$，$p\wedge q \equiv q\wedge p$  
+**结合律 Associative laws**：$(p\vee q)\vee r \equiv p\vee(q\vee r)$，$(p\wedge q)\wedge r \equiv p\wedge(q\wedge r)$  
+**分配律 Distributive laws**：$p\vee(q\wedge r) \equiv (p\vee q)\wedge(p\vee r)$，$p\wedge(q\vee r) \equiv (p\wedge q)\vee(p\wedge r)$  
+**德摩根律 De Morgan's laws**：$\neg(p\wedge q) \equiv \neg p\vee \neg q$，$\neg(p\vee q) \equiv \neg p\wedge \neg q$  
+==**吸收律 Absorption laws**：$p\vee(p\wedge q) \equiv p$，$p\wedge(p\vee q) \equiv p$==  
 **否定律 Negation laws**：$p\vee\neg p \equiv \mathbf T$，$p\wedge\neg p \equiv \mathbf F$
 
 **含蕴涵的等价 Logical equivalences involving conditional statements**：$p\to q \equiv \neg p\vee q$；$p\to q \equiv \neg q\to\neg p$；$p\vee q \equiv \neg p\to q$；$p\wedge q \equiv \neg(p\to\neg q)$；$\neg(p\to q) \equiv p\wedge\neg q$；$(p\to q)\wedge(p\to r) \equiv p\to(q\wedge r)$；$(p\to r)\wedge(q\to r) \equiv (p\vee q)\to r$；$(p\to q)\vee(p\to r) \equiv p\to(q\vee r)$；$(p\to r)\vee(q\to r) \equiv (p\wedge q)\to r$
 
 **含双条件的等价 Logical equivalences involving biconditional statements**：$p\leftrightarrow q \equiv (p\to q)\wedge(q\to p)$；$p\leftrightarrow q \equiv \neg p\leftrightarrow \neg q$；$p\leftrightarrow q \equiv (p\wedge q)\vee(\neg p\wedge\neg q)$；$\neg(p\leftrightarrow q) \equiv p\leftrightarrow \neg q$
 
-> [!bug] 模拟卷错题（2026-09-23）
+> [!bug] 模拟卷错题（2026-09-23）  
 > 我把 $\neg A\to B\equiv A\vee B$ 和 $p\vee r\equiv\neg p\to r$ 都标成了 De Morgan's law。这两个都是**蕴涵等价** $p\to q\equiv\neg p\vee q$（加 double negation）。德摩根律只处理 $\neg(\cdots\wedge\cdots)$ 和 $\neg(\cdots\vee\cdots)$。
 
 ### 4.4 推导题答题规范（⭐ 老师三次强调）
+
 - **每一步表达式 | 右侧写规则名或该规则公式**（记不住名字写公式同样给分）。
 - **结论是复合表达式时，必须推出整个表达式为真**，不是推出各分量再口头组合。
 - **$\mathbf T$ / $\mathbf F$ 不能当变量用**，代换用 $S,R$ 或 $A,B$；$\equiv$ 与 $\Leftrightarrow$ 一份答卷统一。
@@ -157,30 +172,36 @@ $$\boxed{\neg\ (1)\ >\ \wedge\ (2)\ >\ \vee,\ \oplus\ (3)\ >\ \to\ (4)\ >\ \left
 ## 5. §1.4 谓词与量词 Predicates and Quantifiers（[[C1.4 谓词与量词 Predicates and Quantifiers]]）
 
 ### 5.1 谓词 Predicates
+
 - **谓词 (predicate)**：含变量的陈述，如 $P(x)$；变量取定值后成为命题；$P(x)$ 也叫**命题函数 propositional function**。
 - **论域 (domain of discourse / universe of discourse)**：变量取值的集合（**必须非空**）。
 - 谓词的真值取决于变量取值；**自由变量 (free)** 与**约束变量 (bound)**：被量词约束的变量是约束变量。
 
 ### 5.2 三个量词 Quantifiers（⭐ 必背）
-| 量词 | 读法 | 为真的条件 | 记法 |
-|---|---|---|---|
-| $\forall x\,P(x)$ | 全称量词 universal quantifier，for all x | $P(x)$ 对**论域中所有** x 为真 | ∀ |
-| $\exists x\,P(x)$ | 存在量词 existential quantifier，there exists x | 论域中**至少一个** x 使 $P(x)$ 为真 | ∃ |
-| $\exists! x\,P(x)$ | 唯一量词 uniqueness quantifier，there exists a unique x | **恰好一个** x 使 $P(x)$ 为真 | ∃! |
+
+| 量词                 | 读法                                                 | 为真的条件                     | 记法 |
+| ------------------ | -------------------------------------------------- | ------------------------- | -- |
+| $\forall x\,P(x)$  | 全称量词 universal quantifier，for all x                | $P(x)$ 对**论域中所有** x 为真    | ∀  |
+| $\exists x\,P(x)$  | 存在量词 existential quantifier，there exists x         | 论域中**至少一个** x 使 $P(x)$ 为真 | ∃  |
+| $\exists! x\,P(x)$ | 唯一量词 uniqueness quantifier，there exists a unique x | **恰好一个** x 使 $P(x)$ 为真    | ∃! |
 
 - 注意 $\forall$ 与 $\exists$ **不可互换**；真值判断要看论域（空论域上 $\forall$ 真、$\exists$ 假）。
 - **受限论域 restricted domain**：$\forall x<0\,(x^2>0)$ 意为“对所有**满足 $x<0$** 的 $x$”；$\exists z>0\,(z^2=2)$ 同理。其否定要**保留限制条件**：$\neg\forall x<0 P(x) \equiv \exists x<0\neg P(x)$。
 
 ### 5.3 量词优先级 Precedence of Quantifiers
+
 - **量词（$\forall,\exists$）的优先级高于所有逻辑运算符**：$\forall x P(x)\vee Q(x)$ = $(\forall x P(x))\vee Q(x)$，不是 $\forall x(P(x)\vee Q(x))$。
 
 ### 5.4 量词的否定 Negating Quantified Expressions（⭐ 必背，量词的德摩根律 De Morgan's laws for quantifiers）
-$$\neg\forall x P(x) \equiv \exists x \neg P(x),\qquad \neg\exists x P(x) \equiv \forall x \neg P(x)$$
+
+$\neg\forall x P(x) \equiv \exists x \neg P(x),\qquad \neg\exists x P(x) \equiv \forall x \neg P(x)$
+
 - 直观：全称不成立 = 存在反例；存在不成立 = 全都不是。
 - **连续否定多个量词时，量词逐个翻转**（衔接 §1.5）：$\neg\forall x\exists y P(x,y) \equiv \exists x\forall y \neg P(x,y)$。
 
-> [!bug] 模拟卷错题（2026-09-23）
+> [!bug] 模拟卷错题（2026-09-23）  
 > 写否定句的英文时我用了“It is not the case that all cats like fish”，这是题目明确禁止的写法。要把否定推进去再说人话：Some cat does not like fish。
+
 
 ### 5.5 翻译自然语言 Translating from English into Logical Expressions（⭐ 期中预告考点）
 - 典型对应：“所有人/每个” → ∀；“有些/至少一个/存在” → ∃；“没有人” → $\neg\exists$ 或 $\forall\neg$；“并非所有” → $\neg\forall$。
@@ -383,6 +404,7 @@ $$\neg\forall x P(x) \equiv \exists x \neg P(x),\qquad \neg\exists x P(x) \equiv
 | T | F | F | F | T | T | F | F |
 | F | T | T | F | T | T | T | F |
 | F | F | T | F | F | F | T | T |
+
 
 ### TABLE B｜最常用逻辑等价（§1.3）
 （完整列表见第 4.3 节：同一/支配/幂等/双重否定/交换/结合/分配/德摩根/吸收/否定 + 蕴涵与双条件等价。）

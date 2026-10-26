@@ -25,10 +25,12 @@
 #include "ll_ref.h"
 #define NODECLASS NodeRef
 #define LLCLASS LLRef
+#define JOSEPHUS josephusRef
 #else
 #include "ll.h"
 #define NODECLASS Node
 #define LLCLASS LL
+#define JOSEPHUS josephus
 #endif
 
 // ------------------------------------------------------------
@@ -341,16 +343,23 @@ int test_l5() {
     CHECK(emptyOne.headNode() == NULL, "空表反转后 head 仍然是 NULL");
     CHECK(emptyOne.tailNode() == NULL, "空表反转后 tail 仍然是 NULL（别忘设成 NULL）");
 
-    // ---------- 约瑟夫环 ----------
-    // 讲义给的核对值：n = 8, m = 3 → 幸存者下标 6（第 7 个人）
-    LLCLASS<int> j;
-    CHECK(j.josephus(8, 3) == 6, "n=8, m=3 的幸存者应该是下标 6（第 7 个人）");
-    CHECK(j.josephus(1, 1) == 0, "只有 1 个人时幸存者就是 0 号");
-    CHECK(j.josephus(2, 1) == 1, "n=2, m=1 时第一个出列，剩 1 号");
-    CHECK(j.josephus(3, 3) == 1, "n=3, m=3 时幸存者应该是 1 号");
-    CHECK(j.josephus(5, 2) == 2, "n=5, m=2 时幸存者应该是 2 号");
-    CHECK(j.josephus(41, 3) == 30, "n=41, m=3（历史原题）幸存者应该是下标 30，即第 31 人");
-    CHECK(j.getLength() == 0, "约瑟夫环跑完后不该往链表里留下东西");
+    // ---------- 约瑟夫环：独立函数，无须创建 LL 对象 ----------
+    // 讲义给的核对值：n = 8, m = 3 → 幸存者编号 7（从 1 编号）
+    CHECK(JOSEPHUS(8, 3) == 7, "n=8, m=3 的幸存者应该是 7 号");
+    CHECK(JOSEPHUS(1, 1) == 1, "只有 1 个人时幸存者就是 1 号");
+    CHECK(JOSEPHUS(2, 1) == 2, "n=2, m=1 时第一个出列，剩 2 号");
+    CHECK(JOSEPHUS(3, 3) == 2, "n=3, m=3 时幸存者应该是 2 号");
+    CHECK(JOSEPHUS(5, 2) == 3, "n=5, m=2 时幸存者应该是 3 号");
+    CHECK(JOSEPHUS(41, 3) == 31, "n=41, m=3（历史原题）幸存者应该是 31 号");
+
+    // 独立函数只核对输入、结果和重复调用，不再检查某个 LL 对象的长度。
+    CHECK(JOSEPHUS(0, 3) == -1, "人数为 0 时应该返回 -1");
+    CHECK(JOSEPHUS(-2, 3) == -1, "人数为负时应该返回 -1");
+    CHECK(JOSEPHUS(5, 0) == -1, "报数间隔为 0 时应该返回 -1");
+    CHECK(JOSEPHUS(5, -2) == -1, "报数间隔为负时应该返回 -1");
+    CHECK(JOSEPHUS(1, 7) == 1, "只有 1 个人时，即使 m 大于 n 也应该返回 1");
+    CHECK(JOSEPHUS(5, 7) == 4, "m 大于 n 时需要循环报数，幸存者应该是 4 号");
+    CHECK(JOSEPHUS(8, 3) == 7, "多次调用后再次求同一问题，结果应保持一致");
 
     return 0;
 }

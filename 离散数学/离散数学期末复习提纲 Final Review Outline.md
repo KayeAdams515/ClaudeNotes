@@ -1,15 +1,13 @@
 # 离散数学期末复习提纲（Discrete Mathematics Final Review Outline）
 
-本提纲依据仓库中的35篇小节讲义、6篇章节汇总、作业错题及课堂转写重新组织。复习顺序为逻辑与证明、基本结构、关系、计数、递推、图论；章节权重不影响知识覆盖。
+本提纲以仓库 `pdfs/补充课件/` 中全部41份PDF的实际内容界定授课范围，共228页；逐页读取文字并核看公式、表格、图示及重传版本差异。教材小节名、目录预告和旧笔记标签均不单独决定范围。
 
-本提纲的整理目标是保留原笔记中的定义、公式条件、算法、证明方法及习题带出的新概念；不能根据某项是否出现在提纲里判断其考试重要性。本轮查出的遗漏已补入相应正文，具体出处与位置见7.4。
+范围内保留定义、定理条件与结论、证明要点和手算步骤；理解这些内容必需的记号与前置定义也保留。范围外内容在原章节压缩为要点，并标注 **【拓展】** ，不再与授课内容使用相同篇幅。完整来源与本轮范围处理见[[离散数学期末复习逐项核对表 Final Review Coverage]]。
 
-**【拓展】表示原笔记注明的延伸、课堂未展开内容或明确列出的补充，不表示可以省略。** 相同知识合并，重复题的具体数值不逐题抄录，但不同解题方法与新结论保留。
-
-> [!warning] 关于遗漏与考试范围
-> 未写入不等于不重要，也不等于不考；没有“老师明确会考”标记，也不等于不会考。只有能追溯到老师原话的说明才用来标注考试范围。“拓展”“课堂未讲”只说明内容来源与授课情况。
+> [!info] 范围与考试提醒
+> 本次按你的要求，以补充课件作为实际授课范围。**【拓展】表示未在这些课件中独立讲解** ，不据此断言考试绝不会涉及。老师的考试预告、答题语言和手算要求继续按原课堂证据保留，不能将历史提醒反过来扩大本次课件范围。
 >
-> 7.1是小节来源导航，不能作为逐知识点无遗漏的证明。排版前后内容一致，也只能说明排版没有删内容。
+> 同一小节可以同时有授课内容和拓展。关系矩阵、布尔积／幂虽无独立Ch2.6课件，却在Ch9.1、Ch9.3中实际出现；MST定义虽出现，也不意味着最短路算法已授。
 
 ## 考试信息与标记说明（Examination Information and Labels）
 
@@ -17,7 +15,7 @@
 |---|---|
 | 时间（time） | 第22节宣布11月19日8:50–10:50，时长120分钟；按本学期日历为2026年11月19日（周四）。转写后文把星期重复识别成Wednesday，不据此改日期。 |
 | 地点（venue） | 第22节转写分别出现“53A 210”和“F3A210”，均指二楼210。楼名存在转写歧义，须以QQ群正式通知核对，不能把机器转写当作确定楼号。 |
-| 范围（scope） | 第17节说明以期中后的第2、9、6、8、10章为主，第1章约保留一道题；第21节再次明确图论是期末重点。这里仍完整保留第1章及全部已有拓展。 |
+| 范围（scope） | 第17节说明以期中后的第2、9、6、8、10章为主，第1章约保留一道题；第21节再次明确图论是期末重点。这里保留第1章；范围内内容完整，范围外按本次课件规则压缩并标拓展。 |
 | 形式与语言（format and language） | 闭卷（closed-book examination）；学院要求英文作答（answers in English），第18节又提醒要认得英文专业词。 |
 | 题源（question sources） | 第1、12、13节反复强调教材例题（worked examples）、课后习题（exercises）及作业变形；“课堂没逐句讲过”不等于对应小节的教材细节不会出现。 |
 | 推导依据（justification） | 第1–8节反复要求写明所用规则名称或公式；不能只给结果。证明题若指定方法（specified proof method），按指定方法完成。 |
@@ -57,6 +55,8 @@
 ## 一、逻辑与证明（Logic and Proofs）
 
 ### 1.1 命题、联结词与真值表（Propositions, Connectives and Truth Tables）
+
+授课依据：[[Ch1.1_Part1.pdf|Ch1.1_Part1.pdf]]、[[Ch1.1_Part2.pdf|Ch1.1_Part2.pdf]]、[[Ch1.1_Part3.pdf|Ch1.1_Part3.pdf]]、[[Ch1.2.pdf|Ch1.2.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 命题与真值（Propositions and Truth Values）
 
@@ -128,47 +128,27 @@
 > [!warning] 【易错】
 > “今天不是周五”不能改成“今天是周一”；“至少32”之否定为“小于32”；不额外添加原句没有的信息。程序的if-then是控制流程（control flow），不等同于数学蕴涵的真值定义。
 
+- **【拓展】相容或与异或的附加恒等式（additional inclusive OR and XOR identities）** ：$p\lor q$允许两者同时真，$p\oplus q$要求恰好一个真。异或满足交换律、结合律，$p\oplus\mathbf F\equiv p$、$p\oplus\mathbf T\equiv\neg p$、$p\oplus p\equiv\mathbf F$，因此重复异或同一项会消去。
+
 #### 【拓展】广义逻辑与自指（Generalized Logic and Self-reference）
 
-- **【拓展】模糊逻辑（fuzzy logic）** ：本笔记采用真值$[0,1]$、$v(\neg P)=1-v(P)$、$v(P\land Q)=\min(v(P),v(Q))$、$v(P\lor Q)=\max(v(P),v(Q))$；这不是概率（probability）。
+- **【拓展】模糊逻辑（fuzzy logic）** 用$[0,1]$真值；本笔记的否定、合取、析取分别取$1-v$、min、max，用于模糊控制（fuzzy control），不能直接当概率。
 
-  例如0.8和0.4的合取为0.4、析取为0.8；排中律与矛盾律不再按经典二值形式成立。
-
-  模糊控制（fuzzy control）用这类分级真值表达“温度较高”等规则。
-
-- **【拓展】自指（self-reference）与悖论（paradox）** ：说谎者悖论（liar paradox）无法在经典二值体系中一致赋值；
-
-  理发师悖论（barber paradox）通过讨论理发师是否替自己刮胡子推出不存在满足规则者，与罗素悖论（Russell's paradox）同构。
-
-  自指与对角化（diagonalization）也是停机问题（halting problem）相关论证的线索。
+- **【拓展】自指（self-reference）与悖论（paradox）** ：说谎者悖论（liar paradox）不能一致赋经典真值；理发师悖论（barber paradox）与罗素悖论（Russell's paradox）揭示规则可能矛盾。自指、对角化（diagonalization）也用于停机问题的论证。
 
 #### 术语层次与计算应用（Terminology and Computing）
 
-- 术语补充：命题逻辑／命题演算（propositional logic / propositional calculus）把完整陈述作原子；
+- **命题逻辑／命题演算（propositional logic / propositional calculus）** 把完整陈述作原子；命题变元也称语句变元／布尔变量（statement / Boolean variable）。否定是一元运算符（unary operator），其余基本联结词为二元运算符（binary operator）；双条件也称双蕴涵（bi-implication）。
 
-  命题变元也称语句变元／布尔变量（statement / Boolean variable）。
+- **【拓展】对象语言与元语言（object language and metalanguage）** 分别指公式本身和谈论公式的语言；掩码（mask）、位并行（bit-parallel）、位图索引（bitmap index）用位运算筛选或编码，快速傅里叶变换（fast Fourier transform, FFT）也有相关位处理。
 
-  否定是一元运算符（unary operator），其余基本联结词为二元运算符（binary operator）；双条件也称双蕴涵（bi-implication）。
+- **【拓展】异或应用（XOR applications）** ：$a\oplus b\oplus b=a$，即模2加法（addition modulo 2）。一次一密（one-time pad）用$c=m\oplus k$，要求密钥独立均匀、等长且仅用一次；CRC（cyclic redundancy check）与RAID（redundant array of independent disks）用它作奇偶校验（parity check）。
 
-  公式属于对象语言（object language），谈论公式等价的$\equiv$属于元语言（metalanguage），不要把两层混作同一公式。
-
-- **【拓展／应用】掩码（mask）** 用按位与（bitwise AND）筛位，按位或（bitwise OR）置位，按位异或（bitwise XOR）翻位；
-
-  位并行（bit-parallel）同时处理多个布尔值，数据库位图索引（bitmap index）即用位串表达记录集合。
-
-  它们与高效编码、快速傅里叶变换（fast Fourier transform, FFT）中的位处理有关，但本课程不扩写FFT算法。
-
-- **【拓展／应用】异或的消去性质（XOR cancellation）** ：$a\oplus b\oplus b=a$；异或等于模2加法（addition modulo 2）。
-
-  一次一密（one-time pad）以$c=m\oplus k$加密，以$c\oplus k=m$解密；完整安全条件包括密钥均匀随机、独立、与消息等长且只使用一次。重复密钥会使$c_1\oplus c_2=m_1\oplus m_2$，消去密钥。
-
-  循环冗余校验（cyclic redundancy check, CRC）及独立磁盘冗余阵列（redundant array of independent disks, RAID）的奇偶校验（parity check）也使用异或；校验与加密的目标不同。
-
-- **【拓展／应用】布隆过滤器（Bloom filter）与二值神经网络（binary neural network, BNN）** ：前者用位数组与多个哈希位置近似判断集合成员，通常允许假阳性；后者可用按位运算与置位计数（population count / popcount）加速二值计算。
-
-  XOR问题不是线性可分（linearly separable）的，单个线性感知机（linear perceptron）无法表示其真值表；它与位运算可快速计算XOR是两个层面的结论。
+- **【拓展】布隆过滤器（Bloom filter）** 用位数组与哈希作允许假阳性的成员判断；二值神经网络（binary neural network, BNN）可用位运算及置位计数（population count / popcount）。XOR非线性可分（not linearly separable），单个线性感知机（linear perceptron）不能表达。
 
 ### 1.2 翻译、规约、谜题与电路（Translation, Specifications, Puzzles and Circuits）
+
+授课依据：[[Ch1.1_Part3.pdf|Ch1.1_Part3.pdf]]、[[Ch1.2.pdf|Ch1.2.pdf]]。课件有规约、位运算及真话／假话谜题；检索、泥孩子、电路为拓展。
 
 #### 翻译与一致性（Translation and Consistency）
 
@@ -180,47 +160,30 @@
 
 #### 检索与逻辑谜题（Search and Logic Puzzles）
 
-- **布尔检索（Boolean search）** ：AND取交集，OR取并集，NOT排除。先明确括号及检索系统的运算约定，不能只按自然语言猜范围。
+- **骑士与无赖（knights and knaves）** ：课件用Batman代表总说真话者、Joker代表总说假话者。设$K_A$为“A说真话”，发言内容为$S_A$，自洽条件为$K_A\leftrightarrow S_A$，对各人联立。
 
-- **骑士与无赖（knights and knaves）** ：设$K_A$为“A是骑士”，其发言内容为$S_A$，自洽条件是$K_A\leftrightarrow S_A$；对所有人联立，可能唯一解、多解或无解。
+  课件例：A说“B是Batman”，B说“两人类型不同”。若A为真话者，则B也为真话者，却不能真的类型不同，矛盾；故A为Joker，B也为Joker，此时两句均假而自洽。一般题可有唯一解、多解或无解；“我是无赖”在固定两类规则下无解。
 
-  “我是无赖”在固定两类规则下无自洽解。谋杀案（murder puzzle）、美女与老虎（the lady or the tiger）等同样是约束求解。
+- **【拓展】布尔检索（Boolean search）** 以AND、OR、NOT组合检索条件；谋杀案（murder puzzle）和美女与老虎（the lady or the tiger）也可建成逻辑约束。间谍／常人（spy / normal）可真可假，不能套骑士的双条件。
 
-  【拓展】若加入间谍／常人（spy / normal），其发言可真可假，不能对他套用“是骑士当且仅当发言为真”。应分别设类型变量，要求每人恰属于一类，再以“骑士则发言真”“无赖则发言假”约束，常人的发言不受真假限制。
+- **【拓展】泥孩子问题（muddy children puzzle）** ：公开公告（public announcement）建立共同知识（common knowledge）。在标准同步回答、人人正确推理的条件下，恰$m$人有泥，则前$m-1$轮无人知道，第$m$轮有泥者同时知道；对$m$归纳即可。知识逻辑（epistemic logic）研究这类状态变化，并联系分布式共识（distributed consensus）与多智能体系统（multi-agent systems）。
 
-- **泥孩子问题（muddy children puzzle）** ：父亲的公开公告（public announcement）把“至少一人脏”变为共同知识（common knowledge）；
+#### 【拓展】逻辑电路（Logic Circuits）
 
-  第一轮无人知道也提供新信息，第二轮据此推断。重点是知识状态随公开回应变化，不能只看静态真假。
+- **【拓展】逻辑门（logic gate）** 包括反相器（inverter / NOT gate）、与门（AND gate）、或门（OR gate）；组合电路（combinational circuit）输出仅依赖当前输入。沿信号流写中间子式，或按语法树（syntax tree）由内向外造电路；Shannon将布尔代数用于开关电路。
 
-  【拓展】这一背景属于知识逻辑／认知逻辑（epistemic logic）。人人知道某事，还不一定人人知道“别人也知道”，共同知识要求这类“知道别人知道”的层次不断成立；公开公告为大家提供了共同可见的依据。它与分布式系统共识（distributed consensus）、多智能体系统（multi-agent systems）的信息状态相关。
-
-#### 逻辑电路（Logic Circuits）
-
-- **逻辑门（logic gate）** ：反相器（inverter / NOT gate）、与门（AND gate）、或门（OR gate）；
-
-  组合电路（combinational circuit）输出仅由当前输入决定。读电路时沿信号流为中间节点写子式；造电路时从语法树（syntax tree）或最内层子式开始；等价化简可减少门数。
-
-  布尔代数用于开关电路的思想与Shannon的早期工作相联系。
-
-![[C1-图2-组合电路示例.png|560]]
-
-图中每个中间输出都可作为下一门的输入；先写每个节点表达式，再写最终输出。
+> [!info]- 【拓展】原图回看
+> ![[C1-图2-组合电路示例.png|560]]
 
 #### 【拓展】检索误差与电路化简（Retrieval Errors and Circuit Simplification）
 
-- **【拓展／应用】检索误差（retrieval errors）** ：假阳性（false positive）为不相关结果被选入，假阴性（false negative）为相关结果被排除；
+- **【拓展】检索误差（retrieval errors）** ：假阳性（false positive）为误选，假阴性（false negative）为漏选；查准率（precision）是检出结果的相关比例，查全率（recall）是相关结果被检出的比例。语义检索（semantic retrieval）与检索增强生成（retrieval-augmented generation, RAG）为应用背景。
 
-  查准率（precision）为检出结果中相关的比例，查全率（recall）为全部相关结果中检出的比例。布尔条件精确执行也可能因词义歧义检索不准；
-
-  语义检索（semantic retrieval）与检索增强生成（retrieval-augmented generation, RAG）是原笔记提及的应用背景。
-
-- **【拓展／应用】电路化简（circuit simplification）** ：积之和（sum of products）即若干AND输出再OR，对应DNF；小圆圈（bubble）表示信号取反；
-
-  扇出（fan-out）把同一中间输出送往多个后续门，公共子表达式消除（common subexpression elimination）避免重复计算。
-
-  计算图（computational graph）与组合电路都可用DAG描述算子依赖。
+- **【拓展】电路化简（circuit simplification）** 中积之和（sum of products）对应DNF；小圆圈（bubble）表取反，扇出（fan-out）复用中间输出，公共子表达式消除（common subexpression elimination）减少重复。计算图（computational graph）与电路均可用DAG表示依赖。
 
 ### 1.3 等价律、范式与可满足性（Equivalence Laws, Normal Forms and Satisfiability）
+
+授课依据：[[Ch1.2.pdf|Ch1.2.pdf]]、[[Ch1.3.pdf|Ch1.3.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 逻辑分类与基本等价律（Classification and Basic Equivalence Laws）
 
@@ -244,7 +207,12 @@
 | 吸收律（absorption laws） | $p\lor(p\land q)\equiv p$；$p\land(p\lor q)\equiv p$ |
 | 否定律（negation laws） | $p\lor\neg p\equiv\mathbf T$；$p\land\neg p\equiv\mathbf F$ |
 
-- 德摩根律可推广到有限多个命题。
+- **广义德摩根律（generalized De Morgan's laws）** ：对$n\ge1$，
+
+  $$\neg\bigwedge_{i=1}^np_i\equiv\bigvee_{i=1}^n\neg p_i,\qquad
+  \neg\bigvee_{i=1}^np_i\equiv\bigwedge_{i=1}^n\neg p_i.$$
+
+  证明要点：$n=2$为基本德摩根律；把前$n-1$项看成一个子式，再对剩余项应用二元德摩根律，递归展开即可。
 
 > [!tip] 【老师强调】
 > $p\to q\equiv\neg p\lor q$是箭头变换的核心；双条件先写成$(p\to q)\land(q\to p)$。其他式应会推，不把所有式子一律当作老师要求死记。
@@ -276,57 +244,41 @@ $$
 > [!info] 【期中预告】
 > 老师明确说过会有等价推导题，此预告针对期中。
 
+- **替换原理与等价的传递性（substitution principle and transitivity of equivalence）** ：子式可替换为与其逻辑等价的公式而不改变整式真值；若$A\equiv B$、$B\equiv C$，则$A\equiv C$。因此等价推导中的每一行必须与上一行双向等价；仅成立单向蕴涵的化简不能直接接在$\equiv$链中。
+
 #### 【拓展】对偶与范式（Duality and Normal Forms）
 
-- **【拓展】对偶（dual）** ：互换$\land/\lor$、$\mathbf T/\mathbf F$，变元和否定号不变；$(s^*)^*=s$称对合（involution）。等价式的对偶仍等价；不能把“对偶”误作“取否定”。
+- **【拓展】对偶（dual）** 互换$\land/\lor$、$\mathbf T/\mathbf F$，不改变元及否定号；等价式的对偶仍等价，二次对偶还原，称对合（involution）。对偶不等于否定。
 
-- **【拓展】文字（literal）** 为变元或其否定；合取项（term）为若干文字的合取；子句（clause）为若干文字的析取。
+- **【拓展】文字（literal）** 为变元或其否定；合取项（term）为文字合取，子句（clause）为文字析取。析取范式（disjunctive normal form, DNF）是项的析取，合取范式（conjunctive normal form, CNF）是子句的合取。真行造最小项后OR可得DNF；假行造仅在该行假的子句后AND可得CNF。
 
-  析取范式（disjunctive normal form, DNF）为合取项的析取；合取范式（conjunctive normal form, CNF）为子句的合取。
-
-  由真值表造DNF：每个真行写一个包含全部变元的合取项，再析取；由假行造CNF：每个假行写一个仅在该行假的子句，再合取。全假、全真可分别用$\mathbf F,\mathbf T$表示。
-
-- **【拓展】否定范式（negation normal form, NNF）** 只使用$\land,\lor,\neg$，并且否定号只作用于单个命题变元。
-
-  转换时先消去$\to,\leftrightarrow$，再用德摩根律与双重否定把$\neg$向内推。例如$\neg(p\to(q\land r))\equiv p\land(\neg q\lor\neg r)$。
-
-  NNF只限制否定的位置，不要求整体是合取项的析取或子句的合取；转成DNF／CNF还可能需要分配律。
+- **【拓展】否定范式（negation normal form, NNF）** 只用$\land,\lor,\neg$且否定只作用于变元；消箭头、用德摩根内移否定即可。NNF不要求已成DNF或CNF。
 
 #### 【拓展】功能完备性（Functional Completeness）
 
-- **【拓展】功能完备性（functional completeness）** ：运算符集能表达任意布尔函数（Boolean function）。
+- **【拓展】功能完备性（functional completeness）** 指可表达任意布尔函数（Boolean function）。DNF表示定理（DNF representation theorem）以每个真行的最小项（minterm）作OR证明$\{\neg,\land,\lor\}$完备；再用德摩根可去掉AND或OR之一。$n$变元有$2^{2^n}$个布尔函数，DNF最坏可有$2^n$项。
 
-  $\{\neg,\land,\lor\}$、$\{\neg,\land\}$、$\{\neg,\lor\}$均完备，后两者由德摩根律获得另一运算。
+- **【拓展】与非（NAND / Sheffer stroke）** 和或非（NOR / Peirce arrow）各自完备：$p\mid p=\neg p$、$(p\mid q)\mid(p\mid q)=p\land q$；$p\downarrow p=\neg p$、$(p\downarrow q)\downarrow(p\downarrow q)=p\lor q$。它们交换但不结合。
 
-  与非（NAND / Sheffer stroke）$p\mid q=\neg(p\land q)$、或非（NOR / Peirce arrow）$p\downarrow q=\neg(p\lor q)$各自单独完备：$p\mid p=\neg p$，$(p\mid q)\mid(p\mid q)=p\land q$；
-
-  $p\downarrow p=\neg p$，$(p\downarrow q)\downarrow(p\downarrow q)=p\lor q$。二者交换但不结合。$n$变元共有$2^{2^n}$个布尔函数／不同真值表。
+- **【拓展】两层电路（two-level logic circuit）** 用AND后OR实现DNF；PLA（programmable logic array）、FPGA（field-programmable gate array）和LUT（lookup table）为实现背景。
 
 #### 【拓展】SAT、数独与传播（SAT, Sudoku and Propagation）
 
-- **【拓展】可满足性（satisfiability, SAT）** 指至少一组赋值为真；不可满足（unsatisfiable）等同矛盾式。$P$永真当且仅当$\neg P$不可满足。
+- **【拓展】可满足性（satisfiability, SAT）** 指至少一个赋值为真；不可满足（unsatisfiable）即矛盾式，$P$永真当且仅当$\neg P$不可满足。可满足给见证（witness），不可满足须排除所有赋值；暴力枚举（brute-force enumeration）有$2^n$组。
 
-  证可满足给见证（witness），证不可满足要排除全部可能。暴力枚举（brute-force enumeration）有$2^n$组输入，DNF也可能指数长；
+- **【拓展】数独编码（Sudoku encoding）** 用$p(i,j,d)$表示填数，9阶数独729个变量；加入给定值（givens）、每行每列每块覆盖各数字、同格互斥等约束。一般$n^2\times n^2$需$n^6$个变量，满足约束不等于解唯一。
 
-  原笔记以SAT的NP完全性（NP-completeness）说明一般问题的困难，不等于每个实例都难。
+- **【拓展】单元传播（unit propagation）** 强制只剩一个文字的子句；传播停住不证明可满足。DPLL（Davis–Putnam–Logemann–Loveland）再分支与回溯；冲突驱动子句学习（conflict-driven clause learning, CDCL）从冲突学习子句并回跳。
 
-- **【拓展】数独（Sudoku）编码** ：令$p(i,j,d)$表示第$i$行、第$j$列填数字$d$，$9\times9$数独用729个变元。
-
-  约束包括给定值（givens）、每行每列每块含各数字、每格至多一个数字。
-
-  例如行约束$\bigwedge_i\bigwedge_d\bigvee_jp(i,j,d)$，列约束互换$i,j$，块约束$\bigwedge_{a,b=0}^2\bigwedge_{d=1}^9\bigvee_{u,v=1}^3p(3a+u,3b+v,d)$；
-
-  同格互斥为$\neg p(i,j,d)\lor\neg p(i,j,e)$（$d\ne e$）。每格至少一个为$\bigwedge_{i,j}\bigvee_dp(i,j,d)$；在行覆盖与每格至多一个已成立时可推得。$4\times4$有64个变元；
-
-  一般$n^2\times n^2$有$n^6$个变元。给定约束不保证唯一解（unique solution），唯一性需要另验。
-
-- **【拓展】单元传播（unit propagation）** ：在CNF中某子句只剩一个未确定文字时，满足该子句就强制该文字为真，据此简化其他子句，迭代到稳定或矛盾。
-
-  它是SAT求解与规约一致性检查的基本方法，但传播停住而未见矛盾不自动证明整个公式可满足。
+- **【拓展】Cook–Levin定理（Cook–Levin theorem）** ：SAT为NP完全（NP-complete），即属NP且任意NP判定问题能多项式归约到它；若SAT有多项式算法则$P=NP$，不表示已证明$P\ne NP$。
 
 ### 1.4 谓词、论域与单层量词（Predicates, Domains and Quantifiers）
 
+授课依据：[[Ch1.4_Part1.pdf|Ch1.4_Part1.pdf]]、[[Ch1.4_Part2.pdf|Ch1.4_Part2.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
+
 #### 谓词与量词的含义（Meaning of Predicates and Quantifiers）
+
+- **谓词逻辑／谓词演算（predicate logic / predicate calculus）** 区分主语（subject）与谓语／性质（predicate），用量化描述整类对象。
 
 - **谓词（predicate）** ／命题函数（propositional function）$P(x)$含变元，赋值或量化后才成为命题；
 
@@ -362,7 +314,13 @@ $$
 | $\forall x(P\lor Q)\equiv(\forall xP)\lor(\forall xQ)$ | 一般不成立：整数中“偶或奇”处处真，不能说全偶或全奇 |
 | $\exists x(P\land Q)\equiv(\exists xP)\land(\exists xQ)$ | 一般不成立：某人会P、某人会Q，未必同一人两者都会 |
 
-#### 否定与空论域（Negation and Empty Domains）
+- **谓词公式的逻辑等价（logical equivalence of predicate formulas）** ：在同一非空论域上，对谓词符号的每一种解释（interpretation）及自由变量的每一种赋值（assignment），两公式真值始终相同，才称逻辑等价。某个特定论域、某个特定谓词下恰好同真，不足以建立一般等价律。
+
+- **【拓展】直言命题的四种形式（four categorical proposition forms）** ：A型全称肯定（universal affirmative）为$\forall x(A(x)\to B(x))$；E型全称否定（universal negative）为$\forall x(A(x)\to\neg B(x))$；I型特称肯定（particular affirmative）为$\exists x(A(x)\land B(x))$；O型特称否定（particular negative）为$\exists x(A(x)\land\neg B(x))$。O型“有的A不是B”与“并非所有A都是B”等价。
+
+  A、E型本身不保证A存在；当A为空时可空真，不能据此推出对应的存在命题。
+
+#### 【拓展】空论域（Empty Domains）
 
 > [!warning] 【易错】
 > $\neg\forall x(P(x)\to Q(x))\equiv\exists x(P(x)\land\neg Q(x))$，同时翻转量词和联结词；“没有人完美”与“并非人人完美”不能混写。
@@ -371,27 +329,15 @@ $$
 
 #### 【拓展】程序验证与逻辑程序（Verification and Logic Programming）
 
-- **【拓展】前置条件与后置条件（preconditions and postconditions）** ：程序执行前满足的谓词与执行后要求成立的谓词，如交换变量前后值的对应关系；不是只检查某个输入。
+- **【拓展】程序验证（program verification）** 以执行前的前置条件（precondition）及执行后的后置条件（postcondition）描述正确性；部分正确性（partial correctness）不含终止保证，总正确性（total correctness）还要求终止。
 
-- **【拓展】逻辑程序设计（logic programming / Prolog）** ：事实（fact）、规则（rule）、查询（query）；
+- **【拓展】逻辑程序设计（logic programming / Prolog）** 用事实（fact）、规则（rule）、查询（query）表达知识，合一（unification）匹配表达式。符号人工智能（symbolic AI / GOFAI）、专家系统（expert system）、Datalog、答案集编程（answer set programming, ASP）及知识图谱推理（knowledge-graph reasoning）是相关应用；神经符号人工智能（neuro-symbolic AI）结合规则与学习，不能将学习预测当作演绎证明。
 
-  `,`表示合取，`head :- body`表示由body推出head。规则中变量按全称闭包理解；
-
-  只出现在规则体的变量在查询／证明规则体时体现存在搜索（existential search），不能简单称整条规则把它语法上改成存在量词。
-
-  Lewis Carroll论证将自然语言命题翻译成全称蕴涵再串联；关于命题自身的量化须另行说明论域是命题。
-
-- **【拓展／术语】谓词逻辑／谓词演算（predicate logic / predicate calculus）** 把主语（subject）和谓语／性质（predicate）分开，借全称量化（universal quantification）与存在量化（existential quantification）表达对象内部结构。
-
-  形式化验证（formal verification）用逻辑证明规约；Prolog属于声明式编程（declarative programming），描述事实与推理关系，区别于直接列执行步骤。
-
-  元数学（metamathematics）研究形式系统本身；命题逻辑有限真值表可判定，不代表一般一阶逻辑（first-order logic）的有效性也有判定算法。
-
-- **【拓展／应用】符号人工智能（symbolic AI / GOFAI）** 以事实、规则与推理操作表示知识；原笔记列举专家系统（expert system）、Datalog、答案集编程（answer set programming, ASP）和知识图谱推理（knowledge-graph reasoning）作为关联应用。
-
-  神经符号人工智能（neuro-symbolic AI）尝试结合神经网络的表示学习与逻辑规则推理，例如先从数据提取谓词，再交由逻辑规则推断。这里保留应用联系，不将这些工具冒充课堂单独讲授的算法。
+- **【拓展】声明式编程与验证（declarative programming and formal verification）** ：逻辑程序写关系和规则，不指定逐步控制流程；规则体的未定变量参与存在搜索（existential search）。元数学（metamathematics）研究证明系统本身，一阶逻辑（first-order logic）的一般问题不因某类Prolog查询可求解就都有终止算法。
 
 ### 1.5 嵌套量词与精确数量（Nested Quantifiers and Exact Cardinalities）
+
+授课依据：[[Ch1.4_Part2.pdf|Ch1.4_Part2.pdf]]、[[Ch1.5_Part1.pdf|Ch1.5_Part1.pdf]]、[[Ch1.5_Part2.pdf|Ch1.5_Part2.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 量词顺序与否定（Quantifier Order and Negation）
 
@@ -433,11 +379,7 @@ $$
 > [!warning] 【考试注意】
 > 唯一性条件必须针对完整性质“爱所有人”，不能误写成“只要爱某个人就必须是他”。
 
-- **【拓展／应用】邻域独立与聚类系数（independent neighborhood and clustering coefficient）** ：在无向简单的朋友图中，“某人的任意两个不同朋友都不是朋友”可写为
-
-  $$\exists x\,\forall y\,\forall z\bigl((F(x,y)\land F(x,z)\land y\ne z)\to\neg F(y,z)\bigr).$$
-
-  这等价于存在顶点$x$的邻域$N(x)$是独立集，即$x$不在任何三角形中。度$d(x)\ge2$时，局部聚类系数（local clustering coefficient）为$C(x)=e(G[N(x)])/\binom{d(x)}2$，故此处为0；度小于2时分母为0，须注明采用的约定，不能直接做除法。
+- **【拓展】邻域独立与聚类系数（independent neighborhood and clustering coefficient）** ：课件的朋友语句$\exists x\forall y\forall z((F(x,y)\land F(x,z)\land y\ne z)\to\neg F(y,z))$属于范围内；将它解释为图中某点邻域独立，并以局部聚类系数（local clustering coefficient）$2e(N(x))/(d(x)(d(x)-1))$衡量邻居连边，是额外应用，$d<2$须另约定。
 
 #### 量词移动与依赖（Quantifier Movement and Dependence）
 
@@ -450,25 +392,28 @@ $$
 
 - **【拓展】量化作嵌套循环（quantification as nested loops）** ：全称层找反例，存在层找见证；内层存在成功后可换下一个外层对象，但共同见证不能每次重选。
 
+- **含独立命题的量词移动（moving quantifiers past an independent proposition）** ：假定论域非空，且$x$不自由出现在$A$中，下面八式均成立：
+
+  | 联结词 | 全称量词（universal quantifier） | 存在量词（existential quantifier） |
+  |---|---|---|
+  | 合取（conjunction） | $\forall x(A\land P(x))\equiv A\land\forall xP(x)$ | $\exists x(A\land P(x))\equiv A\land\exists xP(x)$ |
+  | 析取（disjunction） | $\forall x(A\lor P(x))\equiv A\lor\forall xP(x)$ | $\exists x(A\lor P(x))\equiv A\lor\exists xP(x)$ |
+  | 量词在前件（quantifier in antecedent） | $(\forall xP(x))\to A\equiv\exists x(P(x)\to A)$ | $(\exists xP(x))\to A\equiv\forall x(P(x)\to A)$ |
+  | 量词在后件（quantifier in consequent） | $A\to\forall xP(x)\equiv\forall x(A\to P(x))$ | $A\to\exists xP(x)\equiv\exists x(A\to P(x))$ |
+
+  证明要点：先用$B\to C\equiv\neg B\lor C$消箭头，量词经过否定时翻转，再使用与独立命题的并交移动。量词位于蕴涵前件时翻转、位于后件时不翻转。若$x$自由出现在$A$里，不能照搬；空论域下也不能不加检查地照搬整张表。
+
 #### 【拓展】分析与学习理论中的量词（Quantifiers in Analysis and Learning Theory）
 
-- **【拓展】极限（limit）** $\lim_{x\to a}f(x)=L$为$\forall\varepsilon>0\exists\delta>0\forall x(0<|x-a|<\delta\to|f(x)-L|<\varepsilon)$；
+- **【拓展】极限（limit）** 的量词次序为$\forall\varepsilon>0\exists\delta>0\forall x$；一致连续（uniform continuity）要求同一$\delta$适用于所有$x$。逐点收敛（pointwise convergence）的$N$可依赖$x$，一致收敛（uniform convergence）要求同一$N$适用于所有$x$，不能交换这两层量词。
 
-  否定为存在$\varepsilon_0>0$使任意$\delta>0$都能找到违反误差界的$x$。逐点连续（pointwise continuity）为$\forall a\forall\varepsilon\exists\delta\forall x\cdots$；
+- **【拓展】空量化规则（null quantification rule）** ：论域非空且$x$不自由出现在$A$中时，$\forall xA\equiv A\equiv\exists xA$。机器学习中的经验风险（empirical risk）与期望风险（expected risk）、泛化（generalization）及PAC学习（probably approximately correct learning）也涉及“所有样本／存在模型”等不同量词次序；不扩写相关理论。
 
-  一致连续（uniform continuity）为$\forall\varepsilon\exists\delta\forall a\forall x\cdots$，同一$\delta$适用于所有点。不能随意消去依赖关系。
-
-- **【拓展／补充】空量化规则（null quantification rule）** ：在非空论域且x不自由出现在A中时，$\forall xA\equiv A\equiv\exists xA$；移动量词也须先验自由变量条件。
-
-  乘法逆元（multiplicative inverse）的表达为$\forall x\in\mathbb R\,(x\ne0\to\exists y\in\mathbb R\,xy=1)$，不能为每个x要求同一个y。
-
-- **【拓展／应用】逐点收敛与一致收敛（pointwise and uniform convergence）** ：前者$\forall x\forall\varepsilon>0\exists N\forall n\ge N:|f_n(x)-f(x)|<\varepsilon$，后者$\forall\varepsilon>0\exists N\forall x\forall n\ge N:\cdots$，差别在N能否依赖x。
-
-  大概近似正确学习（probably approximately correct learning, PAC learning）的误差$\varepsilon$、失败概率$\delta$、样本量（sample size）及数据分布（data distribution）也需明确量词次序；
-
-  本提纲保留这一联系，不以一串省略量词冒充完整PAC定义。
+- **【拓展】逐点连续（pointwise continuity）** 的$\delta$可依赖该点；一致连续则须对全部点统一。PAC学习还要区分样本量（sample size）、数据分布（data distribution）及误差、置信度；量词位置表达的是不同保证。
 
 ### 1.6 推理规则与有效性（Rules of Inference and Validity）
+
+授课依据：[[Ch1.6_Part1.pdf|Ch1.6_Part1.pdf]]、[[Ch1.6_Part2 (1).pdf|Ch1.6_Part2 (1).pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 有效性与命题推理（Validity and Propositional Inference）
 
@@ -513,19 +458,31 @@ $$
 >
 > 课堂提醒针对的是省略最终推导，不应解读为这条逻辑推论本身错误。
 
+- **综合量化证明的完整示例（worked quantified proof）** ：由$\exists x(C(x)\land\neg F(x))$和$\forall x(C(x)\to P(x))$，推出$\exists x(P(x)\land\neg F(x))$。
+
+  | 步骤（step） | 依据（reason） |
+  |---|---|
+  | 1. $\exists x(C(x)\land\neg F(x))$ | 前提（premise） |
+  | 2. $C(a)\land\neg F(a)$，$a$为新见证 | 由1存在实例化（EI） |
+  | 3. $C(a)$ | 由2化简律（simplification） |
+  | 4. $\forall x(C(x)\to P(x))$ | 前提（premise） |
+  | 5. $C(a)\to P(a)$ | 由4全称实例化（UI） |
+  | 6. $P(a)$ | 由3、5肯定前件式（MP） |
+  | 7. $\neg F(a)$ | 由2化简律（simplification） |
+  | 8. $P(a)\land\neg F(a)$ | 由6、7合取律（conjunction） |
+  | 9. $\exists x(P(x)\land\neg F(x))$ | 由8存在概括（EG） |
+
+  新见证$a$不能在证明结束后被当成任意对象全称概括；结论中的存在量词必须补回。
+
 #### 归结与自动证明（Resolution and Automated Proof）
 
-- **【拓展】归结反驳（resolution refutation）** ：把前提与结论否定合取，消箭头、否定内移、分配为CNF，再归结；推出空子句（empty clause）表示矛盾。
+- **全称否定后件式（universal modus tollens）** ：由$\forall x(P(x)\to Q(x))$及$\neg Q(a)$，先UI得$P(a)\to Q(a)$，再MT得$\neg P(a)$。论证形式（argument form）用变元表达结构；肯定前件式也称分离律（law of detachment），归结产生的子句称归结式（resolvent）。
 
-  这里是命题层做法，不能据此声称任意一阶公式均可无条件直接变成等价的量词自由子句。
-
-- **全称否定后件式（universal modus tollens）** ：由$\forall x(P(x)\to Q(x))$及$\neg Q(a)$推出$\neg P(a)$；论证形式（argument form）是用变元表达推理结构。
-
-  肯定前件式也叫分离律（law of detachment）；归结产生的子句叫归结式（resolvent）。
-
-  自动定理证明（automated theorem proving）可搜索规则链，但“某个系统搜不到证明”不等于已证明目标为假。
+- **【拓展】归结反驳（resolution refutation）** 将命题前提与结论否定转为CNF，归结到空子句（empty clause）便证矛盾。命题归结具反驳完备性（refutation completeness）：有限CNF不可满足当且仅当能推出空子句；可靠性（soundness）保证不误推，完备性（completeness）不保证证明短。自动定理证明（automated theorem proving）搜不到证明也不等于目标为假。
 
 ### 1.7 证明的基本方法（Basic Proof Methods）
+
+授课依据：[[Ch1.6_Part3.pdf|Ch1.6_Part3.pdf]]、[[Ch1.6_Part4.pdf|Ch1.6_Part4.pdf]]。Part3、Part4虽然文件名写1.6，实际讲教材证明方法；按内容归入本节。
 
 #### 证明的语言与基础（Language and Foundations of Proof）
 
@@ -533,7 +490,7 @@ $$
 
   数学陈述常省略全称量词，证明时取“任意满足假设的对象”，不能只举几个例子。
 
-- **【拓展】定理（theorem）／命题（proposition）／事实（fact）／结果（result）** 为已证明的结论；公理／公设（axiom / postulate）作为基础假设；
+- **【拓展】证明用语（proof terminology）** ：定理（theorem）／命题（proposition）／事实（fact）／结果（result）为已证明的结论；公理／公设（axiom / postulate）作为基础假设；
 
   引理（lemma）辅助证明；推论（corollary）直接由已有定理得到；猜想（conjecture）尚待证明或反驳。名称不改变逻辑地位。
 
@@ -556,6 +513,17 @@ $$
 
   逆否证明有明确目标$\neg p$，反证法可由任何已知事实的冲突结束，不要混淆英文名称。
 
+- **证明方法的选用与互相改写（choosing and converting proof methods）** ：课堂建议先试直接证明，再试逆否证明，再试反证法；题目指定方法时按题目要求。
+
+  已有$p\Rightarrow q$的直接证明，可在假设$p\land\neg q$后照原步骤推出$q\land\neg q$，改成反证法；已有$\neg q\Rightarrow\neg p$的逆否证明，可加上$p$后得到$p\land\neg p$，也改成反证法。两种间接证明（indirect proofs）的终点不同：逆否法明确推出$\neg p$，反证法只须得到矛盾。
+
+- **【拓展】因子界与试除（factor bounds and trial division）** ：整数$n>1$若为合数（composite），存在素因子（prime factor）$p\le\sqrt n$；否则分解$n=ab$时两因子都大于$\sqrt n$将使$ab>n$。因此判定素数（prime number）只须试除到$\lfloor\sqrt n\rfloor$，也可只试其中的素数。1既不是素数也不是合数。
+
+
+- **正整数因子的平方根界（square-root bound on factors）** ：若$n=ab$且$a,b>0$，则$a\le\sqrt n$或$b\le\sqrt n$。用逆否法：若$a>\sqrt n$且$b>\sqrt n$，则$ab>n$，不可能$n=ab$。课件的根号不能在转写中漏掉。
+
+- **有理数和的直接证明（direct proof of closure under rational addition）** ：若$r=p/q,s=t/u$，其中$p,q,t,u\in\mathbb Z$且$q,u\ne0$，则$r+s=(pu+qt)/(qu)$，分子分母为整数且$qu\ne0$，所以仍有理。
+
 #### 平方根证明与等价性（Square-root Proof and Equivalence）
 
 - $\sqrt2$无理的骨架：若$\sqrt2=a/b$且$a,b$互素（relatively prime），则$a^2=2b^2$；
@@ -565,182 +533,110 @@ $$
 > [!warning] 【考试注意】
 > 最简分数及非零分母不能省；需要用英文表达“lowest terms / relatively prime”。
 
+> [!info] 【历年考过：C1.7课堂补充】
+> 老师在这类无理数证明处提及以往期末题，并提醒失分常在“把自然语言陈述及其否定准确形式化”。先写清反设中的整数、互素和非零分母，再进行推导；这是历年信息，不是本次原题预告。
+
 - **等价性证明（proof of equivalence）** ：$p\leftrightarrow q$分别证两方向；
 
   $n$个陈述等价可用循环蕴涵（cyclic implications）$p_1\to p_2\to\cdots\to p_n\to p_1$，只需$n$条而非$n(n-1)$条。
 
 #### 【拓展】反例与错误证明（Counterexamples and Fallacious Proofs）
 
-- **【拓展】空证明（vacuous proof）** 证前件永假；平凡证明（trivial proof）证后件恒真。反例（counterexample）必须在论域内、满足所有前提而违反结论；
+- **【拓展】空证明与平凡证明（vacuous and trivial proofs）** 分别证前件恒假、后件恒真；反例（counterexample）须满足全部前提而违反结论。错误证明（fallacious proof）常见除0、错误开方、增根（extraneous solution）、循环论证／窃取论题（circular reasoning / begging the question）。
 
-  一个反例即可反驳全称。
+- **【拓展】奇偶与有理性结论（parity and rationality results）** ：奇数为相邻平方差；有理数的和、积仍有理，非零有理数的倒数仍有理；无理数加有理数、乘非零有理数仍无理，两无理数的和或积则可能有理或无理。需按量词分别举例或反证。
 
-- **【拓展】错误证明（fallacious proof）** 包括除以0、对负数或不等式作无依据操作、开平方漏$\pm$、非等价变形引入增根（extraneous solution）、循环论证／窃取论题（circular reasoning / begging the question）。
+- **【拓展】平均值论证（averaging argument）** 保证有限非空数列有项不小于平均值；否则求和矛盾。概率方法（probabilistic method）以正概率证明存在。圆排1至10的连续三数和重复计每数3次，平均16.5，故某组至少17。
 
-  倒推解方程后须把候选根代回原式。
+- **【拓展】欧几里得引理（Euclid's lemma）** ：素数$p\mid ab\Rightarrow p\mid a$或$p\mid b$，可据此仿$\sqrt2$证明任意素数平方根无理。
 
-- 习题方法归纳：奇偶性先代$2k$或$2k+1$；有理数加法须检验分母非零；无理＋有理仍无理可反证；两无理数和／积却可能有理或无理，须分辨量词；奇数$2k+1=(k+1)^2-k^2$；
-
-  $x+y\ge2\Rightarrow x\ge1\lor y\ge1$用逆否；至少有一个数不小于平均值（average）可假设全部小于平均值后求和矛盾。圆周数列可把相邻和整体相加，利用每项被计相同次数。
-
-- **【拓展／方法】平均值论证（averaging argument）** ：有限非空数列至少有一项不小于平均值，也至少有一项不大于平均值；否则把所有严格不等式求和就与平均值定义矛盾。
-
-  概率方法（probabilistic method）把“找对象”转为“证明满足性质的随机对象出现的概率大于0”，从而推出至少存在一个对象，不必直接构造它。有限样本空间中，至少有一个取值不小于随机变量的期望（expectation），是平均值思想的另一种表述。
+- **【拓展】勒让德三平方和定理（Legendre's three-square theorem）** ：$n\ge0$可写为三个整数平方之和，当且仅当$n\ne4^a(8b+7)$（$a,b\ge0$整数）。7是三平方反例，3是两平方反例；四平方结论另见1.8。
 
 #### 【拓展】估界、有理根与稠密性（Bounds, Rational Roots and Density）
 
-- **【拓展／补充】因子估界（bounding factors）** ：正数乘积$n=a_1\cdots a_k$至少有一因子$\le n^{1/k}$，否则全部严格大于阈值，相乘得到$n>n$。
+- **【拓展】因子估界（bounding factors）** ：正数乘积$n=a_1\cdots a_k$至少一因子$\le n^{1/k}$；否则乘积大于自身。两因子的平方根界已在范围内证明方法处保留。
 
-  $\sqrt[3]2$无理可仿平方根反证：最简$a/b$满足$a^3=2b^3$，推出a、b均偶。
+- **【拓展】有理根定理（rational root theorem）** ：整数系数多项式最简有理根$a/b$满足$a$整除常数项、$b$整除最高次系数；$x^3+x+1$的候选$\pm1$均非根。
 
-- **【拓展／补充】有理根定理（rational root theorem）** ：整数系数多项式若有最简有理根a/b，则a整除常数项、b整除最高项系数。
-
-  例如$x^3+x+1$若有有理根，只可能$\pm1$，代入均非0；也可按最简分数整除性直接反证。
-
-- **【拓展／补充】稠密性（density）** ：对有理数r<s，$r+(s-r)/\sqrt2$在二者之间且无理；结合任意实数区间内可找有理端点，说明无理数在实数中稠密（dense），有理数也稠密。
-
-  稠密性和可数性（countability）不同，$\mathbb Q$稠密仍可数。
+- **【拓展】稠密性（density）** ：任意两实数间均有有理数和无理数；有理端点$r<s$间可取$r+(s-r)/\sqrt2$。稠密（dense）不等于不可数，$\mathbb Q$稠密仍可数。
 
 ### 1.8 分情况、存在唯一性与证明策略（Cases, Existence, Uniqueness and Strategies）
 
+授课依据：[[Ch1.6_Part5.pdf|Ch1.6_Part5.pdf]]。Part5实际讲分类、穷举、存在与唯一；博弈、铺砌、深层数论另标拓展。
+
 #### 分类与不失一般性（Cases and WLOG）
 
-- **穷举证明（exhaustive proof）** 检验有限域全部对象；分情况证明（proof by cases）把假设分为覆盖全部可能的几类，并各证目标。
+- **穷举证明（exhaustive proof）** 检验有限论域中的全部对象；分情况证明（proof by cases）将全部可能分成若干类，各证目标。逻辑依据是$(p_1\lor\cdots\lor p_k)\to q\equiv\bigwedge_i(p_i\to q)$，不可漏0、等号或其他边界。
 
-  逻辑依据是$(p_1\lor\cdots\lor p_k)\to q\equiv\bigwedge_i(p_i\to q)$。实数分正、负、零；整数分奇偶或余数类；漏0、等号或空集会使命题失效。
+- **课件穷举例（courseware exhaustive examples）** ：对$n=1,2,3,4$，$(n+1)^3$依次为$8,27,64,125$，$3^n$为$3,9,27,81$，故四个情形均满足严格大于。100以内完全幂（perfect power，底数为正整数、整数指数$>1$）为$1,4,8,9,16,25,27,32,36,49,64,81,100$，其中仅8、9相邻；这只证明有限范围。
 
-- 用末位分类可证平方末位只可能为0、1、4、5、6、9，四次方末位只可能0、1、5、6。
+- **课件分类例（courseware case proofs）** ：整数$n$满足$n^2\ge n$：$n\ge1$时$n^2\ge n\cdot1$；$n=0$时相等；$n\le-1$时$n^2>0>n$。课件一处写$n^2>n$应修正，因为0、1取等。
 
-  分段定义（piecewise definition）的绝对值（absolute value）、最大值（maximum）、最小值（minimum）也用分类，例如$\max(x,y)+\min(x,y)=x+y$，$\max(x,y)=(x+y+|x-y|)/2$、$\min(x,y)=(x+y-|x-y|)/2$；
+- **绝对值（absolute value）乘法证明** ：$|t|=t$（$t\ge0$）、$|t|=-t$（$t<0$）。当$(x,y)$符号分别为$(+,+),(-,+),(+,-),(-,-)$时，$|xy|$依次为$xy,-xy,-xy,xy$，均等于$|x||y|$；将0并入非负情形即可覆盖全部实数。
 
-  三角不等式（triangle inequality）为$|x+y|\le|x|+|y|$。
-
-- **【拓展】不失一般性（without loss of generality, WLOG）** 只有在对象交换等对称性（symmetry）使未写情形可还原时合法；不能凭方便假定$x\le y$。
-
-  有限样例不能证明无限域命题，数值实验（numerical experiment）主要用于猜想或找反例。
+- **【拓展】不失一般性（without loss of generality, WLOG）** 依赖对称性（symmetry），不能任意假设$x\le y$。分段定义（piecewise definition）的最大／最小值（maximum / minimum）满足$\max(x,y)+\min(x,y)=x+y$，且$\max/\min=(x+y\pm|x-y|)/2$；三角不等式（triangle inequality）为$|x+y|\le|x|+|y|$。平方、四次方末位分别只能为$0,1,4,5,6,9$与$0,1,5,6$。
 
 #### 存在、唯一与博弈策略（Existence, Uniqueness and Game Strategies）
 
-- **存在性证明（existence proof）** 分构造性（constructive）与非构造性（nonconstructive）。$1729=1^3+12^3=9^3+10^3$为具体见证；
+- **存在性证明（existence proof）** 要证明$\exists xP(x)$；给出对象并验证即可。课件以$1729=10^3+9^3=12^3+1^3$证明同一正整数可有两种正立方和表示。
 
-  以$(\sqrt2)^{\sqrt2}$的有理／无理两种情形说明存在无理数$a,b$使$a^b$有理，是经典非构造性论证。
+- **唯一性证明（uniqueness proof）** 有两部分：先证明存在，再证明任意两个满足者相等，不能把“至多一个”当“恰好一个”。课件例：若$a,b\in\mathbb R,a\ne0$，则$ar+b=0$有唯一实解。
 
-  【拓展】盖尔丰德–施奈德定理（Gelfond–Schneider theorem）可进一步判定$(\sqrt2)^{\sqrt2}$为超越数（transcendental number），但上述分情况证明不依赖它。原笔记借此引出直觉主义（intuitionism）与构造主义数学（constructive mathematics）：它们不接受把排中律当作无需说明的普遍构造依据。
+  存在：取$r=-b/a$，代入得$a(-b/a)+b=0$。唯一：设$s$也是解，$as+b=ar+b=0$，相减得$a(s-r)=0$，由$a\ne0$得$s=r$。若$a=0$，则按$b=0$或$b\ne0$分别为无穷多解或无解，不能沿用唯一性结论。
 
-  Curry–Howard对应（Curry–Howard correspondence）把命题与类型、证明与程序联系起来，是依赖类型（dependent type）语言及Coq、Agda等证明助手（proof assistant）的思想背景；不应据此把任意经典存在证明都说成已给出见证算法。
+> [!tip] 【课件要求：Ch1.6_Part5，PDF p4，slide 16】
+> “DO NOT over simplify the proof”：写出存在与唯一两个部分，给必要理由，不能仅用“显然”替代关键推理。
 
-- **【拓展】Chomp游戏（Chomp game）** 用策略窃取（strategy stealing）：若某一步后的对手存在必胜策略，可由先手先走那一步反用，矛盾；证明存在策略不一定给出具体策略。
+- **【拓展】构造性与非构造性证明（constructive and nonconstructive proofs）** 区别在是否给出见证；经典无理数幂例将$r=(\sqrt2)^{\sqrt2}$分有理／无理两种情况，分别取$(a,b)=(\sqrt2,\sqrt2)$或$(r,\sqrt2)$，使无理数$a,b$满足$a^b$有理。
 
-  取石子游戏（take-away game）可从终局反推必败位置（losing position），与必胜位置（winning position）交替分析。
-
-- **唯一性证明（uniqueness proof）** 必须同时有存在性与唯一性：先构造$x$满足性质，再设任意$y$也满足并证$y=x$。常见例子为线性方程、加法逆元；
-
-  不要把“至多一个”当成“恰好一个”。
-
-> [!tip] 【老师强调】
-> C1.8课堂补充提醒“DO NOT over simplify the proof”，须把两部分写出来。
-
-- **【拓展】取石子策略（take-away strategy）** ：每次可取1至m颗、取最后一颗胜时，$n\equiv0\pmod{m+1}$是必败位置（P-position），其余是必胜位置（N-position）；
-
-  先取到m+1的倍数，之后对手取k就取m+1−k。15颗且每次1–3颗时先取3，再给对手依次留12、8、4。
-
-  终局倒推（backward induction）与极小化极大搜索（minimax search）由此联系，不能把必败位置的策略用于“最后一颗输”的不同规则。
+- **【拓展】Chomp游戏与策略窃取（Chomp and strategy stealing）** ：每步吃所选格及右下区域，左上毒格输；至少两格的矩形先手存在必胜策略。若先吃右下角后对手有制胜回应，先手可直接走该回应到同一局面，矛盾。取石子游戏（take-away game）每次取1至$m$且最后一颗胜时，$m+1$倍数为必败位置（losing / P-position），其余为必胜位置（winning / N-position）；倒推（backward induction）与极小化极大搜索（minimax search）为相关方法。
 
 #### 【拓展】证明策略与不等式（Proof Strategies and Inequalities）
 
-- **【拓展】正向推理（forward reasoning）** 从前提出发，逆向推理（backward reasoning）从目标寻找充分条件；逆向寻找完成后，要验证每步能正向推出目标，不能犯肯定后件谬误。
+- **【拓展】正向／逆向推理（forward / backward reasoning）** 分别从假设向目标推、从目标找充分条件；改编证明（adapting a proof）须重验边界，反例搜索（searching for counterexamples）从0、负数、相等、空集着手。
 
-  例：$(\sqrt a-\sqrt b)^2\ge0$正向得$a+b\ge2\sqrt{ab}$。
+- **【拓展】均值不等式（mean inequalities）** ：正数的调和、几何、算术、平方平均（harmonic / geometric / arithmetic / quadratic mean）满足HM≤GM≤AM≤QM，等号当两数相等。一般AM–GM对非负$a_i$给$\frac1n\sum a_i\ge(\prod a_i)^{1/n}$；等号当全部相等。非零实数$x$满足$x^2+x^{-2}\ge2$，等号$x=\pm1$。
 
-- **【拓展】均值不等式（mean inequalities）** ：对正数$a,b$，调和平均（harmonic mean, HM）$2ab/(a+b)$，几何平均（geometric mean, GM）$\sqrt{ab}$，算术平均（arithmetic mean, AM）$(a+b)/2$，平方平均（quadratic mean, QM）$\sqrt{(a^2+b^2)/2}$；
+- **【拓展】构造与估界后穷举（construction and bounding before exhaustion）** ：$m^2+1,\ldots,m^2+N$在$2m\ge N$时都是非平方；三个实数至少两个乘积非负。$n^2+n^3=100$在正整数无解；$2x^2+5y^2=14$在整数无解；$x^4+y^4=625$在正整数无解，均可先估界再检查有限候选。
 
-  $\mathrm{HM}\le\mathrm{GM}\le\mathrm{AM}\le\mathrm{QM}$，等号当且仅当$a=b$。乘不等式、平方及开根号前先检查符号条件。
+- **【拓展】代数数与超越数（algebraic and transcendental numbers）** 分别是／不是非零整系数多项式的根。盖尔丰德–施奈德定理（Gelfond–Schneider theorem）：代数$a\ne0,1$、无理代数$b$使$a^b$超越；实幂取$a>0$。因此$2^{\sqrt2}$、$(\sqrt2)^{\sqrt2}$均超越。
 
-- **【拓展】改编证明（adapting a proof）与反例搜索（searching for counterexamples）** ：改变参数时重验每步；从小数、0、负数、相等、空集、边界值开始找反例。
-
-  整式方程无解可先估界（bounding）把无限候选缩到有限，再穷举。100个连续非平方数可选在相邻足够大的平方之间。
+- **【拓展】构造主义（constructivism）、直觉主义（intuitionism）** 不把任意经典存在证明当作已给见证算法；Curry–Howard对应（Curry–Howard correspondence）联系命题／类型、证明／程序，并联系依赖类型（dependent type）与Coq、Agda等证明助手（proof assistant）。
 
 #### 【拓展】铺砌与不变量（Tilings and Invariants）
 
-- **【拓展】铺砌（tiling）、骨牌（domino）、三格骨牌（triomino）** ：先检查面积整除（divisibility），再检查不变量（invariant）。
+- **【拓展】铺砌与不变量（tilings and invariants）** ：骨牌（domino）各盖一黑一白，去对角两角的棋盘黑白数不同，不能铺；面积偶数或黑白平衡只给必要条件。将格子作点、相邻格连边，骨牌铺满等价于完美匹配（perfect matching）。
 
-  $8\times8$棋盘可用骨牌覆盖，去一格后面积奇数不行；去对角两角后面积虽偶，但黑白数32与30，每块骨牌各盖一黑一白，故不行。
+- **【拓展】三格骨牌（triomino）** 有直线形与L形；面积须为3倍数，直线块可用模3三色染色（three-coloring）排除部分缺角棋盘，不能照搬给L形。$2^k\times2^k$缺一格可用L形块按四象限和中心一块归纳铺砌。
 
-  直线三格骨牌可用三色染色（three-coloring）制造每块各色一格的不变量；L形与直线形的可铺性不能混用。
+> [!info]- 【拓展】原图回看
+> ![[C1-图9-去掉左上和右下角的棋盘.png|360]]
 
-![[C1-图9-去掉左上和右下角的棋盘.png|360]]
+#### 归纳法前置知识与【拓展】证明界限（Induction Prerequisite and Limits of Proof）
 
-- **【拓展】直线与L形三格骨牌（straight and right triominoes）** ：三格块要求面积为3的倍数，故不能铺完整64格棋盘；去一角剩63格，直线块仍不能铺。
+- **数学归纳法（mathematical induction）** 是后续课件证明所用的前置方法：先证基础步（base case）$P(n_0)$，再假设任意$k\ge n_0$的$P(k)$成立并证$P(k+1)$，才能推出所有$n\ge n_0$成立。关系幂、树边数和欧拉公式的具体证明保留在对应章。
 
-  用按行列和模3循环的三色染色，每个横／竖直线块各覆盖一格三种颜色；旋转染色使去掉角原属21格的颜色，则余三色20、21、22，不能由21块各覆盖三色。L形块不满足同样的三色覆盖规律，不能照搬该反证；
+- **【拓展】其他方法与数论背景（additional methods and number theory）** ：强归纳法（strong induction）可假设前面全部情形；结构归纳法（structural induction）沿基本对象与构造规则证明；康托尔对角线法（Cantor diagonalization）构造枚举外对象。拉格朗日四平方和定理（Lagrange's four-square theorem）称每个$n\ge0$是四个整数平方和；华林问题（Waring's problem）研究固定个数的$k$次幂表示，$g(4)=19$，79即说明18个四次方不足。
 
-  $2^k\times2^k$缺一格可用L形块铺砌是笔记指向归纳法的后续例子，核心是四象限加中心一块。
+- **【拓展】素数与幂的背景（prime and power problems）** ：孪生素数猜想（twin prime conjecture）断言无穷多相差2的素数对；强哥德巴赫猜想（strong Goldbach conjecture）断言每个大于2偶数是两素数和。费马大定理（Fermat's Last Theorem）排除$n>2$、$xyz\ne0$的整数解$x^n+y^n=z^n$；Collatz猜想（Collatz conjecture，亦称$3x+1$/Hasse/Ulam/Syracuse/Kakutani问题）猜测按偶除2、奇乘3加1的轨迹都到1，有限计算不代替证明。
 
-#### 【拓展】数论与证明界限（Number Theory and Limits of Proof）
+- **【拓展】欧拉数论定理（Euler's theorem in number theory）** ：$\gcd(a,m)=1,m\ge2$时$a^{\varphi(m)}\equiv1\pmod m$；欧拉函数（Euler's totient function）数与$m$互素的剩余数。勾股定理（Pythagorean theorem）为直角三角形$a^2+b^2=c^2$；勾股数组（Pythagorean triple）可取$(m^2-n^2,2mn,m^2+n^2)$，互素且奇偶相反的$m>n>0$给本原（primitive）数组。
 
-- **【拓展】数论背景（number-theoretic background）** ：拉格朗日四平方和定理（Lagrange's four-square theorem）说明每个非负整数是四个整数平方之和；
-
-  “前面若干数可表示为三个平方”不能推出全称结论。华林问题（Waring's problem）讨论每个正整数能否用固定数目的$k$次幂表示。
-
-  勾股数组（Pythagorean triple）可构造为$(m^2-n^2,2mn,m^2+n^2)$，$m>n>0$，从而有无穷多组。
-
-- **【拓展／补充】华林反例（Waring-type counterexample）** ：1至78均可表示为至多18个整数四次方之和，不代表所有正整数都行；
-
-  79低于81，只能用0、1、16，最多选四个16仍需15个1，共19项，故18项不足。原笔记引用$g(4)=19$为一般背景，有限样例验证不能代替该一般定理。
-
-- **【拓展】开放问题与证明界限（open problems and limits of proof）** ：费马大定理（Fermat's Last Theorem）排除$n>2$、$xyz\ne0$的整数解$x^n+y^n=z^n$，原笔记介绍Wiles在1990年代的证明；
-
-  Collatz／$3x+1$猜想（Collatz conjecture）对偶数取$x/2$、奇数取$3x+1$，猜测每个正整数轨迹到达1。
-
-  原笔记的计算验证上界是历史记录，不能充当全称证明。
-
-  素数（prime）相关的孪生素数猜想（twin prime conjecture）、哥德巴赫猜想（Goldbach's conjecture）也属于笔记列出的背景，不扩写成另一个课程章节。
-
-- **【拓展】其他证明方式（additional proof methods）** ：数学归纳法（mathematical induction）需基础步（base case）和归纳步（inductive step）；
-
-  结构归纳法（structural induction）沿递归构造证明；康托尔对角线法（Cantor diagonalization）构造漏掉的对象；
-
-  组合证明（combinatorial proof）对同一集合两种计数。哥德尔不完备性定理（Gödel's incompleteness theorems）针对足够强、有效公理化且相容的形式系统；
-
-  丘奇不可判定性定理（Church's undecidability theorem）说明一阶逻辑有效性无一般判定算法。这不等于不能枚举形式证明，也不等于每个具体定理都不可证明。
+- **【拓展】证明的界限（limits of proof）** ：哥德尔不完备性定理（Gödel's incompleteness theorems）称足够表达算术、相容且有效公理化的系统有既不可证又不可否证的语句，且在通常条件下不能内部证明自身相容。丘奇不可判定性定理（Church's undecidability theorem）排除一阶有效性的一般判定算法，亦称判定问题（Entscheidungsproblem）；停机问题（halting problem）以判定器自我输入的反向行为构造矛盾。均不表示每个具体命题或程序都不可处理。
 
 #### 【拓展】铺砌补充与构造（Further Tilings and Constructions）
 
-- **【拓展／补充】更多铺砌结论（further tiling results）** ：面积偶数的完整矩形可沿偶数边分行铺；$8\times8$去同侧两角、去全部四角均可按行铺；
+- **【拓展】Gomory铺砌论证（Gomory's tiling argument）** 以棋盘哈密顿回路说明去任意一黑一白可铺；各去两格则可能留下孤立角，故黑白平衡不充分。多联骨牌（polyomino）沿整边接格；自由四格骨牌（free tetrominoes）有I、O、T、L/J、S/Z五类，S/Z不能同类铺满矩形，不能用原笔记错误的列奇偶理由证明。
 
-  $5\times5$去三角剩22格但黑白10:12，不能铺。完整$8\times8$去任意一黑一白可沿覆盖全棋盘的哈密顿回路删两点，把剩余偶长度链逐对覆盖；
+- **【拓展】卡塔兰猜想／米哈伊列斯库定理（Catalan's conjecture / Mihăilescu's theorem）** ：整数$x,y,a,b>1$满足$x^a-y^b=1$时只有$3^2-2^3=1$。这是一般定理，区别于课件100以内的穷举，也区别于卡特兰数（Catalan numbers）。出租车数（taxicab numbers）研究不同正立方和表示，1729为两种表示的最小例。
 
-  这称Gomory铺砌论证（Gomory's tiling argument）。黑白各删两格则可能失败：删$(1,2),(2,1),(2,2),(3,3)$后保留的$(1,1)$孤立，且仍黑白平衡；
-
-  这比原笔记先删掉角本身再说角被孤立的写法准确。
-
-- **【拓展】多联骨牌（polyomino）** 由单位格沿整边相连；允许旋转、翻转视同的四格骨牌（free tetrominoes）有I、O、T、L/J、S/Z五类。
-
-  标准棋盘可用I、O、L、T同类块分别铺满：I按行，O按$2\times2$，两个L拼$2\times4$，四个T拼$4\times4$；
-
-  S/Z类不能铺满矩形，需边界排布阻碍论证，原笔记“每块在奇列覆盖奇数格”的理由不成立（某朝向覆盖2格）。不将该错误染色理由用于证明。
-
-- **【拓展／补充】完全幂（perfect power）** 为$a^b$（a,b为规定范围的整数且b>1），完全平方数（perfect square）为平方情形；存在问题须先定范围。
-
-  卡塔兰猜想／米哈伊列斯库定理（Catalan's conjecture / Mihăilescu's theorem）指出：在$x,y,a,b>1$的整数中，$x^a-y^b=1$只有$3^2-2^3=1$这一组解，即8与9是唯一一对连续完全幂。原笔记介绍其2002年的证明。
-
-  在100以内列出完全幂并穷举，只证明该有限范围的结论，不能代替上述一般定理。这里的卡塔兰猜想与5.4的卡特兰数（Catalan numbers）是不同概念。
-
-  出租车数（taxicab numbers）以不同方式表示为正立方和，1729是两种表示的最小例。
-
-  Euclid勾股参数式在m、n互素且奇偶相反时给出本原勾股数组（primitive Pythagorean triples），允许交换两直角边；不能省互素与奇偶条件。
-
-- **【拓展／背景】证明方法的相关背景（background connections of proof methods）** ：原笔记人物与历史旁注还提到哈代–温伯格定律（Hardy–Weinberg law）的遗传模式应用、代数数论（algebraic number theory）及椭圆曲线理论（theory of elliptic curves）与数论证明的发展联系。
-
-  $3x+1$猜想也称Collatz问题（Collatz problem）、Hasse算法（Hasse's algorithm）、Ulam问题（Ulam's problem）、Syracuse问题（Syracuse problem）或角谷问题（Kakutani's problem）。广义Collatz类问题的不可判定性（undecidability）不能直接推成这个具体猜想不可证明。
-
-  一阶逻辑判定问题也称Entscheidungsproblem；“没有通用判定算法”与“某个实例没有证明”是不同判断。
-
----
+- **【拓展】历史联系（historical connections）** ：原笔记以哈代–温伯格定律（Hardy–Weinberg law）、代数数论（algebraic number theory）、椭圆曲线理论（theory of elliptic curves）说明应用或发展背景；广义Collatz类问题不可判定，不能据此说具体Collatz猜想已不可证明。
 
 ## 二、集合、函数、序列与矩阵（Sets, Functions, Sequences and Matrices）
 
 ### 2.1 集合的基本语言（Basic Set Language）
+
+授课依据：[[Ch2.1.pdf|Ch2.1.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 集合的表示与常用对象（Notation and Common Sets）
 
@@ -755,6 +651,8 @@ $$
 - **全集（universal set）** $U$限定讨论范围；空集（empty set / null set）$\varnothing$无元素；单元素集（singleton set）只有一个元素。
 
   $\varnothing\ne\{\varnothing\}$，后者基数为1；$\{\varnothing,\{\varnothing\}\}$有两个元素。
+
+- **有理数（rational number）** 的精确定义为$\mathbb Q=\{p/q:p,q\in\mathbb Z,q\ne0\}$；实数（real number）中不属于$\mathbb Q$的为无理数（irrational number）。课件将分母变量误重复成$p$，此处按正确条件写。
 
 #### 相等、包含与证明（Equality, Inclusion and Proof）
 
@@ -782,6 +680,10 @@ $$
 
   $\forall x\in A\,P(x)$展开为$\forall x(x\in A\to P(x))$，存在则配合取。
 
+- **真值集与量化真值（truth sets and quantified truth values）** ：$T_P=\{x\in U:P(x)\}$，则$\forall xP(x)$为真当且仅当$T_P=U$；$\exists xP(x)$为真当且仅当$T_P\ne\varnothing$。空论域情形仍与这两个判断一致。
+
+- **【拓展／应用】数据类型（data type）** 可理解为一个取值集合连同允许的运算，例如布尔类型以$\{0,1\}$为值集并配AND、OR、NOT。集合只描述成员，类型还需说明可执行哪些操作，不能只由名字猜取值范围。
+
 #### 【拓展】区间与集合论基础（Intervals and Foundations of Set Theory）
 
 - **【拓展】区间记号（interval notation）** ：$(a,b),[a,b],(a,b],[a,b)$分别表示端点是否纳入，无穷端点永不用闭括号。
@@ -789,6 +691,8 @@ $$
 - **【拓展】朴素集合论（naive set theory）与公理化集合论（axiomatic set theory）** ：无条件允许$\{x:x\notin x\}$会导致罗素悖论；不能把任意文字描述都默认成一个合法集合。
 
 ### 2.2 集合运算、恒等式及扩展（Set Operations, Identities and Extensions）
+
+授课依据：[[Ch2.2.pdf|Ch2.2.pdf]]。仅目录出现“Set Identities / Generalized Unions”不足以扩充范围；实际页有五种运算、容斥与位串。
 
 | 运算（operation） | 定义及逻辑对应 |
 |---|---|
@@ -810,17 +714,17 @@ $$
 
 ![[C2.2-三集合容斥原理.png|600]]
 
-#### 无限集合族（Infinite Set Families）
+- **三集合容斥的完整公式（three-set inclusion–exclusion formula）** ：对有限集合，
 
-- **无限集合族的边界例（boundary examples for infinite set families）** ：$A_i=[0,1/i]$（$i\ge1$）的交为$\{0\}$、并为$[0,1]$；
+  $$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|.$$
 
-  $B_i=(0,1/i)$的交为空，不能因为每个集合非空就断言无限交非空；$\{i,i+1,\ldots\}$的交也为空。
+  证明要点：只在一集中的元素计1次；在两集中的元素计$2-1=1$次；在三集中的元素计$3-3+1=1$次。集合必须有限才能直接用这些普通整数减法；不能把无限基数当作整数随意相减。
 
-- **广义并与交（generalized unions and intersections）** $\bigcup_iA_i$对应“存在一个i”，$\bigcap_iA_i$对应“对所有i”；
+#### 【拓展】无限集合族（Infinite Set Families）
 
-  有限和无限族都按定义，不把无限交误当作某个有限阶段。
+- **【拓展】广义并与交（generalized unions and intersections）** 分别表示存在一个指标／所有指标满足成员关系。递增集合族（increasing family）的交由最小集决定，递减集合族（decreasing family）的并由最大集决定；另一运算须检查端点。
 
-  递增族（increasing family）的交通常由最小集合决定，递减族（decreasing family）的并通常由最大集合决定，另一运算需实际检查极限边界。
+  无限集合族（infinite set family）中，每个$[0,1/i]$非空且交为$\{0\}$，每个$(0,1/i)$非空却交为空；不能把有限结论直接外推。
 
 #### 【拓展】恒等式与证明（Identities and Proofs）
 
@@ -838,27 +742,19 @@ $$
 
 #### 【拓展】集合后继与自然数构造（Set Successors and Natural-number Construction）
 
-- **【拓展】集合后继（set successor）** 定义为$S(A)=A\cup\{A\}$：把集合$A$整体作为一个元素加入，不是把$A$的元素再重复一遍。
+- **【拓展】集合后继（set successor）** 为$S(A)=A\cup\{A\}$；$S(\varnothing)=\{\varnothing\}$，不是重复加入已有元素。在良基集合论（well-founded set theory）中有限$A$满足$|S(A)|=|A|+1$；冯·诺依曼自然数（von Neumann natural numbers）取$0=\varnothing,n+1=n\cup\{n\}$。
 
-  $S(\varnothing)=\{\varnothing\}$，$S(\{\varnothing\})=\{\varnothing,\{\varnothing\}\}$，$S(\{1,2,3\})=\{1,2,3,\{1,2,3\}\}$。
-
-  在通常良基集合论（well-founded set theory）中$A\notin A$，故有限$A$满足$|S(A)|=|A|+1$。冯·诺依曼自然数（von Neumann natural numbers）用$0=\varnothing$、$n+1=n\cup\{n\}$递归构造；每个$n$就是前$n$个自然数组成的集合。
-
-- **【拓展】恒等式证明（proof of set identities）** 有四法：双向包含；描述法逐元素转换为逻辑等价；隶属表（membership table）列0／1；用已证恒等式逐步变形。
-
-  不能由一张特定文氏图声称证了一切情况。
+- **【拓展】集合恒等式证明（proof of set identities）** 可用双向包含、逐元素转逻辑、隶属表（membership table）或已证恒等式变形；特定文氏图不能独立证明一般结论。
 
 #### 计算机表示与算法（Computer Representation and Algorithms）
 
-- **有限全集固定顺序后，用特征位串／特征函数（characteristic bit string / characteristic function）** 表示集合；
+- **特征位串（characteristic bit string）** ：有限且大小可存储的全集$U=\{a_1,\ldots,a_n\}$先固定顺序；第$i$位为1当且仅当$a_i\in A$。相同位序下，并、交、补、对称差分别为逐位OR、AND、NOT、XOR，不能混用两种元素顺序。
 
-  并、交、补、对称差分别按位OR、AND、NOT、XOR。对称差交换、结合，$A\oplus A=\varnothing$，$A\oplus\varnothing=A$。
+  课件例$U=\{1,\ldots,10\}$、$A=\{1,3,5,7,9\}$、$B=\{1,2,3,4,5\}$，对应$1010101010$与$1111100000$；交为$1010100000$，并为$1111101010$，补$B$为$0000011111$。
 
-  同一套恒等式贯穿逻辑、集合、位串和零一矩阵，统属布尔代数（Boolean algebra）。
+- **【拓展】集合交集算法（set-intersection algorithms）** ：双循环$O(nm)$；排序后双指针（two-pointer method）线性扫描；哈希集合（hash set）通常期望$O(n+m)$；先排序$B$再逐项二分查找（binary search）需$O(m\log m+n\log m)$。布尔标记数组（Boolean marking array）含初始化为$O(U+n+m)$，机器字位并行为$O(\lceil U/w\rceil)$；期望复杂度（expected complexity）不等于最坏复杂度（worst-case complexity）。
 
-- **计算集合交集（set intersection）** ：双循环最坏$O(nm)$，排序后双指针（two-pointer method）扫描为排序加$O(n+m)$，哈希集合（hash set）在通常散列假设下期望$O(n+m)$。
-
-  不能把期望复杂度（expected complexity）无条件写成最坏复杂度（worst-case complexity）；C++ `set`与`unordered_set`的结构和复杂度不同。
+- **【拓展】特征函数（characteristic function）** 将成员关系映为0/1，联系布尔代数（Boolean algebra）；$A\oplus U=\overline A$、$A\oplus\overline A=U$，且对称差交换、结合、同项消去。
 
 #### 【拓展】多重集与模糊集（Multisets and Fuzzy Sets）
 
@@ -872,6 +768,8 @@ $$
 
 ### 2.3 函数及其运算（Functions and Their Operations）
 
+授课依据：[[Ch2.3_Part1.pdf|Ch2.3_Part1.pdf]]、[[Ch2.3_Part2.pdf|Ch2.3_Part2.pdf]]。函数后半、反函数与复合均有实际课件内容，保留；取整综合、部分函数与高级像集性质为拓展。
+
 #### 函数定义与像（Definition and Images）
 
 - **函数／映射（function / mapping）** $f:A\to B$把每个$a\in A$对应唯一$f(a)\in B$。
@@ -882,9 +780,11 @@ $$
 
 - 函数相等需定义域、陪域的约定及各点输出一致；函数图像（graph of a function）为$\{(a,f(a)):a\in A\}\subseteq A\times B$。实值函数的和与积逐点定义：$(f+g)(x)=f(x)+g(x)$、$(fg)(x)=f(x)g(x)$。
 
-- **子集的像（image of a subset）** $f(S)=\{f(s):s\in S\}$。 **【拓展／补充】逆像（inverse image）** $f^{-1}(T)=\{a:f(a)\in T\}$不要求f可逆，勿与反函数混淆；
+- **【拓展】子集的像（image of a subset）** $f(S)=\{f(s):s\in S\}$。 **【拓展／补充】逆像（inverse image）** $f^{-1}(T)=\{a:f(a)\in T\}$不要求f可逆，勿与反函数混淆；
 
   像保持并，交一般仅有$f(S\cap T)\subseteq f(S)\cap f(T)$；逆像保持并、交及相对补。
+
+- **【拓展】有限像集的基数（cardinality of a finite image）** ：有限$S\subseteq A$满足$|f(S)|\le|S|$。$f$单射当且仅当每个有限$S\subseteq A$都满足$|f(S)|=|S|$：单射不合并元素；反之若有$x\ne y$却同像，取$S=\{x,y\}$便违背等式。
 
 #### 单射、满射与双射（Injection, Surjection and Bijection）
 
@@ -898,192 +798,135 @@ $$
 
   非严格递增／递减（increasing / decreasing）可能有平台，不能保证单射。若A、B有限且大小相同，单射当且仅当满射；无限集上不成立，如$n\mapsto n+1$在$\mathbb N$上单而不满。
 
+- **单调性的定义（definitions of monotonicity）** ：对实数子集上的实值函数，对任意$x<y$，$f(x)\le f(y)$称递增／不减（increasing / nondecreasing），$f(x)\ge f(y)$称递减／不增（decreasing / nonincreasing）；把两式改为严格不等号，分别得到严格递增（strictly increasing）和严格递减（strictly decreasing）。
+
+  严格单调蕴涵单射，因为不同输入可按大小排序，其输出严格不等；单射不必单调，例如在$\{1,2,3\}$上依次映为$1,3,2$。普通递增／递减只是不保证单射，不能说所有这类函数都不单射。
+
 #### 恒等、反函数与复合（Identity, Inverses and Composition）
 
 - **恒等函数（identity function）** $i_A(a)=a$。反函数（inverse function）$f^{-1}:B\to A$存在当且仅当f双射；交换输入输出即可。
 
   限制定义域或陪域（restriction of domain or codomain）可使$x^2$成为可逆函数，例如$[0,\infty)\to[0,\infty)$。
 
-- **复合函数（composition）** $(f\circ g)(x)=f(g(x))$，先g后f，须保证中间像落在下一定义域。复合结合，但一般不交换；单射复合单射、满射复合满射、双射复合双射。
+- **复合函数（composition）** $(f\circ g)(x)=f(g(x))$，先g后f，须保证中间像落在下一定义域。复合结合，但一般不交换。
 
-  若$f\circ g$单则g单，若$f\circ g$满则f满；反方向的另一因子不可无条件推出。$f^{-1}\circ f=i_A$、$f\circ f^{-1}=i_B$，$(f\circ g)^{-1}=g^{-1}\circ f^{-1}$。
+  【拓展】单射复合单射、满射复合满射、双射复合双射。
+
+  【拓展】若$f\circ g$单则g单，若$f\circ g$满则f满；反方向的另一因子不可无条件推出。$(f\circ g)^{-1}=g^{-1}\circ f^{-1}$。
+
+  课件双射的恒等式：$f^{-1}\circ f=i_A$、$f\circ f^{-1}=i_B$，先代入$f^{-1}(f(a))=a$、$f(f^{-1}(b))=b$即可验证。
 
 ![[C2.3-映射类型-单射满射双射.png|650]]
 
-#### 取整函数（Floor and Ceiling Functions）
+- **反函数、倒数与逆运算（inverse functions, reciprocals and undoing operations）** ：$f^{-1}$是反函数，$(1/f)(x)=1/f(x)$是逐点倒数，只在$f(x)\ne0$时定义，二者不能互换。双射还满足$(f^{-1})^{-1}=f$。
 
-- **下取整（floor function）** $\lfloor x\rfloor$为不大于x的最大整数，上取整（ceiling function）$\lceil x\rceil$为不小于x的最小整数；如$\lfloor-0.5\rfloor=-1$、$\lceil-0.5\rceil=0$。
+  【拓展】只为修复满射，可把陪域改为$f(A)$；修复单射则要在定义域中保留各同像类的代表。限制后的映射是新函数。例如$\sin:[-\pi/2,\pi/2]\to[-1,1]$为双射，其反函数为反正弦（arcsine）$\arcsin$；不能直接把全实轴上的周期性正弦当作可逆函数。
 
-  存储块数、分组数等“装满才够”的问题用上取整，能凑出多少完整组用下取整。
+#### 【拓展】取整函数（Floor and Ceiling Functions）
 
-$$
-\begin{gathered}
-\lfloor x\rfloor=n\iff n\le x<n+1\iff x-1<n\le x,\\
-\lceil x\rceil=n\iff n-1<x\le n\iff x\le n<x+1,\\
-x-1<\lfloor x\rfloor\le x\le\lceil x\rceil<x+1,\\
-\lfloor-x\rfloor=-\lceil x\rceil,\qquad\lceil-x\rceil=-\lfloor x\rfloor,\\
-\lfloor x+n\rfloor=\lfloor x\rfloor+n,\quad
-\lceil x+n\rceil=\lceil x\rceil+n\quad(n\in\mathbb Z).
-\end{gathered}
-$$
+- **【拓展】下取整／上取整（floor / ceiling function）** 分别为不大于／不小于$x$的最近整数；$\lfloor-0.5\rfloor=-1,\lceil-0.5\rceil=0$。基本刻画为$n\le x<n+1\iff\lfloor x\rfloor=n$，$n-1<x\le n\iff\lceil x\rceil=n$。
 
-#### 取整证明与成立条件（Proofs and Conditions for Rounding Identities）
+  对整数$k$，取整可平移$k$；$\lfloor-x\rfloor=-\lceil x\rceil$。不能一般拆开实数和或积。鸽巢课件用到的$\lceil N/k\rceil$及含义在4.2按范围内内容保留。
 
-- 取整证明写$x=m+\alpha$，$m\in\mathbb Z,0\le\alpha<1$，按跨越整数的位置分类。$\lfloor2x\rfloor=\lfloor x\rfloor+\lfloor x+1/2\rfloor$；
+#### 【拓展】取整证明与成立条件（Proofs and Conditions for Rounding Identities）
 
-  整数n满足$\lfloor n/2\rfloor+\lceil n/2\rceil=n$、$\lfloor n/2\rfloor\lceil n/2\rceil=\lfloor n^2/4\rfloor$。一般不能拆开实数和或积的取整。
+- **【拓展】取整恒等式（rounding identities）** ：$\lfloor2x\rfloor=\lfloor x\rfloor+\lfloor x+1/2\rfloor$；整数$n$满足$\lfloor n/2\rfloor+\lceil n/2\rceil=n$、两者积为$\lfloor n^2/4\rfloor$。
 
-- **【拓展／补充】取整可拆的精确条件** ：写$x=m+\alpha,y=n+\beta$。下取整之和等式成立当且仅当$\alpha+\beta<1$；上取整之和等式成立当且仅当$\alpha=0$或$\beta=0$或$\alpha+\beta>1$；
-
-  $\lceil x+y\rceil=\lfloor x\rfloor+\lceil y\rceil$成立当且仅当$\alpha=0$，或$\beta>0$且$\alpha+\beta\le1$。后一个条件补齐了原章节汇总中的未完成答案。
+- **【拓展】可拆条件（conditions for splitting rounded sums）** ：写$x=m+\alpha,y=n+\beta$，$0\le\alpha,\beta<1$。下取整之和可拆当且仅当$\alpha+\beta<1$；上取整之和可拆当且仅当$\alpha=0$或$\beta=0$或$\alpha+\beta>1$；$\lceil x+y\rceil=\lfloor x\rfloor+\lceil y\rceil$当且仅当$\alpha=0$，或$\beta>0$且$\alpha+\beta\le1$。
 
 #### 阶乘与部分函数（Factorials and Partial Functions）
 
-- **阶乘（factorial）** $n!=1\cdot2\cdots n$，$0!=1$；
+- **阶乘（factorial）** 为$n!=1\cdot2\cdots n$，$0!=1$，计数课件直接使用。
 
-  **【拓展／补充】Stirling近似（Stirling's approximation）** $n!\sim\sqrt{2\pi n}(n/e)^n$，$\sim$表示比值趋于1，不是精确等号。
+- **【拓展】Stirling近似（Stirling's approximation）** ：$n!\sim\sqrt{2\pi n}(n/e)^n$，$\sim$指比值趋于1。比较排序（comparison sorting）的二元决策树（binary decision tree）须区分$n!$次序，故最坏比较次数$\ge\lceil\log_2(n!)\rceil=\Omega(n\log n)$，仅限比较模型。
 
-- **【拓展】部分函数（partial function）** 只在所称输入集合的某个子集上定义；未定义（undefined）不是一个普通输出值。
+- **【拓展】部分函数（partial function）** 只在部分输入上定义，未定义（undefined）不是一个输出。机器学习（machine learning）的函数拟合（function approximation）、物理信息神经网络（physics-informed neural network, PINN）不自动给出可解释性（interpretability）或证明。
 
-  机器学习（machine learning）中把模型看作输入到输出的映射有助于区分定义域与值域；
+- **【拓展】对数（logarithm）** ：教材$\log$默认底2，$\ln$为自然对数（natural logarithm）；$\log_bx=\ln x/\ln b$需$x>0,b>0,b\ne1$，数值与取整不能混底。
 
-  物理信息神经网络（physics-informed neural network, PINN）把物理约束加入学习，函数拟合（function approximation）不自动提供可解释性（interpretability）或精确证明。
+### 2.4 序列与递推预备及【拓展】求和（Sequences, Recurrence Prerequisites and Summations）
 
-### 2.4 【拓展：本小节课堂未讲】序列与求和（Sequences and Summations）
+授课依据：[[Ch8.1.pdf|Ch8.1.pdf]]。数列、递推和复利在Ch8.1实际出现，相关预备定义保留；独立求和、Lucas、Binet等为拓展。
 
 #### 序列、递推与迭代（Sequences, Recurrences and Iteration）
 
-- **序列（sequence）** 是以整数下标集为定义域的函数；项（term）$a_n$、下标（index）n、起始下标必须说明。
+- **序列（sequence）** 按整数下标列项（term）$a_n$，须说明下标（index）起点；递推关系（recurrence relation）以前项给后项，配足初始条件（initial conditions）才确定解（solution）。这些概念在Ch8.1课件实际出现，完整建模与例题见第五部分。
 
-  等差数列／算术序列（arithmetic progression）$a_n=a_0+nd$，d为公差（common difference）；
+- **复利与迭代（compound interest and iteration）** ：$P_n=(1+r)P_{n-1}$反复代入得$P_n=P_0(1+r)^n$。正向／反向代入（forward / backward substitution）是迭代求闭式（closed formula）的方式。初值取决于最大滞后及起始下标，如$a_n=a_{n-5}$通常需5个初值。
 
-  等比数列／几何序列（geometric progression）$a_n=ar^n$，r为公比（common ratio）。有限字符串（string）是有序符号序列，空串（empty string）长0。
+- **【拓展】等差与等比数列（arithmetic / geometric progression）** 分别为$a_0+nd$、$ar^n$，$d,r$称公差／公比（common difference / ratio）。一阶仿射递推（first-order affine recurrence）$a_n=ra_{n-1}+b$在$r\ne1$时为$r^na_0+b(r^n-1)/(r-1)$，$r=1$时为$a_0+nb$。
 
-- **递推关系（recurrence relation）** 由前项定义后项，初始条件（initial conditions）与递推起始下标共同确定序列；验证解（solution）须同时满足递推和初值。
+- **【拓展】Lucas数与Binet公式（Lucas numbers and Binet's formula）** ：$L_0=2,L_1=1$、$L_n=L_{n-1}+L_{n-2}$；斐波那契数取$f_0=0,f_1=1$时，$f_n=(\varphi^n-\psi^n)/\sqrt5$，$\varphi=(1+\sqrt5)/2$为黄金比例（golden ratio），$\psi=(1-\sqrt5)/2$。相同递推不代表相同初值。
 
-  斐波那契数（Fibonacci numbers）约定$f_0=0,f_1=1,f_n=f_{n-1}+f_{n-2}$。
+#### 【拓展】规律识别与求和记号（Patterns and Summation Notation）
 
-- **迭代法（iteration）** 可正向代入（forward substitution）或反向代入（backward substitution）得闭式（closed formula）；
+- **【拓展】规律识别（pattern recognition）** 可看差分（differences）、商（ratios）、周期（periodicity）或递推；有限项不能唯一确定通项。
 
-  加常数得等差，乘常数得等比；复利（compound interest）$P_n=P_0(1+r)^n$。由有限项猜规律不唯一；猜出的通项要用归纳法确认。
+- **【拓展】求和／连乘记号（summation / product notation）** 为$\sum,\prod$；哑指标（dummy index）换元（change of index）须同时改上下限，有限双重求和（double summation）可换序，空和／空积（empty sum / product）为0／1。有限求和具线性性（linearity），与指标有关的因子不可当常数提出。
 
-- **一阶仿射递推（first-order affine recurrence）** 同时含比例增长与固定增量：$a_n=ra_{n-1}+b$（$n\ge1$）。例如年薪先增长5%再固定加1000，对应$a_n=1.05a_{n-1}+1000$。
-
-  反向代入得$a_n=r^na_0+b\sum_{j=0}^{n-1}r^j$，故$r\ne1$时$a_n=r^na_0+b(r^n-1)/(r-1)$；$r=1$时$a_n=a_0+nb$。先增薪再按比例上涨会得到不同递推，须按叙述顺序建模。
-
-#### 规律识别与求和记号（Patterns and Summation Notation）
-
-- **常见整数序列（integer sequences）** 包括正整数、奇数、偶数、平方、立方、幂、阶乘、斐波那契数、素数。
-
-  识别规律可检查差分（differences）、商（ratios）、周期（periodicity）、递推与已知数列，不能把猜想当证明。
-
-- **求和记号（summation notation）** $\sum_{k=m}^na_k$中k是哑指标（dummy index），项数为$n-m+1$；换元（change of index）必须同时改上下限和被加式。
-
-  双重求和（double summation）有限情形可换序，矩形范围可分离时才可拆乘积；按集合求和（sum over a set）每个元素算一次。
-
-  连乘记号（product notation）$\prod$同样遵守下标与项数规则；空和（empty sum）为0，空积（empty product）为1。
-
-| 求和公式（summation formula） | 条件 |
+| 【拓展】求和公式（summation formula） | 条件 |
 |---|---|
-| $\sum_{k=0}^nar^k=a(1-r^{n+1})/(1-r)$ | $r\ne1$；$r=1$时为$(n+1)a$ |
-| $\sum_{k=1}^nk=n(n+1)/2$ | $n\ge0$ |
-| $\sum_{k=1}^n(2k-1)=n^2$ | $n\ge0$；前n个正奇数之和 |
-| $\sum_{k=1}^nk^2=n(n+1)(2n+1)/6$ | $n\ge0$ |
-| $\sum_{k=1}^nk^3=[n(n+1)/2]^2$ | $n\ge0$ |
-| $\sum_{k=0}^{\infty}x^k=1/(1-x)$ | $\vert x\vert <1$ |
-| $\sum_{k=1}^{\infty}kx^{k-1}=1/(1-x)^2$ | $\vert x\vert <1$；可由前式逐项求导 |
+| $\sum_{k=0}^nar^k=a(1-r^{n+1})/(1-r)$ | $r\ne1$；$r=1$时$(n+1)a$ |
+| $\sum_{k=1}^nk=n(n+1)/2$；$\sum_{k=1}^n(2k-1)=n^2$ | $n\ge0$整数 |
+| $\sum_{k=1}^nk^2=n(n+1)(2n+1)/6$；$\sum_{k=1}^nk^3=[n(n+1)/2]^2$ | $n\ge0$整数 |
+| $\sum_{k=0}^{\infty}x^k=1/(1-x)$；$\sum_{k=1}^{\infty}kx^{k-1}=1/(1-x)^2$ | $\lvert x\rvert<1$ |
 
-#### 求和方法与补充序列（Summation Methods and Further Sequences）
+#### 【拓展】求和方法与补充序列（Summation Methods and Further Sequences）
 
-- **几何求和（geometric sum）** 由S与rS错位相减；区间和$\sum_{k=m}^na_k$用从起点到n的和减去到$m-1$的和；
+- **【拓展】求和方法（summation methods）** ：等比和用$S-rS$错位相减，区间和用前缀和相减，望远镜和／积（telescoping sum / product）消去中间项；奇数和可看逐层扩方格。无穷级数（infinite series）须检查收敛条件（convergence conditions），不能随意逐项求导。
 
-  望远镜求和／乘积（telescoping sum / product）消去中间项，例如$\prod_{k=1}^n(k+1)/k=n+1$。
+- **【拓展】Ulam数（Ulam numbers）** 从1、2起，每次选能唯一表示成两个不同已有项之和的最小数。在线整数序列大全（On-Line Encyclopedia of Integer Sequences, OEIS）帮助识别，有限项匹配不构成证明；接触数问题（kissing-number problem）问同半径球围绕中心球、彼此内部不重叠的最多相切球数。
 
-  无穷级数（infinite series）须检查收敛条件（convergence condition），逐项求导不是任意级数都合法。
+### 2.5 【拓展】可数性与无限基数（Countability and Infinite Cardinality）
 
-  奇数和的几何证明（geometric proof）：从$(n-1)\times(n-1)$方格扩成$n\times n$方格，新增一行一列但角格只计一次，共$n+(n-1)=2n-1$格；逐层相加得到$n^2$。
+【拓展】全部补充课件中未见本节的独立讲解，保留压缩说明供回查。
 
-- **【拓展／补充】Ulam数（Ulam numbers）** 以1、2开头，每次选能唯一表示为两个不同较小已入选项之和的最小整数；开头$1,2,3,4,6,8,11,13,16,18,26,28,36,38,47,48,53,57,62,69$。
+#### 【拓展】等势与可数性（Cardinality and Countability）
 
-  相同两项相加不算，存在多种表示也不算。
+- **【拓展】等势（equinumerosity / same cardinality）** 用双射定义，$|A|\le|B|$用单射定义；无限集可与真子集等势。可数集（countable set）指有限集或与$\mathbb Z^+$双射的可数无穷集（countably infinite set，基数$\aleph_0$）；其余为不可数（uncountable）。可数集的子集仍可数。
 
-### 2.5 【拓展：本小节课堂未讲】可数性与无限基数（Countability and Infinite Cardinality）
+#### 【拓展】可数集的枚举（Enumerating Countable Sets）
 
-#### 等势与可数性（Cardinality and Countability）
+- **【拓展】枚举（enumeration）** ：整数可列$0,1,-1,2,-2,\ldots$，有理数按分子分母之和分层并去重。可数个可数集的并（countable union of countable sets）、有限笛卡尔积及有限字母表上的全部有限串均可数；无限乘积不一定可数。
 
-- **等势（same cardinality / equinumerosity）** 用双射定义；$|A|\le|B|$用A到B的单射定义，严格小于还要求不等势。无限集可与自身真子集等势，不能机械套有限集结论。
+- **【拓展】Hilbert大饭店（Hilbert's Grand Hotel）** 以$n\mapsto n+1$或$2n$安排新客；二维对角枚举（diagonal enumeration）处理可数车客。Cantor配对函数（Cantor pairing function）$\pi(m,n)=(m+n-2)(m+n-1)/2+m$将正整数对双射到正整数，不能先列完一个无限行再列下一行。
 
-- **可数集（countable set）** 指有限集或可数无穷集；可数无穷（countably infinite）与$\mathbb Z^+$双射，基数$\aleph_0$；不可数（uncountable）不能如此枚举。
+> [!info]- 【拓展】原图回看
+> ![[C2-图8-正有理数可数的排列路径.png|430]]
 
-  证明无限集可数可给双射或不重不漏的序列；可数集的子集仍可数。
+#### 【拓展】对角线与双射判据（Diagonalization and Bijection Criteria）
 
-#### 可数集的枚举（Enumerating Countable Sets）
+- **【拓展】Cantor对角线论证（Cantor's diagonal argument）** 令新数第$n$位不同于第$n$个数的第$n$位，构造枚举之外的实数，故$\mathbb R$及无理数集不可数；只用1、2等方式避免小数双重展开。
 
-- **希尔伯特大饭店（Hilbert's Grand Hotel）** ：房间$n\mapsto n+1$可腾一间，$n\mapsto2n$可容纳又一列客人；
+- **【拓展】Schröder–Bernstein定理（Schröder–Bernstein theorem）** ：两集合间双向有单射便有双射。例如$(0,1)\hookrightarrow[0,1]$用包含，反向用$x\mapsto(x+1)/3$，得等势；两个单射不必互为反函数。小数交织（digit interleaving）须处理双重表示。
 
-  可数辆车各有可数客人时，用二维对角枚举（diagonal enumeration）安置。$\mathbb Z$按$0,1,-1,2,-2,\ldots$列；正有理数按分子分母之和分层并去重；加0和负数得$\mathbb Q$可数。
+#### 【拓展】不可计算函数与更大的无限（Uncomputable Functions and Larger Infinities）
 
-![[C2-图8-正有理数可数的排列路径.png|430]]
+- **【拓展】可计算／不可计算函数（computable / uncomputable functions）** ：有限程序只有可数多个，而$\mathbb N\to\{0,1\}$的函数不可数，故有函数无程序计算。Cantor定理（Cantor's theorem）称$|S|<|\mathcal P(S)|$，由$T=\{s:s\notin f(s)\}$对角化排除满射。
 
-- **可数个可数集的并（countable union of countable sets）** 可沿二维对角线枚举，重复元素删去；有限笛卡尔积、有限字母表上的所有有限串也可数。
+- **【拓展】连续统（continuum）** 基数$\mathfrak c=2^{\aleph_0}$；连续统假设（continuum hypothesis, CH）称不存在介于$\aleph_0$与$\mathfrak c$的基数。其对ZFC的独立性（independence）以相容性为前提，不是被证明为假。
 
-  不是说可数个集合的无限笛卡尔积仍可数；无限二进制串已不可数。
+- **【拓展】时间／空间层级定理（time / space hierarchy theorem）** ：对适当可构造（constructible）的资源界，$f=o(g/\log g)$保证$\operatorname{DTIME}(f)\subsetneq\operatorname{DTIME}(g)$；空间界至少$\log n$且$f=o(g)$时有对应严格空间层级。确定性图灵机（deterministic Turing machine）的较大资源允许模拟后对角化；不能外推成任意微增资源都更强或$P\ne NP$。[条件核对来源](https://cs.uwaterloo.ca/~r5olivei/courses/2024-fall-cs360/lecture-notes/lecture05/)。
 
-#### 对角线与双射判据（Diagonalization and Bijection Criteria）
+- **【拓展】黎曼猜想（Riemann hypothesis）** 称黎曼ζ函数（Riemann zeta function）全部非平凡零点（nontrivial zeros）的实部为$1/2$，负偶整数的平凡零点另论。[原陈述](https://www.claymath.org/millennium/Riemann-Hypothesis/)。
 
-- **康托尔对角线论证（Cantor's diagonal argument）** ：假设$(0,1)$实数列为$x_1,x_2,\ldots$，构造y的第n位与$x_n$第n位不同，如只用1、2避免小数双重表示，y不在列表中，矛盾。
+### 2.6 矩阵预备与【拓展】普通运算（Matrix Prerequisites and Ordinary Operations）
 
-  故$\mathbb R$不可数；无理数若可数，与$\mathbb Q$并就使$\mathbb R$可数，也矛盾。
+授课依据：[[Ch9.1_Part1.pdf|Ch9.1_Part1.pdf]]、[[Ch9.1_Part3.pdf|Ch9.1_Part3.pdf]]、[[Ch9.3_Part2.pdf|Ch9.3_Part2.pdf]]。矩阵下标、零一矩阵、布尔积／幂服务于关系与Warshall，属于范围内；普通矩阵代数另标拓展。
 
-- **Schröder–Bernstein定理（Schröder–Bernstein theorem）** ：若A到B、B到A各有单射，则有双射。用来证明区间与整条实数轴等势、平面与直线等势时，不必硬构造双射；
+#### 矩阵记号与【拓展】普通运算（Matrix Notation and Ordinary Operations）
 
-  小数交织（digit interleaving）需处理双重展开问题。
+- **矩阵（matrix）** 的$m\times n$表示$m$行$n$列，条目（entry）$a_{ij}$按先行后列编号；方阵（square matrix）行列数相同。关系矩阵的这些记法在Ch9.1课件中使用。
 
-#### 不可计算函数与更大的无限（Uncomputable Functions and Larger Infinities）
+- **【拓展】普通矩阵运算（ordinary matrix operations）** ：行／列矩阵（row / column matrix）、零矩阵（zero matrix）按形状或条目命名；相等须同型逐项相等，加法（sum）与数乘（scalar multiplication）逐项进行。$A_{m\times k}B_{k\times n}$为$m\times n$，$(AB)_{ij}=\sum_ta_{it}b_{tj}$，一般不交换。
 
-- **可计算函数（computable function）** 有有限程序对每个合法输入给出输出；
+#### 【拓展】幂、转置与逆（Powers, Transposes and Inverses）
 
-  有限字母表的程序只有可数多个，而$\mathbb N\to\{0,1\}$的函数已有不可数多个，故存在不可计算函数（uncomputable function）。这是非构造性存在证明；
+- **【拓展】单位矩阵（identity matrix）** 对角1其余0，$I_mA=A=AI_n$；幂满足$A^0=I,A^{r+s}=A^rA^s$。转置（transpose）交换行列，$(AB)^T=B^TA^T$；对称矩阵（symmetric matrix）满足$A^T=A$，故$A+A^T$对称。
 
-  不能把十进制展开直接当一一对应而忽略$0.4999\ldots=0.5000\ldots$。
+- **【拓展】数量矩阵（scalar matrix）** 为$cI$，与全部同阶方阵交换；矩阵环的中心（center of a matrix ring）恰由此组成。逆矩阵（inverse matrix）须满足双侧乘积为$I$，并非逐项倒数；逆唯一且$(AB)^{-1}=B^{-1}A^{-1}$。
 
-- **康托尔定理（Cantor's theorem）** ：$|S|<|\mathcal P(S)|$。若f满射到幂集，取$T=\{s:s\notin f(s)\}$，考察$f(t)=T$即矛盾。
-
-  连续统（continuum）基数$\mathfrak c=|\mathbb R|=2^{\aleph_0}$；
-
-  连续统假设（continuum hypothesis, CH）称不存在严格介于$\aleph_0$与$\mathfrak c$之间的基数，在通常选择公理框架下表述为$\mathfrak c=\aleph_1$。
-
-  它相对于标准ZFC公理的独立性（independence）以公理系统相容为前提，不是已证明为假的猜想。
-
-### 2.6 【拓展：本小节课堂未讲】矩阵与布尔矩阵（Matrices and Boolean Matrices）
-
-#### 普通矩阵运算（Ordinary Matrix Operations）
-
-- $m\times n$矩阵（matrix）有m行、n列，条目（entry）为$a_{ij}$；
-
-  行矩阵（row matrix）、列矩阵（column matrix）、方阵（square matrix）、零矩阵（zero matrix）按形状或条目命名。相等要求同型且逐项相等；
-
-  和（sum）、数乘（scalar multiplication）逐项运算。
-
-- **普通矩阵积（matrix product）** ：A为$m\times k$、B为$k\times n$才可作AB，$(AB)_{ij}=\sum_{t=1}^ka_{it}b_{tj}$，结果$m\times n$。
-
-  AB与BA可能一方无定义或形状不同，即使同型也一般不相等；结合律、对加法分配律在维数合法时成立。
-
-#### 幂、转置与逆（Powers, Transposes and Inverses）
-
-- **单位矩阵（identity matrix）** I对角1其余0；$A^0=I$、$A^{r+s}=A^rA^s$。转置（transpose）$(A^T)_{ij}=a_{ji}$，$(A+B)^T=A^T+B^T$，$(AB)^T=B^TA^T$。
-
-  对称矩阵（symmetric matrix）满足$A^T=A$。
-
-  对任意实方阵$A$，$A+A^T$是对称矩阵，因为$(A+A^T)^T=A^T+A=A+A^T$。证明时用转置的加法规则与二次转置还原，不是只观察一个数值例。
-
-- **数量矩阵（scalar matrix）** 形如$cI$，它与每个同阶方阵$B$交换：$(cI)B=cB=B(cI)$。
-
-  原自测还要求反向判断：若实$2\times2$矩阵$A=\begin{bmatrix}a&b\\c&d\end{bmatrix}$与所有同阶矩阵交换，先令$B=\begin{bmatrix}1&0\\0&0\end{bmatrix}$，由$AB=BA$得$b=c=0$；再令$B=\begin{bmatrix}0&1\\0&0\end{bmatrix}$得$a=d$，故$A=aI$。矩阵环的中心（center of a matrix ring）就是这些与所有元素交换的矩阵。
-
-- **逆矩阵（inverse matrix）** 满足$AA^{-1}=A^{-1}A=I$；不是逐项取倒数。$A=\begin{bmatrix}0&1\\-1&0\end{bmatrix}$有$A^2=-I,A^4=I$，幂按模4循环；
-
-  这是周期矩阵幂（periodic matrix powers）的例子。
+- **【拓展】周期矩阵幂（periodic matrix powers）** 例如$\begin{bmatrix}0&1\\-1&0\end{bmatrix}^2=-I$、四次幂为$I$，可按指数模4化简。
 
 #### 布尔矩阵及可达性（Boolean Matrices and Reachability）
 
@@ -1097,17 +940,14 @@ $$
 
 - 逐项并交有幂等、交换、结合、分配律，$A\lor0=A$、$A\land0=0$；布尔积有结合律和单位元I、零元0，也对逐项OR分配，但一般不交换。不要把逐项AND与布尔积当同一个运算。
 
-- **布尔幂的最终周期性（eventual periodicity of Boolean powers）** ：$n\times n$布尔矩阵只有$2^{n^2}$种，幂序列必有$A^{[p]}=A^{[q]}$（$p<q$）；继续右乘$A$，得到对所有$k\ge0$都有$A^{[p+k]}=A^{[q+k]}$。
 
-  “最终周期”不等于“最终不变”。例如$A=\begin{bmatrix}0&1\\1&0\end{bmatrix}$的布尔幂在$A,I$间交替，并不逐项只增不减；逐项单调的是累计并$A\lor\cdots\lor A^{[r]}$。
-
-  若某次幂等于全1矩阵$J$，且$A$每列至少有一个1，则$J\odot A=J$，后续幂才保持为$J$。原例的稳定性应由这一乘法条件解释，不能只说“OR不会把1改回0”。
-
----
+- **【拓展】布尔幂最终周期性（eventual periodicity of Boolean powers）** 来自$n\times n$布尔矩阵仅$2^{n^2}$种；重复后再右乘，周期延续。它不保证最终不变：$\begin{bmatrix}0&1\\1&0\end{bmatrix}$的幂交替为$A,I$。单调的是累计并；若某次为全1矩阵$J$且$A$每列有1，则$J\odot A=J$保证后续稳定。
 
 ## 三、关系（Relations）
 
 ### 3.1 二元关系的性质与运算（Properties and Operations of Binary Relations）
+
+授课依据：[[Ch9.1_Part1.pdf|Ch9.1_Part1.pdf]]、[[Ch9.1_Part2 (1).pdf|Ch9.1_Part2 (1).pdf]]、[[Ch9.1_Part3.pdf|Ch9.1_Part3.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 关系与表示（Relations and Representations）
 
@@ -1160,11 +1000,22 @@ $$
 
   自反且传递则$R^n=R$（$n\ge1$）。传递关系满足$R^{n+1}\subseteq R^n$且各次幂仍传递， **不保证$R^n=R^2$** 。反例$R=\{(1,2),(2,3),(1,3)\}$：$R^2=\{(1,3)\}$、$R^3=\varnothing$。
 
+- **关系幂性质的证明要点（proofs of properties of relation powers）** ：
+
+  1. **复合保包含（monotonicity of composition）** ：若$R\subseteq S$，复合中的中间见证在换成$S$后仍合法，故$T\circ R\subseteq T\circ S$，$R\circ T\subseteq S\circ T$。
+  2. **幂与路径（powers and paths）** ：$n=1$是边的定义；长度$n+1$的路径拆出一条边与长度$n$的余段，按复合定义和归纳假设，恰好对应$R^{n+1}$。
+  3. **传递性的幂刻画（power characterization of transitivity）** ：由$R^2\subseteq R$归纳得$R^{n+1}\subseteq R^2\subseteq R$；逆向只需取$n=2$。
+  4. **各次幂仍传递（transitivity of every positive power）** ：由保包含归纳得$R\supseteq R^2\supseteq\cdots$。因此$(R^n)^2=R^{2n}\subseteq R^n$，即$R^n$传递。也可用捷径引理（shortcut lemma）：传递关系的两条相邻边能缩成一条，把$2n$步缩到$n$步。
+
+  指数还满足$(R^m)^n=R^{mn}$；但一般$(R\circ S)^n\ne R^n\circ S^n$，展开后交替次序不能随意交换。这里的传递关系幂递减，不能推广到任意关系。
+
 #### 逆关系与计数（Inverses and Counting）
 
 - **逆关系（inverse relation）** $R^{-1}=\{(b,a):(a,b)\in R\}$；$(R^{-1})^{-1}=R$，逆保持并、交、差及适当全集下的补；$(S\circ R)^{-1}=R^{-1}\circ S^{-1}$，复合次序反转。
 
-- **【拓展／补充】关系计数（counting relations）** ：若$|A|=m,|B|=n$共有$2^{mn}$个A到B关系。n元集上总数$2^{n^2}$；自反与反自反各$2^{n(n-1)}$；对称$2^{n(n+1)/2}$；
+- **关系总数（number of relations）** ：若$|A|=m,|B|=n$，共有$2^{mn}$个A到B关系；n元集上为$2^{n^2}$，因为每个有序对可选或不选。
+
+- **【拓展】按性质计数（counting by properties）** ：自反与反自反各$2^{n(n-1)}$；对称$2^{n(n+1)/2}$；
 
   反对称$2^n3^{\binom n2}$；非对称$3^{\binom n2}$；同时对称反对称$2^n$。方法是对角线逐位选、不同点的无序对分别选。传递性把不同位置的选择耦合，不能套上述独立选择法；
 
@@ -1172,45 +1023,42 @@ $$
 
 ![[C9-四个性质的有向图判读.png|650]]
 
+- **对称关系的逆刻画（inverse characterization of symmetry）** ：$R$对称当且仅当$R=R^{-1}$。正向由每条边都有反向边，分别得到双向包含；逆向由$(a,b)\in R=R^{-1}$立得$(b,a)\in R$。
+
+  对同底集关系，$(R\cup S)^{-1}=R^{-1}\cup S^{-1}$、$(R\cap S)^{-1}=R^{-1}\cap S^{-1}$、$(R-S)^{-1}=R^{-1}-S^{-1}$；$(\overline R)^{-1}=\overline{R^{-1}}$的右侧补集须相对于反向笛卡尔积。逆关系总存在，不要求它还是函数。
+
 ### 3.2 多元关系与数据库（n-ary Relations and Databases）
+
+授课依据：[[Ch9.2.pdf|Ch9.2.pdf]]。保留n元关系、域、度、记录字段、条件筛选和拼表概念；键、投影、SQL及通用算子细节为拓展。
 
 #### 记录、属性与键（Records, Attributes and Keys）
 
-- $n$元关系（$n$-ary relation）$R\subseteq A_1\times\cdots\times A_n$，度（degree）为n，不是记录条数。
+- **$n$元关系（$n$-ary relation）** 为$R\subseteq A_1\times\cdots\times A_n$，各$A_i$是论域（domain），度（degree）为$n$，不是记录数。课件例$(a,b,m)$满足$m>0$且$m\mid(a-b)$，度3、论域$\mathbb Z,\mathbb Z,\mathbb Z^+$。
 
-  关系数据库（relational database）把n元组作为记录／行（record / row），各分量为字段／属性（field / attribute），各$A_i$为属性论域（domain）。
+- **关系数据库（relational database）** 以元组为记录／行（record / row）、分量为字段／属性（field / attribute），展示为表；数学关系是集合，不保留重复行与自然行序。课件实际讨论按条件筛元组及连接分表记录。
 
-  数学关系是集合，不保留重复行与自然行序。
-
-- **外延（extension）与内涵（intension）** ：外延是当前实际存储的元组集合，内涵是表名、属性、论域及取值规则等相对固定的结构约束。
-
-  选键不能只看当前外延碰巧没有重复，还须确认内涵允许的未来记录也符合唯一性约束；这正是“当前姓名不重名”不能保证姓名永远可作键的原因。
-
-- **主键（primary key）** 可唯一标识记录；复合键（composite key）由多个属性联合区分。当前记录恰好不重不等于未来数据也受唯一性保证，新增记录须维持键约束。学号比姓名更适合作标识；
-
-  分表减少重复信息（redundancy），但需正确的连接条件才能恢复。
+- **【拓展】外延／内涵（extension / intension）** 分别为当前元组与结构规则；主键（primary key）唯一标识记录，复合键（composite key）联合多个字段。不能由当前姓名不重名就认定未来也可作键；分表减少冗余（redundancy），连接条件仍须正确。
 
 #### 选择、投影与连接（Selection, Projection and Join）
 
-选择、投影、连接属于关系代数（relational algebra）：输入关系，按明确规则生成新的关系。
+- **选择／条件筛选（selection）** 保留满足条件$C$的记录：$s_C(R)=\{\boldsymbol a\in R:C(\boldsymbol a)\}$，字段数不变。它对应课件“determining all n-tuples satisfying certain conditions”。
 
-- **选择（selection）** $s_C(R)$按条件C筛行，度不变；投影（projection）$P_{i_1,\ldots,i_k}(R)$按指定次序选列，度变为k，并去除重复元组，故行数可能减少。
+- **连接（join）** 将两表公共字段值相同的记录拼接，公共部分只留一次；对应课件“joining records in different tables”。先对齐列序并检查全部共同字段；多对多匹配可产生多行，未匹配记录不进入内连接（inner join）。例如按学号连接成绩表与姓名表，不能仅因记录行号相同就配对。
 
-- **连接（join）** $J_p(R,S)$把R末p列与S前p列相同的记录配对，公共部分只留一次，结果度$m+n-p$。先对齐列序，再比较公共字段全部取值；
+- **【拓展】关系代数（relational algebra）形式化** ：投影（projection）$P_{i_1,\ldots,i_k}(R)$选列并去重；教材$p$列连接$J_p(R,S)$匹配$R$末$p$列与$S$前$p$列，结果度$m+n-p$，$p=0$退化为笛卡尔积。课件没有展开投影及这些通用算子公式，不把整套运算升为授课内容。
 
-  匹配是多对多时可能产出多行，行数不是简单取最小值或固定乘积。未配上的记录不在内连接（inner join）结果中。
+#### 【拓展】SQL与考试信息的边界（SQL and Examination Evidence）
 
-#### SQL与考试信息的边界（SQL and Examination Evidence）
+- **【拓展】SQL（Structured Query Language）** 的WHERE近似选择、SELECT列近似投影、JOIN依条件拼表；SQL默认可保留重复，而数学关系为集合，DISTINCT才去重。
 
-- **【拓展／补充】SQL（Structured Query Language）** 中WHERE对应选择，SELECT对应投影；数学投影去重，在SQL中须留意DISTINCT与默认重复保留语义。
+> [!info] 历史考试提醒
+> 第13节要求先掌握$n$元关系再学数据库语言；SQL考试题的具体承诺无直接证据。按本次课件范围，仅保留筛选与连接的概念为范围内，其余按拓展处理。
 
-  JOIN…ON指定连接条件；左／右／全外连接（left / right / full outer join）保留未匹配行并填NULL，不是本节$J_p$的定义。
-
-  先筛选再连接（selection pushdown）常可减少中间表，但须保证条件只依赖对应输入属性。
-
-- **【复习定位】** 原章节汇总称§9.2、§9.3通常出小问；现有转写未找到足以逐字确认该承诺的原话，因此按“笔记中的复习提示”保留，不标成老师明确限定题量。六种性质、偏序与闭包仍完整掌握。
+- **【拓展】外连接（outer join）** 的左／右／全版本（left / right / full outer join）保留相应未匹配行，并补空值；先筛选再连接（selection pushdown）是关系代数优化思路，但移动条件前须核对等价性。
 
 ### 3.3 矩阵与有向图表示（Matrix and Digraph Representations）
+
+授课依据：[[Ch9.1_Part1.pdf|Ch9.1_Part1.pdf]]、[[Ch9.1_Part2 (1).pdf|Ch9.1_Part2 (1).pdf]]、[[Ch9.1_Part3.pdf|Ch9.1_Part3.pdf]]。课件将矩阵／有向图表示提前放在Ch9.1，不能只找同名Ch9.3文件。
 
 #### 矩阵、复合与图表示（Matrices, Composition and Digraphs）
 
@@ -1230,6 +1078,8 @@ $$
 
 ### 3.4 闭包与Warshall算法（Closures and Warshall's Algorithm）
 
+授课依据：[[Ch9.3_Part1.pdf|Ch9.3_Part1.pdf]]、[[Ch9.3_Part2.pdf|Ch9.3_Part2.pdf]]。课件文件名Ch9.3实际讲闭包，含Warshall、闭包保留性质与次序。
+
 #### 闭包的定义与三种闭包（Definition and Three Closures）
 
 - **性质P的闭包（closure with respect to P）** 是包含R且满足P的最小关系：“最小”按集合包含，不只是元素数较少。
@@ -1244,11 +1094,15 @@ $$
 
 #### 传递闭包的上界与证明（Bounds and Proof of Transitive Closure）
 
-- **路径长度（path length）** 为边数；正长度回路（circuit）可使$(a,a)$进入传递闭包。有限n元集上$t(R)=R\cup R^2\cup\cdots\cup R^n$；
+- **路径长度上界（path-length bound）** ：有限$n$元集上，若不同端点可达，删去重复点间的闭段得到至多$n-1$步；同点的正长度闭路只保留首尾相同，可缩为至多$n$步。因此$R^*=R\cup\cdots\cup R^n$，不能无条件截到$n-1$。
 
-  不同端点的路径可去掉重复段缩到至多$n-1$步，自身到自身的正长度回路最多需n步，不能统一删成$n-1$上界。
+- **传递闭包的三步证明（three-step proof of transitive closure）** ：
 
-- 证明闭包正确需三件事：包含R；满足目标性质；被任意满足性质的R之超关系（superrelation）包含。传递闭包的传递性靠拼接路径，最小性靠任意传递超关系都包含各次幂。
+  1. 包含：$R=R^1\subseteq R^*$。
+  2. 传递：若$(x,y)\in R^m,(y,z)\in R^n$，拼接得$(x,z)\in R^{m+n}\subseteq R^*$。
+  3. 最小：任取传递的$S\supseteq R$；由复合保包含得$R^k\subseteq S^k$，由$S$传递得$S^k\subseteq S$，故所有$R^k$及其并都在$S$中。
+
+  “包含、传递、最小”缺一不可；只证明$R^*$传递不足以证明它就是闭包。
 
 #### Warshall递推与执行顺序（Warshall Recurrence and Execution Order）
 
@@ -1269,17 +1123,56 @@ $$
 > [!warning] 【考试注意：第15节转写】
 > 老师明确说期末要能“by hand、one element by element”计算；不仅会写Python。写$W^{(0)},W^{(1)},\ldots$并圈出新增1，最终转回有序对或可达结论。
 
+- **Warshall的完整步骤（complete Warshall procedure）** ：输入按固定顶点顺序排列的$n\times n$关系矩阵，输出正长度传递闭包矩阵。
+
+```text
+W := M
+for k := 1 to n:
+    for i := 1 to n:
+        for j := 1 to n:
+            W[i,j] := W[i,j] OR (W[i,k] AND W[k,j])
+return W
+```
+
+  第$k$轮若$W[i,k]=1$，就把第$k$行逐位OR入第$i$行；若为0，该行这一轮无须因$k$而更新。内部顶点（interior vertex）按在路径中的位置判断：一个起点若中途再次出现，该次出现也算内部顶点。
+
+  正确性要点：允许的内部顶点逐轮扩为$\{1,\ldots,k\}$，一条路要么不用$k$，要么在$k$处拆成两段；去掉重复绕行后可用这一分解。第$n$轮后所有中间顶点都已允许。不能初始化为全1，也不能把每个对角元预设为1来混淆正长度闭包与自反传递闭包。
+
 #### 手算例（Worked Calculation）
 
-- 手算练习：$R=\{(1,2),(2,3),(3,2)\}$，有
+- **课件四点手算例（four-vertex courseware example）** ：顶点顺序$a,b,c,d$，输入关系矩阵
 
 $$
-W^{(0)}=W^{(1)}=\begin{bmatrix}0&1&0\\0&0&1\\0&1&0\end{bmatrix},\quad
-W^{(2)}=\begin{bmatrix}0&1&1\\0&0&1\\0&1&1\end{bmatrix},\quad
-W^{(3)}=\begin{bmatrix}0&1&1\\0&1&1\\0&1&1\end{bmatrix}.
+W^{(0)}=\begin{bmatrix}
+0&0&0&1\\1&0&1&0\\1&0&0&1\\0&0&1&0
+\end{bmatrix}.
 $$
 
-2与3在正长度回路中，所以对角变1；1没有返回自己的路，对角仍0。不能在初始化时不加说明地填满对角线。
+  第1轮允许$a$中转，只有$b\to a\to d$新增，故把$(b,d)$改1。第2轮允许$b$，但没有点能到$b$，无新增，$W^{(2)}=W^{(1)}$：
+
+$$
+W^{(1)}=W^{(2)}=\begin{bmatrix}
+0&0&0&1\\1&0&1&1\\1&0&0&1\\0&0&1&0
+\end{bmatrix}.
+$$
+
+  第3轮允许$c$，由$d\to c$把$c$行OR入$d$行，新增$(d,a),(d,d)$：
+
+$$
+W^{(3)}=\begin{bmatrix}
+0&0&0&1\\1&0&1&1\\1&0&0&1\\1&0&1&1
+\end{bmatrix}.
+$$
+
+  第4轮允许$d$，所有能到$d$的行并入$d$行，新增$(a,a),(a,c),(c,c)$，得到
+
+$$
+W^{(4)}=\begin{bmatrix}
+1&0&1&1\\1&0&1&1\\1&0&1&1\\1&0&1&1
+\end{bmatrix}=M_{R^*}.
+$$
+
+  $a,c,d$处在正长度回路上，对角为1；没有任何边进入$b$，故$b$列含对角始终为0。不能预先给所有对角填1。
 
 ![[C9-Warshall两种情形.png|600]]
 
@@ -1287,11 +1180,13 @@ $$
 
 - 已有性质则闭包不变：$r(R)=R\iff R$自反，其余同理。三种闭包均包含原关系、幂等（idempotent）且对包含单调。自反闭包保持对称和传递，传递闭包保持自反和对称，对称闭包保持自反，但可破坏传递。
 
-- **【拓展】闭包次序（order of closure operations）** ：$r(s(R))=s(r(R))$，$r(t(R))=t(r(R))$；一般$s(t(R))\subseteq t(s(R))$且可能严格不等。
+- **闭包次序（order of closure operations）** ：$r(s(R))=s(r(R))$，$r(t(R))=t(r(R))$；一般$s(t(R))\subseteq t(s(R))$且可能严格不等。
 
   例$R=\{(1,2),(3,2)\}$原本传递，先对称后传递得到3点全关系9对，先传递后对称只有4对。闭包不普遍对差、补分配；如$t(R_1-R_2)\ne t(R_1)-t(R_2)$。求逆与自反闭包相容：$r(R^{-1})=r(R)^{-1}$。
 
 ### 3.5 等价关系、等价类与划分（Equivalence Relations, Classes and Partitions）
+
+授课依据：[[Ch9.5.pdf|Ch9.5.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 等价关系、等价类与划分（Equivalence, Classes and Partitions）
 
@@ -1307,39 +1202,29 @@ $$
 
   商集（quotient set）$A/R=\{[a]:a\in A\}$的元素是类，不是A中的普通元素。
 
+- **等价类定理的证明要点（proof of the equivalence-class theorem）** ：$aRb\Rightarrow[a]=[b]$：用对称性与传递性证明两个类双向包含；$[a]=[b]\Rightarrow[a]\cap[b]\ne\varnothing$：自反性使$a\in[a]=[b]$；若$c\in[a]\cap[b]$，由$aRc,bRc$及对称、传递得$aRb$，闭合三向等价。
+
+- **等价关系与划分定理的证明要点（proof of the equivalence–partition correspondence）** ：自反性保证每个元素属于一个类，等价类定理保证不同类不交，因此构成划分。反向规定“同块即相关”：同元素在同一块得自反，交换得对称；若$a,b$同块而$b,c$同块，由块不交且共享$b$可知两块相同，得$a,c$同块即传递。这样构造的关系唯一，其类恰好是原划分的块。
+
 #### 类的大小与前缀分类（Class Sizes and Prefix Classification）
 
-- 有限块大小为$n_i$时，关系中有$\sum_i n_i^2$个有序对，商集大小为块数。模m同余（m为正整数）有m类$[0]_m,\ldots,[m-1]_m$，$a\equiv b\pmod m\iff m\mid(a-b)$。
+- **类大小与关系对数（class sizes and pair counts）** ：有限等价类$A_1,\ldots,A_k$给$R=\bigcup_i(A_i\times A_i)$，故$|R|=\sum_i|A_i|^2$；课件的三块大小3、2、1对应$9+4+1=14$个有序对，各块内部全部成对，不能只连不同元素而漏自环。
 
-- **位串前n位关系（prefix equivalence）** ：$sRt$当$s=t$或两串长度均至少n且前n位相同。
-
-  短于n的串每串单独一类，长串按$2^n$个前缀分类，共$(2^n-1)+2^n=2^{n+1}-1$类，n=3时15类，不能只答8。
+- **【拓展】前缀分类（prefix classification）** ：长度$n$的位串按前$r$位相同分等价类，共$2^r$类、每类$2^{n-r}$个；按相同长度等价时必须先说是否允许空串及长度范围。
 
 ![[C9-集合的划分示意.png|510]]
 
-- 等价关系在非空底集上必自反，因而不反自反、也不非对称；它若还反对称，就只能是相等关系$\Delta_A$。
-
-  由$f(a)=f(b)$定义的关系自动满足三条性质，是“用标签分类（classification by labels）”的通用构造。
-
 #### 【拓展】等价关系的构造与计数（Constructions and Counting）
 
-- **带正负号的同余关系（congruence up to sign）** ：整数上$aRb\iff a\equiv b\pmod7$或$a\equiv-b\pmod7$，也是等价关系。
+- **【拓展】构造等价关系（constructing equivalence relations）** ：映射$f$诱导$x\sim y\iff f(x)=f(y)$；“模$m$相等或互为相反数”也成等价关系，例如模7有$\{[0]\},\{[1],[6]\},\{[2],[5]\},\{[3],[4]\}$四类。并不一定保等价，交保持等价；可用自反、对称、传递闭包生成最小等价关系。
 
-  自反取正号；对称可反解；传递时若$a\equiv\varepsilon_1b$、$b\equiv\varepsilon_2c$且$\varepsilon_i\in\{1,-1\}$，则$a\equiv\varepsilon_1\varepsilon_2c$，符号仍在$\{1,-1\}$中。
+- **【拓展】Bell数与第二类Stirling数（Bell numbers and Stirling numbers of the second kind）** ：$S(n,k)$数$n$元集合分成$k$个非空无标号块，$S(n,k)=kS(n-1,k)+S(n-1,k-1)$，$S(0,0)=1$，其余不合法边界为0；$B_n=\sum_kS(n,k)$数所有划分。课件只实际列出三元集的5种划分，不涉及这些一般计数公式。
 
-  等价类是把原同余类按相反数合并，四个类分别为$7\mathbb Z$、$(7\mathbb Z+1)\cup(7\mathbb Z+6)$、$(7\mathbb Z+2)\cup(7\mathbb Z+5)$、$(7\mathbb Z+3)\cup(7\mathbb Z+4)$。这些类由整数构成，不是把“余数类本身”误当作底集元素。
-
-- **【拓展／补充】两类构造** ：$(a,b)\sim(c,d)\iff a-b=c-d$在整数对上的类是固定差的整点；这也是用自然数对构造整数的思想。
-
-  实数上$x\sim y\iff x-y\in\mathbb Q$，$[1]=[1/2]=\mathbb Q$、$[\pi]=\pi+\mathbb Q$，类称加法陪集（additive coset）。
-
-- **【拓展／补充】循环关系（circular relation）** 满足$aRb\land bRc\Rightarrow cRa$；自反＋循环当且仅当等价关系。证明先用$bRb$得对称，再用循环＋对称得传递，不可提前使用待证结论。
-
-- **【拓展／补充】划分计数（counting partitions）** ：第二类Stirling数（Stirling number of the second kind）$S(n,k)=kS(n-1,k)+S(n-1,k-1)$，$S(0,0)=1$；
-
-  Bell数（Bell number）$B_n=\sum_kS(n,k)$计所有等价关系。$S(5,3)=\binom53+5\binom42/2=25$，$B_5=52$；块无序，大小相同的块不能重复编号计数。
+- **【拓展】加法陪集（additive coset）** 可表示模$m$同余类$a+m\mathbb Z$；循环关系（circular relation）要求$aRb,bRc\Rightarrow cRa$，配合自反性可导对称、传递。前缀等价（prefix equivalence）及用标签分类（classification by labels）是构造等价类的应用。
 
 ### 3.6 偏序、Hasse图、格与拓扑排序（Partial Orders, Hasse Diagrams, Lattices and Topological Sorting）
+
+授课依据：[[Ch9.6.pdf|Ch9.6.pdf]]。格、分配格、有界格、补格与对偶均在课件内；拓扑排序、一般障碍刻画和安全模型为拓展。
 
 #### 偏序、可比性与字典序（Partial Orders, Comparability and Lexicographic Order）
 
@@ -1349,7 +1234,7 @@ $$
 
 - **可比（comparable）** 指$a\preccurlyeq b$或$b\preccurlyeq a$，否则不可比（incomparable）。任意两点可比为全序／线性序（total / linear order）；
 
-  链（chain）为其中全序的子集，反链（antichain）为不同元素两两不可比的子集。正整数整除与幂集包含一般只是偏序。
+  链（chain）为其中全序的子集，【拓展】反链（antichain）为不同元素两两不可比的子集。正整数整除与幂集包含一般只是偏序。
 
 - **字典序／词典序（lexicographic order）** 比较第一个不同分量；前面分量都相等才比较后面。字符串中真前缀排在长串之前；分量若只偏序，则第一处不同分量不可比时不能越过去用后面的大小决定。
 
@@ -1379,7 +1264,7 @@ $$
 
   序可由$a\preccurlyeq b\iff a\wedge b=a\iff a\vee b=b$恢复。
 
-- **格的有限子集（finite subsets of a lattice）** ：任意有限非空子集都有lub与glb，可反复取二元并交；单元素集合的两者都是该元素。
+- **【拓展】格的有限子集（finite subsets of a lattice）** ：任意有限非空子集都有lub与glb，可反复取二元并交；单元素集合的两者都是该元素。
 
   对大小归纳，$\operatorname{lub}(B\cup\{x\})=\operatorname{lub}(B)\vee x$，glb同理。因此有限非空格必有最大元和最小元，即为有界格；不能把“有限”去掉后照搬。
 
@@ -1393,7 +1278,22 @@ $$
 
 - 在整除偏序的某个子集里，环境中未包含lcm时不能直接把外面的数当lub；在子集内可能另有最小共同上界，或根本没有。
 
-  信息流格（information-flow lattice）用安全级别与允许流动关系建模，并交表示共同约束的合成。
+
+- **格的四条运算律（four lattice laws）** ：对任意$a,b,c$，
+
+  | 定律（law） | 并（join） | 交（meet） |
+  |---|---|---|
+  | 交换律（commutativity） | $a\vee b=b\vee a$ | $a\wedge b=b\wedge a$ |
+  | 结合律（associativity） | $a\vee(b\vee c)=(a\vee b)\vee c$ | $a\wedge(b\wedge c)=(a\wedge b)\wedge c$ |
+  | 幂等律（idempotence） | $a\vee a=a$ | $a\wedge a=a$ |
+  | 吸收律（absorption） | $a\vee(a\wedge b)=a$ | $a\wedge(a\vee b)=a$ |
+
+  证明要点：二元并交的唯一性给出交换、幂等；两个结合式都等于三元素集合的同一个lub／glb；$a\wedge b\preccurlyeq a$使$a$就是$\{a,a\wedge b\}$的lub，得吸收律，交的式子对偶。分配律是额外条件，不由以上四律直接保证。
+
+- **【拓展】多级安全格（multilevel security lattice）** 以安全类（security class）$(\ell,C)$表示权限级别（authority level）和类别集合（category set）；逐分量偏序（componentwise order）取$\ell_1\le\ell_2,C_1\subseteq C_2$，并交为等级max／min与类别并／交。信息流格（information-flow lattice）是此应用背景，课件未展开。
+
+> [!warning] 【课件勘误：Ch9.6，PDF p9，slide 34】
+> 课件将整除偏序$\{1,2,3,4,8,16\}$判为格，但2、3在该集合中无共同上界，实际不是格。判断必须在给定集合内找lub／glb，不能借用集合外的6或其他数。
 
 #### 格的类型与对偶（Lattice Types and Duality）
 
@@ -1403,39 +1303,27 @@ $$
 
 - **有界格（bounded lattice）** 同时有底（bottom）0与顶（top）1；正整数整除格虽有底1但无顶，不有界。补元（complement）y满足$x\vee y=1,x\wedge y=0$；
 
-  人人有补称补格（complemented lattice）。三元素链有界但中间元素无补；$M_3$有补但某点可有两个补。分配格中的补若存在则唯一；有界、分配且有补的格为布尔代数。
+  人人有补称补格（complemented lattice）。三元素链有界但中间元素无补；$M_3$有补但某点可有两个补。【拓展】分配格中的补若存在则唯一；有界、分配且有补的格为布尔代数（Boolean algebra）。
 
 - **对偶原理（principle of duality）** 反转序、互换并交与顶底，得到对偶格（dual lattice）的对应真命题；不能只换符号不换序。
 
 #### 【拓展】障碍、良序与排序（Obstructions, Well-orders and Sorting）
 
-- **【拓展】分配格障碍（obstructions to distributivity）** ：格分配当且仅当不含同构于$M_3$或五边形$N_5$的 **子格（sublattice）** 。
+- **【拓展】分配格障碍（obstructions to distributivity）** 为作为子格（sublattice）的$M_3$或$N_5$，必须保持原并交，不能只看画得像菱形或五边形。有限非空格（finite nonempty lattice）有顶底，有限非空子集有并交；空子集须另要求顶底。
 
-  必须保留并交运算，不是画面“像菱形／五边形”就够；$N_5$是一条$0<a<b<1$链加$0<c<1$且c与a、b均不可比，原笔记的描述需如此修正。
+- **【拓展】良序（well-order）** 是每个非空子集有最小元的全序；不等于任意全序。拓扑排序（topological sorting）是保持偏序先后约束的线性扩张（linear extension），反复删除极小元；DAG可用Kahn算法（Kahn's algorithm）反复取入度0点，无可取点而仍剩顶点则有环。课件讲到格的对偶原理为止，没有拓扑排序算法。
 
-- **【拓展】良序（well-order）** 为全序且每个非空子集有最小元；$\mathbb Z^+$及其二元组的字典序是良序，$(\mathbb Z,\le)$不是。
+- **【拓展】划分的细化序（refinement order）** 以每个细块包含于某粗块定义；最细为单点划分、最粗为全集一块。对偶偏序（dual poset）始终仍是偏序；有限覆盖关系可恢复原序，无限稠密序如$(\mathbb Q,\le)$没有覆盖边，不能照搬有限Hasse算法。
 
-  良序归纳原理（well-ordered induction）若对每个y，由所有$x\prec y$的P(x)可推出P(y)，则处处成立；
-
-  最小元的情形已包含在该条件中，不能只说“省略基础步”而不证明它也被覆盖。证明用最小反例（minimal counterexample）。
-
-- **【拓展】拓扑排序（topological sorting）／线性扩张（linear extension）** 将有限偏序排为与原序一致的线性序。反复选极小元、输出并删除；
-
-  有向无环图（directed acyclic graph, DAG）中等价于反复选入度0的顶点（Kahn's algorithm）。可能有多个合法答案；若尚有顶点但无入度0点则有环。
-
-  邻接表实现$O(v+e)$，用于先修课与项目依赖排期。
-
-- **【拓展／补充】关系的偏序（orders on relations）** ：全部关系按包含构成幂集偏序；全部划分按加细（refinement）排序，加细表示每块包含在另一划分某块中，对应等价关系包含。
-
-  最细划分为每元素一块，最粗为全集一块。
-
----
+- **【拓展】良序归纳原理（well-ordered induction）** 以所有更小对象满足性质推出当前对象；用最小反例（minimal counterexample）证明，最小对象的情形也须被该条件覆盖。全部关系按包含排序，对应幂集偏序。
 
 ## 四、计数（Counting）
 
 组合数学（combinatorics）研究离散对象的计数、构造与结构；本部分同时讨论“有多少个”与“怎样不重不漏地生成”。
 
 ### 4.1 基本计数原理（Basic Counting Principles）
+
+授课依据：[[Ch6.1.pdf|Ch6.1.pdf]]、[[Ch6.5.pdf|Ch6.5.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 加、乘、减、除四原理（The Four Counting Rules）
 
@@ -1449,43 +1337,49 @@ $$
 
 - **除法原理（division rule）** ：若每个实际对象恰被表示d次，则实际数为表示数除d。纤维大小（fiber size）必须一致；对象有对称性（symmetry）时不能不检查就除固定阶乘。
 
+- **课件计数例（courseware counting examples）** ：BASIC变量名长1或2、首字符为字母、大小写不分并排除5个保留名，共$26+26\cdot36-5=957$。8位串以1开头或以00结尾为$2^7+2^6-2^5=160$；350名申请中两专业分别220、147、交51，均非两专业者$350-(220+147-51)=34$。
+
+  病毒每次向50个新地址转发、无重叠的理想模型要先定轮起点：若初始1封为第1轮，前4轮和为$1+50+50^2+50^3=127551$；若初始后再转发4次，则总和为$\sum_{i=0}^450^i=6377551$。课件混用了这两种轮数，不能直接照抄。
+
 #### 圆排列与函数计数（Circular Arrangements and Function Counts）
 
 - **圆排列（circular permutation）** ：n个不同人围圆桌、只把旋转看成同一排法时为$(n-1)!$；若座位编号则为$n!$；镜像（reflection）是否视同须题目说明。
 
   两方向相同的无向环游在$n\ge3$时常再除2。
 
-- **函数计数（counting functions）** ：m元集到n元集总函数$n^m$；单射在$m\le n$时为$P(n,m)$，$m>n$时0；每个输入依次选输出，单射使候选数递减。
+- **【拓展】函数计数（counting functions）** ：m元集到n元集总函数$n^m$；单射在$m\le n$时为$P(n,m)$，$m>n$时0；每个输入依次选输出，单射使候选数递减。
 
   位串为$2^n$，长度r的n元字母串为$n^r$；首位、禁用字符等限制应单独处理。
 
-#### 树形图与受限计数（Tree Diagrams and Restricted Counts）
+#### 【拓展】树形图与受限计数（Tree Diagrams and Restricted Counts）
 
-- **树形图（tree diagram）** ：根到叶的一条完整分支对应一个合法对象，内部节点不是完成结果。五局三胜（best-of-five series）胜方先拿3场即停止，不可把结束后的比赛也计入；
+- **【拓展】树形图（tree diagram）** 以完整根叶分支对应结果；五局三胜（best-of-five series）结束即停，3、4、5场赛果分别2、6、12种，共20，不能计结束后的虚构比赛。
 
-  长度3、4、5的赛果分别2、6、12，共20种。T恤尺寸与颜色若某尺寸可选颜色不同，也须逐分支计数。
-
-- **【拓展／补充】历史IPv4分类计数（classful IPv4 counting）** ：按原题A、B、C类位段限制计数，A类网络部分排除全0，主机部分排除全0与全1；
-
-  数目分别$(2^7-1)(2^{24}-2)$、$2^{14}(2^{16}-2)$、$2^{21}(2^8-2)$，和为3,737,091,842。这里是教材题设的历史模型，不当作现行网络地址分配规则。
+- **【拓展】历史IPv4分类计数（classful IPv4 counting）** 按原题A、B、C类位段及保留位计数，总3,737,091,842；属于教材历史模型，不当现行地址分配规则。
 
 ### 4.2 鸽巢、拉姆齐与子序列（Pigeonhole, Ramsey and Subsequences）
+
+授课依据：[[Ch6.2.pdf|Ch6.2.pdf]]、[[Ch6.2&Ch6.3.pdf|Ch6.2&Ch6.3.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 鸽巢与保证阈值（Pigeonhole Principle and Thresholds）
 
 - **鸽巢原理／抽屉原理（pigeonhole principle / Dirichlet drawer principle）** ：$k+1$个物体进k盒至少一盒有两个；
 
-  从更大有限集到更小有限集不存在单射。广义鸽巢原理（generalized pigeonhole principle）：N个物体进k盒，至少一盒$\lceil N/k\rceil$个。
+  从更大有限集到更小有限集不存在单射。上取整（ceiling）$\lceil x\rceil$是不小于$x$的最小整数。广义鸽巢原理（generalized pigeonhole principle）：N个物体进k盒，至少一盒$\lceil N/k\rceil$个。
 
 - **反问题（inverse problem）** ：要保证至少一盒有r个，最少$k(r-1)+1$个；若各盒容量上限不同则超过其上限和才强制违例。
 
   证明先写清“物体”“盒子”“分配规则”，给出最坏分配说明阈值不能再小。
 
+- **鸽巢原理的证明与锋利性（proof and sharpness of pigeonhole bounds）** ：普通版若每盒至多1个，总数至多$k$，与至少$k+1$个矛盾。广义版若每盒都少于$\lceil N/k\rceil$个，总数至多$k(\lceil N/k\rceil-1)<N$，矛盾。
+
+  要保证某盒至少$r$个，$k(r-1)$个时仍可每盒恰好$r-1$个，因此$k(r-1)+1$既足够又最小。定义域更大足以推出函数不单射；反过来，函数不单射不能推出定义域更大。
+
 #### 构造盒子的三种方法（Three Ways to Construct Boxes）
 
-- **余数类（residue class）** 作盒子：两个数模n同余则差可被n整除。对$1,11,111,\ldots$的余数用鸽巢，或直接遇0余数，或两个相同余数相减，得到每个正整数都有一个仅含0、1的十进制正倍数。
+- **【拓展】余数类（residue class）** 作盒子：两个数模n同余则差可被n整除。对$1,11,111,\ldots$的余数用鸽巢，或直接遇0余数，或两个相同余数相减，得到每个正整数都有一个仅含0、1的十进制正倍数。
 
-- **连续区间和（consecutive interval sum）** 先变前缀和（prefix sum）的差。
+- **【拓展】连续区间和（consecutive interval sum）** 先变前缀和（prefix sum）的差。
 
   例30天每天至少1场、总共至多45场：30个严格递增前缀和$a_j$与$a_j+14$共60数落在1至59，必跨组相等，故某连续天数正好14场。原证明对其他目标数是否适用要重验取值范围；
 
@@ -1505,19 +1399,26 @@ $$
 
 ![[C6.2-K6二色染色必有同色三角形.png|510]]
 
+
+- **【拓展】其他Ramsey结论（further Ramsey results）** ：$R(m,n)=R(n,m)$、$R(2,n)=n$、$R(4,4)=18$；教材$43\le R(5,5)\le49$仅保留为历史范围。指定花色凑$r$张须先计其他花色最多可拿多少，不能套“任意一种”的保证阈值。
+
+- **【拓展】平移前缀和（shifted prefix sums）** ：$d$期每期至少1、总数至多$M$时，$1\le k\le2d-1-M$可由$d$个前缀和与其加$k$的平移强迫跨组相等，得连续区间恰$k$次；超出范围只说明该证明不保证。
+
 #### 子序列定理（Monotone Subsequence Theorem）
 
 - **子序列（subsequence）** 保留原顺序但可不连续；连续子串／连续子段（substring / contiguous segment）不可跳项。
 
   Erdős–Szekeres单调子序列定理（monotone subsequence theorem）：$n^2+1$个互异实数必有长$n+1$的严格递增或递减子序列。
 
-  给第i项标记以它结尾的最长递增与递减长度$(I_i,D_i)$；若两长度均不超过n，仅$n^2$种标签；不同项标签不相同，鸽巢矛盾。互异条件不能漏，n=3即10项保证长4。
+  证明：给第$i$项标记以它结尾的最长递增、递减子序列长度$(I_i,D_i)$。若没有长$n+1$的任一类，则两坐标均在$1,\ldots,n$中，只有$n^2$种标签。$n^2+1$项中应有$i<j$标签相同；但两项互异，若$a_i<a_j$，可将$a_j$接在以$a_i$结尾的最长递增序列后，得$I_j\ge I_i+1$；若$a_i>a_j$，同理$D_j\ge D_i+1$。均与标签相同矛盾，故定理成立。互异条件不能漏，$n=3$时10项保证长4。
 
 - **【拓展】拉姆齐理论的解释边界（limits of Ramsey-style conclusions）** ：规模足够大时保证某种结构存在，不保证该结构有预测价值。
 
   原笔记较大拉姆齐数的区间属于写作时的背景，不作为当前最新研究进展或本课程计算公式。
 
 ### 4.3 排列、组合与约束（Permutations, Combinations and Constraints）
+
+授课依据：[[Ch6.2&Ch6.3.pdf|Ch6.2&Ch6.3.pdf]]、[[Ch6.5.pdf|Ch6.5.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 排列与组合公式（Permutation and Combination Formulas）
 
@@ -1535,15 +1436,17 @@ $$
 
   彩票匹配恰k个中奖号可用$\binom rk\binom{n-r}{r-k}$，全体结果为$\binom nr$（按题设抽取r号）。
 
+- **课件委员会模型（courseware committee model）** ：10人选四人委员会为$\binom{10}4$；再设一名主席乘4，设两名无区别联席主席（co-chairpersons）乘$\binom42$。若另设三人委员会及一名主席，课件允许两委员会成员重合，故再乘$\binom{10}3\cdot3$；题目若要求不重合，第二组选人须改从剩余6人选。
+
 #### 分组与相邻约束（Grouping and Adjacency Constraints）
 
-- 不同标签小组大小$n_1,\ldots,n_k$，总n人分组为$n!/(\prod_i n_i!)$；若等大小的组也不可区分，再除这些等类组的排列次数，不是所有分组一律除$k!$。
+- 【拓展】不同标签小组大小$n_1,\ldots,n_k$，总n人分组为$n!/(\prod_i n_i!)$；若等大小的组也不可区分，再除这些等类组的排列次数，不是所有分组一律除$k!$。
 
 - **捆绑法（block method）** ：指定k人必须相邻，把他们当一块，与其他人一起排，再乘块内$k!$；指定内部顺序固定时不乘。
 
-  插空法（gap method）：先排其余m人有$m+1$空，k个指定人两两不相邻时选k空再排人，$m!\binom{m+1}k k!$；可行条件$k\le m+1$。
+  【拓展】插空法（gap method）：先排其余m人有$m+1$空，k个指定人两两不相邻时选k空再排人，$m!\binom{m+1}k k!$；可行条件$k\le m+1$。
 
-- 相邻关系有重叠时用容斥，两个被禁止相邻对可能形成三人块；“至少一对相邻”的补集不总是“某指定一对相邻”。
+- 【拓展】相邻关系有重叠时用容斥，两个被禁止相邻对可能形成三人块；“至少一对相邻”的补集不总是“某指定一对相邻”。
 
   圆桌空隙为m而非$m+1$，固定旋转后为$(m-1)!\binom mk k!$（m个背景对象不同且$m\ge1$）。
 
@@ -1551,35 +1454,39 @@ $$
 
 ### 4.4 二项式系数与组合证明（Binomial Coefficients and Combinatorial Proofs）
 
+授课依据：[[Ch6.2&Ch6.3.pdf|Ch6.2&Ch6.3.pdf]]。合并课件有Pascal、Vandermonde及曲棍球棒的证明；一般二项式展开与额外恒等式为拓展。
+
 #### 二项式定理与恒等式（Binomial Theorem and Identities）
 
-- **二项式定理（binomial theorem）** ：$(x+y)^n=\sum_{k=0}^n\binom nk x^{n-k}y^k$，n为非负整数；二项式系数（binomial coefficient）数出从n个因子中选哪k个提供y。
+- **二项式系数（binomial coefficient）** $\binom nk$也就是$k$组合数；约定上指标$n\ge0$为整数、$\binom nk=0$当$k<0$或$k>n$，$\binom n0=\binom nn=1$。
 
-  求$(ax+by)^n$中目标项先匹配指数，再乘相应$a^{n-k}b^k$，没有对应整数k则系数0。
-
-| 恒等式（identity） | 条件与计数解释 |
+| 课件恒等式（courseware identity） | 对象及条件 |
 |---|---|
-| $\sum_{k=0}^n\binom nk=2^n$ | 所有子集按大小分类 |
-| $\sum_{k=0}^n(-1)^k\binom nk=0$ | $n\ge1$；奇偶大小子集各$2^{n-1}$个，可用切换固定元素的双射 |
-| $\sum_{k=0}^n2^k\binom nk=3^n$ | 先选k个入选对象，再各涂两种颜色；或每对象三种状态 |
-| $\binom nr=\binom{n-1}{r-1}+\binom{n-1}r$ | 帕斯卡恒等式（Pascal's identity）；按固定对象是否入选 |
-| $\binom{m+n}r=\sum_{k=0}^r\binom mk\binom n{r-k}$ | 范德蒙德恒等式（Vandermonde's identity）；按来自第一组的人数 |
-| $\sum_{k=0}^n\binom nk^2=\binom{2n}n$ | 前式取两组各n、总选n |
-| $\sum_{k=r}^n\binom kr=\binom{n+1}{r+1}$ | 曲棍球棒恒等式（hockey-stick identity）；按最大入选元素分类 |
+| 帕斯卡恒等式（Pascal's identity）：$\binom{n+1}k=\binom n{k-1}+\binom nk$ | 从$n+1$人选$k$，按固定一人入选与否分类 |
+| 范德蒙德恒等式（Vandermonde's identity）：$\binom{m+n}r=\sum_{k=0}^r\binom mk\binom n{r-k}$ | 从两堆$m,n$人共选$r$；零值约定下$0\le r\le m+n$均可 |
+| 曲棍球棒恒等式（hockey-stick identity）：$\sum_{j=r}^n\binom jr=\binom{n+1}{r+1}$ | $0\le r\le n$；按最大入选元素或最后一个1的位置分类 |
+
+- **【拓展】二项式定理（binomial theorem）** ：$(x+y)^n=\sum_{k=0}^n\binom nkx^{n-k}y^k$（$n\ge0$整数）。代$1,1$、$1,-1$、$1,2$分别得系数和$2^n$、交替和0（$n\ge1$）、加权和$3^n$；Vandermonde取$m=n=r$得$\sum_k\binom nk^2=\binom{2n}n$。课件有上述三条恒等式，但未讲一般二项式展开定理。
 
 #### 帕斯卡三角与证明方法（Pascal’s Triangle and Proof Methods）
 
-- **帕斯卡三角（Pascal's triangle）** 两边为1、内部为上方两数和；也是以递推计算二项式系数的方法。
+- **帕斯卡三角（Pascal's triangle）** 两边为1，内部每数为上方相邻两数和；边界与递推共同确定整表。
 
-  曲棍球棒亦可按长度$n+1$、含$r+1$个1的位串中最后一个1的位置分类，原文末尾“长度n”是笔误。
+- **组合证明（combinatorial proof）** 用同一对象集的不同计数或双射证明等式；包括双重计数证明（double-counting proof）、双射证明（bijective proof）。须解释每个因子、分类互斥且覆盖全部；代数证明（algebraic proof）不能替代题目指定的组合证明。
 
-- **组合证明（combinatorial proof）** 包括双重计数证明（double-counting proof）和双射证明（bijective proof）：先明确所数对象，分别解释等式两边的每个因子／求和项，再证不重不漏；
+- **对称性证明（proof of symmetry）** ：从$n$元集合选$k$个与选剩余$n-k$个由取补一一对应，故$\binom nk=\binom n{n-k}$。
 
-  不能只写“由组合意义显然”。代数证明（algebraic proof）可通分阶乘或代入二项式展开，但题目若要求组合证明，应给对象解释。
+- **帕斯卡证明** ：固定$n+1$人中的$a$。包含$a$的$k$人组，另从$n$人选$k-1$；不含$a$则从$n$人选$k$。两类不交且无遗漏，相加即得恒等式。
 
-- **【拓展】证明细节（proof details）** ：上述恒等式的按最大元素分类、奇偶子集双射等详细论证即使课堂略过，也作为正文中的证明方法保留；递推定义还要给边界值，不能只给内部关系。
+- **Vandermonde证明** ：从不交的$m$人、$n$人两堆中共选$r$，总数$\binom{m+n}r$。按第一堆取$k$分类，第二堆取$r-k$，每类为$\binom mk\binom n{r-k}$；$k$不同互斥，求和覆盖全部。课件的$r\le\min(m,n)$是足够条件，采用零值约定后可扩至$r\le m+n$。
+
+- **曲棍球棒证明** ：数长度$n+1$、含$r+1$个1的位串，总数$\binom{n+1}{r+1}$。若最后一个1在第$k$位，$r+1\le k\le n+1$，前$k-1$位取$r$个1，共$\binom{k-1}r$；令$j=k-1$，求和即得。位置不同互斥，且每个合法串有唯一最后一个1。
+
+- **【拓展】其他组合结论（additional combinatorial results）** ：切换固定元素建立奇偶子集双射；三状态计嵌套集合对给$3^n$；任意$r$个连续整数的积被$r!$整除。中心二项式系数（central binomial coefficient）$\binom{2n}n$数等量上下步格路；反射原理（reflection principle）将越界路径与另一端点的无约束路径配对，用于卡特兰计数。
 
 ### 4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）
+
+授课依据：[[Ch6.5.pdf|Ch6.5.pdf]]。保留相邻／圆排列、星条、下界平移、无标号盒列举；Stirling通式与一般容量公式为拓展。
 
 | 选择方式 | r次从n种中选择的结果数 |
 |---|---|
@@ -1587,6 +1494,10 @@ $$
 | 无序、不可重复（unordered without repetition） | $\binom nr$ |
 | 有序、可重复（ordered with repetition） | $n^r$ |
 | 无序、可重复（unordered with repetition） | $\binom{n+r-1}r$，$n\ge1$ |
+
+- **四种选择公式的证明要点（proofs of the four selection formulas）** ：不可重复的$r$-排列按位置有$n,n-1,\ldots,n-r+1$种选择；每个$r$-组合恰有$r!$个内部次序，所以$P(n,r)=r!\binom nr$。允许重复的有序选择每步仍有$n$种，得$n^r$；无序重复选择与$r$颗星、$n-1$根隔板的位置串一一对应，得$\binom{n+r-1}r$。
+
+  【拓展】相同物体排列先临时贴标签计$n!$种，再除每类的内部置换数$\prod_i n_i!$；各盒规定人数时同理。相邻隔板和端点隔板已表示空类，无须再额外乘空盒的选择数。
 
 #### 星条法与整数解（Stars and Bars and Integer Solutions）
 
@@ -1600,47 +1511,34 @@ $$
 
   剩余负则0解。
 
-- **有上界（upper bounds）** 时星条法不能直接用；
+- **【拓展】有上界（upper bounds）** 时星条法不能直接用；
 
   对违反$x_i\le u_i$的情况作容斥，集合S中变量统一减$u_i+1$：$\sum_{S\subseteq\{1,\ldots,n\}}(-1)^{|S|}\binom{r-\sum_{i\in S}(u_i+1)+n-1}{n-1}$，上方不足$n-1$的项按0处理。
 
 #### 重复物体与循环计数（Repeated Objects and Loop Counts）
 
-- **相同物体的排列（permutations with indistinguishable objects）** ：n个位置中各类型重复$n_i$次，$\sum n_i=n$，数为多项式系数（multinomial coefficient）$n!/(n_1!\cdots n_k!)$。
+- **【拓展】重复物体排列（permutations with indistinguishable objects）** 为多项式系数（multinomial coefficient）$n!/(n_1!\cdots n_k!)$，$\sum n_i=n$；各类内部交换不产生新排列。嵌套循环（nested loops）满足$1\le i_m\le\cdots\le i_1\le n$时次数$\binom{n+m-1}m$，严格不等时$\binom nm$。
 
-  每类内部交换不生成新串；从多重字母组成单词、固定各值数量的位串都用它。
-
-- **嵌套循环（nested loops）** 如$1\le i_m\le\cdots\le i_1\le n$的执行次数为$\binom{n+m-1}m$，对应有重复m组合；严格不等时为$\binom nm$。不能只看m层循环就把精确次数写成$n^m$。
+- **物体与盒子的分类（classifying objects and boxes）** ：课件要求先问物体可区分／不可区分（distinguishable / indistinguishable）、盒子有无标签、可否空盒及容量。相同物体进有标号盒用星条法；相同物体进相同盒须忽略盒序，按分拆列举。
 
 ![[C6.5-星条法示意图.png|600]]
 
-| n个物体分入k个盒子（distributing objects into boxes） | 允许空盒 | 各盒非空 |
-|---|---|---|
-| 物体、盒子均可区分（distinguishable） | $k^n$ | $\sum_{i=0}^k(-1)^i\binom ki(k-i)^n=k!S(n,k)$ |
-| 物体不可区分、盒子可区分 | $\binom{n+k-1}{k-1}$ | $\binom{n-1}{k-1}$，$n\ge k$ |
-| 物体可区分、盒子不可区分（indistinguishable） | $\sum_{j=0}^{\min(n,k)}S(n,j)$ | $S(n,k)$ |
-| 物体、盒子均不可区分 | n的至多k部分分拆数 | n的恰k部分分拆数 |
+#### 【拓展】物体入盒与划分公式（Distribution and Partition Formulas）
 
-#### 物体入盒与划分（Distribution and Partitions）
-
-- 若可区分物体入可区分盒，且各盒人数$n_i$已固定，改用$n!/(\prod n_i!)$；每盒至多1则为$P(k,n)$（$n\le k$）。先问身份、盒子标签、是否允许空、每盒容量，再选公式。
-
-- 第二类Stirling数的递推与初值见3.5；
-
-  **【拓展／补充】容斥表达式（inclusion–exclusion expression）** $S(n,k)=\frac1{k!}\sum_{i=0}^k(-1)^i\binom ki(k-i)^n$，$n\ge1,k\ge1$。
-
-  递推是笔记补足的标准结果，容斥闭式是原教材引用的结论；不能再声称该数“没有任何公式”。
+- **【拓展】通用入盒公式（general distribution formulas）** ：$n$个有身份物体进$k$个有标号盒，允许空为$k^n$、固定各盒人数为$n!/\prod n_i!$、各盒非空为$k!S(n,k)$；无标号非空盒为$S(n,k)$，至多$k$盒为$\sum_{j=0}^{\min(n,k)}S(n,j)$。第二类Stirling数见3.5；$S(n,k)=\frac1{k!}\sum_{i=0}^k(-1)^i\binom ki(k-i)^n$（$n,k\ge1$）。这些一般公式未在课件展开。
 
 #### 分拆、容量与边界（Integer Partitions, Capacities and Boundaries）
 
-- **整数分拆（integer partition）** 只看各非空盒装多少，通常写非增序$n_1\ge\cdots\ge n_j>0$，不把顺序不同重算。
+- **整数分拆（integer partition）** 不计盒序，写非增的装量；允许空盒时末尾补0。课件6本相同书进4个相同盒，9种为$(6,0,0,0),(5,1,0,0),(4,2,0,0),(4,1,1,0),(3,3,0,0),(3,2,1,0),(3,1,1,1),(2,2,2,0),(2,2,1,1)$。
 
-  若物体分成多个相同类型（如3苹果、2橘子、1香蕉）而非全部同一种，还要记录每盒的类型组合，不能仅用总数6的整数分拆替代；三盒每盒2个的例题按唯一香蕉所在盒分类，共3种。
+- **课件混合水果例（mixed-fruit example）** ：3苹果A、2橘子O、1香蕉B进3个相同盒，每盒2个。按B的同盒水果分类：$\{AB,AA,OO\}$、$\{AB,AO,AO\}$、$\{BO,AA,AO\}$，共3种。不能仅按总水果数6作整数分拆，因为还须保留类型。
 
 > [!warning] 【易错】
-> 不可区分盒允许空时，不能把$k^n$一律除$k!$；不同装法的空盒数与对称重数不同。0个物体的边界用唯一空分配处理，$S(0,0)=1$，不误把从j=1开始的求和用于$n=0$。
+> 无标号盒不能把有标号计数一律除$k!$，不同装法的重复次数可能不同。0物体用唯一空分配处理；$S(0,0)=1$。
 
 ### 4.6 生成排列与组合的算法（Algorithms for Generating Permutations and Combinations）
+
+授课依据：[[Ch6.6.pdf|Ch6.6.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 > [!important] 【老师明确会考：第19节，00:38:36–00:39:40】
 > 老师在演示下一个排列时说“我一定会考这个算法”，并强调大学内容是怎样用算法找出排列与组合，不只是计算数量。以下三个后继算法（successor algorithms）均应能手算，尤其要解释最小性。
@@ -1651,7 +1549,7 @@ $$
 
 #### 下一个排列：操作、例子与证明（Next Permutation: Steps, Example and Proof）
 
-**下一个排列（next permutation）** ，输入互异元素的当前排列：
+**下一个排列（next permutation）** ，输入$n\ge1$个互异元素的当前排列；空排列只有一个，直接停止：
 
 ```text
 j := n - 1
@@ -1675,11 +1573,23 @@ reverse a[j+1 .. n]
 
 ![[C6.6-字典序下一排列的四个动作.png|620]]
 
+- **下一个排列最小性的完整论证（full minimality argument for next permutation）** ：令$j$为枢轴位置、$a'$为输出，取任意比$a$大的排列$b$，看两者第一次不同的位置$p$。
+
+  1. 若$p<j$，则$b_p>a_p=a'_p$，故$b>a'$。
+  2. 若$p=j$，则$b_j>a_j$。算法选取的$a'_j$是可用元素中大于$a_j$的最小者，故$b_j\ge a'_j$；严格大时$b>a'$，相等时$a'$的升序后缀是剩余元素的最小排列，故$b\ge a'$。
+  3. 若$p>j$，则$b$只重排$a$的原降序后缀，但原后缀已经是这些元素的最大排列，不可能使$b>a$。
+
+  所以任意$b>a$都有$b\ge a'$，没有排列夹在$a$与$a'$之间。三种情形按第一次分歧位置划分，不能只写“显然是下一个”。
+
 #### 下一个位串：二进制加一（Next Bit String: Binary Increment）
 
 **下一个位串（next bit string）** ：从右向左将末尾连续1改成0，遇第一个0改成1，等价于二进制加1（binary increment）。全1已是最后一个；
 
 从全0开始会遍历$2^n$个子集的特征串，但普通加1不保持1的个数，不能直接当固定r组合后继。
+
+- **【拓展】二进制加一的代价（cost of binary increment）** ：单次最坏翻转$n$位，时间$O(n)$；遍历全部$n$位串时，各位分别约每$1,2,4,\ldots$次翻转，所有翻转次数之和小于$2\cdot2^n$，因此不计输出时摊销代价（amortized cost）为$O(1)$。若每次打印全部$n$位，输出总量仍为$\Theta(n2^n)$。
+
+  零长度位串只有空串，处理后立即结束；全1串无后继，不应默默绕回全0并造成重复。
 
 #### 下一个组合：操作与例子（Next Combination: Steps and Examples）
 
@@ -1696,7 +1606,11 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 - 从右找未顶格位置，增加1，再把后缀填成连续递增最小值；循环从$i+1$开始，不能覆盖刚加1的$a_i$。原教材过程限定非最大真子集，本提纲加了停止检查以显式处理$r=0,n$。
 
-- **【拓展】小规模演算（small example）** ：$n=4,r=2$时$12\to13\to14\to23\to24\to34$；$n=5,r=3$时$123,124,125,134,135,145,234,235,245,345$。换成a至e字母，逐位替换即可，顺序不变。
+- **小规模演算（small example）** ：$n=4,r=2$时$12\to13\to14\to23\to24\to34$；$n=5,r=3$时$123,124,125,134,135,145,234,235,245,345$。换成a至e字母，逐位替换即可，顺序不变。
+
+- **组合后继最小性的证明（minimality proof for next combination）** ：$i$为最右未顶格位置。候选把$a_i$加1，并令后续为连续最小整数，因此仍严格递增，末项不超过$n$。任意更大组合$b$的第一次分歧位置$p$不可能大于$i$，因为这些位置原本已达上限$n-r+p$；若$p<i$则$b$已超过候选，若$p=i$则$b_i\ge a_i+1$，相等时其后缀也不小于候选的连续最小后缀。因此候选是唯一最小的更大组合。
+
+- **【拓展】组合顺序与位串顺序（combination order versus bit-string order）** ：固定$r$且把元素1的成员位放在最左侧高位时，递增元组的词典序与特征位串的整数值顺序正好相反。例如$n=4,r=2$时，组合$12<13$，对应$1100_2>1010_2$。若低位对应元素1，结论的方向须重验，不能脱离编码约定说“天然相同”。
 
 #### 全部枚举与不重不漏（Complete Enumeration without Repetition）
 
@@ -1714,6 +1628,8 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 ### 5.1 建模与初始条件（Modeling and Initial Conditions）
 
+授课依据：[[Ch8.1.pdf|Ch8.1.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
+
 本章范围是已有的§8.1；没有把尚未整理的§8.2–8.6扩写成新章节。第19节课堂讲了递推定义、代入验证、复利、兔子、汉诺塔及受限位串；
 
 码字、卡特兰数、讲座调度在原笔记中已补足，以下同样完整保留并标为拓展。
@@ -1730,9 +1646,13 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
   初值$a_0=3,a_1=5$时，减法递推$a_n=a_{n-1}-a_{n-2}$给$a_2=2,a_3=-3$，不要看成加法。
 
-- **细菌翻倍（bacterial doubling）** $a_n=2a_{n-1},a_0=5$得$5\cdot2^n$；复利$S_n=(1+r)S_{n-1},S_0=P$得$P(1+r)^n$。时间单位、计息时刻改变时须重验下标。
+- **【拓展】细菌翻倍（bacterial doubling）** $a_n=2a_{n-1},a_0=5$得$5\cdot2^n$。
+
+- **复利（compound interest）** $S_n=(1+r)S_{n-1},S_0=P$得$P(1+r)^n$。时间单位、计息时刻改变时须重验下标。
 
 ### 5.2 兔子与汉诺塔（Rabbits and the Tower of Hanoi）
+
+授课依据：[[Ch8.1.pdf|Ch8.1.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
 
 #### 兔子模型（Rabbit Model）
 
@@ -1750,15 +1670,15 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 #### 【拓展】四柱变式（Four-peg Variant）
 
-- **【拓展】四柱汉诺塔（four-peg Tower of Hanoi）** ：Frame–Stewart策略（Frame–Stewart strategy）$R_0=0,R_n=\min_{0\le m<n}\{2R_m+2^{n-m}-1\}$；
-
-  先用四柱暂存m个小盘，中间用三柱搬其余盘。原笔记据Bousch 2014论文已修正四柱最优性历史，不沿用旧教材“尚未解决”的说法；此结论不外推到任意柱数。
+- **【拓展】四柱汉诺塔（four-peg Tower of Hanoi）** 的Frame–Stewart策略取$T_4(n)=\min_{0\le k<n}(2T_4(k)+2^{n-k}-1)$，$T_4(0)=0$；四柱最优性已证，不能外推到任意柱数，也不把教材旧说“尚未解决”当现状。
 
 ### 5.3 受限位串与状态（Restricted Bit Strings and States）
 
+授课依据：[[Ch8.1.pdf|Ch8.1.pdf]]。课件用互斥后缀1／10／100建模，完整递推与初值保留；一般自动机状态法为拓展。
+
 #### 禁止00与禁止000（Forbidding 00 and 000）
 
-- **不含00（no consecutive zeros）** ：合格n串按末尾1或10分类，$a_n=a_{n-1}+a_{n-2}$，$a_0=1,a_1=2$，得$1,2,3,5,8,13,\ldots$，$a_n=f_{n+2}$。
+- **不含00（no consecutive zeros）** ：合格n串按末尾1或10分类，$a_n=a_{n-1}+a_{n-2}$，$a_0=1$计唯一空串（empty string），$a_1=2$，得$1,2,3,5,8,13,\ldots$，$a_n=f_{n+2}$。
 
   只在合法短串后任添0会产生非法接缝，不能两类均算$a_{n-1}$。不含11的计数可通过0、1互换得到同型递推。
 
@@ -1766,89 +1686,54 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
   若采用原笔记$b_1,b_2,b_3$作初值，则递推从$n=4$开始。
 
-#### 状态与转移（States and Transitions）
+#### 【拓展】状态与转移（States and Transitions）
 
-- **状态（state）** 可记末尾连续0个数0、1、2：添1回0，添0使状态递增，状态2不能添0。状态需要保存决定下一步是否合法的足够信息，不能把不同历史错误合并。
+- **【拓展】状态转移（state transition）** 按末尾连续0的个数建有限状态机（finite-state machine, FSM）或自动机（automaton），可由转移矩阵（transition matrix）统一求受限位串数；课件本身用互斥的1、10、100后缀分类，无须额外算法才能完成对应题。
 
-![[C8-三连零的状态转移.png|580]]
+> [!info]- 【拓展】原图回看
+> ![[C8-三连零的状态转移.png|580]]
 
 ### 5.4 【拓展】码字与卡特兰数（Codewords and Catalan Numbers）
 
-#### 偶数零码字（Codewords with Even Numbers of Zeros）
+【拓展】全部补充课件中未见本节的独立讲解，保留压缩说明供回查。
 
-- **有效十进制码字（valid decimal codeword）** 为含偶数个0的长度n字符串，允许前导0，0个0也算偶数。
+#### 【拓展】偶数零码字（Codewords with Even Numbers of Zeros）
 
-  记偶状态$E_n$、奇状态$O_n$，有$E_n=9E_{n-1}+O_{n-1}$、$O_n=9O_{n-1}+E_{n-1}$，$E_0=1,O_0=0$。非零数字保持奇偶，0翻转。
+- **【拓展】偶数零码字（codewords with even numbers of zeros）** ：十进制长$n$串中0个数为偶者，$a_0=1$、$a_n=8a_{n-1}+10^{n-1}$，闭式$(10^n+8^n)/2$。按末位0／非0及前缀奇偶分类即可建立递推。
 
-- 由$E_n+O_n=10^n$、$E_n-O_n=8^n$得$E_n=(10^n+8^n)/2$、$O_n=(10^n-8^n)/2$；也可用$E_n=8E_{n-1}+10^{n-1}$。$E_1=9,E_2=82,E_3=756$。把字符串误当n位整数会改变首位选择及全部初值。
+#### 【拓展】卡特兰递推与闭式（Catalan Recurrence and Closed Form）
 
-#### 卡特兰递推与闭式（Catalan Recurrence and Closed Form）
+- **【拓展】卡特兰数（Catalan numbers）** 数合法括号串、二叉结构或不越界格路，$C_0=1$、$C_n=\sum_{k=0}^{n-1}C_kC_{n-1-k}=\binom{2n}n/(n+1)$。递推按首对括号内部规模分类；闭式以反射原理从全部格路扣掉越界路径。朴素填表$O(n^2)$，不把这些补充推导当作Ch8.1课件内容。
 
-- **卡特兰数（Catalan numbers）** $C_n$数$n+1$个保持原序的因子的完整加括号（full parenthesization）。
+- **【拓展】等价计数对象（equivalent counting objects）** 包括保持因子顺序的完整加括号（full parenthesization）、合法括号串（balanced parentheses）、Dyck路径（Dyck paths）及适当的二叉树形（binary tree shapes）；生成函数（generating functions）可求闭式，但此方法未在课件讲解。
 
-  按最后一次乘法分成左k次运算与右$n-1-k$次：$C_n=\sum_{k=0}^{n-1}C_kC_{n-1-k}$，$C_0=1$。分类按唯一最后切口，左右独立故相乘、各切口相加。
-
-- $C_0,\ldots,C_5=1,1,2,5,14,42$，闭式$C_n=\binom{2n}n/(n+1)$，渐近$C_n\sim4^n/(n^{3/2}\sqrt\pi)$。
-
-  相同数还计合法括号串（balanced parentheses）、不越过对角线的格路径（Dyck paths）、相应二叉树结构（binary tree shapes）。
-
-  本小节证明递推，不把依赖后续生成函数（generating functions）的系统闭式证明冒充课堂已完成。
-
-![[C8-卡特兰数的合法与非法路径.png|560]]
+> [!info]- 【拓展】原图回看
+> ![[C8-卡特兰数的合法与非法路径.png|560]]
 
 ### 5.5 【拓展】动态规划与加权区间调度（Dynamic Programming and Weighted Interval Scheduling）
 
-#### 动态规划的两个条件（Conditions for Dynamic Programming）
+【拓展】全部补充课件中未见本节的独立讲解，保留压缩说明供回查。
 
-- **动态规划（dynamic programming, DP）** 利用最优子结构（optimal substructure）与重叠子问题（overlapping subproblems），保存中间答案；
+#### 【拓展】动态规划的两个条件（Conditions for Dynamic Programming）
 
-  可用自顶向下记忆化（memoization）或自底向上填表（tabulation）。
+- **【拓展】动态规划（dynamic programming, DP）** 利用最优子结构（optimal substructure）与重叠子问题（overlapping subproblems），采用记忆化（memoization）或填表（tabulation）。分治（divide and conquer）同样拆子问题，但不以重叠为必要特征；递归（recursion）须有可达终止条件（termination condition）。保存汉诺塔步数能省重复计算，不能省掉实际输出$2^n-1$次移动。
 
-  递归（recursion）必须有可达的终止条件（termination condition），重复展开子问题和没有终止条件是两种不同错误。
+#### 【拓展】调度建模与递推（Scheduling Model and Recurrence）
 
-- **分治（divide and conquer）与动态规划的区别** ：分治将原问题拆成较小问题并合并结果；动态规划特别利用子问题的重叠，避免同一状态重复求值。仅仅写成递归，并不足以判断使用了DP。
+- **【拓展】加权区间调度（weighted interval scheduling）** ：按结束时间排活动，前驱（predecessor）$p(j)=\max\{i<j:e_i\le s_j\}$、空集取0；端点相接视为相容（compatible）。$T(0)=0$、$T(j)=\max\{T(j-1),w_j+T(p(j))\}$，分别对应不选／选第$j$场；替换论证（replacement argument）保证所配子方案也最优。
 
-  例如计算汉诺塔最少步数的递归表达式会反复用到同一$H_{n-1}$，可保存数值；实际输出移动序列仍要输出$2^n-1$次移动，不能用“保存步数”消除这些必要输出。比较两种方法时须先说明在计算数值还是生成操作序列。
+#### 【拓展】贪心反例（A Counterexample to the Greedy Choice）
 
-#### 调度建模与递推（Scheduling Model and Recurrence）
+- **【拓展】最早结束贪心（earliest-finish-time greedy choice）** 可最大化场次数，却不能保证最大权重；两场各10权与覆盖二者时间的一场100权即为反例。总人次（total attendances）也不等于去重听众数（number of distinct attendees）。原题权重组(a)填表最优110，取$\{1,3,7\}$。
 
-- **加权区间调度（weighted interval scheduling）** 每场有开始$s_j$、结束$e_j$、权重$w_j\ge0$，$s_j<e_j$，按结束时间非降排序。
+> [!info]- 【拓展】原图回看
+> ![[C8.1-讲座时间轴与相容前驱.png|650]]
 
-  相容（compatible）允许前场结束等于后场开始。前驱（predecessor）$p(j)=\max\{i<j:e_i\le s_j\}$，不存在取0；它是编号，不是场次数或时间。
+#### 【拓展】方案恢复、平局与效率（Reconstruction, Ties and Efficiency）
 
-- **前j场最优总权重（optimal total weight）** $T(j)=\max\{w_j+T(p(j)),T(j-1)\},T(0)=0$。选j则只能配前$p(j)$场最优安排；不选j则是前$j-1$场最优。
+- **【拓展】恢复方案（reconstruction）** 从$j=n$倒推，若$w_j+T(p(j))\ge T(j-1)$可选$j$并跳到$p(j)$，否则$j\leftarrow j-1$；两种编号均严格下降，最终到0停止。平局（tie）可有不同最优解，不表示该活动必选。原其余权重组(b)、(c)、(d)最优分别140、20、40。
 
-  用替换论证（exchange / replacement argument）说明子方案非最优会导致整体非最优。
-
-#### 贪心反例（A Counterexample to the Greedy Choice）
-
-- **最早结束贪心（earliest-finish-time greedy choice）** 可解最大场次数，但不保证最大总权重；两场各10人与一场覆盖二者时间的100人讲座形成反例。
-
-  总人次（total attendances）不等于去重听众数（number of distinct attendees）。
-
-![[C8.1-讲座时间轴与相容前驱.png|650]]
-
-| j | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-|---|---|---|---|---|---|---|---|
-| 原题前驱p(j) | 0 | 0 | 1 | 0 | 0 | 2 | 4 |
-| 习题54(a)权重 | 20 | 10 | 50 | 30 | 15 | 25 | 40 |
-| T(j) | 20 | 20 | 70 | 70 | 70 | 70 | 110 |
-
-#### 方案恢复、平局与效率（Reconstruction, Ties and Efficiency）
-
-- **恢复方案（reconstruction）** ：从n往前，若$w_j+T(p(j))\ge T(j-1)$，可选j并跳$p(j)$，否则退到$j-1$。例中得到$\{1,3,7\}$，总110。
-
-  平局（tie）表示两条分支均能给某个最优解，不表示j在每一个最优解中；要输出全部最优解须保留两分支。
-
-- 其余原题权重组(b)$100,5,10,20,25,40,30$得最优140，$\{1,6\}$与$\{1,3,7\}$均可；(c)$2,3,8,5,4,7,10$得20，$\{1,3,7\}$；(d)$10,8,7,25,20,30,5$得40，$\{1,6\}$。
-
-  只给时间、不提供权重时不能算出唯一最大人次。
-
-- 已知全部p时填表$O(n)$、恢复$O(n)$、空间$O(n)$；加排序与二分查找（binary search）求前驱，总$O(n\log n)$；逐个向前扫描求p则预处理最坏$O(n^2)$。
-
-  不能把填表复杂度当整个算法复杂度。
-
----
+- **【拓展】效率（efficiency）** ：已有$p(j)$时填表、恢复均$O(n)$；含排序和二分求前驱总$O(n\log n)$，逐项扫描求前驱则可到$O(n^2)$。Ch8.1课件止于兔子、汉诺塔和两类受限位串，没有这套调度算法。
 
 ## 六、图论（Graph Theory）
 
@@ -1857,11 +1742,13 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 ### 6.1 图的类型与建模（Graph Types and Modeling）
 
+授课依据：[[Ch10.1.pdf|Ch10.1.pdf]]。以下保留课件实际出现的内容；夹列的范围外独立结论另标“拓展”。
+
 #### 图的组成与类型（Components and Types of Graphs）
 
 - **图（graph）** $G=(V,E)$由顶点集（vertex set）与边集（edge set）组成；顶点（vertex / node）表示对象，边（edge）表示联系。
 
-  先定义两者的含义，再决定方向、重数、自环；不要只看图形外观。
+  本文有限图题默认$V\ne\varnothing$；$E$可以为空。先定义两者的含义，再决定方向、重数、自环，不只看图形外观。推广到零顶点图时需另声明约定，不能与“有顶点但没有边”的无边图（edgeless graph）混淆。
 
   有限图（finite graph）要求顶点集与边集都有限；任一集合无限则为无限图（infinite graph）。本课程的有限计数公式与算法均按有限图语境使用，不能只检查顶点数而忽略无限多重边的可能性。
 
@@ -1876,60 +1763,43 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 #### 方向、权重与模型（Direction, Weights and Models）
 
-- “允许”不表示图里必须出现；一条有向边含有序起点（initial vertex）与终点（terminal vertex），相反方向的两弧不是同向重弧。
+- **有向图（directed graph / digraph）** 用有序对表示弧（arc），$(u,v)$与$(v,u)$一般不同；无向图（undirected graph）端点无序。简单图（simple graph）无重边、自环，多重图（multigraph）允许重边，伪图（pseudograph）还允许自环；本课具体约定见前表。
 
-  带权图（weighted graph）给边附权重（weight），记录距离、时间、费用、容量等；同一拓扑不同权重会得到不同优化问题。
+- **带权图（weighted graph）** 为边附权重（weight），可表示路程、费用等；“有权”与“有方向”是不同维度。
 
-| 模型（model） | 顶点与边的含义 |
-|---|---|
-| 相识图（acquaintanceship graph） | 人；相互认识，通常无向简单 |
-| 影响图（influence graph） | 人；谁影响谁，有向 |
-| 合作图（collaboration graph） | 作者／演员；合作过，无向 |
-| 呼叫图（call graph） | 号码；一次通话，有向且可有重弧 |
-| 网页图（web graph） | 网页；超链接，有向 |
-| 引用图（citation graph） | 文献；引用关系，有向 |
-| 模块依赖图（module dependency graph） | 模块；按题设方向记录依赖，不能擅自反向 |
-| 先序图（precedence graph） | 语句／任务；必须先于另一任务，合法顺序用拓扑排序 |
-| 航空图（airline graph） | 机场；航班，有向且可多重 |
-| 道路网络（road network） | 路口；路段，可能混合方向、带权与多重 |
-| 生态位重叠图（niche overlap graph） | 物种；资源竞争／生态位重叠，无向 |
-| 蛋白质相互作用图（protein interaction graph） | 蛋白质；相互作用，按题设常作无向 |
-| 循环赛图（round-robin tournament graph） | 队伍；胜者指向败者，每对恰一条弧，称竞赛图（tournament） |
-| 单淘汰赛树（single-elimination tournament tree） | 比赛；胜者进入下一场的依赖，有根树（rooted tree） |
+- **【拓展】图模型（graph models）** 可按题意建立通信网络（communication network）、社交网络（social network）、合作图（collaboration graph）、网页图（web graph）、先后依赖图（precedence graph）、竞赛图（tournament graph）；混合图（mixed graph）严格指并存有向边和无向边，课件分类表误将带自环的有向情形直接称mixed，不照抄该错误。
 
-#### 模型计数与交集图（Counting in Models and Intersection Graphs）
+- **有向边的端点（endpoints of a directed edge）** ：$(u,v)$中$u$是起点（initial vertex）、$v$是终点（terminal / end vertex）；课件称$u$邻接到$v$（$u$ is adjacent to $v$），$v$邻接自$u$（$v$ is adjacent from $u$），不推出反方向。
 
-- n队单淘汰需$n-1$场比赛；n队每对赛一次需$\binom n2$场；节点代表比赛还是球队会改变图的顶点数。模型中的实际统计规模仅是原教材历史例子，不作为当代人口／网络规模；
+#### 【拓展】模型计数与交集图（Counting in Models and Intersection Graphs）
 
-  其数学作用是说明稀疏（sparse）与稠密（dense）存储差别。
+- **【拓展】模型计数与交集图（model counts and intersection graphs）** ：点代表对象、边代表给定关系，不能把纸上交叉当新顶点。同代图（contemporaneous graph）以生命区间相交连边，是区间交集图（interval intersection graph）；无向简单邻接关系对称且反自反，重边不能只用有序对集合记录。
 
-- **【拓展】交集图（intersection graph）** 以集合为顶点，两个不同集合交非空才连边；
-
-  同代图（contemporaneous graph）以人为顶点、生命时间区间相交表示同代，是区间交集图（interval intersection graph）的例子。
-
-  无向简单图的邻接关系为对称且反自反；集合关系不能记录同一有序对的多次出现，重图需另存重数。
+- **【拓展】其他模型术语（additional graph-model terminology）** ：相识图（acquaintanceship graph）、影响图（influence graph）、呼叫图（call graph）、引用图（citation graph）、模块依赖图（module dependency graph）、航空图（airline graph）、道路网络（road network）、生态位重叠图（niche overlap graph）、蛋白质相互作用图（protein interaction graph）。循环赛图（round-robin tournament graph）给比赛方向，单淘汰赛树（single-elimination tournament tree）为有根树（rooted tree）；稀疏（sparse）只描述相对点数较少的边。
 
 ### 6.2 度、图族、二分图与匹配（Degrees, Graph Families, Bipartite Graphs and Matchings）
 
+授课依据：[[Ch10.2.pdf|Ch10.2.pdf]]。度序列和标准图族属于范围内；Hall匹配、网络拓扑、平均度和一般无奇圈算法为拓展。
+
 #### 邻接、度与握手定理（Adjacency, Degree and Handshaking）
 
-- **邻接（adjacency）** 说两顶点有边相连；关联（incidence）说边以某顶点为端点。邻域（neighborhood）$N(v)$是邻接顶点集合，$N(S)=\bigcup_{v\in S}N(v)$；
+- **邻接（adjacency）** 指两顶点由边相连；关联（incidence）指边以某点为端点（endpoint）。邻域／邻点集（neighborhood / neighbor set）$N(v)$含其邻接顶点，$N(S)=\bigcup_{v\in S}N(v)$。
 
-  度（degree）$\deg v$数关联边的端点次数，自环计2，平行边逐条计。邻域大小不总等于度。
+- **度（degree）** $\deg v$数关联端点次数：重边逐条计，自环计2，故不总等于$|N(v)|$。孤立点（isolated vertex）度0，悬挂点／叶（pendant vertex / leaf）度1；最大／最小度（maximum / minimum degree）记$\Delta,\delta$。
 
-- **孤立点（isolated vertex）** 度0，悬挂点／叶（pendant vertex / leaf）度1；
+- **握手定理1（handshaking theorem 1）** ：有限无向图$\sum_v\deg v=2|E|$，重边、自环均适用。证明：逐边计关联端点，每边恰贡献2。10个点均6度时，$2e=60$，故$e=30$。
 
-  最大度（maximum degree）$\Delta(G)$、最小度（minimum degree）$\delta(G)$。
+- **握手定理2（handshaking theorem 2）** ：奇度顶点（odd-degree vertex）数为偶。证明：度和为偶，减去所有偶度项仍为偶；奇数项之和要为偶，其项数只能是偶。不是说每个顶点都偶度。
 
-  握手定理（handshaking theorem）$\sum_v\deg v=2|E|$，故奇度顶点（odd-degree vertex）个数为偶数。
+- **【拓展】平均度与正则图（average degree and regular graph）** ：$v>0$时$\overline d=2e/v$，$\delta\le\overline d\le\Delta$；$r$正则（$r$-regular）每点度$r$，故$rv=2e$。图神经网络（graph neural network, GNN）的平均聚合（mean aggregation）可写$H'=\sigma(\widehat D^{-1}\widehat AHW)$，按行和作度归一化（degree normalization）；度分布（degree distribution）、幂律（power law）、重尾（heavy tail）为额外网络统计背景。
 
-  r正则图（r-regular graph）满足每点度r，$rv=2e$。
+- **【拓展】GNN记号（GNN notation）** 中$H$为特征、$W$为权重矩阵（weight matrix）、$\sigma$为激活函数（activation function），$\widehat A=A+I$、$\widehat D$为$\widehat A$行和的对角矩阵；这一层的“度”按行和约定，不把自环重复计数代入归一化。
 
 #### 有向度与标准图族（Directed Degrees and Standard Families）
 
 - **有向图入度（in-degree）** $\deg^-(v)$与出度（out-degree）$\deg^+(v)$分别数进入与离开的弧，自环各贡献1；$\sum_v\deg^-v=\sum_v\deg^+v=|E|$。
 
-  底层无向图（underlying undirected graph）去掉方向，但是否合并反向弧须按题目约定。
+  【拓展】底层无向图（underlying undirected graph）去掉方向；本课程保留每条弧的身份与重数，因此反向的两条弧变为两条平行边，且$\deg_{\mathrm{underlying}}(v)=\deg^-(v)+\deg^+(v)$。自环在右边贡献$1+1$，与无向度计2一致。若题目另要求合并平行边成简单图，这个等式不再直接适用。
 
 | 图族（graph family） | 点数v | 边数e | 度与补充 |
 |---|---|---|---|
@@ -1938,55 +1808,62 @@ for j := i+1 to r: a[j] := a[i] + j - i
 | 轮图（wheel graph）$W_n$，本书由$C_n$加中心 | $n+1$ | $2n$ | 中心n，轮缘各3 |
 | n维超立方体（n-cube / hypercube）$Q_n$ | $2^n$ | $n2^{n-1}$（$n\ge1$） | n正则，位串差一位相邻 |
 | 完全二分图（complete bipartite graph）$K_{m,n}$ | $m+n$ | mn | 两侧度分别n、m |
-| 路径图（path graph）$P_n$ | n | $n-1$ | $n\ge2$时两端度1，其余度2 |
+| 【拓展】路径图（path graph）$P_n$ | n | $n-1$ | $n\ge2$时两端度1，其余度2 |
 
-- 本书轮图的下标不包含中心；别的书可能用$W_{n+1}$表示同一对象。圈图标准定义从$n=3$开始，不能把单点空图硬叫作$C_1$再套圈的公式；$Q_0$可另定义为一个孤立点，边数0。
+- 课件轮图下标$n$表示轮缘点数，不包括中心；别的书可能用$W_{n+1}$表示同一对象。课件slide 18把$C_1$画成单点自环、$C_2$画成两点两条平行边，slide 19的$W_1,W_2$继承这些边，再加中心和辐条；它们不属于上表$n\ge3$的简单图范围。若题目采用这些低阶课件图，须按图数度数、边数，自环图不能作通常合法顶点着色。slide 23称$C_1$为二分的例外与其自环图矛盾，不作为正确结论。$Q_0$为单点，$Q_{n+1}$由两份$Q_n$逐一连对应顶点构造，等价于位串恰差一位相邻。
+
+- **标准图族的结构定义（structural definitions of standard graph families）** ：
+
+  | 图族（family） | 构造／邻接规则（construction / adjacency rule） |
+  |---|---|
+  | 完全图（complete graph）$K_n$ | $n$个顶点的每一对不同顶点之间恰有一条边 |
+  | 圈图（cycle graph）$C_n$，$n\ge3$ | 顶点$v_1,\ldots,v_n$，仅有$v_iv_{i+1}$及$v_nv_1$，首尾相接成一个圈 |
+  | 轮图（wheel graph）$W_n$，$n\ge3$ | 在$C_n$外加一个中心，并把中心与全部$n$个圈上顶点相连 |
+  | 超立方体（hypercube）$Q_n$ | 顶点为全部$n$位二进制串；两顶点恰好一位不同才相邻 |
+  | 完全二分图（complete bipartite graph）$K_{m,n}$ | 两侧分别有$m,n$点，同侧无边，每一对跨侧顶点之间都有一条边 |
+  | 【拓展】路径图（path graph）$P_n$，$n\ge1$ | 顶点$v_1,\ldots,v_n$，仅连相邻编号$v_iv_{i+1}$；$P_1$为单点 |
+
+  点边数或度数表不能代替结构定义；例如多个不交圈同样每点度2，却不是单个$C_n$。
+
+- **【拓展】星图（star graph）** 为$K_{1,n}$（$n\ge1$）：一个中心与$n$个叶子相连，叶子之间无边。共$n+1$点、$n$边，中心度$n$、各叶度1，是星形网络的图模型；$K_{n,n}$为$n$正则二分图，$K_{2,2}\cong C_4$。
+
+- **握手定理的证明要点（proof of the handshaking theorems）** ：无向图按顶点数关联端点，每边贡献2，故$\sum\deg v=2e$，减去偶度项后奇度项的和为偶，奇度项个数也必偶。有向图每条弧恰贡献一次出度和一次入度，得两总和均为$e$；自环仍满足这些端点计数。
+
+- **完全有向图（complete directed graph）** 的每对不同顶点之间两个方向的弧均存在，无自环时有$n(n-1)$条弧；不能与无向$K_n$的$n(n-1)/2$边混算。
 
 #### 二分图的判定（Bipartite Tests）
 
-- **二分图（bipartite graph）** 的顶点可划为$V_1,V_2$，边全部跨两侧；等价于可用至多两色正确着色，等价于不含奇圈（odd cycle）。按距离奇偶分组或用BFS染色可检验；
+- **二分图（bipartite graph）** 的顶点可划为不交的$V_1,V_2$，所有边均跨两侧；$(V_1,V_2)$称二分划分（bipartition）。课件判据：简单图二分，当且仅当能用至多两色使邻点异色。证明：划分两侧各染一色，反向按颜色分组即可。
 
-  必须检查每个分量，不仅起点所在分量。
+- **课件例（courseware examples）** ：$C_n$（$n\ge3$）当且仅当$n$偶时二分；沿圈交替染色，奇圈末点会与起点冲突。含三角形的图不二分；$K_{m,n}$同侧无边、跨侧全连，是完全二分图（complete bipartite graph），边数$mn$。没有边的非空二分图只需1色，不能无条件写色数2。
 
-- $C_n$当且仅当n偶时二分（$n\ge3$），$K_n$当且仅当$n\le2$，所有$Q_n$按位串中1的奇偶分组，$W_n$含三角形故不二分。
-
-  简单二分图$e\le|V_1||V_2|\le\lfloor v^2/4\rfloor$；只有两侧之间每对都连才在第一式取等，原笔记把一般二分图直接写e=mn需修正。r正则二分图在$r>0$时两侧等大，r=0不能据此推出。
+- **【拓展】无奇圈判据（no-odd-cycle criterion）** ：图二分当且仅当无奇圈；按BFS距离奇偶分层可证反向。BFS／DFS两色判定须遍历所有分量。一般简单二分图$e\le|V_1||V_2|\le\lfloor v^2/4\rfloor$，$r>0$的正则二分图两侧等大，$r=0$无此结论。
 
 #### 【拓展】匹配、Hall与代表系（Matching, Hall and SDR）
 
-- **【拓展：课堂未展开】匹配（matching）** 为互不共享端点的边集；极大匹配（maximal matching）再加边就冲突，最大匹配（maximum matching）边数最多，二者不同。
+- **【拓展】匹配（matching）** 为不共端点的边集；极大（maximal）不能再加边，最大（maximum）边数最多。饱和（saturate）表示覆盖指定顶点，完美匹配（perfect matching）覆盖全部顶点；教材的单侧完全匹配（complete matching）只配满指定侧。
 
-  饱和（saturate）某侧表示该侧每点都被匹配；完美匹配（perfect matching）饱和全部顶点。
+- **【拓展】Hall婚姻定理（Hall's marriage theorem）** ：有限二分图可配满左侧，当且仅当每个左侧子集$A$满足$|N(A)|\ge|A|$；相异代表系（system of distinct representatives, SDR）是等价集合表述。缺额（deficiency）$d(A)=|A|-|N(A)|$，最大匹配大小为$|L|-\max_{A\subseteq L}d(A)$。
 
-  本教材有时称“从$V_1$到$V_2$的完全匹配（complete matching）”，仅要求配满$V_1$，不要求两侧等大。
+- **【拓展】增广路（augmenting path）** 两端未匹配，非匹配边与匹配边交替，翻转使边数加1；匹配最大当且仅当无增广路。匈牙利法（Hungarian method）的名称须按无权匹配／带权指派语境区分。Kőnig定理（Kőnig's theorem）称二分图最大匹配数等于最小顶点覆盖（vertex cover）大小，$\nu=\tau$；不同于支配集。
 
-- **【拓展】Hall婚姻定理（Hall's marriage theorem）** ：有限二分图存在饱和$V_1$的匹配，当且仅当每个$A\subseteq V_1$都有$|N(A)|\ge|A|$；
+#### 【拓展】网络拓扑（Network Topologies）
 
-  只查整个$V_1$或每个单点不够。必要性是不同人须占不同邻点；充分性可强归纳：若每个非空真子集都有富余，先选任一匹配边后删两端；若有子集卡等号，先匹配该子集与其邻域，再匹配余部。
-
-  该证明不是简单的“随便贪心选边”。
-
-- **【拓展】相异代表系（system of distinct representatives, SDR）** 从每个集合选不同元素，存在当且仅当任意k个集合的并至少k元；转换成集合—元素二分图即Hall。
-
-  缺额（deficiency）$d(A)=|A|-|N(A)|$，最大匹配大小$|V_1|-\max_{A\subseteq V_1}d(A)$（包含空集使最大缺额非负）。
-
-#### 网络拓扑（Network Topologies）
-
-- **【拓展／应用】网络拓扑（network topology）** ：局域网（local area network, LAN）的星形（star）、环形（ring）、总线（bus）；
-
-  并行互连（parallel interconnection）用完全图、线性阵列（linear array）、网格（mesh）与超立方体，取舍在链路成本、最大度与通信跳数（hop count）。
+- **【拓展】网络拓扑（network topology）** ：局域网（local area network, LAN）的星形（star）、环形（ring）、总线（bus），以及并行互连（parallel interconnection）的线性阵列（linear array）、网格（mesh）、超立方体，按链路数、最大度、通信跳数（hop count）取舍。未在补充课件展开。
 
 ### 6.3 图的运算、补图与度序列（Graph Operations, Complements and Degree Sequences）
+
+授课依据：[[Ch10.2.pdf|Ch10.2.pdf]]、[[Ch10.3.pdf|Ch10.3.pdf]]。补图、自补图和Q3的6个Q2子图均在课件；诱导子图通式与度序列实现算法为拓展。
 
 #### 子图与图运算（Subgraphs and Graph Operations）
 
 - **子图（subgraph）** $H=(W,F)$满足$W\subseteq V,F\subseteq E$且边端点都在W中；生成子图（spanning subgraph）保留全部顶点；
 
-  诱导子图（induced subgraph）$G[W]$保留W内原有全部边。删点（vertex deletion）同时删关联边；删边（edge deletion）保留点。
+  【拓展】诱导子图（induced subgraph）$G[W]$保留W内原有全部边。删点（vertex deletion）同时删关联边；删边（edge deletion）保留点。
 
   真子图（proper subgraph）是与原图不同的子图，即至少删了一个顶点或一条边；生成子图也可能是真子图，诱导子图也可以等于原图。
 
-  边收缩（edge contraction）把一条边两端粘合，并按题设处理新自环、平行边。
+  【拓展】边收缩（edge contraction）把一条边两端粘合，并按题设处理新自环、平行边。
 
 - **并图（union of graphs）** 取点边集合并，交图（intersection）取交；不交并（disjoint union）先保证点集互不相交。
 
@@ -2001,51 +1878,36 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 ![[C10-join与笛卡尔积.png|650]]
 
-#### 【拓展】子图计数与补图（Counting Subgraphs and Complements）
+#### 补图、自补图与子图计数（Complements, Self-complementarity and Subgraph Counts）
 
-- **【拓展】子图计数（counting subgraphs）** ：非空顶点子图数为$\sum_{\varnothing\ne W\subseteq V}2^{e(G[W])}$；
+- **补图（complement）** $\overline G$与$G$同点集，在不同顶点原来不邻接时连边：$e(\overline G)=\binom v2-e(G)$、$\deg_{\overline G}x=v-1-\deg_Gx$。$G\cup\overline G=K_v$；例如$\overline{C_4}=2K_2$，$\overline{K_{m,n}}=K_m\cup K_n$。
 
-  不能用只依赖$|W|$的$s(r)$代替各W，除非像完全图一样诱导边数由大小决定。$K_2$有4个、$K_3$有17个。
+- **自补图（self-complementary graph）** 满足$G\cong\overline G$。课件比较$C_4$与其补图不相同构，$C_5$与其补图同构；要给保持邻接的双射，不是图画相像即可。
 
-  诱导子图若允许空顶点集则恰$2^v$种，和任意子图计数不同。
+- **课件立方体子图例（cube-subgraph example）** ：$Q_3$有6个$Q_2$方形面，不能只数投影画法中的内外两个框。
 
-- **【拓展】超立方体的面计数（counting faces of a hypercube）** ：$Q_3$有6个正方形面，每个面诱导一个$Q_2$，不是按画在纸上的“内外两个方框”只数出2个。
+- **【拓展】一般计数（general counting）** ：$Q_n$的$k$维坐标面（coordinate face）有$\binom nk2^{n-k}$个；非空点集任意子图数为$\sum_{\varnothing\ne W\subseteq V}2^{e(G[W])}$，允许空点集的诱导子图有$2^v$个。自补必要条件为$v\equiv0,1\pmod4$，不充分保证给定图自补。
 
-  一般$Q_n$的$k$维坐标面（coordinate face）有$\binom nk2^{n-k}$个：选$k$个自由变化坐标，其余坐标固定为0或1。
+#### 度序列与【拓展】实现判据（Degree Sequences and Realization Criteria）
 
-- **【拓展】补图（complement）** $\overline G$同点集，两个不同点原来不邻接时才连；$e(\overline G)=\binom v2-e(G)$，$\deg_{\overline G}(x)=v-1-\deg_G(x)$；$G\cup\overline G=K_v$。
+- **度序列（degree sequence）** 将各点度按非增顺序列出，课件$(2,3,2,2,0,1)$应排序为$(3,2,2,2,1,0)$。握手定理要求总和偶；简单图还须每项$\le v-1$。这些仅为必要条件，不能据此直接判可实现。
 
-  $\overline{K_{m,n}}=K_m\cup K_n$，$\overline{C_4}=2K_2$，$\overline{C_5}\cong C_5$。
+- **课件的重边边界（parallel-edge boundary）** ：$(5,5,4)$在3点简单图不可实现，但允许重边可取前两点间3条边、它们到第三点各2条边。课件此处的“Yes”须保留图类型条件。
 
-- **【拓展】自补图（self-complementary graph）** $G\cong\overline G$必须$e=v(v-1)/4$，所以$v\equiv0,1\pmod4$。这是对一个指定图的必要条件，不足以断言它自补；
-
-  $P_4,C_5$为例，$C_4$不是。
-
-#### 【拓展】度序列与实现（Degree Sequences and Realization）
-
-- **【拓展】度序列（degree sequence）** 在本节按非增序列出各点度；图形序列（graphic sequence）可由某简单图实现。必要条件是非负整数、每项至多$v-1$、总和偶；
-
-  这些不充分。简单图至少两个点时必有两点同度，因为0与$v-1$不能同时出现，实际至多v−1种度。
-
-- **【拓展】Erdős–Gallai判据（Erdős–Gallai criterion）** ：非增非负整数$d_1,\ldots,d_n$可图，当且仅当和为偶且每个$1\le k\le n$满足$\sum_{i=1}^kd_i\le k(k-1)+\sum_{i=k+1}^n\min(d_i,k)$。
-
-  Havel–Hakimi算法（Havel–Hakimi algorithm）：移去最大项d，将余下最大的d项各减1，重排；全0成功，负数或d超过余项数失败，不能先把d减1再拿它决定减几项。
-
-  允许自环与重边的伪图中，非负整数度列只需和为偶；不能把简单图判据与之混用。
+- **【拓展】图形序列（graphic sequence）** 指简单图可实现的非负整数序列。Havel–Hakimi算法（Havel–Hakimi algorithm）删最大项$d$、对余下最大$d$项各减1后重排，全0成功，负数或越界失败；Erdős–Gallai判据（Erdős–Gallai criterion）为和偶且各$k$满足$\sum_{i=1}^kd_i\le k(k-1)+\sum_{i>k}\min(d_i,k)$。伪图允许自环重边时只需和偶；简单图至少两点时必有两点同度。
 
 ### 6.4 图的表示与同构（Graph Representations and Isomorphism）
 
-#### 表示法与自环约定（Representations and Loop Conventions）
+授课依据：[[Ch10.3.pdf|Ch10.3.pdf]]。Ch10.3正文实际只讲同构、自补及不变量例；邻接／关联表示和谱判据为拓展。
 
-- **【拓展：课堂未展开表示法细节】邻接表（adjacency list）** 逐点列邻居，存储$O(v+e)$；
+#### 【拓展】表示法与自环约定（Representations and Loop Conventions）
 
-  邻接矩阵（adjacency matrix）A以$a_{ij}$记录$i\to j$的弧数／无向重边数，存储$O(v^2)$；
+- **【拓展】图的表示（graph representations）** ：邻接表（adjacency list）用$O(v+e)$空间；邻接矩阵（adjacency matrix）$A$按点对记录边重数，用$O(v^2)$；关联矩阵（incidence matrix）按点×边，用$O(ve)$。这些图表示细节没有在Ch10.3课件展开；关系的零一矩阵则是范围内内容，见3.3。
 
-  关联矩阵（incidence matrix）以点为行、边为列，存储$O(ve)$。稀疏图常用邻接表，稠密图矩阵便于常数时间查边；多重边须保留其身份或重数。
+- **【拓展】自环约定（loop conventions）** ：本教材邻接矩阵自环对角计1，度却计2，故有自环时行和不能直接当度；无向无自环图的0/1关联矩阵满足$MM^T=D+A$，$D$为度对角矩阵（degree diagonal matrix）。有向邻接矩阵行和为出度、列和为入度。
 
-- 本教材无向伪图的邻接矩阵自环在对角只计1；图论度数自环计2，所以有自环时度为行和再加自环数，不等于行和。简单无向图A对称、主对角线0、行和为度；有向图行和为出度、列和为入度。
-
-  无向普通关联矩阵的普通边列有两个1，0／1约定的自环列只有一个1，须先声明自环约定。
+> [!info]- 【拓展】原图回看
+> ![[C10.3-原图-关联矩阵一例.png|560]]
 
 #### 同构的定义、排除与证明（Defining, Refuting and Proving Isomorphism）
 
@@ -2053,54 +1915,49 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
   图相等（equality of graphs）要求标签相同，同构允许改名。同构本身是等价关系。
 
-- **同构不变量（isomorphism invariant）** ：点边数、度序列、入出度、分量、圈长度与数量、三角形数、邻点度分布、割点、二分性、距离等。不变量不同可否定，同则不够肯定；
+- **同构不变量（isomorphism invariant）** ：课件明确列出点数、边数和度序列；任一不同即不同构，全部相同仍不足以证明同构。$C_6$与$C_3\cup C_3$同为6点6边2正则却不同构，是原笔记的“魔鬼对（devil's pair）”反例。
 
-  $C_6$与$C_3\cup C_3$同为6点6边2正则却不同构，是骗过度序列检验的“魔鬼对（devil's pair）”。
+  【拓展】入出度、分量、圈长度／数量、三角形数、邻点度分布、割点、二分性、距离也保持；用于排除，不能反向当作一般充分判据。
 
-- **证明同构须给完整双射并核对边与非边，或给置换矩阵（permutation matrix）** P使$A_H=PA_GP^T$；重排行、列须使用同一顶点置换，不能独立乱换。补图与反向图保持同构。
+- **证明同构须给完整双射并核对边与非边** 。双射$f$确定后逐条验证$uv\in E_G\iff f(u)f(v)\in E_H$；只试一次对应失败，不能证明不存在其他对应。
+
+  【拓展】置换矩阵（permutation matrix）$P$可写$A_H=PA_GP^T$，须用同一顶点置换重排行列；补图与反向图保持同构。
 
   验证给定双射只需多项式比较，暴力找映射可达$v!$个候选；
 
-  原笔记介绍图同构的准多项式算法（quasipolynomial-time algorithm），不把“没有简单充分判据”误说成绝无充要定义。
+  【拓展】原笔记介绍图同构的准多项式算法（quasipolynomial-time algorithm），不把“没有简单充分判据”误说成绝无充要定义。
 
 ![[C10.3-同构即重排行列.png|620]]
 
+
+- **【拓展】矩阵判据与谱不变量（matrix criterion and spectral invariants）** ：存在置换矩阵（permutation matrix）$P$使$B=P^TAP$当且仅当对应图同构；谱（spectrum）、秩（rank）、行列式（determinant）、迹（trace）由此保持，但相同仍不充分。$K_{1,4}$与$C_4\cup K_1$同谱而不同构；图同构判定不等于已证明只能枚举全部$n!$映射。
+
 #### 【拓展】反向图、带宽与计数（Converse, Bandwidth and Counting）
 
-- **【拓展】反向图（converse / reverse digraph）** 所有弧反向，对应$A^T$；反两次回原图，等于自身反向图当且仅当邻接关系对称。
+- **【拓展】反向图（converse digraph）** 反转全部弧，对应邻接矩阵转置；不自动与原图同构。带宽（bandwidth）是在顶点编号中最小化相邻点编号差的最大值，依赖编号。
 
-  二分图按两侧重排后$A=\begin{bmatrix}0&B\\B^T&0\end{bmatrix}$；无向图按连通分量重排得分块对角矩阵（block diagonal matrix）。
+- **【拓展】有标签／非同构图计数（labeled / nonisomorphic graph counts）** ：$n$点有标签简单图有$2^{\binom n2}$个；非同构图不能一律除$n!$，因自同构（automorphism）数不同。2、3、4点分别有2、4、11类。
 
-- **【拓展】带宽（bandwidth）** 在所有顶点编号中最小化$\max\{|i-j|:v_iv_j\in E\}$；量化非零元距主对角线最远偏移。原例$B(K_5)=4,B(K_{1,3})=2,B(K_{2,3})=3,B(K_{3,3})=4,B(Q_3)=4,B(C_5)=2$；
-
-  $C_5$不能按自然环序排后直接说最大偏移2，可按环顶点编号顺序$1,2,5,3,4$实现。Cuthill–McKee重排序（Cuthill–McKee ordering）与缩小矩阵带宽有关。
-
-- **【拓展】非同构简单图计数（counting nonisomorphic simple graphs）** ：2点2类、3点4类、4点11类；5点3边4类、6点4边9类。
-
-  不同于有标签图（labeled graph）的$2^{\binom n2}$种计数，不能任意除$n!$，因为各图自同构（automorphism）数量不同。
+- **【拓展】矩阵重排（matrix reordering）** ：无向图按分量排列邻接矩阵为分块对角（block diagonal）形式；Cuthill–McKee重排序（Cuthill–McKee ordering）是减小带宽的启发方法，不保证任意图均最优。
 
 ### 6.5 路径、连通性、树与网络可靠性（Paths, Connectivity, Trees and Reliability）
 
+授课依据：[[Ch10.4.pdf|Ch10.4.pdf]]、[[Ch10.5.pdf|Ch10.5.pdf]]。保留路径、简单路径、连通、树的定理及MST定义；桥是Fleury所需前置定义，其余可靠性理论为拓展。
+
 > [!warning] 【考试注意：术语约定】
-> 本教材路径（path）允许重复点和边，相当于通行的走法（walk）；简单路径（simple path）强调不重复边，相当于迹（trail）。
+> 本提纲按Ch10.4课件：path允许重复，simple path要求顶点不重复；只要求边不重复的路线另称迹（trail）。教材将simple path用于不重复边的另一约定，作为术语差异保留，答题先依课件及题目说明。
 >
-> 下文讨论树、距离、哈密顿等需要不重复顶点时会明确写出，不能只凭中文“简单”猜定义。
+> 树中的“无圈”排除真正的简单圈，不把同一条无向边立即往返当作圈。哈密顿回路仅允许末尾复写起点。
 
 #### 路径与连通性的语言（Language of Paths and Connectivity）
 
-- **长度（length）** 是边数；回路（circuit）起终点相同且正长度；零长度路径只停在一个点，不算回路。圈（cycle）在本提纲指闭合且除首尾外顶点不重复的走法；
+- **路径（path）** 按课件为相邻顶点序列，长度（length）等于边数，允许重复；简单路径（simple path）要求所有顶点不同。回路（circuit / cycle）为正长度闭合路径；简单圈（simple cycle）除首尾相同外顶点互异。无向单边往返不作为树中的圈。
 
-  无向图沿一条边往返虽是闭走（closed walk），不因此视为树中有圈。
+- **连通（connected）** ：无向图任意两点有路径；连通分量（connected component）是极大连通部分。重复顶点段可删除，故有路径就有简单路径。强连通（strongly connected）要求有向图每对点双向可达；弱连通（weakly connected）只要求去方向后连通。
 
-- **无向连通（connected）** 为任意两点间有路径；有路径就能删去重复顶点段，得到不重复顶点的路径。连通分量（connected component）是极大连通子图，“极大”按包含而非点数最多。
+- **无环（acyclic）** ：没有圈；有向无环图（directed acyclic graph, DAG）无有向圈，去方向后可能有无向圈，不能混淆。
 
-  有向强连通（strongly connected）要求每对双向可达，弱连通（weakly connected）只要求底层无向图连通；
-
-  强连通分量（strongly connected component, SCC）按互达划分。
-
-  【拓展】Kosaraju算法（Kosaraju's algorithm）先在原图做DFS记录完成次序，再按完成次序逆序在反向图做DFS；每次搜出的未访问集合为一个SCC。Tarjan算法（Tarjan's algorithm）利用DFS栈与低链接值（low-link value）一遍求SCC。两者的时间复杂度均为$O(v+e)$；这里只保留原笔记列出的思路与复杂度。
-
-- **无环（acyclic）** 在有向图中指无有向圈，DAG可拓扑排序；去方向后可能仍有无向圈，反之不可混说。SCC缩点（condensation）得到DAG。
+- **【拓展】强连通分量（strongly connected component, SCC）** 按互达划分，缩点（condensation）后成DAG；Kosaraju算法（Kosaraju's algorithm）两遍DFS、Tarjan算法（Tarjan's algorithm）用低链接值（low-link value）与栈，均$O(v+e)$。课件只讲强／弱连通定义，没有这些求分量算法。
 
 #### 极小性、树与生成树（Minimality, Trees and Spanning Trees）
 
@@ -2114,79 +1971,46 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 - **生成树（spanning tree）** 保留原图全部顶点、选边形成树；连通当且仅当有生成树，通常不唯一；非连通图只能取生成森林（spanning forest）。
 
-  任意生成树不等于最小生成树（minimum spanning tree, MST），后者还优化边权和。
+  最小生成树（minimum spanning tree, MST）是在连通带权无向图的所有生成树中，使边权总和最小者。树先要覆盖全部顶点、连通且无圈，再比较权重；“极小连通”指不能删边，“最小权”指总权最优，二者不同。课件示例生成树总权22优于31；本课件只给MST定义与比较，没有Prim／Kruskal算法，也没有Dijkstra最短路算法。
 
 ![[C10-树与两个反例.png|600]]
 
-#### 【拓展】故障与连通度（Failures and Connectivity）
+- **树定理的证明要点（proofs of the tree theorems）** ：
 
-- **【拓展】割点（cut vertex / articulation point）** 删去该点及关联边使分量数增加；割边／桥（cut edge / bridge）删边使分量数增加。
+  - 至少两叶：有限且至少两点的树取一条最长的不重复顶点路径。端点若有路径外邻点可延长路径；若另接路径内非相邻点则造圈，均矛盾。因此两个端点度都为1。
+  - 边数$n-1$：$n=1$时零边；$n>1$剪掉一片叶及其唯一边，余图仍连通无圈，按归纳假设有$n-2$边，加回该边得$n-1$。
+  - 唯一路径：连通保证存在；若两条不重复顶点路径不同，沿首次分歧到再次相遇的部分组成圈，违背无圈。反过来，若有圈，圈上两点有两条不同路径，违背唯一性。
+  - 生成树存在：连通图若有圈，从圈中删一条边不破坏连通；不断删到无圈，仍保留所有顶点，得到生成树。
 
-  无向图边是桥当且仅当不在任何圈上；连通图有叶边则是桥，叶本身通常不是割点。判割点要看删后的分量数，不把“剩下少一个点”当不连通。
+  这些等价刻画按有限非空无向简单图、且“不重复顶点路径”的约定使用；允许来回走同一边的走法不会唯一。
 
-- **【拓展】不可分图（nonseparable graph）** 按原笔记定义为没有割点的连通图；至少3个顶点时，它等价于双连通图／2连通图（biconnected / 2-connected graph）。$K_2$没有割点，但不满足“至少3个顶点”的2连通约定。
+#### 桥与【拓展】故障连通度（Bridges and Connectivity under Failures）
 
-  块（block）是极大不可分子图；常用分块约定也把单条桥及孤立点分别视为块。不同块至多共享一个顶点，共享点是割点。使用“块”的定义时须说明桥与孤立点的约定。
+- **桥／割边（bridge / cut edge）** 删去后使连通分量数增加；等价于该边不在任何圈上。这是课件Fleury算法所必需的术语，按范围内保留；桥要在“尚未走过边组成的剩余图”中重新判断。
 
-- **【拓展】点割（vertex cut）与边割（edge cut）** 分别是一组删除后使图不连通的点／边；
+- **【拓展】割点（cut vertex / articulation point）** 删点及关联边使分量数增加；叶通常不是割点。不可分图（nonseparable graph）为无割点的连通图，至少3点时对应双连通／2连通（biconnected / 2-connected）；块（block）为极大不可分子图，桥与孤立点是否单列成块须约定。
 
-  点连通度（vertex connectivity）$\kappa(G)$、边连通度（edge connectivity）$\lambda(G)$为最少删除数。简单完全图约定$\kappa(K_n)=n-1$；
-
-  不连通图取0，单点边界单列。对简单图有$\kappa\le\lambda\le\delta$；最大可能连通度不超过$n-1$，这类n上界不可套到有重边图。
-
-- **【拓展】k连通（k-connected）** 通常要求顶点数大于k且$\kappa\ge k$，删少于k点仍连通；能容忍k−1个任意点故障，不是k个。
-
-  最优连通（optimally connected）在原笔记采用$\kappa=\lambda=\delta$。
-
-| 网络（network） | $\kappa,\lambda$ | 直径 |
-|---|---|---|
-| $P_n$，$n\ge2$ | $1,1$ | $n-1$ |
-| $K_n$，$n\ge2$ | $n-1,n-1$ | 1 |
-| $K_{m,n}$，$m,n\ge1$ | $\min(m,n),\min(m,n)$ | 两侧都非空时至多2；$K_{1,1}$为1 |
-| $P_m\square P_n$，$m,n\ge2$ | $2,2$ | $m+n-2$ |
-| $Q_n$，$n\ge1$ | $n,n$ | n |
+- **【拓展】点割／边割（vertex / edge cut）** 分别删点／边使图断开，最小数为点／边连通度（vertex / edge connectivity）$\kappa,\lambda$。简单图$\kappa\le\lambda\le\delta$，完全图约定$\kappa(K_n)=n-1$，不连通取0；$k$连通（$k$-connected）要求点数$>k$且删少于$k$点仍连通，最优连通（optimally connected）指$\kappa=\lambda=\delta$。
 
 #### 【拓展】距离与路径冗余（Distances and Path Redundancy）
 
-- **【拓展】距离（distance）** $d(u,v)$为最短路径边数；离心率（eccentricity）$e(v)=\max_ud(u,v)$；
+- **【拓展】距离（distance）** 为最少边数；离心率（eccentricity）为到各点距离最大值，直径／半径（diameter / radius）分别取离心率最大／最小，中心（center）达半径。有限连通图$\mathrm{rad}\le\mathrm{diam}\le2\mathrm{rad}$；不连通须约定无穷或逐分量讨论。
 
-  直径（diameter）$\max_ve(v)$，半径（radius）$\min_ve(v)$，中心（center）为达到半径的顶点。有限连通图满足$\operatorname{rad}\le\operatorname{diam}\le2\operatorname{rad}$；
+- **【拓展】Menger定理（Menger's theorem）** ：不邻接两点的内部点不交路径（internally vertex-disjoint paths）最大数等于最小分离点割；不同两点的边不交路径（edge-disjoint paths）版对应最小边割。Robbins定理（Robbins' theorem）称连通无向图有强连通定向（strong orientation）当且仅当无桥；顶点基（vertex basis）可在缩点DAG每个源分量选一点。
 
-  不连通时要约定无穷距离或逐分量讨论。
+#### 【拓展】边数、矩阵幂与走法（Edge Bounds, Matrix Powers and Walks）
 
-- **【拓展】Menger定理（Menger's theorem）** ：不相邻u、v之间内部点不交路径（internally vertex-disjoint paths）最大数等于分离u、v的最小点割；
+- **【拓展】边数与分量（edge bounds and components）** ：$n$点连通图至少$n-1$边；$k$分量简单图$e\le\binom{n-k+1}2$；$e>\binom{n-1}2$保证连通，反向“$e\ge n-1$即连通”错误。
 
-  不同u、v之间边不交路径（edge-disjoint paths）最大数等于最小边割。路径冗余对应故障容忍；完整图的全局点连通度用既定约定处理，不能对空的非邻点对集合直接取最小。
-
-- **【拓展】Robbins定理（Robbins' theorem）** ：连通无向图可作强连通定向（strong orientation）当且仅当无桥。
-
-  顶点基（vertex basis）是最小可达种子集：每个非种子顶点可由某种子到达；SCC缩点DAG的每个入度0分量各选一个点即可，孤立分量也要覆盖。
-
-#### 边数、矩阵幂与走法（Edge Bounds, Matrix Powers and Walks）
-
-- **【拓展／补充】边数与分量（edge bounds and components）** ：n点连通图至少n−1边；有k分量的简单图，$e\le\sum_i\binom{n_i}2\le\binom{n-k+1}2$；若$e>\binom{n-1}2$则必连通。
-
-  反向“e≥n−1就连通”错误；点数集中在一个大分量加孤立点可使不连通图仍有很多边。
-
-- **普通邻接矩阵幂（ordinary adjacency matrix powers）** $(A^r)_{ij}$数从i到j恰长r的走法，允许重复，不是简单路径条数；归纳把最后一条边按中间点分解即证。
-
-  简单图$(A^2)_{ii}=\deg v_i$，$(A^2)_{ij}$（i≠j）数共同邻点；多重图的对角平方条目不能直接当度。二分图偶步只到同侧、奇步只到异侧。
-
-- 核对原练习：$K_4$不同两点间长2、3、4、5走法为2、7、20、61；$K_{3,3}$异侧为0、9、0、81，同侧不同点为3、0、27、0。若只问是否可达，换布尔运算；
-
-  不能用普通A幂中的数值直接当关系矩阵。
+- **【拓展】普通邻接矩阵幂（ordinary adjacency matrix powers）** $(A^r)_{ij}$数恰长$r$的走法（walk），允许重复；简单图$(A^2)_{ii}=\deg v_i$，非对角数共同邻点（common neighbors）。普通积数方案，布尔积只判断存在，不能把两者混作关系矩阵。
 
 #### 【拓展】状态图与应用（State Graphs and Applications）
 
-- **【拓展】Alcuin过河问题（Alcuin river-crossing puzzle）** 以两岸人员与物品分布为状态顶点，一次合法摆渡为边；狼羊菜题16种分布中10种安全，最短7次。
-
-  广度优先搜索（breadth-first search, BFS）找最少边路径，深度优先搜索（depth-first search, DFS）可做可达性遍历。
-
-  六度分隔（six degrees of separation）是原笔记用来说明社交网络短联系链的背景；演员共同出演图也称好莱坞图（Hollywood graph）。它不表示每张图的直径都至多6，也不替代对给定图的路径或闭包计算。
-
-  图神经网络（graph neural network, GNN）的邻接聚合（neighborhood aggregation）与矩阵乘法有关，但带非线性的多层网络不能一般直接等同于$A^LXW$。
+- **【拓展】状态图（state graph）** 将合法状态作点、一步合法操作作边；Alcuin过河问题（Alcuin river-crossing puzzle）的狼羊菜题最少7次。广度／深度优先搜索（breadth-first / depth-first search, BFS / DFS）可求最少边路径／可达性；六度分隔（six degrees of separation）、好莱坞图（Hollywood graph）与GNN邻接聚合（neighborhood aggregation）是应用背景，不意味着任意图直径至多6或一般网络等于$A^LXW$。
 
 ### 6.6 欧拉与哈密顿（Euler and Hamilton）
+
+授课依据：[[Ch10.5.pdf|Ch10.5.pdf]]。Fleury、Hierholzer均在课件；有向欧拉、闭包引理和Gray码等为拓展。
 
 | 概念（concept） | 恰好一次的对象 | 首尾 |
 |---|---|---|
@@ -2197,11 +2021,13 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 #### 欧拉与哈密顿的区别（Euler versus Hamilton）
 
-- 欧拉可重复经过顶点，不能重复边；哈密顿关注顶点，不能把覆盖全部边当作要求。柯尼斯堡七桥问题（Königsberg bridge problem）建成4点7边多重图，四个奇度点，因此不能一笔走完全部桥。
+- **欧拉与哈密顿（Euler and Hamilton）** ：欧拉路线恰好走每条边一次，可重复点；哈密顿路线恰好经过每个顶点一次，闭合时仅最后复写起点。柯尼斯堡七桥问题（Königsberg bridge problem）有4个奇度点，不能一笔走完。
 
-  欧拉图（Eulerian graph）是具有欧拉回路的图；通常在连通图语境下使用，含孤立点时先说明是否忽略这些点。哈密顿图（Hamiltonian graph）是具有哈密顿回路的图，有哈密顿路径还不足以称为哈密顿图。
+- **欧拉图（Eulerian graph）的课件约定** ：Ch10.5 slide 5把“连通且有欧拉路径”称Eulerian，包含开放路径与回路。部分教材专指有欧拉回路，本提纲按课件回答，但写清“Euler path”还是“Euler circuit”，避免只写Eulerian造成歧义。哈密顿图（Hamiltonian graph）通常指有哈密顿回路。
 
-  【拓展／背景】哈密顿的Icosian游戏（Icosian puzzle）要求沿十二面体（dodecahedron）图访问全部20个顶点后回到起点。原笔记称“二十面体游戏”，应避免误记为20个面；正十二面体有20个顶点，正二十面体（icosahedron）只有12个顶点。
+- **Icosian游戏（Icosian puzzle）** 问十二面体骨架是否有经过各顶点一次的回路；十二面体有12个面、20个顶点，不能把面数当顶点数。
+
+- **多重图中的边身份（edge identities in multigraphs）** ：路线需记$e_1,\ldots,e_r$及顶点序列，只写顶点不能区分平行边；不同平行边各走一次合法，同一条边重复两次不合法。
 
 #### 欧拉判据及证明（Euler Criteria and Proof）
 
@@ -2211,35 +2037,31 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 - **必要性（necessity）** 靠每个中途顶点的进出配对；充分性（sufficiency）先走一个闭回路，若还有未用边，找已有回路上仍接未用边的点另走子回路并拼接，直到用完所有边。
 
-#### 【拓展】求欧拉路线的算法（Algorithms for Euler Routes）
+#### 求欧拉路线的算法（Algorithms for Euler Routes）
 
-- **【拓展／算法】Hierholzer算法（Hierholzer's algorithm）** ：从合法起点出发沿未用边走；无路时退栈并记输出；仍有未用边时继续压栈，最终逆序得欧拉路线。
+- **Fleury算法（Fleury's algorithm）** ：输入满足欧拉判据的无向图；0个奇度点可从任意非孤立点开始，2个奇度点从其中一个开始。每步在剩余图中选当前点关联的未走边，优先非桥；仅当无其他选择时才走桥。走过即删边并移动到另一端，直到所有边删完停止，记录的边序列即欧拉路线。
 
-  实现中每边访问常数次为$O(e)$。开放路径从奇度点起，或临时连两奇点求回路再拆新边。
+  手算须画出或更新剩余图，桥的身份会改变；开头检查0／2奇度和连通性，不能在不满足条件的图上照走后声称算法成功。
 
-- **【拓展／算法】Fleury算法（Fleury's algorithm）** ：在剩余图中优先走非桥，只有别无可选时才走桥；走一边就删去，桥的身份会变化。
+- **Hierholzer算法（Hierholzer's algorithm）** ：回路情形先从非孤立点$v$沿未用边走到回到$v$；若尚有未用边，找当前路线上的点$u$仍接未用边，从$u$再走一个闭回路，把新回路在$u$处接入旧路线；重复到所有边用尽。偶度保证不会在起点以外提前无边可走，连通性保证有剩边就有可拼接点。
 
-  每步重新判桥的直接实现通常$O(e^2)$量级，不与Hierholzer的线性实现混淆。
+  课件拼接例：$a\to d\to f\to a$与$d\to b\to e\to c\to d$，再接$f\to b\to c\to g\to e\to f$，得到$a\to d\to b\to e\to c\to d\to f\to b\to c\to g\to e\to f\to a$。检查每条原边恰出现一次。
+
+  **【拓展】栈实现（stack implementation）** 可实现$O(e)$；开放路线可先连一条临时边将两奇点变偶，求回路后删临时边并从该处断开。朴素Fleury反复判桥可到$O(e^2)$。
 
 ![[C10-Fleury为什么不能先走桥.png|620]]
 
 #### 【拓展】有向欧拉与分笔覆盖（Directed Euler Routes and Trail Covers）
 
-- **【拓展】有向欧拉条件（directed Euler conditions）** ：非零度顶点的底层无向图连通；回路要求每点入度等于出度；
+- **【拓展】有向欧拉（directed Euler routes）** 要求非零度底层连通；回路每点入度等于出度，开放路线仅起点出多1、终点入多1，其余平衡。有$2k$个奇度点的无向有边连通图，覆盖全部边最少$\max(1,k)$条迹，抬笔次数再减1。
 
-  开放路径要求唯一s满足出度比入度多1、唯一t满足入度比出度多1，其余平衡，从s到t。不能仅看度而忽略所有边是否属于同一可遍历部分。
+- **【拓展】邮递员问题（Chinese postman problem）** 求覆盖全部边的最短闭走，必要时重复边；不同于要求每边恰走一次的欧拉问题。
 
-- **【拓展】最少分几笔（minimum number of trails）** ：一个有边的连通图若有$2k$个奇度点，最少$\max(1,k)$条不重边的迹覆盖全部边，抬笔次数为迹数减1；
-
-  不连通图对各有边分量求和。七桥可分成两迹且不必重画桥；原笔记“必然有桥重画”不成立。加边是否修好欧拉性质要重新数奇度点，而非只看总边数。
-
-- 应用：道路巡检、邮递员问题（Chinese postman problem）目标覆盖边，需重复时与单纯欧拉问题有别；
-
-  DNA片段组装（DNA fragment assembly）可把片段邻接编码为欧拉路线。测试设备覆盖点则对应哈密顿，任务对象必须先辨清。
+- **【拓展】DNA片段组装（DNA fragment assembly）** 可把重叠关系建图，视建模对象选欧拉或哈密顿形式；“每片段一次”与“每重叠边一次”不能混作同一要求。
 
 #### 哈密顿的排除与充分条件（Hamiltonian Tests and Sufficient Conditions）
 
-- **哈密顿回路的排除条件（necessary-condition tests）** ：n≥3时每点度至少2、无割点；二分图两侧必须等大；
+- **【拓展】哈密顿回路的排除条件（necessary-condition tests）** ：n≥3时每点度至少2、无割点；二分图两侧必须等大；
 
   度2点的两条边被强制纳入，若迫使某点用三条边或提前封成不含全部点的小圈，则不可能。哈密顿路径在二分图两侧大小差至多1，不能照搬回路的等大条件。
 
@@ -2252,140 +2074,63 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
 #### 【拓展】闭包证明与结构条件（Closure Proof and Structural Conditions）
 
-- **【拓展】Bondy–Chvátal闭包引理（Bondy–Chvátal closure lemma）** ：不邻接u、v的度和至少n时，加边uv不改变哈密顿回路是否存在。
+- **【拓展】Bondy–Chvátal闭包引理（Bondy–Chvátal closure lemma）** ：简单$n$点图中，不邻接$u,v$度和$\ge n$时加边$uv$不改变哈密顿性；可用断开的哈密顿路径与度数鸽巢重接证明。它能推出Ore，但课件只陈述Dirac、Ore及其充分不必要性。
 
-  反向证明：若新回路用uv，删它得原图哈密顿路径$x_1=u,\ldots,x_n=v$；在位置$i\in\{1,\ldots,n-1\}$中，令$A=\{i:ux_{i+1}\in E\},B=\{i:x_iv\in E\}$。
+- **【拓展】结构必要条件（necessary structural conditions）** ：删非空点集$S$后，有哈密顿回路者分量数$\le|S|$，有哈密顿路径者$\le|S|+1$。$K_{m,n}$有哈密顿回路须$m=n\ge2$，有哈密顿路径须$|m-n|\le1$；轮图回路必须含中心。
 
-  $|A|+|B|\ge n>n-1$，必有公共i，可拼成$x_1\cdots x_i x_n x_{n-1}\cdots x_{i+1}x_1$。反复加满足条件的边到完全图即可证Ore；原笔记该证明的位置集合下标漏算，已在此纠正。
-
-- **【拓展】必要结构条件（necessary structural condition）** ：有哈密顿回路则任意非空S删去后分量数不超过$|S|$；有哈密顿路径则不超过$|S|+1$。
-
-  这些条件一般不充分。哈密顿判定为NP完全问题，不是没有定义上的充要条件，而是没有本课欧拉式简单度数充要判据。
-
-![[C10.5-欧拉与哈密顿的区别.png|620]]
-
-| 标准图族 | 欧拉回路 | 开放欧拉路径 | 哈密顿回路 |
-|---|---|---|---|
-| $K_n$，$n\ge2$ | n奇 | 仅n=2 | n≥3 |
-| $C_n$，n≥3 | 有 | 无 | 有 |
-| $W_n$，n≥3 | 无 | 无 | 有，须把中心插入轮缘相邻两点之间 |
-| $Q_n$，n≥1 | n偶 | 仅n=1 | n≥2 |
-| $K_{m,n}$，m,n≥1 | m、n均偶 | $K_{1,1}$，或一侧为2另一侧奇 | m=n≥2 |
+> [!info]- 【拓展】原图回看
+> ![[C10.5-欧拉与哈密顿的区别.png|620]]
 
 #### 【拓展】Gray码、骑士与Petersen（Gray Codes, Knight’s Tours and Petersen Graph）
 
-- **【拓展】Gray码／格雷码（Gray code）** 为相邻二进制码只差一位的序列，循环Gray码对应$Q_n$的哈密顿回路（n≥2）。
+- **【拓展】Gray码（Gray code）** 相邻位串恰差一位，循环版本对应$Q_n$哈密顿回路（$n\ge2$），可用反射构造。旋转编码（rotating-drum code）借此避免多位同时切换。
 
-  反射构造（reflected binary code）先在旧码前加0，再把旧码倒序前加1拼接；例如$00,01,11,10$。
+- **【拓展】骑士周游（knight's tour）** 将棋盘格作点、马步作边，遍历为哈密顿路径，可复返周游（reentrant / closed tour）为回路。Petersen图（Petersen graph）有10点15边、3正则，无哈密顿回路但删任一点后有，是次哈密顿图（hypohamiltonian graph）的例子。
 
-  旋转编码（rotating encoding）使传感器相邻位置变化一位，减少读数歧义。
+- **【拓展】Warnsdorff启发式（Warnsdorff's heuristic）** 在骑士周游中优先走剩余可走邻点较少的格子，不是任意棋盘都成功的定理。
 
-- **【拓展】骑士周游（knight's tour）** 将棋盘格作点、马步$(\pm1,\pm2),(\pm2,\pm1)$作边，遍历各格为哈密顿路径，可复返周游（reentrant / closed tour）为回路。
+### 6.7 【拓展】最短路径与旅行商（Shortest Paths and the Traveling Salesperson Problem）
 
-  马步总换黑白色，奇数格棋盘无闭周游；$3\times3$中心孤立，$4\times4$也无周游。
+【拓展】全部补充课件中未见本节的独立讲解，保留压缩说明供回查。补充课件没有Ch10.6；MST定义在6.5按范围内保留，不由此引入最短路算法。
 
-  Warnsdorff启发式（Warnsdorff's heuristic）每步优先后续可走位置少者，是构造策略，不是任意棋盘必成功的证明。
+#### 【拓展】代价与松弛（Costs and Relaxation）
 
-- **【拓展】Petersen图（Petersen graph）** 10点15边3正则，无哈密顿回路，但删任一顶点后有；这是次哈密顿图（hypohamiltonian graph）的例子。
+- **【拓展】最短路与松弛（shortest paths and relaxation）** ：带权路径长度（weighted path length）为边权和；若$d(u)+w(u,v)<d(v)$，更新$d(v)$并记前驱（predecessor）$u$。有限标签是已找到走法的上界，松弛局部改善不等于全局完成；有可达负回路（negative cycle）时相关目标可能无有限最短走法。
 
-  旅行商问题（traveling salesperson problem, TSP）是在带权哈密顿回路中再求最小总权，详见下一节。
+#### 【拓展】Dijkstra：条件与步骤（Dijkstra: Conditions and Steps）
 
-### 6.7 【拓展：§10.6整节课堂未讲】最短路径与旅行商（Shortest Paths and the Traveling Salesperson Problem）
+- **【拓展】Dijkstra算法（Dijkstra's algorithm）** 解非负权单源最短路（single-source shortest paths）：$d(s)=0$、其余$\infty$，反复确定未确定点中标签最小者，再松弛其出边。最小标签为$\infty$时其余不可达；只问一个目标也须等目标被确定才能停，首次发现不够。非负权使已确定距离不会再改善，负边会破坏此保证。
 
-#### 代价与松弛（Costs and Relaxation）
+- **【拓展】路径恢复与代价（path reconstruction and cost）** 沿前驱反向回溯；原例$a\to c\to b\to d\to e\to z$长13。朴素实现$O(v^2)$，二叉堆（binary heap）版$O((v+e)\log v)$；有负边可用Bellman–Ford算法（Bellman–Ford algorithm）$O(ve)$并检测可达负回路。
 
-- **带权路径长度（weighted path length）** 为沿途边权和，不是边数；最短路径（shortest path）优化两端点之间的长度。
+- **【拓展】路由应用（routing application）** ：开放式最短路径优先协议（Open Shortest Path First, OSPF）的SPF（shortest path first）计算是原笔记中的应用联系，不能由协议名称断言课件已授Dijkstra。
 
-  最少边数（fewest edges）可把所有边权设1，用BFS；最短时间、最短里程、最低费用使用不同权重，答案可能不同。
+> [!info]- 【拓展】原图回看
+> ![[C10.6-原图-Dijkstra逐步标签.png|650]]
 
-  原教材航线例里程最优2109英里，而费用最优197美元，对应路线不同，不能混用指标。
+#### 【拓展】Floyd：分层递推与路径恢复（Floyd: Layered Recurrence and Reconstruction）
 
-- **松弛（relaxation）** ：若$d(u)+w(u,v)<d(v)$，改$d(v)\leftarrow d(u)+w(u,v)$并记录前驱（predecessor）$\operatorname{prev}(v)=u$。
+- **【拓展】Floyd／Floyd–Warshall算法（Floyd / Floyd–Warshall algorithm）** 解全对最短路（all-pairs shortest paths）。直接边取最小权，无边为$\infty$，对角取0与自环权较小者；按中转$k$最外层，更新$D_{ij}\leftarrow\min(D_{ij},D_{ik}+D_{kj})$，$O(v^3)$时间、$O(v^2)$空间。
 
-  标签（label）从上界向下改，不能把更大候选覆盖当前较小值。
+  可有负边；$D_{kk}<0$提示负回路，仅对能到该回路且从它能到终点的点对失去有限最短值。next表（next-hop table）可恢复路线。它与Warshall用相同分层结构，但min／加法与OR／AND不能混用。
 
-  三条性质分别是单调性（monotonicity）：标签只减不增；上界性（upper-bound property）：有限标签对应实际走法，故不小于真实最短距离；局部性（locality）：更新只需$d(u)$与边权，不需先知道完整路径。
+#### 【拓展】DAG与A星（DAG and A-star）
 
-  初值$+\infty$表示尚未发现路径，并不是某条有限路线的长度。仅凭“严格变小”不能推出更新次数必有限：可达负权回路（reachable negative-weight cycle）会使标签不断下降，算法的终止与正确性还依赖各自的前提。
+- **【拓展】DAG最短／最长路（shortest / longest paths in a DAG）** 可按拓扑序松弛，用min／max，$O(v+e)$；一般最长简单路径（longest simple path）不能按此直接求。
 
-#### Dijkstra：条件、过程与例子（Conditions, Procedure and Examples）
+- **【拓展】A星搜索（A* search）** 以$f=g+h$选择点，启发函数（heuristic）可采纳（admissible）指不高估；若不重开点，通常还需一致性（consistency）$h(u)\le w(u,v)+h(v)$，否则须允许重开（reopening）。$h=0$退化为Dijkstra。
 
-- **Dijkstra算法（Dijkstra's algorithm）** 解非负权（nonnegative weights）单源最短路（single-source shortest paths）：初始化$d(s)=0$、其余$\infty$；
+#### 【拓展】旅行商、启发式与近似（TSP, Heuristics and Approximation）
 
-  反复从未确定点取最小标签者u，确定其最短距离，松弛全部出边。需要源点到所有顶点的结果时，跑完所有可达点；若只问目标t，t被取出确定时可停。尚未确定的点不能标成“已确定”。
+- **【拓展】旅行商问题（traveling salesperson problem, TSP）** 求访问每城一次并返回的最小权哈密顿回路；无向完全图$n\ge3$固定起点并同一正反方向，有$(n-1)!/2$候选。原五城例最优458；不能由Floyd最短距离矩阵直接宣称已解TSP，度量闭包（metric closure）仍有访问顺序优化。
 
-  【拓展／应用】开放式最短路径优先协议（Open Shortest Path First, OSPF）中的最短路径优先（shortest path first, SPF）是原笔记提到的路由应用背景；对应计算的是网络中从本路由器出发的路径代价。
+- **【拓展】精确、启发式与近似（exact optimization, heuristic and approximation）** ：最近邻（nearest-neighbor）、2-opt／3-opt局部搜索（local search）不保证最优；近似比（approximation ratio）$c$要求$\mathrm{OPT}\le W\le c\mathrm{OPT}$。Christofides算法（Christofides' algorithm）对非负无向、满足三角不等式的度量TSP（metric TSP）保证$3/2$，不能套任意权重。
 
-- **正确性（correctness）** 靠贪心不变量（greedy invariant）：已确定点距离真实最短，任何通往未确定点的路径第一次跨出已定集合时，其候选已被松弛；
-
-  非负边保证后续路段不能再把更小的隐藏答案带回来。单条负权边（negative edge）已能使“确定后不再改”失败，例如$s\to u=2,s\to v=5,v\to u=-4$。
-
-| 原教材例2：确定点 | a | c | b | d | e | z |
-|---|---|---|---|---|---|---|
-| 对应最终距离 | 0 | 2 | 3 | 8 | 10 | 13 |
-| 关键变化 | b先4，c为2 | b改3，d先10，e先12 | d改8 | e改10，z先14 | z改13 | 完成 |
-
-- **路线恢复（path reconstruction）** 从z沿prev反向回溯：$a\to c\to b\to d\to e\to z$，$2+1+5+2+3=13$。原例1则为$a\to d\to e\to z$，距离$2+3+1=6$；
-
-  其中$a\to d\to e$应为5，不能抄原印的7。
-
-- Dijkstra朴素数组／矩阵实现$O(v^2)$，邻接表＋二叉堆（binary heap）实现$O((v+e)\log v)$；算法与实现复杂度要一起说。
-
-  负权可考虑Bellman–Ford算法（Bellman–Ford algorithm），时间$O(ve)$；若存在可达负回路（negative cycle），相关目标的最短走法长度可能无有限下界。
-
-![[C10.6-原图-Dijkstra逐步标签.png|650]]
-
-#### Floyd：分层递推与路径恢复（Layered Recurrence and Reconstruction）
-
-- **Floyd／Floyd–Warshall算法（Floyd / Floyd–Warshall algorithm）** 解全对最短路（all-pairs shortest paths）。
-
-  初值$D^{(0)}_{ii}=0$，有边取最小边权，无边$\infty$；第k轮
-
-$$
-D_{ij}^{(k)}=\min\bigl(D_{ij}^{(k-1)},D_{ik}^{(k-1)}+D_{kj}^{(k-1)}\bigr).
-$$
-
-- 含义为仅允许前k个顶点作中转；k必须最外层。可有负边，但要解释负回路：结束后若某$D_{ii}<0$则检测出负回路，其可到达与可返回关联的点对没有有限最短走法。时间$O(v^3)$，空间$O(v^2)$；
-
-  next表（next-hop table）或中间点表能恢复路线，不能说Floyd本身“无法构造路径”。松弛成功时可更新$\operatorname{next}[i,j]=\operatorname{next}[i,k]$。
-
-- 原例2的a行最终按$a,b,c,d,e,z$为$(0,3,2,8,10,13)$，与Dijkstra一致。Warshall与Floyd的同一分层结构分别使用OR／AND与min／加法，前者求是否可达、后者求最小代价。
-
-#### DAG与A星（DAG and A-star）
-
-- **DAG上按拓扑序松弛所有边，最短路、最长路（longest path）** 均可$O(v+e)$，最长路取max、不可达初值$-\infty$。
-
-  一般图最长简单路径（longest simple path）困难，不能允许重复正圈后仍声称有有限最长长度。
-
-- **A星搜索（A* search）** 按$f(v)=g(v)+h(v)$选点，h为启发函数（heuristic function），$h\equiv0$退化Dijkstra。
-
-  可采纳性（admissibility）要求不高估剩余最短距离；若确定后不重开顶点，通常还需一致性（consistency）$h(u)\le w(u,v)+h(v)$。
-
-  仅可采纳但不一致时，要允许更好g值重开（reopening），不能无条件照Dijkstra永久定点。
-
-#### 旅行商、启发式与近似（TSP, Heuristics and Approximation）
-
-- TSP要求每城市恰一次并回起点，找最小权哈密顿回路；不是最短路，也不是最小生成树。无向完全图固定起点、正反视同、n≥3时有$(n-1)!/2$条候选；有向图一般不能再除2。
-
-  五城原例共12条候选，最优Detroit–Toledo–Kalamazoo–Grand Rapids–Saginaw–Detroit，$58+133+56+113+98=458$。
-
-- **精确优化（exact optimization）** 、启发式（heuristic）与有保证近似（approximation algorithm）要区分。
-
-  最近邻法（nearest-neighbor heuristic）每次去最近未访问城市，直接实现$O(v^2)$，但不保证全局最优或常数近似比。
-
-  2-opt／3-opt局部搜索（local search）换局部边可改进，但局部最优不等于全局最优。
-
-- **近似比（approximation ratio）** c对最小化问题表示$\mathrm{OPT}\le W_{alg}\le c\,\mathrm{OPT}$。
-
-  对非负、无向、满足三角不等式的度量TSP（metric TSP），Christofides算法（Christofides' algorithm）保证3/2：最小生成树＋奇度点最小权完美匹配＋欧拉化＋捷径（shortcutting）；
-
-  前两者分别不超过OPT和OPT/2，三角不等式保证跳过重复点不增长度。此保证不能直接用于任意权重TSP。
-
-- **度量闭包（metric closure）** 把每对顶点边权换成最短路距离，可将“每城至少一次”的闭走优化与闭包上的TSP联系，仍需做全局访问顺序优化；不能由Floyd距离矩阵直接宣称TSP已解。
-
-  一般TSP的优化为NP难（NP-hard），相应有界长度判定为NP完全；工程启发式的某批实例表现不构成普遍误差保证。
+- **【拓展】复杂度类（complexity classes）** ：P为多项式时间可判定问题；NP为“是”的证书（certificate）可多项式验证，非“非多项式”。若每个NP问题都可多项式归约（polynomial-time reduction）到某问题，则该问题NP难（NP-hard）；自身再属NP才NP完全（NP-complete）。TSP优化版NP难、阈值判定版NP完全，不等于已证明$P\ne NP$。
 
 ### 6.8 平面图、欧拉公式与不可平面障碍（Planarity, Euler's Formula and Obstructions）
+
+授课依据：[[Ch10.7.pdf|Ch10.7.pdf]]。保留Euler公式、归纳证明、边数界、细分同胚与Kuratowski；交叉数、厚度、曲面为拓展。
 
 #### 可平面与平面嵌入（Planarity and Plane Embeddings）
 
@@ -2398,13 +2143,15 @@ $$
 > [!info] 【历年考过：第22节转写L398附近】
 > 老师在平面图与不交叉论证附近提到过去期末出过题，不能据此把本次具体题型写死。应会从定义分辨planar与plane、统计面并使用定理。
 
+- **【拓展】Jordan曲线定理（Jordan curve theorem）** ：平面内一条简单闭曲线（simple closed curve，即无自交的闭合曲线）把其余平面分成恰好两个连通区域，一个有界、一个无界，曲线是两者共同边界。它可解释圈内／圈外，但不能直接用于自交曲线或环面闭曲线；作为背景压缩保留。
+
 #### 面、欧拉公式与边数界（Faces, Euler’s Formula and Edge Bounds）
 
 - **面／区域（face / region）** 由嵌入划开，外部无界面（unbounded / exterior face）也算一个；
 
   边界（boundary）围住面，面度（degree of a face）按边界边出现次数计，不按不同边集合大小。桥在同一面边界走两次，自环可围成面。
 
-- **欧拉公式（Euler's formula）** ：连通平面图$v-e+f=2$；c个连通分量推广为$v-e+f=1+c$。树只围一个面，代入$e=v-1$一致；从树逐条加闭圈边，每次e和f各加1；
+- **欧拉公式（Euler's formula）** ：连通平面图$v-e+f=2$；【拓展】c个连通分量推广为$v-e+f=1+c$。树只围一个面，代入$e=v-1$一致；从树逐条加闭圈边，每次e和f各加1；
 
   删桥减少连通性时不能沿用“面数必减1”的分支。
 
@@ -2419,9 +2166,17 @@ $$
 | $e\le2v-4$ | 简单、无三角形（triangle-free）、可平面，v≥3；二分图满足无三角形条件 |
 | $K_5$不可平面 | v=5,e=10，违反$10\le9$ |
 | $K_{3,3}$不可平面 | v=6,e=9且二分，违反$9\le8$ |
-| $K_n$可平面 | 当且仅当$n\le4$ |
-| $K_{m,n}$可平面 | m,n非负时当且仅当$\min(m,n)\le2$；一侧空也自然可平面 |
-| $Q_n$可平面 | 当且仅当$n\le3$，包含n=0的单点约定 |
+| 【拓展】$K_n$可平面 | 当且仅当$n\le4$ |
+| 【拓展】$K_{m,n}$可平面 | m,n非负时当且仅当$\min(m,n)\le2$；一侧空也自然可平面 |
+| 【拓展】$Q_n$可平面 | 当且仅当$n\le3$，包含n=0的单点约定 |
+
+- **欧拉公式的归纳证明要点（inductive proof of Euler's formula）** ：连通树有$e=v-1,f=1$，等式成立；若图有圈，删去圈上一条非桥边，顶点与连通性不变、边数和面数各减1，等式保持。反复删到树即可证明原图公式。课件的加边归纳可这样写完整：$v=1,e=0,f=1$成立；从一条边开始，保持当前子图连通，每步添一条原图中的边。若引入一个新顶点，则$v,e$各加1、$f$不变；若两端都已有，则边在某个面的内部将它一分为二，$e,f$各加1、$v$不变。两种情况均保持$v-e+f=2$，直至得到原连通图。
+
+  【拓展】对$c$个分量，在面内补$c-1$条连接边而不新增面，得$v-e+f=1+c$。
+
+- **【拓展】极大平面图与三角剖分（maximal planar graph and triangulation）** ：对$v\ge3$的简单图，极大可平面是指不能在同一顶点集上再加边而保持可平面。其平面嵌入每个面（包括外面）都是三角形，等价于$e=3v-6$；反向若仍能添边，就会违反该上界。$K_3$已是最小的这类例子，不能把$K_4$称为最小。
+
+  无三角形简单平面图在$e=2v-4$取等时，各面边界度须为4，计数仍按边的出现次数；不能忽略桥的重复边界。仅有数值等式但未先证可平面，不能倒推存在该面结构。
 
 #### 必要条件与不可平面障碍（Necessary Conditions and Obstructions）
 
@@ -2475,6 +2230,8 @@ $$
 
 ### 6.9 图着色、色数及资源分配（Graph Coloring, Chromatic Number and Resource Allocation）
 
+授课依据：[[Ch10.8.pdf|Ch10.8.pdf]]。保留地图、色数、标准图族、完全子图下界、航班与排考；四色／六色及Brooks等未在课件陈述。
+
 #### 着色定义与最优性（Coloring and Optimality）
 
 - **合法顶点着色（proper vertex coloring）** 为每点赋色且邻点异色；k着色（k-coloring）表示至多用k种颜色。
@@ -2482,6 +2239,10 @@ $$
   色数／顶点色数（chromatic number）$\chi(G)$是最少用色数。非空无边图色数1；空顶点图常约定0。有自环时不能合法顶点着色，通常讨论简单图；重边不增加新的不同色约束。
 
 - 求精确色数必须双向证明：给一个k着色证$\chi\le k$，再证明k−1色不够以证$\chi\ge k$。加边不会降低色数，删边不会提高；不同连通分量可复用颜色，整体色数取最大，不是相加。
+
+- **色数达到顶点数的充要条件（characterization of graphs with chromatic number equal to their order）** ：有$n\ge1$个顶点的有限简单图满足$\chi(G)=n$，当且仅当$G\cong K_n$。
+
+  证明要点：完全图的任意两点相邻，必须用$n$色；反过来，若不是完全图，存在不相邻的$u,v$，给它们同一色，其余$n-2$点各用一个新色，就得到$n-1$着色，与$\chi(G)=n$矛盾。因此非完全的$n$点简单图满足$\chi(G)\le n-1$，但不一定恰好等于$n-1$。
 
 #### 地图、标准图族与四色（Maps, Families and Four Colors）
 
@@ -2498,89 +2259,50 @@ $$
 | $Q_n$，n≥1 | 2；$Q_0$为1 |
 | 非平凡树（nontrivial tree） | 2，按与根距离奇偶染色 |
 
-- **四色定理（four-color theorem）** ：每个可平面图可用至多4色，$\chi\le4$，不是恰4。$K_4$说明上界可达到；图能4着色不意味着可平面，如$K_{3,3}$甚至可2着色。
 
-  含奇圈排除2色；不含$K_4$并不能排除色数4。
+- **【拓展】四色／六色定理（four-color / six-color theorem）** 分别给每个有限简单可平面图$\chi\le4$／$\chi\le6$；四是通用上界，不是每图恰需四。六色可由反复删度至多5点后归纳着色证明。课件未陈述这两个一般定理，不能由所画地图例题推成整套定理已授。
+
+- **【拓展】区间图（interval graph）** 以相交时间区间连边，色数等于最大同时重叠数：共同重叠给下界，按开始时间贪心分配空闲色给上界。端点常取半开$[s,e)$；不连续多片段的活跃区间不保证此等式。
 
 ![[C10.8-地图到冲突图到着色.png|620]]
 
 #### 资源分配模型（Resource Allocation Models）
 
-- **排考（exam scheduling）** ：点=课程，边=有共同学生，色=时段。原7门课例中的$\{1,2,3,4\}$形成$K_4$给下界4，时段$\{1,6\},\{2\},\{3,5\},\{4,7\}$给上界4，故最少4。
+- **排考（exam scheduling）** ：点为课程，有共同学生就连边，颜色为时段。课件7门课例有完全子图$\{1,2,3,4\}$，故至少4时段；$\{1,6\},\{2\},\{3,5\},\{4,7\}$给4时段可行表，故最少4。证明最优须兼有下界与可行安排。
 
-  原12门课例有$K_5$，可排$\{1,6,12\},\{2,7,10\},\{3,8,11\},\{4,9\},\{5\}$五时段，故最少5。课号对应原笔记；不能把一个可行的六时段表当作最小值6。
+- **登机口分配（gate assignment）** ：点为航班，占用时间重叠就连边，颜色为登机口；课件6航班例最少3口。4课程课件小例也需3时段，不能因示意图旁误写“Bipartite”而断言可2着色。
 
-- 同模型应用：登机口分配（gate assignment）点=航班、边=占用时段交叠、色=登机口，原6航班例需3口；
-
-  委员会排程（committee scheduling）边=共同成员，原$K_6$少一边的例子需5时段；
-
-  频率／频道分配（frequency / channel assignment）点=发射台、边=干扰；
-
-  寄存器分配（register allocation）点=变量、边=生存期同时活跃（overlapping live ranges），色=寄存器。同一颜色代表可共享资源，不是边的数量。
+- **【拓展】其他资源分配（other resource allocation）** ：教材12课程例需5时段；委员会排程（committee scheduling）按共同成员连边，频率／频道分配（frequency / channel assignment）按干扰连边，寄存器分配（register allocation）按生存期重叠（overlapping live ranges）连边。都是同色共享资源，课件未逐项展开。
 
 ![[C10.8-原图-考试排程的着色与时段表.png|620]]
 
-#### 【拓展】团、独立集与色数界（Cliques, Independent Sets and Bounds）
+#### 团下界与【拓展】独立集（Clique Bound and Independent Sets）
 
-- **【拓展】团（clique）** 为两两相邻顶点集，团数（clique number）$\omega(G)$为最大团大小；
+- **团／完全子图（clique / complete subgraph）** 的顶点两两相邻，团数（clique number）$\omega(G)$为最大团大小。课件实际使用：若含$K_k$子图，则$\chi(G)\ge k$，因为其中各点须异色；这一下界不总取等，$C_5$为例。
 
-  独立集（independent set）为两两不相邻顶点集，独立数（independence number）$\alpha(G)$为最大独立集大小。
-
-  各颜色类（color class）是独立集，但用到的非空颜色类才构成严格意义的划分，不能在“划分”中允许空块。
-
-$$
-\max\left\{\omega(G),\left\lceil\frac{v}{\alpha(G)}\right\rceil\right\}
-\le\chi(G)\le\min\{\Delta(G)+1,\ v-\alpha(G)+1\}
-\quad(v>0).
-$$
-
-- **【拓展】界的证明（proofs of bounds）** ：团每点不同色；每色类最多$\alpha$点得$v\le\alpha\chi$；最大独立集共用一色、其余点各一色得$v-\alpha+1$上界。
-
-  团下界不总紧，$C_5$有$\omega=2$、$\chi=3$；原7点图H有$\alpha=2$故需至少4色，即便其最大团只有3。
+- **【拓展】独立集（independent set）** 的点两两不邻，独立数（independence number）$\alpha$为最大大小；非空颜色类（color class）是独立集，构成划分。对$v>0$，$\max\{\omega,\lceil v/\alpha\rceil\}\le\chi\le\min\{\Delta+1,v-\alpha+1\}$；每色至多$\alpha$点给下界，最大独立集共色、其余点各色给上界。
 
 #### 【拓展】贪心与Brooks（Greedy Coloring and Brooks）
 
-- **【拓展】贪心着色（greedy coloring）** 按指定顺序为每点选已染邻点未用的最小编号色，最多$\Delta+1$色；依赖顺序，不保证最优。
-
-  按度非增也可能多用色：$P_6$顺序$p_2,p_3,p_5,p_4,p_1,p_6$会用3色，而$\chi=2$。
-
-- **【拓展】Brooks定理（Brooks' theorem）** ：连通简单图若不是完全图且不是奇圈，则$\chi\le\Delta$（单点等退化情形单列）；完全图与奇圈达到$\Delta+1$。
-
-  不能省连通条件后把“某个分量是例外”忽略。3着色判定（3-colorability decision）为NP完全，暴力构造仍可判定，不把“难算”误写成没有任何判据。
+- **【拓展】贪心着色（greedy coloring）** 按顶点顺序选邻点未用的最小色，至多$\Delta+1$色，依赖顺序且未必最优。Brooks定理（Brooks' theorem）称连通简单图除完全图与奇圈外满足$\chi\le\Delta$；例外达到$\Delta+1$。3着色判定（3-colorability decision）为NP完全，但仍能有限枚举判定。
 
 #### 【拓展】边着色与多重名额（Edge and k-tuple Coloring）
 
-- **【拓展】边着色（edge coloring）** 使共端点的边异色，边色数（edge chromatic number）$\chi'(G)$与顶点色数不同。
+- **【拓展】边着色（edge coloring）** 让共端点的边异色，边色数（edge chromatic number）$\chi'$不同于顶点色数。Vizing定理（Vizing's theorem）对简单图给$\Delta\le\chi'\le\Delta+1$；$K_n$（$n\ge2$）偶$n$为$n-1$、奇$n$为$n$，对应循环赛轮数。
 
-  Vizing定理（Vizing's theorem）对简单图给$\Delta\le\chi'\le\Delta+1$；不能直接套有自环或任意多重图。偶圈边色数2、奇圈3；
-
-  $K_n$在n偶时n−1、n奇时n（n≥2），对应循环赛最少轮数。原例G、H最大度都4，边色数分别4、5。
-
-- **【拓展】k重着色（k-tuple coloring）** 每点分配k个不同颜色，相邻点的颜色集合不交，最小总色数为$\chi_k(G)$。$\chi_k(K_n)=kn$；有边二分图$\chi_k=2k$，无边非空图仅k；
-
-  $\chi_2(C_4)=4,\chi_2(W_4)=6,\chi_2(C_5)=5,\chi_3(C_5)=8$，说明一般$\chi_k\ne k\chi$。
+- **【拓展】$k$重着色（$k$-tuple coloring）** 每点分$k$个不同颜色，邻点色集不交，最少总色数$\chi_k$；$\chi_k(K_n)=kn$，有边二分图为$2k$，无边非空图为$k$。一般不等于$k\chi$，如$\chi_2(C_5)=5$。
 
 #### 【拓展】支配与画廊（Domination and Art Galleries）
 
-- **【拓展】支配集（dominating set）** D要求每个D外顶点至少有一个D内邻点，最小大小为支配数（domination number）$\gamma(G)$；不同于独立集。
+- **【拓展】支配集（dominating set）** 要求每个集外点有集内邻点，最小大小为支配数（domination number）$\gamma$；极大独立集（maximal independent set）必支配，但未必最大独立集（maximum independent set）或最小支配集。
 
-  极大独立集（maximal independent set）必支配，但未必是最大独立集（maximum independent set）或最小支配集。
-
-- **【拓展】画廊问题（art gallery problem）** ：无洞简单n边形（simple polygon without holes）可用至多$\lfloor n/3\rfloor$个顶点守卫（vertex guards），最坏情况下需要这么多；
-
-  不是每个具体展厅都恰需该数。
-
-  证明先三角剖分（triangulation）为n−2三角形，再把外平面剖分图（outerplanar triangulation）3着色，取人数最少的颜色类，每个三角形都有该色一个顶点。
-
-  不能把有内部新增点的任意平面三角剖分都当成可3着色。
-
----
+- **【拓展】画廊问题（art gallery problem）** ：无洞简单$n$边形（simple polygon without holes）最坏需且总够$\lfloor n/3\rfloor$个顶点守卫（vertex guards）。以$n-3$对角线三角剖分（triangulation）成$n-2$三角形，所得外平面图（outerplanar graph，全部点在外面边界）可逐耳顶点（ear vertex）3着色，取最小色类覆盖各三角形。不是每个展厅恰需该数，也不是任意平面三角剖分均可3着色。
 
 ## 七、来源、考试证据与勘误（Sources, Examination Evidence and Corrections）
 
 ### 7.1 小节覆盖对照（Section Coverage Map）
 
-下表逐篇列出来源及正文落点，用于定位，不能单独证明每个知识点都已覆盖。原笔记中的例题、自测和习题若只重复同一知识，合并为方法条目；本轮回查中发现的独立概念、反例、边界与新结论已补入正文，并在7.4逐项列出。表中编号是本提纲编号。
+下表逐篇列出来源及正文落点，用于定位，不能单独证明每个知识点都已覆盖。原笔记中的例题、自测和习题若只重复同一知识，合并为方法条目；原笔记知识来源仍可回查；本轮授课范围以各节课件依据及7.6为准。表中编号是本提纲编号。
 
 > [!info]- 展开对照表
 > | 原笔记（source note） | 正文落点 | 核对范围（coverage） |
@@ -2684,73 +2406,101 @@ $$
 > | C10.7交叉数上界遗漏奇偶取整，厚度把下界无条件当等号 | 6.8给出四个floor的上界；厚度保留普遍下界与已证小图精确值，注明通式有适用限制 |
 > | C10.8把允许空颜色类直接称划分；画廊界称每个展厅精确值 | 6.9只取非空类构成划分，画廊公式为最坏保证且限定无洞简单多边形 |
 
+本轮另补的来源勘误：
+
+| 原笔记问题 | 正文采用的条件或结论 |
+|---|---|
+| C2.4按右侧出现前项的“项数”决定初值数 | 2.4按最大滞后与递推起始下标检查，给出$a_n=a_{n-5}$反例 |
+| C2.3把“非严格单调”笼统判为不单射 | 2.3改为“不保证单射”；严格单调的定义与证明分别写清 |
+| C9.6旁注称一般偏序反向后未必仍是偏序 | 3.6明确任意偏序的对偶仍为偏序；任意格的对偶仍为格 |
+| C9.6将覆盖关系恢复原序不加有限性限制 | 3.6限定本课Hasse算法为有限偏序，给出有理数稠密序反例 |
+| C10.4把森林必须定义成不连通 | 6.5按无圈图定义，允许一棵树也是森林 |
+| C10.6把TSP优化版与NP完全判定版混称 | 6.7分清优化为NP难、阈值判定为NP完全，补P／NP与归约定义 |
+| C10.7称$K_4$为最小极大平面图 | 6.8注明$K_3$已满足，给出$v\ge3$条件与三角面刻画 |
+| C10.8画廊3着色表述易被泛化成所有平面三角剖分 | 6.9限定为无洞简单多边形的剖分图，区分外平面与可平面 |
+| C6.2旧研究范围把上、下界方向混写 | 4.2保留教材历史范围并标明，未当作当前新界 |
+
 这里的勘误只写入新提纲，未改动原笔记。历史统计与未解问题背景按原笔记的历史语境保留，不把旧的计算验证界或规模数字冒充当前纪录；计算验证有限实例也不替代一般证明。
 
-### 7.4 本轮缺口复核与补入记录（Gap Audit and Additions）
+### 7.4 历史记录：前一轮38组补入（Previous Audit: 38 Additions）
 
-本轮回查对象为7.1列出的35篇小节讲义、6篇章节汇总及作业笔记，重点逐项比对定义、具名结论、算法、公式条件，以及例题、自测、习题与旁注带出的独立知识。下表记录查出的38组缺口及处理位置；其中“补入”指此前缺少这一知识，“补全”指此前已有部分内容，但名称、条件、推理或应用不全。
+> [!info]- 展开上一轮38组历史修补记录
+> 以下是前一轮修订留下的38组记录，保留供查阅历史变化；本轮的全量提示块核对、正文条目索引与新增修订另见7.5及逐项核对表。下表不是当前完整知识点清单。
+>
+> 这份修订记录便于回查，不能把未列在修订表中的内容理解为不重要，也不能把修订记录冒充逐字逐题的教材替代品。合并的只是重复实例，不能据此自行缩小考试范围。
+>
+> #### 逻辑与证明（Logic and Proofs）
+>
+> | 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
+> |---|---|---|
+> | 实质蕴涵（material implication） | [[C1.1 命题逻辑 Propositional Logic\|C1.1]]条件语句 | 补全名称与非因果含义，1.1 |
+> | XOR消去、一次一密、CRC与RAID（XOR cancellation, one-time pad, CRC and RAID） | [[C1.1 命题逻辑 Propositional Logic\|C1.1]]异或与计算机联系 | 补入可逆公式、密钥条件及校验应用，1.1 |
+> | 布隆过滤器、BNN、XOR非线性可分（Bloom filter, BNN and XOR nonseparability） | [[C1.1 命题逻辑 Propositional Logic\|C1.1]]位并行与AI联系 | 补入应用与概念区别，1.1；模糊控制名称同步补全 |
+> | 第三类人谜题（puzzles with spies / normals） | [[C1.2 命题逻辑的应用 Applications of Propositional Logic\|C1.2]]骑士与无赖习题说明 | 补入三类人的不同约束，1.2 |
+> | 知识逻辑与共同知识（epistemic logic and common knowledge） | [[C1.2 命题逻辑的应用 Applications of Propositional Logic\|C1.2]]泥孩子旁注 | 补全名称、知道的层次及应用联系，1.2 |
+> | 否定范式（negation normal form, NNF） | [[C1.3 命题等价 Propositional Equivalences\|C1.3]]七步等价推导后的方法说明 | 补入定义、转化次序、例子及与DNF／CNF的区别，1.3 |
+> | 符号与神经符号AI（symbolic and neuro-symbolic AI） | [[C1.4 谓词与量词 Predicates and Quantifiers\|C1.4]]Prolog旁注 | 补入原笔记列举的应用联系，1.4 |
+> | 邻域独立与聚类系数（independent neighborhood and clustering coefficient） | [[C1.5 嵌套量词 Nested Quantifiers\|C1.5]]朋友关系例题旁注 | 补入量词公式、图论解释及度数边界，1.5 |
+> | 平均值论证与概率方法（averaging argument and probabilistic method） | [[C1.7 证明导论 Introduction to Proofs\|C1.7]]习题平均值结论后的联系 | 补全方法名称与存在性解释，1.7 |
+> | 构造主义及证明程序联系（constructivism and proofs as programs） | [[C1.8 证明方法与策略 Proof Methods and Strategy\|C1.8]]无理数幂例题旁注 | 补入Gelfond–Schneider、直觉主义、Curry–Howard与证明助手背景，1.8 |
+> | 卡塔兰猜想（Catalan's conjecture） | [[C1.8 证明方法与策略 Proof Methods and Strategy\|C1.8]]100以内连续完全幂例题 | 补入一般定理与有限穷举的区别，1.8 |
+> | 证明与数论背景术语（background terminology of proofs and number theory） | [[C1.8 证明方法与策略 Proof Methods and Strategy\|C1.8]]人物、费马与Collatz旁注 | 补全原笔记背景名称与不可判定性边界，1.8 |
+>
+> #### 集合、序列与矩阵（Sets, Sequences and Matrices）
+>
+> | 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
+> |---|---|---|
+> | 笛卡尔积相等与空积条件（equality and emptiness of Cartesian products） | [[C2.1 集合 Sets\|C2.1]]笛卡尔积习题 | 补全两个充要条件与非空情形证明方法，2.1 |
+> | 运算与包含、对称差消去（operations, inclusion and symmetric-difference cancellation） | [[C2.2 集合运算 Set Operations\|C2.2]]相关习题与自测7 | 补入结论、证明与并集不能消去的反例，2.2 |
+> | 集合后继（set successor） | [[C2.2 集合运算 Set Operations\|C2.2]]自测8、习题59–60 | 补入定义、三个例子、基数及自然数构造，2.2 |
+> | 比例增长加固定增量（affine recurrence） | [[C2.4 序列与求和 Sequences and Summations\|C2.4]]工资增长模型 | 补入递推、迭代闭式及$r=1$边界，2.4 |
+> | 正奇数求和（sum of positive odd integers） | [[C2.4 序列与求和 Sequences and Summations\|C2.4]]求和与几何解释 | 补入公式及逐层添方格证明，2.4 |
+> | $A+A^T$的对称性（symmetry of a matrix plus its transpose） | [[C2.6 矩阵 Matrices\|C2.6]]自测6、习题14 | 补入一般证明，2.6 |
+> | 数量矩阵与中心（scalar matrices and center） | [[C2.6 矩阵 Matrices\|C2.6]]自测7、补充习题38–39 | 补入正向证明及$2\times2$逆向构造，2.6 |
+> | 布尔幂最终周期性（eventual periodicity of Boolean powers） | [[C2.6 矩阵 Matrices\|C2.6]]自测8 | 补入有限性证明、交替反例与全1稳定条件，2.6 |
+>
+> #### 关系（Relations）
+>
+> | 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
+> |---|---|---|
+> | 一对多等对应情况（one-to-many and related correspondences） | [[C9.1 关系及其性质 Relations and Their Properties\|C9.1]]关系与函数的区别 | 补全名称，3.1 |
+> | 数据库外延与内涵（extension and intension） | [[C9.2 n 元关系与数据库 n-ary Relations and Their Applications\|C9.2]]键的时间条件 | 补入两者定义与选键依据，3.2 |
+> | 关系代数（relational algebra） | [[C9.2 n 元关系与数据库 n-ary Relations and Their Applications\|C9.2]]三个运算及SQL联系 | 原有运算，补全统称与输入输出含义，3.2 |
+> | 正负同余合并（congruence up to sign） | [[C9 关系 Relations MOC\|C9汇总]]自测11(b)、12(c) | 补入三性质证明及模7四个类，3.5 |
+> | 格的有限子集与有限格（finite subsets of lattices and finite lattices） | [[C9 关系 Relations MOC\|C9汇总]]自测19 | 补入归纳方法、有界结论及空子集条件，3.6 |
+>
+> #### 计数与递推（Counting and Recurrences）
+>
+> | 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
+> |---|---|---|
+> | 组合数学（combinatorics） | [[C6.1 计数基础 The Basics of Counting\|C6.1]]导言 | 补全统称与计数／构造联系，第四部分开头 |
+> | 分治与动态规划（divide and conquer and dynamic programming） | [[C8.1 递推关系的应用 Applications of Recurrence Relations\|C8.1]]动态规划比较 | 补全区别，并区分汉诺塔求步数与输出移动，5.5 |
+>
+> #### 图论（Graph Theory）
+>
+> | 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
+> |---|---|---|
+> | 有限图与无限图（finite and infinite graphs） | [[C10.1 图与图模型 Graphs and Graph Models\|C10.1]]Remark | 补入点集、边集两方面的条件，6.1 |
+> | 真子图（proper subgraph） | [[C10.2 图的术语与特殊类型 Graph Terminology and Special Types of Graphs\|C10.2]]定义7 | 补入与生成／诱导子图的区别，6.3 |
+> | 立方体的六个面（six square faces of a cube） | [[C10.2 图的术语与特殊类型 Graph Terminology and Special Types of Graphs\|C10.2]]$Q_3$子图例 | 补入六个$Q_2$及坐标面计数说明，6.3 |
+> | 强分量算法（SCC algorithms） | [[C10.4 连通性 Connectivity\|C10.4]]§5末尾 | 补入Kosaraju／Tarjan思路与复杂度，6.5 |
+> | 不可分图、双连通与块（nonseparable, biconnected graphs and blocks） | [[C10.4 连通性 Connectivity\|C10.4]]§3、§4 | 补入定义与小图约定，6.5 |
+> | 六度分隔与好莱坞图（six degrees of separation and Hollywood graph） | [[C9.4 关系的闭包 Closures of Relations\|C9.4]]应用；[[C10.4 连通性 Connectivity\|C10.4]]连通例 | 补全名称与不能泛化到任意图的边界，6.5 |
+> | 欧拉图与哈密顿图（Eulerian and Hamiltonian graphs） | [[C10.5 欧拉路径与哈密顿路径 Euler and Hamilton Paths\|C10.5]]术语定义 | 原有路线判据，补全图的名称与区别，6.6 |
+> | Icosian游戏（Icosian puzzle） | [[C10.5 欧拉路径与哈密顿路径 Euler and Hamilton Paths\|C10.5]]哈密顿背景 | 补入模型及原笔记已说明的20顶点／12面区别，6.6 |
+> | 松弛的三条性质（three properties of relaxation） | [[C10.6 最短路径问题 Shortest-Path Problems\|C10.6]]§3 | 补全上界性、局部性及终止性限制，6.7 |
+> | 交叉处加点改变原图（adding vertices at crossings changes the graph） | [[C10.7 平面图 Planar Graphs\|C10.7]]平面画法说明 | 补入操作限制，6.8 |
+> | OSPF与SPF（Open Shortest Path First and shortest path first） | [[C10.6 最短路径问题 Shortest-Path Problems\|C10.6]]开场及路由应用 | 补全应用名称，6.7 |
 
-这份修订记录便于回查，不能把未列在修订表中的内容理解为不重要，也不能把修订记录冒充逐字逐题的教材替代品。合并的只是重复实例，不能据此自行缩小考试范围。
+### 7.5 本轮逐项核对入口（Current Item-by-item Audit）
 
-#### 逻辑与证明（Logic and Proofs）
+上一轮按原笔记的593个重要块及其上下文补全70组内容，属于“原笔记全量核对”历史；本轮另按41份补充课件重新划定深度，范围外已压缩。原笔记出处与当时修补记录仍保留在[[离散数学期末复习逐项核对表 Final Review Coverage]]历史部分，不能据此将教材拓展认作老师实际授课。
 
-| 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
-|---|---|---|
-| 实质蕴涵（material implication） | [[C1.1 命题逻辑 Propositional Logic\|C1.1]]条件语句 | 补全名称与非因果含义，1.1 |
-| XOR消去、一次一密、CRC与RAID（XOR cancellation, one-time pad, CRC and RAID） | [[C1.1 命题逻辑 Propositional Logic\|C1.1]]异或与计算机联系 | 补入可逆公式、密钥条件及校验应用，1.1 |
-| 布隆过滤器、BNN、XOR非线性可分（Bloom filter, BNN and XOR nonseparability） | [[C1.1 命题逻辑 Propositional Logic\|C1.1]]位并行与AI联系 | 补入应用与概念区别，1.1；模糊控制名称同步补全 |
-| 第三类人谜题（puzzles with spies / normals） | [[C1.2 命题逻辑的应用 Applications of Propositional Logic\|C1.2]]骑士与无赖习题说明 | 补入三类人的不同约束，1.2 |
-| 知识逻辑与共同知识（epistemic logic and common knowledge） | [[C1.2 命题逻辑的应用 Applications of Propositional Logic\|C1.2]]泥孩子旁注 | 补全名称、知道的层次及应用联系，1.2 |
-| 否定范式（negation normal form, NNF） | [[C1.3 命题等价 Propositional Equivalences\|C1.3]]七步等价推导后的方法说明 | 补入定义、转化次序、例子及与DNF／CNF的区别，1.3 |
-| 符号与神经符号AI（symbolic and neuro-symbolic AI） | [[C1.4 谓词与量词 Predicates and Quantifiers\|C1.4]]Prolog旁注 | 补入原笔记列举的应用联系，1.4 |
-| 邻域独立与聚类系数（independent neighborhood and clustering coefficient） | [[C1.5 嵌套量词 Nested Quantifiers\|C1.5]]朋友关系例题旁注 | 补入量词公式、图论解释及度数边界，1.5 |
-| 平均值论证与概率方法（averaging argument and probabilistic method） | [[C1.7 证明导论 Introduction to Proofs\|C1.7]]习题平均值结论后的联系 | 补全方法名称与存在性解释，1.7 |
-| 构造主义及证明程序联系（constructivism and proofs as programs） | [[C1.8 证明方法与策略 Proof Methods and Strategy\|C1.8]]无理数幂例题旁注 | 补入Gelfond–Schneider、直觉主义、Curry–Howard与证明助手背景，1.8 |
-| 卡塔兰猜想（Catalan's conjecture） | [[C1.8 证明方法与策略 Proof Methods and Strategy\|C1.8]]100以内连续完全幂例题 | 补入一般定理与有限穷举的区别，1.8 |
-| 证明与数论背景术语（background terminology of proofs and number theory） | [[C1.8 证明方法与策略 Proof Methods and Strategy\|C1.8]]人物、费马与Collatz旁注 | 补全原笔记背景名称与不可判定性边界，1.8 |
+### 7.6 补充课件范围与本轮调整（Courseware Scope and Current Revision）
 
-#### 集合、序列与矩阵（Sets, Sequences and Matrices）
+全部41份PDF的逐文件页码清单、正文分项处理及重传修正见[[离散数学期末复习逐项核对表 Final Review Coverage#本轮课件范围核对（Current Courseware Scope Audit）|本轮课件范围核对]]。正文各小节开头提供实际课件入口；同节范围内与拓展分别判断。
 
-| 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
-|---|---|---|
-| 笛卡尔积相等与空积条件（equality and emptiness of Cartesian products） | [[C2.1 集合 Sets\|C2.1]]笛卡尔积习题 | 补全两个充要条件与非空情形证明方法，2.1 |
-| 运算与包含、对称差消去（operations, inclusion and symmetric-difference cancellation） | [[C2.2 集合运算 Set Operations\|C2.2]]相关习题与自测7 | 补入结论、证明与并集不能消去的反例，2.2 |
-| 集合后继（set successor） | [[C2.2 集合运算 Set Operations\|C2.2]]自测8、习题59–60 | 补入定义、三个例子、基数及自然数构造，2.2 |
-| 比例增长加固定增量（affine recurrence） | [[C2.4 序列与求和 Sequences and Summations\|C2.4]]工资增长模型 | 补入递推、迭代闭式及$r=1$边界，2.4 |
-| 正奇数求和（sum of positive odd integers） | [[C2.4 序列与求和 Sequences and Summations\|C2.4]]求和与几何解释 | 补入公式及逐层添方格证明，2.4 |
-| $A+A^T$的对称性（symmetry of a matrix plus its transpose） | [[C2.6 矩阵 Matrices\|C2.6]]自测6、习题14 | 补入一般证明，2.6 |
-| 数量矩阵与中心（scalar matrices and center） | [[C2.6 矩阵 Matrices\|C2.6]]自测7、补充习题38–39 | 补入正向证明及$2\times2$逆向构造，2.6 |
-| 布尔幂最终周期性（eventual periodicity of Boolean powers） | [[C2.6 矩阵 Matrices\|C2.6]]自测8 | 补入有限性证明、交替反例与全1稳定条件，2.6 |
-
-#### 关系（Relations）
-
-| 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
-|---|---|---|
-| 一对多等对应情况（one-to-many and related correspondences） | [[C9.1 关系及其性质 Relations and Their Properties\|C9.1]]关系与函数的区别 | 补全名称，3.1 |
-| 数据库外延与内涵（extension and intension） | [[C9.2 n 元关系与数据库 n-ary Relations and Their Applications\|C9.2]]键的时间条件 | 补入两者定义与选键依据，3.2 |
-| 关系代数（relational algebra） | [[C9.2 n 元关系与数据库 n-ary Relations and Their Applications\|C9.2]]三个运算及SQL联系 | 原有运算，补全统称与输入输出含义，3.2 |
-| 正负同余合并（congruence up to sign） | [[C9 关系 Relations MOC\|C9汇总]]自测11(b)、12(c) | 补入三性质证明及模7四个类，3.5 |
-| 格的有限子集与有限格（finite subsets of lattices and finite lattices） | [[C9 关系 Relations MOC\|C9汇总]]自测19 | 补入归纳方法、有界结论及空子集条件，3.6 |
-
-#### 计数与递推（Counting and Recurrences）
-
-| 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
-|---|---|---|
-| 组合数学（combinatorics） | [[C6.1 计数基础 The Basics of Counting\|C6.1]]导言 | 补全统称与计数／构造联系，第四部分开头 |
-| 分治与动态规划（divide and conquer and dynamic programming） | [[C8.1 递推关系的应用 Applications of Recurrence Relations\|C8.1]]动态规划比较 | 补全区别，并区分汉诺塔求步数与输出移动，5.5 |
-
-#### 图论（Graph Theory）
-
-| 核对项（audit item） | 原笔记位置（source） | 本轮处理与正文位置 |
-|---|---|---|
-| 有限图与无限图（finite and infinite graphs） | [[C10.1 图与图模型 Graphs and Graph Models\|C10.1]]Remark | 补入点集、边集两方面的条件，6.1 |
-| 真子图（proper subgraph） | [[C10.2 图的术语与特殊类型 Graph Terminology and Special Types of Graphs\|C10.2]]定义7 | 补入与生成／诱导子图的区别，6.3 |
-| 立方体的六个面（six square faces of a cube） | [[C10.2 图的术语与特殊类型 Graph Terminology and Special Types of Graphs\|C10.2]]$Q_3$子图例 | 补入六个$Q_2$及坐标面计数说明，6.3 |
-| 强分量算法（SCC algorithms） | [[C10.4 连通性 Connectivity\|C10.4]]§5末尾 | 补入Kosaraju／Tarjan思路与复杂度，6.5 |
-| 不可分图、双连通与块（nonseparable, biconnected graphs and blocks） | [[C10.4 连通性 Connectivity\|C10.4]]§3、§4 | 补入定义与小图约定，6.5 |
-| 六度分隔与好莱坞图（six degrees of separation and Hollywood graph） | [[C9.4 关系的闭包 Closures of Relations\|C9.4]]应用；[[C10.4 连通性 Connectivity\|C10.4]]连通例 | 补全名称与不能泛化到任意图的边界，6.5 |
-| 欧拉图与哈密顿图（Eulerian and Hamiltonian graphs） | [[C10.5 欧拉路径与哈密顿路径 Euler and Hamilton Paths\|C10.5]]术语定义 | 原有路线判据，补全图的名称与区别，6.6 |
-| Icosian游戏（Icosian puzzle） | [[C10.5 欧拉路径与哈密顿路径 Euler and Hamilton Paths\|C10.5]]哈密顿背景 | 补入模型及原笔记已说明的20顶点／12面区别，6.6 |
-| 松弛的三条性质（three properties of relaxation） | [[C10.6 最短路径问题 Shortest-Path Problems\|C10.6]]§3 | 补全上界性、局部性及终止性限制，6.7 |
-| 交叉处加点改变原图（adding vertices at crossings changes the graph） | [[C10.7 平面图 Planar Graphs\|C10.7]]平面画法说明 | 补入操作限制，6.8 |
-| OSPF与SPF（Open Shortest Path First and shortest path first） | [[C10.6 最短路径问题 Shortest-Path Problems\|C10.6]]开场及路由应用 | 补全应用名称，6.7 |
+- 恢复为范围内：函数后半、关系矩阵与布尔运算、闭包次序、度序列、补图、自补图、Fleury、Hierholzer，以及MST定义。
+- 压缩并标拓展：普通矩阵代数、独立可数性、一般二项式展开、Stirling通式、拓扑排序、动态规划、最短路与TSP、四色／六色定理及其他图论延伸。相关课件实际出现的局部概念与公式保留。
+- 术语按课件修订：simple path要求顶点不重复；Eulerian在该课件包括有开放欧拉路径的连通图。低阶$C_1,C_2,W_1,W_2$按课件图示单列，不混套简单图公式。
+- 数学勘误继续保留：课件不是不会出错。否定后件、关系复合／矩阵顺序、Warshall下标、格判定等均采用核算后的正确形式，具体页码见核对表。

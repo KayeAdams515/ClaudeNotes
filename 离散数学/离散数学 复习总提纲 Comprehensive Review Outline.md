@@ -971,23 +971,69 @@ $n$ 个物体分 $k$ 类、第 $i$ 类有 $n_i$ 个相同 ⇒ $\dfrac{n!}{n_1!n_
 - **定义域（domain）/ 值域（range）**；$|A|=m,|B|=n$ 时 $A$ 到 $B$ 的关系共 $2^{mn}$ 个。
 - **逆关系（inverse relation）** $R^{-1}=\{(b,a)\mid(a,b)\in R\}$；$R$ 对称 $\iff R=R^{-1}$。
 
-### 六个性质（⭐ 全章核心，必须会用三种判据）
+### 六个性质：定义、逻辑写法与判据（⭐ 全章核心）
 
-| 性质 | 定义 | 矩阵判据（$M_R$） | 有向图判据 |
-|---|---|---|---|
-| **自反 reflexive** | $\forall a,(a,a)\in R$ | 主对角线全 1 | 每个顶点有自环 |
-| **非自反 irreflexive** | $\forall a,(a,a)\notin R$ | 主对角线全 0 | 无自环 |
-| **对称 symmetric** | $(a,b)\in R\Rightarrow(b,a)\in R$ | $M=M^t$ | 不同顶点间边成对 |
-| **非对称 asymmetric** | $(a,b)\in R\Rightarrow(b,a)\notin R$ | $i\ne j$ 时 $m_{ij},m_{ji}$ 不同时为 1，**且对角线全 0** | 无双向边**且**无自环 |
-| **反对称 antisymmetric** | $(a,b),(b,a)\in R\Rightarrow a=b$ | $i\ne j$ 时 $m_{ij},m_{ji}$ 不同时为 1 | 不同顶点间无双向边 |
-| **传递 transitive** | $(a,b),(b,c)\in R\Rightarrow(a,c)\in R$ | $M^{[2]}$ 的 1 处 $M$ 也必为 1 | 两步可达 ⇒ 一步可达 |
+**约定**：以下 $a,b,c$ 都是**在 $A$ 中取值的个体变元**（量词只在 $A$ 上遍历，不在 $R$ 上遍历）；$aRb$ 与 $(a,b)\in R$ 是同一种写法。$\Delta=\{(a,a)\mid a\in A\}$ 是**对角关系（diagonal relation）**。
+
+| 性质 | 一阶逻辑定义 | 等价写法（集合/运算） | 矩阵判据（$M_R$） | 有向图判据 |
+|---|---|---|---|---|
+| **自反 reflexive** | $\forall a\,(a,a)\in R$ | $\Delta\subseteq R$ | 主对角线全 1 | 每个顶点有自环 |
+| **非自反 irreflexive** | $\forall a\,(a,a)\notin R$ | $R\cap\Delta=\varnothing$ | 主对角线全 0 | 无自环 |
+| **对称 symmetric** | $\forall a\forall b\,\big((a,b)\in R\to(b,a)\in R\big)$ | $R=R^{-1}$ | $M=M^t$ | 不同顶点间边成对 |
+| **非对称 asymmetric** | $\forall a\forall b\,\big((a,b)\in R\to(b,a)\notin R\big)$ | $R\cap R^{-1}=\varnothing$ | $i\ne j$ 时 $m_{ij},m_{ji}$ 不同时为 1，**且对角线全 0** | 无双向边**且**无自环 |
+| **反对称 antisymmetric** | $\forall a\forall b\,\big((a,b)\in R\wedge(b,a)\in R\to a=b\big)$ | $R\cap R^{-1}\subseteq\Delta$ | $i\ne j$ 时 $m_{ij},m_{ji}$ 不同时为 1 | 不同顶点间无双向边 |
+| **传递 transitive** | $\forall a\forall b\forall c\,\big((a,b)\in R\wedge(b,c)\in R\to(a,c)\in R\big)$ | $R\circ R\subseteq R$ | $M^{[2]}$ 的 1 处 $M$ 也必为 1 | 两步可达 ⇒ 一步可达 |
+
+**读法**：六条都是"**若……则……**"的全称句，前件列条件、后件下结论；**量词只在 $A$ 上遍历**，所以 $a,b,c$ 允许取同一个元素（除非另写 $a\ne b$）。
+
+### 否定式：要证"不具备"，就找这些反例
+
+把 $\neg$ 推过全称量词（§1.4 的量词德摩根律），六条性质的否定都变成**存在句**：
+
+| 要证不具备 | 否定式（一阶逻辑） | 反例是什么 |
+|---|---|---|
+| 自反（$\neg$自反） | $\exists a\,(a,a)\notin R$ | 某个点没有自环 |
+| 非自反（$\neg$非自反） | $\exists a\,(a,a)\in R$ | 某个点有自环 |
+| 对称（$\neg$对称） | $\exists a\exists b\,\big((a,b)\in R\wedge(b,a)\notin R\big)$ | 一条**单向边** |
+| 非对称（$\neg$非对称） | $\exists a\exists b\,\big((a,b)\in R\wedge(b,a)\in R\big)$ | 一对**双向边**（含自环） |
+| 反对称（$\neg$反对称） | $\exists a\exists b\,\big(a\ne b\wedge(a,b)\in R\wedge(b,a)\in R\big)$ | 不同点之间的**一对双向边** |
+| 传递（$\neg$传递） | $\exists a\exists b\exists c\,\big((a,b)\in R\wedge(b,c)\in R\wedge(a,c)\notin R\big)$ | 一条**缺口的二步链** |
+
+> - ⚠️ **非自反 ≠ 自反的否定**。$\neg$自反只要求"有一个点没自环"，非自反要求"**每个点**都没自环"——前者弱、后者强，中间还有一大片"部分有自环"的关系。
+> - ⚠️ **$\neg$对称 ≠ 反对称**。$\neg$对称只要一条单向边；反对称要求**任何**一对双向边都只能是自环。
+> - ⚠️ **$\neg$非对称 ≠ 对称**。$\neg$非对称只要求存在一对双向边（哪怕是自环），对称要求**所有**边都成双。
+
+### 三个必须说清的逻辑细节
+
+1. **空真是"白送"的**：蕴含前件为假时整句为真（§1.1）。所以**空关系** $\varnothing$ 天然对称、反对称、传递、非自反；只有当 $A=\varnothing$ 时它才自反。反过来，**对角关系** $\Delta$ 自反、对称、反对称、传递，但不是非自反。
+2. **传递要三个量词**：$\forall a\forall b\forall c$，第三个变量不能省，也不能写成 $\forall a\forall b\big((a,b)\in R\wedge(b,a)\in R\to(a,a)\in R\big)$（那只是"往返一趟"的特例）。
+3. **反对称的 $a=b$ 是结论**：它不假设两点不同；等价地写成 $\forall a\forall b\big(a\ne b\to((a,b)\notin R\vee(b,a)\notin R)\big)$，两种写法在证明里各有用处（前者适合直接证，后者适合反证）。
+
+### 三类经典搭配（合取式）
+
+把性质当命题用 $\wedge$ 拼起来，就是第 9 章后半的全部研究对象（§9.1 末、§9.5、§9.6 反复出现）：
+
+| 名称 | 合取式 | 一阶逻辑合成 |
+|---|---|---|
+| **等价关系 equivalence relation** | 自反 $\wedge$ 对称 $\wedge$ 传递 | $\forall a\,(a,a)\in R\ \wedge\ \forall a\forall b\big((a,b)\in R\to(b,a)\in R\big)\ \wedge\ \forall a\forall b\forall c\big((a,b),(b,c)\in R\to(a,c)\in R\big)$ |
+| **偏序 partial ordering** | 自反 $\wedge$ **反对称** $\wedge$ 传递 | 把中间一条换成 $\forall a\forall b\big((a,b),(b,a)\in R\to a=b\big)$ |
+| **严格序 strict order** | **非自反** $\wedge$ 非对称 $\wedge$ 传递 | 即 $<$ 型关系；非自反 + 传递已能推出非对称 |
+
+**证明模板**（把定义直接翻译成写法）：
+
+- 证自反：任取 $a\in A$，验证 $(a,a)\in R$；
+- 证对称：设 $(a,b)\in R$（$a,b$ 任意），推出 $(b,a)\in R$；
+- 证反对称：设 $(a,b)\in R$ 且 $(b,a)\in R$，推出 $a=b$；
+- 证传递：设 $(a,b)\in R$ 且 $(b,c)\in R$，推出 $(a,c)\in R$；
+- 证不具备：按上面的否定式**举出具体元素**，并逐项验证（不能只报反例不验证）。
 
 > ⭐ **全章第一大坑：对称与反对称不是反义词**。可以都有（$\{(1,1),(2,2)\}$）、可以都没有（$\{(1,2),(2,1),(1,3)\}$）。唯一禁止的是：存在 $a\ne b$ 使 $(a,b)$ 与 $(b,a)$ 同时在 $R$ 里。**自环对这两条判断毫无影响**。
 >
-> ⭐ **非对称 = 反对称 + 非自反**。
+> ⭐ **非对称 = 反对称 + 非自反**（逻辑上：$R\cap R^{-1}=\varnothing$ ⟺ $R\cap R^{-1}\subseteq\Delta$ 且 $R\cap\Delta=\varnothing$）。
 
 ![[C9-四个性质的有向图判读.png|560]]
 *图 9-1｜四个性质的有向图判读：自反看自环、对称看双向、反对称看有无双向边、传递看二步能否并成一步*
+
 
 ### 关系的运算与复合
 
@@ -1409,11 +1455,14 @@ $n$ 个物体分 $k$ 类、第 $i$ 类有 $n_i$ 个相同 ⇒ $\dfrac{n!}{n_1!n_
 
 ## A5 关系
 
-| 性质 | 判据（$M_R$） | 闭包 |
-|---|---|---|
-| 自反 | 对角线全 1 | $r(R)=R\cup\Delta$，$M\vee I$ |
-| 对称 | $M=M^t$ | $s(R)=R\cup R^{-1}$，$M\vee M^t$ |
-| 传递 | $M^{[2]}\subseteq M$ | $t(R)=R^*=\bigcup_{n\ge1}R^n$，Warshall $O(n^3)$ |
+| 性质 | 一阶逻辑（$a,b,c\in A$） | 判据（$M_R$） | 闭包 |
+|---|---|---|---|
+| 自反 | $\forall a\,(a,a)\in R$ | 对角线全 1 | $r(R)=R\cup\Delta$，$M\vee I$ |
+| 非自反 | $\forall a\,(a,a)\notin R$ | 对角线全 0 | — |
+| 对称 | $\forall a\forall b\big((a,b)\in R\to(b,a)\in R\big)$ | $M=M^t$ | $s(R)=R\cup R^{-1}$，$M\vee M^t$ |
+| 非对称 | $\forall a\forall b\big((a,b)\in R\to(b,a)\notin R\big)$ | 双向不同真且对角线全 0 | — |
+| 反对称 | $\forall a\forall b\big((a,b),(b,a)\in R\to a=b\big)$ | $i\ne j$ 时 $m_{ij},m_{ji}$ 不同时 1 | — |
+| 传递 | $\forall a\forall b\forall c\big((a,b),(b,c)\in R\to(a,c)\in R\big)$ | $M^{[2]}\subseteq M$ | $t(R)=R^*=\bigcup_{n\ge1}R^n$，Warshall $O(n^3)$ |
 
 ## A6 图论判据汇总
 

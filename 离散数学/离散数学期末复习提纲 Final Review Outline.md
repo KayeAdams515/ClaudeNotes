@@ -52,6 +52,10 @@
 
 按考试证据确定先后时，可优先回看 **4.6生成算法、3.4手算Warshall、6.3图运算及整个第六部分** ；这只是复习时间分配建议，不缩小本提纲的知识范围。
 
+> [!info]- 个人练习回看入口（2026-11-15）
+> [[前两轮练习总结与知识错题]]汇总第一轮第1、2章与第二轮第9、6章试卷的已知批改结果，目前实际作答覆盖第1、2、9章。正文**K01–K08**记录已确认的历史概念错因，**P01–P03**记录待补证明，均可展开查看相关英文题目和答案。计算、抄写、符号笔误不作为个人知识错题；未作答也不直接判为概念错误。旧卷中当前标为“拓展”的内容仍保留该标记。
+
+
 ---
 
 ## 一、逻辑与证明（Logic and Proofs）
@@ -300,6 +304,18 @@ $$
 
   `No A is B`为$\forall x(A(x)\to\neg B(x))$；`Not every A is B`为$\exists x(A(x)\land\neg B(x))$。存在式写蕴涵会被不属于A的对象空真满足。
 
+> [!warning]- 【个人知识错题 K02】动物个体与动物类别的论域不能混用
+> **来源**：第一轮，第1章精选卷题组4，Rosen §1.6 Ex.9(f)；含后续“把is改成are”的讨论。
+>
+> **错点与标记**：把“某只动物具有性质”与“某一类动物全部具有性质”混用，改变了否定的含义。仅改is/are不能完成论域转换；本条记录历史概念错因，需通过重做确认已掌握。
+>
+> **原题（English）**：For this collection of premises, what relevant conclusion or conclusions can be drawn? Explain the rules of inference used to obtain each conclusion from the premises. “All rodents gnaw their food.” “Mice are rodents.” “Rabbits do not gnaw their food.” “Bats are not rodents.”
+>
+> **答案**：以动物个体为论域，令$R,G,M,H,B$分别表示“是啮齿动物、啃食、是老鼠、是兔子、是蝙蝠”。前提为$\forall x(R(x)\to G(x))$、$\forall x(M(x)\to R(x))$、$\forall x(H(x)\to\neg G(x))$、$\forall x(B(x)\to\neg R(x))$。由假言三段论得$\forall x(M(x)\to G(x))$；由逆否及兔子前提得$\forall x(H(x)\to\neg R(x))$。因此：**All mice gnaw their food. No rabbits are rodents.** 不能由“蝙蝠不是啮齿动物”断定蝙蝠是否啃食。
+>
+> **自查**：若把$P(X)$定义为“类别$X$中所有动物都是啮齿动物”，则$\neg P(X)$只是“并非全是”，不能解释成“这一类没有啮齿动物”。
+
+
 - **作用域（scope）** 是量词管辖的子式；其中出现的同名变元为约束变元（bound variable），未被量词约束的为自由变元（free variable）。量词优先于普通联结词，但必须用括号明确范围；
 
   约束变量可一致改名（renaming bound variables），须防止变元捕获（variable capture）。
@@ -357,6 +373,18 @@ $$
 - 否定时逐层换$\forall/\exists$，最后否定谓词：$\neg\forall x\exists y\forall zP\equiv\exists x\forall y\exists z\neg P$。`every other`加$y\ne x$限制；
 
   `not necessarily`表示存在反例，不是处处相反。
+
+> [!warning]- 【个人知识错题 K01】否定量词后还要正确否定蕴涵
+> **来源**：第一轮，第1章精选卷题组3，Rosen §1.5 Ex.31(d)。
+>
+> **错点**：否定内移到$P\to Q$时未正确使用$\neg(P\to Q)\equiv P\land\neg Q$；这一步改变逻辑含义，属于知识性错误。
+>
+> **原题（English）**：Express the negation of $\forall x\exists y(P(x,y)\to Q(x,y))$ so that all negation symbols immediately precede predicates.
+>
+> **答案**：
+> $$\neg\forall x\exists y(P(x,y)\to Q(x,y))\equiv\exists x\forall y\neg(P(x,y)\to Q(x,y))\equiv\boxed{\exists x\forall y(P(x,y)\land\neg Q(x,y))}.$$
+> **自查**：量词经过否定时翻转，内层蕴涵被否定后变成“前件真且后件假”。
+
 
 #### 恰好一个与恰好多个（Exactly One and Exact Counts）
 
@@ -589,6 +617,13 @@ $$
 > [!tip] 【课件要求：Ch1.6_Part5，PDF p4，slide 16】
 > “DO NOT over simplify the proof”：写出存在与唯一两个部分，给必要理由，不能仅用“显然”替代关键推理。
 
+> [!todo]- 【待补证明 P01】存在唯一须分别验证，不直接判为概念错误
+> **来源与状态**：第一轮，第1章精选卷题组7，Rosen §1.8 Ex.16。原作答给出了候选解，但存在性、唯一性的验证不完整；这是待补证明，不据此断言没有理解唯一性的定义。
+>
+> **原题（English）**：Show that if $a,b,c$ are real numbers and $a\ne0$, then there is a unique solution of the equation $ax+b=c$.
+>
+> **标准答案（English）**：Let $x_0=(c-b)/a$. Then $ax_0+b=c$, so a solution exists. If $u$ and $v$ are both solutions, then $au+b=av+b$, hence $a(u-v)=0$. Since $a\ne0$, $u=v$. Therefore the solution exists and is unique.
+
 - **【拓展】构造性与非构造性证明（constructive and nonconstructive proofs）** 区别在是否给出见证；经典无理数幂例将$r=(\sqrt2)^{\sqrt2}$分有理／无理两种情况，分别取$(a,b)=(\sqrt2,\sqrt2)$或$(r,\sqrt2)$，使无理数$a,b$满足$a^b$有理。
 
 - **【拓展】Chomp游戏与策略窃取（Chomp and strategy stealing）** ：每步吃所选格及右下区域，左上毒格输；至少两格的矩形先手存在必胜策略。若先吃右下角后对手有制胜回应，先手可直接走该回应到同一局面，矛盾。取石子游戏（take-away game）每次取1至$m$且最后一颗胜时，$m+1$倍数为必败位置（losing / P-position），其余为必胜位置（winning / N-position）；倒推（backward induction）与极小化极大搜索（minimax search）为相关方法。
@@ -816,6 +851,16 @@ $$
 
   【拓展】若$f\circ g$单则g单，若$f\circ g$满则f满；反方向的另一因子不可无条件推出。$(f\circ g)^{-1}=g^{-1}\circ f^{-1}$。
 
+> [!warning]- 【拓展·个人知识错题 K03】单射性必须用于对应的函数
+> **来源**：第一轮，第2章精选卷题组6，Rosen §2.3 Ex.34。此题保留在当前提纲的拓展位置，不提升为授课范围。
+>
+> **错点**：由$f(g(x_1))=f(g(x_2))$直接推出$x_1=x_2$时，用错了单射条件。仅用$f$单射只能得到$g(x_1)=g(x_2)$；能直接推出输入$x_1=x_2$的是$f\circ g$单射。
+>
+> **原题（English）**：If $f$ and $f\circ g$ are one-to-one, does it follow that $g$ is one-to-one? Justify your answer.
+>
+> **标准答案（English）**：Yes. Suppose that $g(x_1)=g(x_2)$. Applying $f$ gives $(f\circ g)(x_1)=(f\circ g)(x_2)$. Since $f\circ g$ is one-to-one, $x_1=x_2$. Thus $g$ is one-to-one. In fact, the assumption that $f$ is one-to-one is unnecessary.
+
+
   课件双射的恒等式：$f^{-1}\circ f=i_A$、$f\circ f^{-1}=i_B$，先代入$f^{-1}(f(a))=a$、$f(f^{-1}(b))=b$即可验证。
 
 ![[C2.3-映射类型-单射满射双射.png|650]]
@@ -835,6 +880,13 @@ $$
 - **【拓展】取整恒等式（rounding identities）** ：$\lfloor2x\rfloor=\lfloor x\rfloor+\lfloor x+1/2\rfloor$；整数$n$满足$\lfloor n/2\rfloor+\lceil n/2\rceil=n$、两者积为$\lfloor n^2/4\rfloor$。
 
 - **【拓展】可拆条件（conditions for splitting rounded sums）** ：写$x=m+\alpha,y=n+\beta$，$0\le\alpha,\beta<1$。下取整之和可拆当且仅当$\alpha+\beta<1$；上取整之和可拆当且仅当$\alpha=0$或$\beta=0$或$\alpha+\beta>1$；$\lceil x+y\rceil=\lfloor x\rfloor+\lceil y\rceil$当且仅当$\alpha=0$，或$\beta>0$且$\alpha+\beta\le1$。
+
+> [!todo]- 【拓展·待补证明 P02】负号与取整的关系，未作答不算已证错误
+> **来源与状态**：第一轮，第2章精选卷题组7，Rosen §2.3 Ex.54。原作答未完成证明，按待补练习保留；当前仍属拓展。
+>
+> **原题（English）**：Prove that if $x$ is a real number, then $\lfloor-x\rfloor=-\lceil x\rceil$ and $\lceil-x\rceil=-\lfloor x\rfloor$.
+>
+> **标准答案（English）**：Let $m=\lceil x\rceil$. Then $m-1<x\le m$, so $-m\le-x<-m+1$. Hence $\lfloor-x\rfloor=-m=-\lceil x\rceil$. Let $k=\lfloor x\rfloor$. Then $k\le x<k+1$, so $-k-1<-x\le-k$. Hence $\lceil-x\rceil=-k=-\lfloor x\rfloor$.
 
 #### 阶乘与部分函数（Factorials and Partial Functions）
 
@@ -1007,6 +1059,15 @@ $$
 - **传递性的幂刻画（power characterization）** ：$R$传递$\iff R^2\subseteq R\iff\forall n\ge1,R^n\subseteq R$；若自反，则$R\subseteq R^2$；
 
   自反且传递则$R^n=R$（$n\ge1$）。传递关系满足$R^{n+1}\subseteq R^n$且各次幂仍传递， **不保证$R^n=R^2$** 。反例$R=\{(1,2),(2,3),(1,3)\}$：$R^2=\{(1,3)\}$、$R^3=\varnothing$。
+
+> [!todo]- 【待补证明 P03】自反与传递分别给出两个方向的包含
+> **来源与状态**：第二轮，第9章题组4，Rosen §9.1 Ex.55。原作答明确写“不会”；这是方法缺口，与计算或书写失误分开记录。
+>
+> **原题（English）**：Let $R$ be a relation that is reflexive and transitive. Prove that $R^n=R$ for all positive integers $n$.
+>
+> **关键思路**：传递性给$R^2\subseteq R$；自反性允许插入自环，给$R\subseteq R^2$。先得$R^2=R$，再归纳到所有正整数次幂。
+>
+> **标准答案（English）**：Since $R$ is transitive, $R^2\subseteq R$. Conversely, if $(a,b)\in R$, reflexivity gives $(b,b)\in R$, so $(a,b)\in R^2$. Thus $R^2=R$. The case $n=1$ is immediate. If $R^k=R$, then $R^{k+1}=R\circ R^k=R^2=R$. By induction, $R^n=R$ for every positive integer $n$.
 
 - **关系幂性质的证明要点（proofs of properties of relation powers）** ：
 
@@ -1206,9 +1267,33 @@ $$
 
   不同的类两两不交。
 
+> [!warning]- 【个人知识错题 K04】一个具体等价类不等于所有类的分类规则
+> **来源**：第二轮，第9章题组7，Rosen §9.5 Ex.16、40(a,b)。
+>
+> **错点**：$(1,2)$的等价类求对了，但解释所有等价类时仍回答“第二个数是第一个数的两倍”，只解释了比值为$1/2$的那一类。
+>
+> **原题相关小问（English）**：Let $R$ be the relation on the set of ordered pairs of positive integers such that $((a,b),(c,d))\in R$ if and only if $ad=bc$. (a) What is the equivalence class of $(1,2)$ with respect to the equivalence relation in Exercise 16? (b) Give an interpretation of the equivalence classes for the equivalence relation $R$ in Exercise 16. [Hint: Look at the ratio $a/b$ corresponding to $(a,b)$.]
+>
+> **答案**：$[(1,2)]_R=\{(k,2k):k\in\mathbb Z^+\}$。一般有$ad=bc\iff a/b=c/d$，故每个等价类由**比值相同**的正整数对组成，不同类对应不同的正有理数。例如$(1,1),(2,2)$同属比值1的类，和比值$1/2$的类不同。
+>
+> **English answer**：Each equivalence class consists of all ordered pairs of positive integers having the same ratio. Distinct classes correspond to distinct positive rational numbers.
+
+
 - **划分（partition）** 是非空块（block）的集合，块两两不交且并为A。等价关系与划分一一对应：R给出全部不同等价类；划分$\{A_i\}$反推$R=\bigcup_i(A_i\times A_i)$。
 
   商集（quotient set）$A/R=\{[a]:a\in A\}$的元素是类，不是A中的普通元素。
+
+> [!warning]- 【个人知识错题 K05】从划分还原关系要判断同块，不是比较集合大小
+> **来源**：第二轮，第9章题组8，Rosen §9.5 Ex.47(a)。
+>
+> **原错点**：写成$A\,R\,B\iff|A|=|B|$，把元素间的同块关系改成了集合间的等势关系；研究对象和关系条件都变了。
+>
+> **原题（English）**：List the ordered pairs in the equivalence relation produced by this partition of $\{0,1,2,3,4,5\}$: $\{0\},\{1,2\},\{3,4,5\}$.
+>
+> **答案**：同块中的元素全部配对，包括自环；不同块之间不配对。
+> $$\begin{aligned}R=\{&(0,0),\\&(1,1),(1,2),(2,1),(2,2),\\&(3,3),(3,4),(3,5),\\&(4,3),(4,4),(4,5),\\&(5,3),(5,4),(5,5)\}.\end{aligned}$$
+> 共$1^2+2^2+3^2=14$个有序对。块大小只用于检查对数，不是定义两个元素是否相关的条件。
+
 
 - **等价类定理的证明要点（proof of the equivalence-class theorem）** ：$aRb\Rightarrow[a]=[b]$：用对称性与传递性证明两个类双向包含；$[a]=[b]\Rightarrow[a]\cap[b]\ne\varnothing$：自反性使$a\in[a]=[b]$；若$c\in[a]\cap[b]$，由$aRc,bRc$及对称、传递得$aRb$，闭合三向等价。
 
@@ -1254,6 +1339,19 @@ $$
 
 ![[C9-Hasse图的三步构造.png|600]]
 
+> [!warning]- 【个人知识错题 K06】Hasse图的高低与连线必须服从给定偏序
+> **来源**：第二轮，第9章题组9，Rosen §9.6 Ex.22(a)。
+>
+> **错点**：把整除偏序上下画反，并把不可比的2、3连起来；还漏了1与3、2与6的覆盖连线。此前列出的整除有序对清单本身正确。
+>
+> **原题（English）**：Draw the Hasse diagram for divisibility on the set $\{1,2,3,4,5,6\}$.
+>
+> **答案**：若$a\mid b$且$a\ne b$，将$b$画在$a$上方；只连覆盖对。由下到上的覆盖对为$\boxed{(1,2),(1,3),(1,5),(2,4),(2,6),(3,6)}$。1在最下方，2与3之间不连线；1与6已有中间点，因此也不直接连线。
+>
+> **正确图**：下图左侧为本题，中间为K07，右侧为K08。画得更高本身不表示可比，还必须存在相应的向上路径。
+> ![[C9-HW-两轮练习Hasse订正.png|900]]
+
+
 先指定环境偏序集$(A,\preccurlyeq)$和目标子集$B\subseteq A$。**区别在于比较范围与候选元素的范围** ：
 
 - **极大元、极小元、最大元、最小元** 都在所研究的集合内部比较，结果必须属于该集合。若题目问整个偏序集的极值，就在$A$中比较；若问子集$B$的极值，就只在$B$中比较，沿用$A$的偏序关系。因此它们也可以研究子集，并非只能研究整体。
@@ -1278,6 +1376,29 @@ $$
 
 - 不能把“某一个上界”当lub，也不能把“上界集合中的极小元”不经比较就当最小元。做题先写环境集合、目标子集、全部上／下界，再求其最小／最大者。有限非空偏序集总有极小与极大元，但不一定有最小与最大元。
 
+> [!warning]- 【个人知识错题 K07】极大极小与整除上下界的方向
+> **来源**：第二轮，第9章题组9，Rosen §9.6 Ex.33(a–h)。
+>
+> **错点**：因Hasse图上下反向而交换了极大、极小，并把共同倍数方向的上界与共同因数方向的下界混淆；最大、最小元素不存在的两个结论原来答对了。
+>
+> **原题（English）**：Answer these questions for the poset $(\{3,5,9,15,24,45\},\mid)$. (a) Find the maximal elements. (b) Find the minimal elements. (c) Is there a greatest element? (d) Is there a least element? (e) Find all upper bounds of $\{3,5\}$. (f) Find the least upper bound of $\{3,5\}$, if it exists. (g) Find all lower bounds of $\{15,45\}$. (h) Find the greatest lower bound of $\{15,45\}$, if it exists.
+>
+> **答案**：
+>
+> | 小问 | 正确答案 |
+> |---|---|
+> | (a) maximal elements | $\{24,45\}$ |
+> | (b) minimal elements | $\{3,5\}$ |
+> | (c) greatest element | Does not exist. |
+> | (d) least element | Does not exist. |
+> | (e) upper bounds of $\{3,5\}$ | $\{15,45\}$ |
+> | (f) least upper bound | $15$ |
+> | (g) lower bounds of $\{15,45\}$ | $\{3,5,15\}$ |
+> | (h) greatest lower bound | $15$ |
+>
+> **检查方法**：上界$u$须满足$3\mid u$且$5\mid u$；下界$l$须满足$l\mid15$且$l\mid45$。允许与自身比较，故15本身是$\{15,45\}$的下界。45不是其下界，因为$45\nmid15$。所有候选都从题设环境集合中取。
+
+
 #### 格与并交（Lattices, Join and Meet）
 
 - **格（lattice）** 要求每一对元素都有lub和glb，记$a\vee b=\operatorname{lub}\{a,b\}$（并，join）、$a\wedge b=\operatorname{glb}\{a,b\}$（交，meet）。格中的并交交换、结合、幂等、吸收；
@@ -1297,6 +1418,18 @@ $$
 | 全序集（total order） | max | min |
 
 - 在整除偏序的某个子集里，环境中未包含lcm时不能直接把外面的数当lub；在子集内可能另有最小共同上界，或根本没有。
+
+> [!warning]- 【个人知识错题 K08】判非格时必须指出真正缺失的界
+> **来源**：第二轮，第9章题组10，Rosen §9.6 Ex.44(a)。
+>
+> **错点**：“不是格”的结论正确，但把9与12的最大下界说成不存在；还在图中连接了不满足整除关系的6与9。这里需要订正并、交的含义与候选范围。
+>
+> **原题（English）**：Determine whether the poset $(\{1,3,6,9,12\},\mid)$ is a lattice.
+>
+> **答案**：共同下界为$\{1,3\}$，故$9\wedge12=3$存在；给定集合中没有9与12的共同上界，因此$9\vee12$不存在，偏序集不是格。不能把集合外的36当作本题最小上界。正确覆盖对为$(1,3),(3,6),(3,9),(6,12)$，图见K06右侧。
+>
+> **English answer**：The poset is not a lattice because 9 and 12 have no common upper bound in the given set. Hence their least upper bound does not exist. Their greatest lower bound does exist and equals 3.
+
 
 
 - **格的四条运算律（four lattice laws）** ：对任意$a,b,c$，

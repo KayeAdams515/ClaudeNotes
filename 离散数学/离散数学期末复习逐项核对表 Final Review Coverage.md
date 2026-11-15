@@ -8,7 +8,7 @@
 
 - 逐份阅读 `pdfs/补充课件/` 的41份PDF，共228页；按四格讲义的实际内容读取文字，核看公式、手写／图示答案与表格。两组重传文件均比较，发现实质修正，没有按文件名直接当相同文件。
 - 概念、定理、证明或算法在实际页中出现，保留完整复习深度；必需的记号与前置定义一并保留。目录中的标题、教材整节名称、转写提及及旧“拓展”标签不独立扩大范围。
-- 同一主题段可混合范围内与范围外内容，按正文逐段标记。范围外缩成定义、关键结论和条件，省去冗长证明、扩展算法表及重复数值；不删除原笔记。后续按用户要求，“分组与相邻约束”中的基础方法取消拓展标记，但实际课件证据仍分别注明，不将标签调整算作新增授课证据。
+- 同一主题段可混合范围内与范围外内容，按正文逐段标记。范围外缩成定义、关键结论和条件，省去冗长证明、扩展算法表及重复数值；不删除原笔记。后续按用户要求，4.3“分组与相邻约束”中的基础方法及4.5全部内容取消拓展标记，但实际课件证据仍分别注明，不将标签调整算作新增授课证据。
 - 页码均为PDF物理页；讲义中印刷slide编号与物理页不同，例如Ch1.4_Part1含一页批注。下表页范围文本用于定位，链接默认打开所列起始页。
 
 ### A. 全部课件阅读记录（All Courseware Read）
@@ -59,7 +59,7 @@
 
 ### B. 正文分项范围与处理（Current Text Scope and Treatment）
 
-以下163行对应正文主题段，段内独立拓展仍在相应位置标注；这些数量是导航单位，不用来证明“绝无遗漏”。“混合”表示已拆分课件直接内容与课件外内容，而不是把整段一概算入范围；S097按后续要求作为基础方法保留，不再标拓展。正文行号对应当前版本。
+以下163行对应正文主题段，段内独立拓展仍在相应位置标注；这些数量是导航单位，不用来证明“绝无遗漏”。“混合”表示已拆分课件直接内容与课件外内容，而不是把整段一概算入范围；S097、S100–S103按后续要求保留，不再标拓展。正文行号对应当前版本。
 
 | 项 | 正文主题与位置 | 本轮范围 | 实际页码依据／判断 | 处理结果 |
 |---|---|---|---|---|
@@ -162,9 +162,9 @@
 | S097 | [[离散数学期末复习提纲 Final Review Outline#4.3 排列、组合与约束（Permutations, Combinations and Constraints）\|4.3]] · 分组与相邻约束（Grouping and Adjacency Constraints），L1461 | 混合（基础方法保留） | [[Ch6.5.pdf#page=1\|Ch6.5.pdf · p1–2]]；[[Ch6.1.pdf#page=3\|Ch6.1.pdf · p3–4]] | 按用户要求移除本节3处拓展标记；两人相邻／不相邻、圆排列有课件例题，一般分组、插空、重叠相邻容斥及圆桌插空未见单独展开 |
 | S098 | [[离散数学期末复习提纲 Final Review Outline#4.4 二项式系数与组合证明（Binomial Coefficients and Combinatorial Proofs）\|4.4]] · 二项式定理与恒等式（Binomial Theorem and Identities），L1481 | 混合 | [[Ch6.2&Ch6.3.pdf#page=3\|Ch6.2&Ch6.3.pdf · p3–5]] | 课件部分保留；范围外独立结论已标拓展并缩写 |
 | S099 | [[离散数学期末复习提纲 Final Review Outline#4.4 二项式系数与组合证明（Binomial Coefficients and Combinatorial Proofs）\|4.4]] · 帕斯卡三角与证明方法（Pascal’s Triangle and Proof Methods），L1493 | 混合 | [[Ch6.2&Ch6.3.pdf#page=3\|Ch6.2&Ch6.3.pdf · p3–5]] | 课件部分保留；范围外独立结论已标拓展并缩写 |
-| S100 | [[离散数学期末复习提纲 Final Review Outline#4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）\|4.5]] · 星条法与整数解（Stars and Bars and Integer Solutions），L1524 | 混合 | [[Ch6.5.pdf#page=2\|Ch6.5.pdf · p2–3]] | 课件部分保留；范围外独立结论已标拓展并缩写 |
-| S101 | [[离散数学期末复习提纲 Final Review Outline#4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）\|4.5]] · 重复物体与循环计数（Repeated Objects and Loop Counts），L1540 | 混合 | [[Ch6.5.pdf#page=1\|Ch6.5.pdf · p1]] | 课件部分保留；范围外独立结论已标拓展并缩写 |
-| S102 | [[离散数学期末复习提纲 Final Review Outline#4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）\|4.5]] · 【拓展】物体入盒与划分公式（Distribution and Partition Formulas），L1548 | 拓展 | 全部41份实际页未见独立讲解；原笔记出处保留在历史附录 | 压缩为正文要点，标拓展；详细出处仍可回查 |
+| S100 | [[离散数学期末复习提纲 Final Review Outline#4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）\|4.5]] · 星条法与整数解（Stars and Bars and Integer Solutions），L1524 | 混合（按要求保留） | [[Ch6.5.pdf#page=2\|Ch6.5.pdf · p2–3]] | 按用户要求移除上界容斥的拓展标记，保留原公式及课件依据 |
+| S101 | [[离散数学期末复习提纲 Final Review Outline#4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）\|4.5]] · 重复物体与循环计数（Repeated Objects and Loop Counts），L1540 | 混合（按要求保留） | [[Ch6.5.pdf#page=1\|Ch6.5.pdf · p1]] | 按用户要求移除重复物体排列的拓展标记，保留原公式及课件依据 |
+| S102 | [[离散数学期末复习提纲 Final Review Outline#4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）\|4.5]] · 物体入盒与划分公式（Distribution and Partition Formulas），L1548 | 课件外（按要求保留） | 全部41份实际页未见独立讲解；原笔记出处保留在历史附录 | 按用户要求移除标题与通用公式的拓展标记，保留公式及未在课件展开的说明 |
 | S103 | [[离散数学期末复习提纲 Final Review Outline#4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）\|4.5]] · 分拆、容量与边界（Integer Partitions, Capacities and Boundaries），L1552 | 授课范围 | [[Ch6.5.pdf#page=2\|Ch6.5.pdf · p2–3]] | 保留定义、条件、结论及相应证明／步骤 |
 | S104 | [[离散数学期末复习提纲 Final Review Outline#4.6 生成排列与组合的算法（Algorithms for Generating Permutations and Combinations）\|4.6]] · 下一个排列：操作、例子与证明（Next Permutation: Steps, Example and Proof），L1572 | 授课范围 | [[Ch6.6.pdf#page=3\|Ch6.6.pdf · p3]] | 保留定义、条件、结论及相应证明／步骤 |
 | S105 | [[离散数学期末复习提纲 Final Review Outline#4.6 生成排列与组合的算法（Algorithms for Generating Permutations and Combinations）\|4.6]] · 下一个位串：二进制加一（Next Bit String: Binary Increment），L1606 | 混合 | [[Ch6.6.pdf#page=1\|Ch6.6.pdf · p1–2]] | 课件部分保留；范围外独立结论已标拓展并缩写 |
@@ -253,7 +253,7 @@
 
 - 原有27个图片嵌入全部保留；部分拓展原图折叠，范围内示意图继续用于正文。所有小节编号保留，改名标题的链接同步更新。
 - 重点保留并复核：逻辑与量词公式、三条组合恒等式证明、子序列证明、三种生成算法、递推与初值、四点Warshall逐轮矩阵、树的归纳证明、Fleury／Hierholzer、Euler公式的归纳分支。
-- 62个纯拓展主题段合计由42269字压至25000字，约缩减40.9%；混合段中的拓展也另行压缩。正文整体由141918字调整为127106字，授课证明与课件手算例有所补强。此处按字符计，仅表示篇幅变化。
+- 按课件范围初次压缩时，62个纯拓展主题段合计由42269字压至25000字，约缩减40.9%；混合段中的拓展也另行压缩。正文整体由141918字调整为127158字，授课证明与课件手算例有所补强。此处按字符计，仅表示篇幅变化。
 - 老师考试提醒仍按原转写证据保留；考试楼名仍有“53A 210／F3A210”的转写歧义，未按PDF内容替它自动作确定解释。数学勘误不是未处理缺失，已在正文或上表给出采用的正确形式。
 
 ---
@@ -263,6 +263,7 @@
 - 正文3.6原将上下界概括为“子集中所有元素都在其上／下”，容易误解为严格偏序。原笔记[[C9.6 偏序 Partial Orderings#5.3 上界、下界、lub、glb|C9.6 §5.3]]的公式本已允许相等；现已在正文恢复完整定义，明确界可属于目标子集，并同步澄清确界与Hasse图判读。
 - 正文3.6补充区分目标集合与环境偏序集：极大／极小／最大／最小元须在目标集合内部比较并取值；上下界及确界针对目标子集，在环境偏序集中寻找。统一用$B\subseteq A$列出定义，说明$B=A$的情形，并用整除偏序的$A=\{1,2,3,6\}$、$B=\{2,3\}$对比说明，避免误记为“极值只能研究整体”。
 - 正文4.3“分组与相邻约束”按用户后续复习要求，移除一般分组、插空、相邻重叠容斥的3处拓展标记，并保留原公式和图片。复核Ch6.5的PDF p2、slide 5：指定两人相邻为$2\cdot4!$，不相邻为$5!-2\cdot4!$，圆桌排列为$5!/5$；插空法并非该例题使用的方法。一般分组公式、插空公式、重叠相邻事件容斥及圆桌插空未见课件单独展开，仍在正文明确这一证据边界。
+- 正文4.5按用户要求移除全部5处拓展标记，涉及相同物体排列的证明、上界容斥、重复物体排列、物体入盒与划分公式标题及通用入盒公式；原定义、公式、例题与图片均保留。同步调整范围说明和当前索引，课件是否实际展开的事实说明继续保留。
 
 ## 历史附录：原笔记全量核对（Historical Note Audit）
 

@@ -9,7 +9,7 @@
 >
 > 同一小节可以同时有授课内容和拓展。关系矩阵、布尔积／幂虽无独立Ch2.6课件，却在Ch9.1、Ch9.3中实际出现；MST定义虽出现，也不意味着最短路算法已授。
 >
-> 按后续复习要求，4.3“分组与相邻约束”中的基础方法不标“拓展”；课件直接涉及与未单独展开的部分，已在该小节注明。
+> 按后续复习要求，4.3“分组与相邻约束”中的基础方法及4.5全部内容不标“拓展”；课件直接涉及与未单独展开的部分，已在对应小节注明。
 
 ## 考试信息与标记说明（Examination Information and Labels）
 
@@ -1508,7 +1508,7 @@ $$
 
 ### 4.5 重复选择、物体分配与整数分拆（Repetition, Distribution and Integer Partitions）
 
-授课依据：[[Ch6.5.pdf|Ch6.5.pdf]]。保留相邻／圆排列、星条、下界平移、无标号盒列举；Stirling通式与一般容量公式为拓展。
+授课依据：[[Ch6.5.pdf|Ch6.5.pdf]]。保留星条、下界平移、无标号盒列举；Stirling通式与一般容量公式未见课件单独展开，按复习要求一并保留。
 
 | 选择方式 | r次从n种中选择的结果数 |
 |---|---|
@@ -1519,7 +1519,7 @@ $$
 
 - **四种选择公式的证明要点（proofs of the four selection formulas）** ：不可重复的$r$-排列按位置有$n,n-1,\ldots,n-r+1$种选择；每个$r$-组合恰有$r!$个内部次序，所以$P(n,r)=r!\binom nr$。允许重复的有序选择每步仍有$n$种，得$n^r$；无序重复选择与$r$颗星、$n-1$根隔板的位置串一一对应，得$\binom{n+r-1}r$。
 
-  【拓展】相同物体排列先临时贴标签计$n!$种，再除每类的内部置换数$\prod_i n_i!$；各盒规定人数时同理。相邻隔板和端点隔板已表示空类，无须再额外乘空盒的选择数。
+  相同物体排列先临时贴标签计$n!$种，再除每类的内部置换数$\prod_i n_i!$；各盒规定人数时同理。相邻隔板和端点隔板已表示空类，无须再额外乘空盒的选择数。
 
 #### 星条法与整数解（Stars and Bars and Integer Solutions）
 
@@ -1533,21 +1533,21 @@ $$
 
   剩余负则0解。
 
-- **【拓展】有上界（upper bounds）** 时星条法不能直接用；
+- **有上界（upper bounds）** 时星条法不能直接用；
 
   对违反$x_i\le u_i$的情况作容斥，集合S中变量统一减$u_i+1$：$\sum_{S\subseteq\{1,\ldots,n\}}(-1)^{|S|}\binom{r-\sum_{i\in S}(u_i+1)+n-1}{n-1}$，上方不足$n-1$的项按0处理。
 
 #### 重复物体与循环计数（Repeated Objects and Loop Counts）
 
-- **【拓展】重复物体排列（permutations with indistinguishable objects）** 为多项式系数（multinomial coefficient）$n!/(n_1!\cdots n_k!)$，$\sum n_i=n$；各类内部交换不产生新排列。嵌套循环（nested loops）满足$1\le i_m\le\cdots\le i_1\le n$时次数$\binom{n+m-1}m$，严格不等时$\binom nm$。
+- **重复物体排列（permutations with indistinguishable objects）** 为多项式系数（multinomial coefficient）$n!/(n_1!\cdots n_k!)$，$\sum n_i=n$；各类内部交换不产生新排列。嵌套循环（nested loops）满足$1\le i_m\le\cdots\le i_1\le n$时次数$\binom{n+m-1}m$，严格不等时$\binom nm$。
 
 - **物体与盒子的分类（classifying objects and boxes）** ：课件要求先问物体可区分／不可区分（distinguishable / indistinguishable）、盒子有无标签、可否空盒及容量。相同物体进有标号盒用星条法；相同物体进相同盒须忽略盒序，按分拆列举。
 
 ![[C6.5-星条法示意图.png|600]]
 
-#### 【拓展】物体入盒与划分公式（Distribution and Partition Formulas）
+#### 物体入盒与划分公式（Distribution and Partition Formulas）
 
-- **【拓展】通用入盒公式（general distribution formulas）** ：$n$个有身份物体进$k$个有标号盒，允许空为$k^n$、固定各盒人数为$n!/\prod n_i!$、各盒非空为$k!S(n,k)$；无标号非空盒为$S(n,k)$，至多$k$盒为$\sum_{j=0}^{\min(n,k)}S(n,j)$。第二类Stirling数见3.5；$S(n,k)=\frac1{k!}\sum_{i=0}^k(-1)^i\binom ki(k-i)^n$（$n,k\ge1$）。这些一般公式未在课件展开。
+- **通用入盒公式（general distribution formulas）** ：$n$个有身份物体进$k$个有标号盒，允许空为$k^n$、固定各盒人数为$n!/\prod n_i!$、各盒非空为$k!S(n,k)$；无标号非空盒为$S(n,k)$，至多$k$盒为$\sum_{j=0}^{\min(n,k)}S(n,j)$。第二类Stirling数见3.5；$S(n,k)=\frac1{k!}\sum_{i=0}^k(-1)^i\binom ki(k-i)^n$（$n,k\ge1$）。这些一般公式未在课件展开。
 
 #### 分拆、容量与边界（Integer Partitions, Capacities and Boundaries）
 
@@ -2523,6 +2523,7 @@ for j := i+1 to r: a[j] := a[i] + j - i
 全部41份PDF的逐文件页码清单、正文分项处理及重传修正见[[离散数学期末复习逐项核对表 Final Review Coverage#本轮课件范围核对（Current Courseware Scope Audit）|本轮课件范围核对]]。正文各小节开头提供实际课件入口；同节范围内与拓展分别判断。
 
 - 恢复为范围内：函数后半、关系矩阵与布尔运算、闭包次序、度序列、补图、自补图、Fleury、Hierholzer，以及MST定义。
-- 压缩并标拓展：普通矩阵代数、独立可数性、一般二项式展开、Stirling通式、拓扑排序、动态规划、最短路与TSP、四色／六色定理及其他图论延伸。相关课件实际出现的局部概念与公式保留。
+- 压缩并标拓展：普通矩阵代数、独立可数性、一般二项式展开、拓扑排序、动态规划、最短路与TSP、四色／六色定理及其他图论延伸。相关课件实际出现的局部概念与公式保留。
+- 按后续复习要求，4.3“分组与相邻约束”中的基础方法及4.5全部内容不标拓展，保留正文、公式及原图；各小节仍注明课件对应情况。
 - 术语按课件修订：simple path要求顶点不重复；Eulerian在该课件包括有开放欧拉路径的连通图。低阶$C_1,C_2,W_1,W_2$按课件图示单列，不混套简单图公式。
 - 数学勘误继续保留：课件不是不会出错。否定后件、关系复合／矩阵顺序、Warshall下标、格判定等均采用核算后的正确形式，具体页码见核对表。

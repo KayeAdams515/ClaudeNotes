@@ -27,7 +27,7 @@ graph TD
     C1 --> C2["Ch29 电流产生磁场 ✅<br/>毕奥-萨伐尔定律、直导线/圆弧/圆环<br/>平行电流的力、安培环路定律、螺线管、偶极子"]
     C2 --> D["电磁感应 Ch30–31"]
     D --> D1["Ch30 感应与电感 ✅<br/>法拉第定律、楞次定律、感生电场<br/>电感与互感、RL 电路、磁场能量"]
-    D1 --> D2["Ch31 电磁振荡与交流电"]
+    D1 --> D2["Ch31 电磁振荡与交流电 ✅<br/>LC 振荡与能量交换、阻尼与受迫、共振<br/>交流发电机、三种负载、阻抗与相位"]
     D2 --> E["Ch32 麦克斯韦方程组<br/>统一"]
 ```
 
@@ -101,7 +101,12 @@ graph TD
 | 30 | 4 | [[C30.4 感生电场]] | 为什么必须有电场；$\oint\vec E_{\text{in}}\cdot d\vec s=-d\Phi_B/dt$（**路径固定在空间中**）；三个视角；与静电场六项对照；非保守 $\Rightarrow$ 无单值标量势（**不等于**电路里不能谈电压，相量与此无关）；Checkpoint 4（五个区域四条路径，$a,b,c$ 外、$d,e$ 里） | ✅ |
 | 30 | 5 | [[C30.5 电感、自感与互感]] | 电感 $L=N\Phi_B/i$（H）与三个前提（材料线性、几何固定、介质确定）；与电容四步法对照；长螺线管 $L=\mu_0n^2lA$；自感电动势 $\mathcal E_L=-L\,di/dt$ 与"阻碍变化"；互感 $M=N_2\Phi_{21}/i_1$、$M_{21}=M_{12}=M$、漏磁与耦合系数 $k$、$\vert M\vert\le\sqrt{L_1L_2}$；变压器 | ✅ |
 | 30 | 6 | [[C30.6 RL 电路与磁场能量]] | 模型四条件（$i(0)=0$、线性 $L$、理想电源、集中参数）与放电须闭合回路；$\tau_L=L/R$；充电 $i=\frac{\mathcal E}{R}(1-e^{-t/\tau_L})$、放电 $i=\frac{\mathcal E}{R}e^{-t/\tau_L}$；能量分配 $\mathcal E i=i^2R+Li\,di/dt$；$U_B=\tfrac12Li^2$；$u_B=B^2/2\mu_0$（真空或线性非磁介质）；例 5（$18\ \mathrm J$） | ✅ |
-| 31–32 | — | Ch31 电磁振荡与交流电 … Ch32 麦克斯韦方程组 | 课件在 `courseware/` 下，尚未整理 | ⏳ |
+| 31 | 1 | [[C31.1 LC 振荡与能量交换]] | RC/RL 充放电回顾；本章四节与 Problems 13/27/32/34/45/48；能量交换的八个状态；$\omega=1/\sqrt{LC}$、$q=Q\cos(\omega t+\phi)$、$i=-\omega Q\sin(\omega t+\phi)$；与弹簧振子对照；$U=Q^2/2C$ 守恒 | ✅ |
+| 31 | 2 | [[C31.2 阻尼振荡与受迫振荡]] | $\ddot q+(R/L)\dot q+q/LC=0$、$q=Qe^{-Rt/2L}\cos\omega't$、$\omega'=\sqrt{\omega^2-(R/2L)^2}$；受迫解 $i_m=\mathcal E_m/\sqrt{R^2+(\omega_dL-1/\omega_dC)^2}$；共振 $\omega_d=1/\sqrt{LC}$ 与共振曲线 | ✅ |
+| 31 | 3 | [[C31.3 交流发电机与三种基本负载]] | $\Phi=NBA\cos\omega_dt$、$\mathcal E=\mathcal E_m\sin\omega_dt$（$\mathcal E_m=NBA\omega_d$）；$X_R=R$、$X_C=1/\omega_dC$（电流超前 $90^\circ$）、$X_L=\omega_dL$（滞后 $90^\circ$）；相量读法 | ✅ |
+| 31 | 4 | [[C31.4 串联 RLC 电路：阻抗与相位]] | 三个电压不同相 ⇒ 相量合成；$Z=\sqrt{R^2+(X_L-X_C)^2}$、$i_m=\mathcal E_m/Z$、$\tan\phi=(X_L-X_C)/R$；$\phi$ 三种情形；串联 $Z$ 与并联导纳 $Y$ 对照 | ✅ |
+| 31 | 5 | [[C31.5 四个例题与全章公式总表]] | 例 1 容抗（$133\ \Omega$ / $1.59\ \Omega$）、例 2 感抗（$15.1\ \Omega$ / $503\ \Omega$）、例 3 由 rms 与相位反求（$R=24\ \Omega$、$X_L-X_C=-32\ \Omega$、$P\approx866\ \mathrm W$）、例 4 调谐（$L=2.29\ \mu\mathrm H$）；全章四类回路总表；功率与变压器（拓展） | ✅ |
+| 32 | — | Ch32 麦克斯韦方程组 | 课件在 `courseware/` 下，尚未整理 | ⏳ |
 
 ## 第 21 章速查
 
@@ -734,3 +739,107 @@ graph LR
 - **C30.3 的 $R\to0$ 极限**：由 $i=BL(x_0-x)/L_{\text{ind}}$ 与 $W=(BLx_0)^2/(2L_{\text{ind}})$ 两条路径独立算得同一数值（抽样 $B=0.5\ \mathrm T$、$L=0.4\ \mathrm m$、$x_0=0.25\ \mathrm m$、$L_{\text{ind}}=2\ \mu\mathrm H$ 时均为 $625\ \mathrm J$），确认不存在"无限功"。
 
 首次整理日期：2026-11-09。
+
+## 第 31 章索引与来源核查
+
+本章共 27 页，拆成五篇。**开篇五页（RC 与 RL 充放电复习、四节大纲与作业题号、What's physics、关键词）并入 C31.1 篇首**：其中前两页是第 27、30 章的回顾内容，不是本章新知识。第 4 节内容最多（13 页），按"发电机与三种负载"（C31.3）与"串联 RLC 与阻抗"（C31.4）拆成两篇；四道例题与全章总表合为 C31.5。
+
+| 笔记 | 课件页码 | 核心内容 | 手写笔迹 |
+|---|---|---|---|
+| [[C31.1 LC 振荡与能量交换]] | p1–9 | RC 充电/放电、RL 建立/耗散的回顾；四节大纲与 Problems 13/27/32/34/45/48；能量交换的八个状态（四个极端 + 四个过渡）；$U=\frac12Li^2+q^2/2C$ 守恒 → $\ddot q+\omega^2q=0$；$q=Q\cos(\omega t+\phi)$、$i=-\omega Q\sin(\omega t+\phi)$、$I=\omega Q$；$\omega=1/\sqrt{LC}$；与弹簧振子对照；$U_E\propto\cos^2$、$U_B\propto\sin^2$、总和 $Q^2/2C$ | 无，0 页 |
+| [[C31.2 阻尼振荡与受迫振荡]] | p10–12 | 阻尼：$\frac{dU}{dt}=-i^2R$ → $L\ddot q+R\dot q+q/C=0$；$q=Qe^{-Rt/2L}\cos(\omega't+\phi)$、$\omega'=\sqrt{\omega^2-(R/2L)^2}$（条件 $R^2/4L^2<1/LC$）；能量按 $e^{-Rt/L}$ 衰减；三种阻尼（拓展）；受迫：$\omega_d$ 主导、$i_m=\mathcal E_m/\sqrt{R^2+(\omega_dL-1/\omega_dC)^2}$；共振 $\omega_d=1/\sqrt{LC}$、$i_m=\mathcal E_m/R$；共振曲线与 $R$ 的关系 | 无，0 页 |
+| [[C31.3 交流发电机与三种基本负载]] | p13–17 | $\Phi=NBA\cos\omega_dt$、$\mathcal E=\mathcal E_m\sin\omega_dt=\mathcal E_m=NBA\omega_d$；滑环与电刷；六项学习目标；电阻负载（同相、$X_R=R$）；电容负载（$i$ 超前 $\pi/2$、$X_C=1/\omega_dC$）；电感负载（$i$ 滞后 $\pi/2$、$X_L=\omega_dL$）；$I=V/X$ 的统一形式；相量的读法与"只可同频相加" | 无，0 页 |
+| [[C31.4 串联 RLC 电路：阻抗与相位]] | p18–22 | 串联同电流、三个电压不同相（不能代数相加）；相量四联图的读法；$\mathcal E_m^2=V_R^2+(V_L-V_C)^2$；$Z=\sqrt{R^2+(X_L-X_C)^2}$、$i_m=\mathcal E_m/Z$、$\tan\phi=(X_L-X_C)/R$；$\phi>0$ 感性滞后、$\phi<0$ 容性超前、$\phi=0$ 共振；$\cos\phi=R/Z$；串联 $Z$ 与并联导纳 $Y$ 的对照表 | 无，0 页 |
+| [[C31.5 四个例题与全章公式总表]] | p23–27 | 例 1 容抗（$X_C=133\ \Omega$、$1.59\ \Omega$；$I_{\max}=0.754\ \mathrm A$、$62.8\ \mathrm A$）；例 2 感抗（$15.1\ \Omega$、$503\ \Omega$）；例 3 由 rms 与相位反求（$R=24\ \Omega$、$X_L-X_C=-32\ \Omega$、$P\approx866\ \mathrm W$）；例 4 调谐（$L=2.29\ \mu\mathrm H$）；$X_LX_C=L/C$；全章四类回路方程—解总表；平均功率与变压器（【拓展】，补关键词提到但未展开的两小节） | 无，0 页 |
+
+### 教材与页码
+
+教材沿用 **Fundamentals of Physics, Tenth Edition, Extended**（`物理/courseware/教材/`）。第 31 章 Electromagnetic Oscillations and Alternating Current 正文自印刷 p.903 起，各节：
+
+- 31-1 LC 振荡 pp.904–909（Checkpoint 1 在 p.906；Checkpoint 2 与 Sample Problem 31.01 在 p.909）
+- 31-2 RLC 电路的阻尼振荡 pp.911–912（Sample Problem 31.02 在 p.912）
+- 31-3 三种简单电路的受迫振荡 pp.913–920（Checkpoint 3 在 p.916、Checkpoint 4 在 p.918、Checkpoint 5 在 p.919；Sample Problem 31.03–31.05）
+- 31-4 串联 RLC 电路 pp.921–926（Checkpoint 6 与 Sample Problem 31.06 在 p.926）
+- 31-5 交流电路的功率 pp.927–929（Checkpoint 7 在 p.928、Sample Problem 31.07 在 p.929）
+- 变压器与输电 pp.930–932；Review & Summary 与 Checkpoint 8 在 p.933
+- Questions 自 p.935 起，Problems 自 p.937 起
+
+页码换算同第 26–30 章：pymupdf 的 0 基索引 = 印刷页码 + 25。
+
+作业题：Problems 13、27、32、34、45、48。本库未附答案，笔记中只列题号，未展开。
+
+课件原文件为 `物理/courseware/Chapter 31 Electromagnetic Oscilations and AC.pptx`（27 页），另有同名 PDF（同为 27 页，无隐藏页）。笔迹核查：`pptx_ink.py check` 结果为 **0 处笔迹、0 页含笔迹**（`ppt/ink/` 为空）；`pdf_tools.py survey` 亦报**无 Ink 注释、无整页空白页**。本章同样**没有板书需要还原**。
+
+### 配图处理
+
+全章 14 张图，均在 `物理/attachments/`，前缀 `C31-`，全部裁切自课件：
+
+- `C31-LC能量交换的八个状态.png`（p7，整页）、`C31-q与i的振荡曲线.png`（p8 的 $q(t)$/$i(t)$ 双栏图，含 $a,c,e,g$ 状态标记）、`C31-电场能与磁场能交替.png`（p9 的 $U_E$/$U_B$ 曲线）
+- `C31-阻尼电路.png`、`C31-阻尼衰减波形.png`（p11，电路与衰减波形分开裁）、`C31-受迫振荡电路.png`、`C31-共振曲线.png`（p12，同样分开裁）
+- `C31-交流发电机.png`（p13）、`C31-电阻负载.png`、`C31-电容负载.png`、`C31-电感负载.png`（p15–17 的三栏图，含电路、波形、相量）
+- `C31-串联RLC电路.png`（p18）、`C31-相量图四联.png`（p20 整页四联）、`C31-相位常数三种情形.png`（p21 右半的三组相量与波形）
+
+未入库的图：p4 的器件照片（RLC 电路板、阻抗分析仪、输电铁塔，正文用文字说明）；p19、p22 的公式块（已用 LaTeX 重排，且 p22 的对照更适合做成表格）；p23–26 例题里重复出现的小电路示意（与 p15–18 重复）。
+
+### 授课进度与标注约定
+
+未在物理课程目录找到本章课堂转写稿（`transcript/`、`transscript/` 目录都不存在）。笔记完成代表资料整理完成，**不代表本学期已讲授完毕**。无笔迹同样不能证明尚未讲授。
+
+本章正文主干取自课件；教材补充与自补内容以 **【拓展】** 标注，共 6 处：C31.1 的 LC 数值例子；C31.2 的三种阻尼情形；C31.4 的"并联为什么用导纳"；C31.5 的"为什么 $12.0\ \Omega$ 没用上"、交流功率与变压器；另有一处速查行标注。
+
+### 本章的方法主线
+
+```mermaid
+graph LR
+    A["Ch30.6 电感储能<br/>U = ½Li²，Ch25 电容储能 U = ½CV²"] --> B["Ch31.1 LC 振荡<br/>ω = 1/√(LC)，能量在 E 与 B 之间倒手"]
+    B --> C["Ch31.2 加电阻<br/>阻尼：振幅 e^(−Rt/2L)"]
+    C --> D["Ch31.2 加电源<br/>受迫：频率跟 ω_d，共振在 ω"]
+    D --> E["Ch31.3 发电机<br/>ε = NBAω_d sin ω_d t"]
+    E --> F["Ch31.3 三种负载<br/>X_R、X_C、X_L 与 ±90° 相位"]
+    F --> G["Ch31.4 串联 RLC<br/>Z、tan φ = (X_L−X_C)/R"]
+    G --> H["Ch31.5 例题与总表<br/>功率因数、变压器（拓展）"]
+    H --> I["Ch32 麦克斯韦方程组"]
+```
+
+### 第 31 章公式速查
+
+**作业题：Problems 13、27、32、34、45、48。**
+
+| 公式 | 物理含义与条件 |
+|---|---|
+| $\omega=\dfrac{1}{\sqrt{LC}}$，$T=2\pi\sqrt{LC}$ | 自由 LC 振荡的角频率与周期 |
+| $q=Q\cos(\omega t+\phi)$，$i=-\omega Q\sin(\omega t+\phi)$ | 电荷与电流差 $90^\circ$；$I=\omega Q$ |
+| $U=\dfrac12Li^2+\dfrac{q^2}{2C}=\dfrac{Q^2}{2C}=\dfrac12LI^2$ | 无阻尼时总能量守恒 |
+| $q=Qe^{-Rt/2L}\cos(\omega't+\phi)$，$\omega'=\sqrt{\omega^2-\left(\dfrac{R}{2L}\right)^2}$ | 欠阻尼振荡（$R^2/4L^2<1/LC$） |
+| $i_m=\dfrac{\mathcal E_m}{\sqrt{R^2+\left(\omega_dL-\dfrac{1}{\omega_dC}\right)^2}}$ | 受迫稳态振幅；频率恒为 $\omega_d$ |
+| $\omega_d=\dfrac{1}{\sqrt{LC}}$ ⇒ $i_m=\dfrac{\mathcal E_m}{R}$ | 共振条件与峰值 |
+| $\Phi=NBA\cos\omega_dt$，$\mathcal E=\mathcal E_m\sin\omega_dt$，$\mathcal E_m=NBA\omega_d$ | 交流发电机 |
+| $X_R=R$，$X_C=\dfrac{1}{\omega_dC}$，$X_L=\omega_dL$ | 三种基本负载的电抗 |
+| $Z=\sqrt{R^2+(X_L-X_C)^2}$，$i_m=\dfrac{\mathcal E_m}{Z}$，$\tan\phi=\dfrac{X_L-X_C}{R}$ | 串联 RLC 的阻抗与相位 |
+| $P_{\text{avg}}=I_{\text{rms}}V_{\text{rms}}\cos\phi=I_{\text{rms}}^2R$ | 平均功率与功率因数（拓展） |
+| $\dfrac{V_s}{V_p}=\dfrac{N_s}{N_p}$，$V_pI_p=V_sI_s$ | 理想变压器（拓展） |
+
+### 第 31 章课件问题清单
+
+| 位置 | 问题 | 本次处理 |
+|---|---|---|
+| 第 5 页 关键词表 | 列出"交流功率 / 功率因数 / 变压器 / 输电线路"，但全篇 27 页**没有对应的小节**（教材有 31-5 与变压器一节） | 在 [[C31.5 四个例题与全章公式总表]] 末尾以【拓展】补平均功率、功率因数与理想变压器；本清单记录这一缺口，不把它当成"课件讲过"的内容 |
+| 第 18 页 | $v_C$、$v_L$ 两个表达式排版严重错乱（写成 $\dfrac{i_CX_C}{\sin(\omega t+\pi/2)}\sin\omega t$ 这类形式，分子分母各自还带着 $\sin$） | 正文按标准推导重写：三个电压都用同一个 $i_m$ 表示、相位分别为 $0$、$+\pi/2$、$-\pi/2$ |
+| 第 7 页 能量图 | 红色手写体标号 $(a)$–$(h)$（作者后加）与图内原有的 $(a)$–$(h)$ 标号重复，位置还有偏移，容易看混 | 正文按"四个极端状态 + 四个过渡状态"重述（见 C31.1 的表），不依赖红字位置；图上仍可对照印刷标号 |
+| 第 19 页 | 只给出 $i_m=\mathcal E_m/Z$、$\tan\phi=\frac{X_L-X_C}{X_R}$ 与 $Z$ 的公式，**没有推导**（相量合成在第 20 页） | 正文把勾股合成的过程补齐，并解释"为什么不能代数相加" |
+| 第 22 页 | 并联部分用 $1/X_R$、$1/X_L$、$1/X_C$ 书写，与串联的 $X_R$、$X_L$、$X_C$ 记号混用，容易误读成"电抗本身取倒数" | 正文照录并注明 $X_R=R$，另用一栏说明"导纳"的含义 |
+| 第 1–2 页 | 是第 27 章 RC、第 30 章 RL 的回顾页，不是本章新内容 | 并入 C31.1 篇首作复习，不计入本章知识点统计 |
+| 全章 | 没有任何随堂测 / Checkpoint 页（第 29、30 章都有） | 本清单注明：本章没有随堂题可解析 |
+
+### 数值复算
+
+本章四道例题与关键常数已用 Python 独立复算（脚本未入库）。主要结果：
+
+- **例 1**：$X_C(60\ \mathrm{Hz})=132.63\ \Omega$（原稿 $133$）、$X_C(5000\ \mathrm{Hz})=1.5915\ \Omega$（原稿 $1.59$）；$I_{\max}=0.754\ \mathrm A$ 与 $62.83\ \mathrm A$。
+- **例 2**：$X_L(60\ \mathrm{Hz})=15.08\ \Omega$（原稿 $15.1$）、$X_L(2000\ \mathrm{Hz})=502.65\ \Omega$（原稿 $503$）。
+- **例 3**：$V_{\text{rms}}/I_{\text{rms}}=40.0\ \Omega$；$R=40\cos(-53^\circ)=24.07\ \Omega$；$X_L-X_C=24\tan(-53^\circ)=-31.95\ \Omega$；$P=I^2R=866.6\ \mathrm W$ 与 $V I\cos\phi=866.6\ \mathrm W$ 一致。
+- **例 4**：$L=1/(4\pi^2f_0^2C)=2.289\times10^{-6}\ \mathrm H$；回代 $1/(2\pi\sqrt{LC})$ 得 $88.90\ \mathrm{MHz}$。
+- **C31.1 数值例**：$L=1.0\ \mathrm{mH}$、$C=1.0\ \mu\mathrm F$ ⇒ $f=5033\ \mathrm{Hz}$、$T=1.99\times10^{-4}\ \mathrm s$；$Q=1.0\ \mu\mathrm C$ 时 $U=5.0\times10^{-7}\ \mathrm J=\frac12LI^2$（$I=3.16\times10^{-2}\ \mathrm A$），两条路径一致。
+- **输电例子**：送 $100\ \mathrm{MW}$、$R_{\text{line}}=22\ \Omega$，$10\ \mathrm{kV}$ 时线损 $2.2\times10^{9}\ \mathrm W$，$500\ \mathrm{kV}$ 时 $8.8\times10^{5}\ \mathrm W$（约 $0.9\%$）。
+
+首次整理日期：2026-11-16。

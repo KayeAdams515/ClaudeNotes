@@ -52,8 +52,8 @@
 
 按考试证据确定先后时，可优先回看 **4.6生成算法、3.4手算Warshall、6.3图运算及整个第六部分** ；这只是复习时间分配建议，不缩小本提纲的知识范围。
 
-> [!info]- 个人练习回看入口（2026-11-15）
-> [[前两轮练习总结与知识错题]]汇总第一轮第1、2章与第二轮第9、6章试卷的已知批改结果，目前实际作答覆盖第1、2、9章。正文**K01–K08**记录已确认的历史概念错因，**P01–P03**记录待补证明，均可展开查看相关英文题目和答案。计算、抄写、符号笔误不作为个人知识错题；未作答也不直接判为概念错误。旧卷中当前标为“拓展”的内容仍保留该标记。
+> [!info]- 个人练习回看入口（更新至2026-11-17）
+> [[前两轮练习总结与知识错题]]保留第1、2、9章的历史批改；[[第6章计数卷总结与知识错题]]整理另找的第6章计数卷及两题补交，实际作答现已覆盖第1、2、6、9章。正文**K01–K14**记录已确认的概念错因或术语混淆，**P01–P06**区分待补证明与证明规范补充，均附英文题目和正确答案。计算、抄写、英文或符号笔误不作为个人知识错题；补交的Ramsey题已核验正确，冰球杆恒等式按思路正确、补充一般论证记录。旧卷中当前标为“拓展”的内容保留原标记，不因归档扩大授课范围。
 
 
 ---
@@ -1494,6 +1494,28 @@ $$
 
   病毒每次向50个新地址转发、无重叠的理想模型要先定轮起点：若初始1封为第1轮，前4轮和为$1+50+50^2+50^3=127551$；若初始后再转发4次，则总和为$\sum_{i=0}^450^i=6377551$。课件混用了这两种轮数，不能直接照抄。
 
+> [!warning]- 【个人知识错题 K09】同一情况内的两步相乘，不同情况之间再相加
+> **来源**：自选第6章计数卷，2026-11-16，Q3(c)；教材来源按原卷为Rosen §6.3 Ex.30(b)。
+>
+> **原题（English）**：Seven women and nine men are on the faculty of a mathematics department. How many ways are there to select a committee of five members of the department if at least one woman and at least one man must be on the committee?
+>
+> **原步骤与错因**：已正确分成“1女4男、2女3男、3女2男、4女1男”，但每类写成$\binom7j+\binom9{5-j}$；选女性与选男性是组成同一个委员会的两步，每种女性选择都能搭配每种男性选择，应相乘。
+>
+> **正确答案**：
+> $$\sum_{j=1}^{4}\binom7j\binom9{5-j}=882+1764+1260+315=\boxed{4221}.$$
+> 补集核对为$\binom{16}5-\binom95-\binom75=4368-126-21=4221$。自查顺序：**先分类 → 类内分步相乘 → 类间互斥相加**。
+
+> [!warning]- 【个人知识错题 K10】“至少四个”的补集是“至多三个”
+> **来源**：同卷Q3(a)(iii)；Rosen §6.3 Ex.11(c)。
+>
+> **原题（English，节录）**：How many bit strings of length 10 contain at least four 1s? Evaluate the number.
+>
+> **原步骤与错因**：用总数减去上一问“至多四个1”的数量；即使修复上一问漏掉$\binom{10}1$的抄算问题，这样得到的仍是“至少五个1”。
+>
+> **正确答案**：
+> $$\#(\text{至少4个1})=2^{10}-\sum_{k=0}^{3}\binom{10}k=1024-(1+10+45+120)=\boxed{848}.$$
+> 对整数计数，$\neg(X\ge r)$是$X\le r-1$。本题恰好四个为210，至多四个为386；“至多四个”的漏项与本小问的补集边界错误分开处理。
+
 #### 圆排列与函数计数（Circular Arrangements and Function Counts）
 
 - **圆排列（circular permutation）** ：n个不同人围圆桌、只把旋转看成同一排法时为$(n-1)!$；若座位编号则为$n!$；镜像（reflection）是否视同须题目说明。
@@ -1553,6 +1575,17 @@ $$
 ![[C6.2-K6二色染色必有同色三角形.png|510]]
 
 
+> [!success]- 【补交核验】Ramsey题构造与结论正确，不再记为未作答
+> **来源**：同卷Q2(d)，2026-11-17补交；原卷来源为Rosen §6.2 Example 13及Ex.26相关小问。
+>
+> **原题（English）**：Assume that every pair of people in a group are either friends or enemies. (i) Show that in any group of six people there are either three mutual friends or three mutual enemies. (ii) Show that in a group of five people there are not necessarily three mutual friends or three mutual enemies. (iii) What do (i) and (ii) together say about the Ramsey number $R(3,3)$?
+>
+> **作答状态**：选定$A$后用$\lceil5/2\rceil=3$分类、五边形反例和$R(3,3)=6$均正确。原英文未清楚表达“$D$同时与$B,C$都是敌人”，按条件表述规范处理，不另计概念错题。
+>
+> **正确证明**：任选$A$，其余5人中至少3人同为$A$的朋友或同为敌人。先设$B,C,D$同为$A$的朋友：若其中任意两人是朋友，他们与$A$组成三个共同朋友；否则$B,C,D$两两为敌。三个敌人的情形交换朋友、敌人作同样讨论，故$R(3,3)\le6$。五人置于五边形，规定相邻为朋友、非相邻为敌人；两种关系各形成一个5圈，均没有三角形，故$R(3,3)>5$。合得$\boxed{R(3,3)=6}$。
+>
+> **英文替换句**：If any two of $B,C,D$ are friends, they form three mutual friends together with $A$. Otherwise, $B,C,D$ are three mutual enemies. 保留原分支时则写：Otherwise, $D$ is an enemy of **both** $B$ and $C$.
+
 - **【拓展】其他Ramsey结论（further Ramsey results）** ：$R(m,n)=R(n,m)$、$R(2,n)=n$、$R(4,4)=18$；教材$43\le R(5,5)\le49$仅保留为历史范围。指定花色凑$r$张须先计其他花色最多可拿多少，不能套“任意一种”的保证阈值。
 
 - **【拓展】平移前缀和（shifted prefix sums）** ：$d$期每期至少1、总数至多$M$时，$1\le k\le2d-1-M$可由$d$个前缀和与其加$k$的平移强迫跨组相等，得连续区间恰$k$次；超出范围只说明该证明不保证。
@@ -1580,6 +1613,17 @@ $$
   $P(n,0)=\binom n0=1$，空排列是唯一一种；$\binom nr=0$约定用于整数$r<0$或$r>n$。
 
 - $P(n,r)=\binom nr r!$源于每个无序子集对应$r!$种顺序；$\binom nr=\binom n{n-r}$源于选入与选出互补。锦标赛名次／不同职务要排列，无职务委员会要组合；先选人再分配职务可能两步都要。
+
+> [!warning]- 【个人知识错题 K11】指定两人中奖后，还要统计他们分别获得哪个奖
+> **来源**：同卷Q3(b)(iii)；Rosen §6.3 Ex.25(e)。
+>
+> **原题（English，保留共同题干与本小问）**：One hundred tickets, numbered 1, 2, …, 100, are sold to 100 different people for a drawing. Four different prizes are awarded, including a grand prize. How many ways are there to award the prizes if the people holding tickets 19 and 47 both win prizes?
+>
+> **原步骤与错因**：只写$P(98,2)$，漏掉给19号、47号分别指定奖品的选择；奖品不同，即使中奖者已经固定，也仍有角色分配。
+>
+> **正确答案**：先给这两人依次分配不同奖品，共$P(4,2)=12$种；剩余两个奖品再分给其他98人，共$P(98,2)$种。因此
+> $$P(4,2)P(98,2)=12\cdot98\cdot97=\boxed{114072}.$$
+> 本题前两问列式$P(100,4)$和$4P(99,3)$正确；其数值被算成组合数，另列为计算核对项，不据此重复判为“不懂奖品有区别”。
 
 #### 计算与应用（Calculation and Applications）
 
@@ -1653,7 +1697,33 @@ $$
 
 - **Vandermonde证明** ：从不交的$m$人、$n$人两堆中共选$r$，总数$\binom{m+n}r$。按第一堆取$k$分类，第二堆取$r-k$，每类为$\binom mk\binom n{r-k}$；$k$不同互斥，求和覆盖全部。课件的$r\le\min(m,n)$是足够条件，采用零值约定后可扩至$r\le m+n$。
 
+> [!example]- 【证明规范 P04】Vandermonde分类已找对，还须写出互斥与穷尽
+> **来源**：同卷Q4(d)；对应Rosen §6.4 Theorem 3。
+>
+> **原题（English）**：Give a combinatorial proof of Vandermonde's identity: for nonnegative integers $m,n,r$ with $r\le m$ and $r\le n$,
+> $$\binom{m+n}r=\sum_{k=0}^{r}\binom m{r-k}\binom nk.$$
+> Explain why the cases you add are disjoint and exhaustive.
+>
+> **作答状态**：两组球与按取球数分类的主要思路正确；需要说清球彼此可区分、两组事先固定且互不相交，并补题目要求的“不重不漏”。不计作独立概念错误。
+>
+> **正确证明**：固定不交集合$A,B$，大小分别为$m,n$，数$A\cup B$的$r$元子集$T$。直接数为$\binom{m+n}r$；设$k=|T\cap B|$，则这一类有$\binom m{r-k}\binom nk$个。每个$T$有唯一的$k$，故不同类互斥；每个$T$均有$0\le k\le r$，故分类穷尽。按求和原理得所证等式。
+>
+> **01串等价解释**：数长$m+n$、恰有$r$个1的位串，固定分成前$m$位与后$n$位；后段有$k$个1时，前段有$r-k$个1。这里按**固定的两段**分类，不按最后一个0分类。
+
 - **曲棍球棒证明** ：数长度$n+1$、含$r+1$个1的位串，总数$\binom{n+1}{r+1}$。若最后一个1在第$k$位，$r+1\le k\le n+1$，前$k-1$位取$r$个1，共$\binom{k-1}r$；令$j=k-1$，求和即得。位置不同互斥，且每个合法串有唯一最后一个1。
+
+> [!example]- 【证明规范 P05】冰球杆恒等式：图对应最后一个0，不是第一个0
+> **来源**：同卷Q4(e)，2026-11-17补交；Rosen §6.4 Ex.27(a)的等价形式。补交后不再记为未作答。
+>
+> **原题（English）**：Prove the hockey-stick identity
+> $$\sum_{k=0}^{r}\binom{n+k}k=\binom{n+r+1}r$$
+> whenever $n$ and $r$ are positive integers, using a combinatorial argument. (Hint: count bit strings of length $n+r+1$ containing exactly $r$ ones, classified by the position of the last 0.)
+>
+> **作答状态**：总计数、图形分段与求和式正确，但把last反复写成first；图中单独取出的0前面已有$n$个0，实际画的是最后一个0。按英文与图不一致处理，不推断为概念不懂；原稿只展开$k=0,1$，另补一般$k$及分类理由。
+>
+> **正确证明**：数长$n+r+1$、恰有$r$个1的位串，总共$n+1$个0。直接选1的位置得$\binom{n+r+1}r$。设最后一个0前有$k$个1，则前缀含$n$个0、$k$个1，长度$n+k$，有$\binom{n+k}k$种；最后一个0之后固定是$r-k$个1。每个合法串有唯一的最后一个0，因此$k=0,\ldots,r$的分类互斥且穷尽，求和即得等式。
+>
+> **英文核心段**：Let $k$ be the number of ones before the last zero. Before this zero, there are exactly $n$ zeros and $k$ ones, giving $\binom{n+k}k$ possible prefixes. After it, all remaining $r-k$ bits must be ones. These cases are disjoint and exhaustive because every string has a unique last zero.
 
 - **【拓展】其他组合结论（additional combinatorial results）** ：切换固定元素建立奇偶子集双射；三状态计嵌套集合对给$3^n$；任意$r$个连续整数的积被$r!$整除。中心二项式系数（central binomial coefficient）$\binom{2n}n$数等量上下步格路；反射原理（reflection principle）将越界路径与另一端点的无约束路径配对，用于卡特兰计数。
 
@@ -1671,6 +1741,17 @@ $$
 - **四种选择公式的证明要点（proofs of the four selection formulas）** ：不可重复的$r$-排列按位置有$n,n-1,\ldots,n-r+1$种选择；每个$r$-组合恰有$r!$个内部次序，所以$P(n,r)=r!\binom nr$。允许重复的有序选择每步仍有$n$种，得$n^r$；无序重复选择与$r$颗星、$n-1$根隔板的位置串一一对应，得$\binom{n+r-1}r$。
 
   相同物体排列先临时贴标签计$n!$种，再除每类的内部置换数$\prod_i n_i!$；各盒规定人数时同理。相邻隔板和端点隔板已表示空类，无须再额外乘空盒的选择数。
+
+> [!warning]- 【个人知识错题 K12】无序重复选择不是Stirling数：本题星条模型已做对
+> **来源**：同卷Q5(a)(iv)；Rosen Chapter 6 Supplementary Ex.1相关小问。
+>
+> **原题（English，节录）**：How many ways are there to choose 6 items from 10 distinct items when the items in the choices are unordered and repetition is allowed? Name the formula used and evaluate it.
+>
+> **原步骤与错因**：先写$S(10,6)$并称为Stirling number，随后正确画出6颗星、9块板并算得5005；确认的是概念名称与记号混淆，不是星条构造错误。
+>
+> **正确答案**：这是重复组合（combinations with repetition）。令$x_i$为第$i$种物品选中的次数，则$x_1+\cdots+x_{10}=6,\ x_i\ge0$，故
+> $$\boxed{\binom{10+6-1}{6}=\binom{15}{6}=5005}.$$
+> 通常$S(10,6)$表示10个不同对象划分成6个非空无标号块，与本题不是同一对象集。这里只需分清含义，不因本题而新增Stirling递推或通式的背诵要求。
 
 #### 星条法与整数解（Stars and Bars and Integer Solutions）
 
@@ -1692,6 +1773,28 @@ $$
 
   **总和有上界** 如$x_1+\cdots+x_n\le r$则可加入非负松弛变量$x_{n+1}$，转成$x_1+\cdots+x_n+x_{n+1}=r$，直接用星条法。
 
+> [!warning]- 【个人知识错题 K13】非负整数解不能套正整数解公式；上界违例也要保留下界
+> **来源**：同卷Q5(b)(ii)；Rosen §6.5 Ex.15(c)。
+>
+> **原题（English）**：How many solutions are there to $x_1+x_2+x_3+x_4+x_5=21$, where each $x_i$ is a nonnegative integer and $0\le x_1\le10$?
+>
+> **原步骤与错因**：以$\binom{20}4$作总数；当$x_1=11$时把剩余和为10的四个变量算成$\binom93$，并只讨论到$x_1=17$。这些计数把允许0的变量当成了正整数；不合法解其实包括$(21,0,0,0,0)$。
+>
+> **正确答案**：全部非负解有$\binom{25}4=12650$个；不合法解满足$x_1\ge11$，令$y_1=x_1-11\ge0$，得到$y_1+x_2+\cdots+x_5=10$，共有$\binom{14}4=1001$个。因此
+> $$\boxed{\binom{25}4-\binom{14}4=11649}.$$
+> 若坚持分类，固定$x_1=t$时其余四变量的解数为$\binom{24-t}3$；不合法的$t=11,\ldots,21$应全部覆盖，首项是$\binom{13}3$，末项是$\binom33$。原式中额外减去$\binom{20}3$没有本题需排除的条件支持。
+>
+> **边界自查**：每问重新写清$x_i\ge0$或$x_i\ge1$。Q5(b)(i)采用$y_i=x_i-1\ge1$、总和16，再算$\binom{15}4=1365$是正确的，不能因参考答案改用$x_i-2\ge0$而改判。
+
+> [!tip]- 【方法补充，不计概念错题】总和不等式：用松弛变量或核对求和换元后的上限
+> **来源／原题（English）**：同卷Q5(b)(iii)，Rosen §6.5 Ex.20。How many solutions are there to the inequality $x_1+x_2+x_3\le11$, where $x_1,x_2,x_3$ are nonnegative integers?
+>
+> **原作答**：写$\sum_{k=2}^{10}\binom k2$，上限错误；仅凭这一行不判定为概念误解。
+>
+> **正确答案**：总和固定为$t$时有$\binom{t+2}2$解，故
+> $$\sum_{t=0}^{11}\binom{t+2}2=\sum_{k=2}^{13}\binom k2=\boxed{\binom{14}3=364}.$$
+> 其中$k=t+2$，所以$t=11$对应$k=13$。也可令$x_4=11-(x_1+x_2+x_3)\ge0$，原解与$x_1+\cdots+x_4=11$的非负解一一对应，直接星条得$\binom{14}3$。
+
 #### 重复物体与循环计数（Repeated Objects and Loop Counts）
 
 - **重复物体排列（permutations with indistinguishable objects）** 为多项式系数（multinomial coefficient）$n!/(n_1!\cdots n_k!)$，$\sum n_i=n$；各类内部交换不产生新排列。嵌套循环（nested loops）满足$1\le i_m\le\cdots\le i_1\le n$时次数$\binom{n+m-1}m$，严格不等时$\binom nm$。
@@ -1699,6 +1802,22 @@ $$
 - **物体与盒子的分类（classifying objects and boxes）** ：课件要求先问物体可区分／不可区分（distinguishable / indistinguishable）、盒子有无标签、可否空盒及容量。相同物体进有标号盒用星条法；相同物体进相同盒须忽略盒序，按分拆列举。
 
 ![[C6.5-星条法示意图.png|600]]
+
+> [!warning]- 【个人知识错题 K14】分配只计归属；先排列再切段会多计，去标签也不能一律除阶乘
+> **来源**：同卷Q5(d)；Rosen §6.5 Ex.59。用分类即可，不要求Stirling公式。
+>
+> **原题（English）**：How many ways are there to distribute five balls into three boxes if each box must have at least one ball in it, if (i) both the balls and the boxes are labeled? (ii) the balls are labeled, but the boxes are unlabeled? (iii) the balls are unlabeled, but the boxes are labeled? (iv) both the balls and the boxes are unlabeled?
+>
+> **原步骤与错因**：先排5个不同球，再在4个内部空切成3段，意图计算$5!\binom42=720$；又将其除$3!$处理无标签盒。前一步把盒内顺序也算入：固定归属且盒装量为$(3,1,1)$时重复$3!1!1!=6$次，为$(2,2,1)$时重复$2!2!1!=4$次，不能用同一个常数直接修复。第(iv)问又将相同球、有标签盒的6种装量一律除$3!$，忽略相同装量的对称性。原稿$C(2,4)$的参数倒置、分母写$C(3,3)$是另列的记号问题。
+>
+> **正确答案与分类**：
+>
+> - **不同球、相同盒**：大小只可能$3+1+1$或$2+2+1$。前者选三球组有$\binom53=10$种；后者先选单球，再把其余四球分成两个无序对，有$5\binom42/2=15$种，合为$\boxed{25}$。
+> - **不同球、不同盒**：每个非空分组的三个块按内容彼此不同，贴上三个盒标签恰有$3!$种，故$\boxed{25\cdot3!=150}$；也可用$3^5-3\cdot2^5+3=150$核对。
+> - **相同球、不同盒**：正整数解$x_1+x_2+x_3=5$，共$\boxed{\binom42=6}$种，即$(3,1,1)$的3种不同排列及$(2,2,1)$的3种不同排列。
+> - **相同球、相同盒**：只剩装量分拆$3+1+1,\ 2+2+1$，共$\boxed2$种。
+>
+> **除法条件**：本题(i)除以$3!$得到(ii)本身可以成立，因为不同球、三个盒均非空使每个无标签分组恰有6种贴标签方式；但原来的(i)已错。反之，(iii)不能直接除$3!$得到(iv)，因为$(3,1,1)$与$(2,2,1)$各只有3个不同的盒标签排列，而非6个。
 
 #### 物体入盒与划分公式（Distribution and Partition Formulas）
 
@@ -1758,6 +1877,21 @@ reverse a[j+1 .. n]
 
   所以任意$b>a$都有$b\ge a'$，没有排列夹在$a$与$a'$之间。三种情形按第一次分歧位置划分，不能只写“显然是下一个”。
 
+> [!todo]- 【待补证明 P06】能手算下一个排列，还要能写出没有中间排列的证明
+> **来源**：同卷Q6(b)；Rosen §6.6 Ex.10。
+>
+> **原题（English）**：Show that the next-permutation algorithm produces the next larger permutation in lexicographic order. That is, if $a$ is the input and $a'$ the output, show that $a'>a$ and that no permutation $b$ satisfies $a<b<a'$.
+>
+> **原作答状态**：已写“任取$b>a$，令$p$为$b$与$a$的首个不同位置”，随后写不出来。Q6(a)三个手算过程全部正确；此处按证明未完成记录，不改判为不会执行算法。
+>
+> **正确证明（English）**：Assume that $a$ is not the largest permutation, and let $j$ be the pivot. The output agrees with $a$ before position $j$ and has $a'_j>a_j$, so $a'>a$. Take any permutation $b>a$, and let $p$ be the first position where $b$ and $a$ differ.
+>
+> 1. If $p<j$, then $b_p>a_p=a'_p$, so $b>a'$.
+> 2. If $p=j$, the algorithm chooses the smallest available element greater than $a_j$, so $b_j\ge a'_j$. If the inequality is strict, then $b>a'$. If equality holds, both permutations have the same remaining elements, and the increasing suffix of $a'$ is their smallest arrangement. Hence $b\ge a'$.
+> 3. If $p>j$, then $b$ changes only the original decreasing suffix of $a$. This suffix is already the largest arrangement of its elements, contradicting $b>a$.
+>
+> Thus every $b>a$ satisfies $b\ge a'$, so no permutation lies strictly between $a$ and $a'$. **记忆线索**：更早增加会更大；枢轴取最小可增值；尾部取最小排列。
+
 #### 下一个位串：二进制加一（Next Bit String: Binary Increment）
 
 **下一个位串（next bit string）** ：从右向左将末尾连续1改成0，遇第一个0改成1，等价于二进制加1（binary increment）。全1已是最后一个；
@@ -1784,6 +1918,13 @@ for j := i+1 to r: a[j] := a[i] + j - i
 - 从右找未顶格位置，增加1，再把后缀填成连续递增最小值；循环从$i+1$开始，不能覆盖刚加1的$a_i$。原教材过程限定非最大真子集，本提纲加了停止检查以显式处理$r=0,n$。
 
 - **小规模演算（small example）** ：$n=4,r=2$时$12\to13\to14\to23\to24\to34$；$n=5,r=3$时$123,124,125,134,135,145,234,235,245,345$。换成a至e字母，逐位替换即可，顺序不变。
+
+> [!tip]- 【过程书写提醒，不计知识错题】下一个组合须写当前值与位置上界的比较
+> **来源／原题（English）**：同卷Q6(d)(ii)。Find the next larger 5-combination of $\{1,2,\ldots,8\}$ after $\{2,4,6,7,8\}$. Show the comparison $a_i$ versus $n-r+i$ for each position you inspect.
+>
+> **作答状态**：最终结果$\{2,5,6,7,8\}$正确，但未写题目要求的比较过程。
+>
+> **补全**：$n=8,r=5$，位置上界为$4,5,6,7,8$。从右检查：$i=5$时$8=8$，$i=4$时$7=7$，$i=3$时$6=6$，$i=2$时$4<5$；故第二位加1到5，后缀取6、7、8，答案$\boxed{\{2,5,6,7,8\}}$。Q6(d)(i)的10个3组合已列对，不另标为算法知识错误。
 
 - **组合后继最小性的证明（minimality proof for next combination）** ：$i$为最右未顶格位置。候选把$a_i$加1，并令后续为连续最小整数，因此仍严格递增，末项不超过$n$。任意更大组合$b$的第一次分歧位置$p$不可能大于$i$，因为这些位置原本已达上限$n-r+p$；若$p<i$则$b$已超过候选，若$p=i$则$b_i\ge a_i+1$，相等时其后缀也不小于候选的连续最小后缀。因此候选是唯一最小的更大组合。
 

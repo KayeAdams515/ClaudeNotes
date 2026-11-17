@@ -2227,9 +2227,13 @@ for j := i+1 to r: a[j] := a[i] + j - i
 
   【拓展】边收缩（edge contraction）把一条边两端粘合，并按题设处理新自环、平行边。
 
-- **并图（union of graphs）** 取点边集合并，交图（intersection）取交；不交并（disjoint union）先保证点集互不相交。
+- **并图（union of graphs）** 取点边集合并，交图（intersection）取交。
 
-  联图（join of graphs）$G+H$在不交并基础上加上全部跨图边：点$v_G+v_H$、边$e_G+e_H+v_Gv_H$，G侧顶点度加$v_H$，H侧加$v_G$。
+- **不交并（disjoint union）** 记作$G\sqcup H$：先在需要时给顶点改名，使$V_G\cap V_H=\varnothing$，再取$G\sqcup H=(V_G\cup V_H,E_G\cup E_H)$。两图各保留一份，图间不加边；原来即使有同名顶点，也保留为不同顶点，不合并。
+
+  点数$v_G+v_H$，边数$e_G+e_H$，各顶点的度不变。例如$K_2\sqcup K_2$是两条互不相连的边，共4个顶点、2条边、2个连通分量。
+
+- **联图（join of graphs）** $G+H$在不交并基础上加上全部跨图边：点$v_G+v_H$、边$e_G+e_H+v_Gv_H$，G侧顶点度加$v_H$，H侧加$v_G$。
 
 ![[C10.2-原图-并图与G1G2.png|640]]
 

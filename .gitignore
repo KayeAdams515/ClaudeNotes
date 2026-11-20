@@ -25,3 +25,6 @@ transscript/
 .ipynb_checkpoints/
 *.tmp
 *.pdf#
+
+# 五、整理过程的暂存目录（产物应已复制进各课程目录）
+课件笔记-staging/

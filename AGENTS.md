@@ -20,3 +20,9 @@
 - 远端：`https://github.com/KayeAdams515/ClaudeNotes.git`
 - 默认分支：`main`
 - iCloud 仓库：`/Users/andyue/Library/Mobile Documents/iCloud~md~obsidian/Documents/ClaudeNotes`
+
+## Obsidian Markdown 排版
+
+- 粗体标记与相邻正文之间保留空格，尤其不能让闭合的 `**` 与后文粘连；标记内侧不加空格。例如写成 `**感应电流（induced current）** 的方向`，不要写成 `**感应电流（induced current）**的方向`。中文正文紧接开头标记时也应留空格，例如 `这一 **自感电动势** 为`。句末或独立段落的闭合标记后无需额外添加行尾空格。
+- Markdown 表格的单元格内，数学公式不得用裸竖线表示绝对值或范数，以免被识别为列分隔符。绝对值使用 `\lvert x\rvert`（需要伸缩时使用 `\left\lvert x\right\rvert`），范数使用 `\lVert v\rVert`；其他数学竖线按含义使用 `\mid`、`\vert` 等 LaTeX 命令。表格结构自身的列分隔符仍使用 `|`。
+- 完成笔记后检查每一处粗体标记与后文的间隔，以及表格公式中是否存在会干扰分列的竖线；修复时保留原有内容、公式含义和编号。

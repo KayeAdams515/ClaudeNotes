@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>复变函数 精选错题与核心题型复习试卷</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 16mm 15mm 18mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Serif SC", Georgia, serif;
+      color: #111827;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 24px 0;
+      line-height: 1.65;
+      font-size: 10.5pt;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 16px auto;
+      padding: 12px 18px;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .toolbar-info {
+      font-size: 9.5pt;
+      color: #374151;
+    }
+
+    .print-btn {
+      background: #1d4ed8;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 10pt;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .print-btn:hover {
+      background: #1e40af;
+    }
+
+    .paper {
+      width: 210mm;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 16mm 15mm 18mm 15mm;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .exam-header {
+      text-align: center;
+      border-bottom: 2px solid #111827;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    .exam-title {
+      font-size: 16pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin: 0 0 6px 0;
+    }
+
+    .exam-subtitle {
+      font-size: 9.5pt;
+      color: #374151;
+      margin: 0 0 10px 0;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9.5pt;
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px dashed #9ca3af;
+    }
+
+    .chapter-title {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #111827;
+      background: #f3f4f6;
+      border-left: 4px solid #111827;
+      padding: 5px 10px;
+      margin: 18px 0 12px 0;
+      break-after: avoid;
+    }
+
+    .question-block {
+      margin-bottom: 14px;
+      break-inside: avoid;
+    }
+
+    .question-stem {
+      margin-bottom: 6px;
+    }
+
+    .q-num {
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    .q-tag {
+      display: inline-block;
+      font-size: 8.5pt;
+      padding: 0 5px;
+      border-radius: 3px;
+      margin-right: 6px;
+      font-weight: 600;
+      vertical-align: baseline;
+    }
+
+    .tag-err {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fca5a5;
+    }
+
+    .tag-core {
+      background: #e0f2fe;
+      color: #075985;
+      border: 1px solid #7dd3fc;
+    }
+
+    .q-src {
+      font-size: 8.5pt;
+      color: #4b5563;
+      margin-right: 6px;
+    }
+
+    .answer-lines {
+      margin-top: 4px;
+    }
+
+    .line {
+      height: 28px;
+      border-bottom: 1px solid #cbd5e1;
+      width: 100%;
+    }
+
+    .line:first-child {
+      height: 24px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .paper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .chapter-title {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .q-tag {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-info">
+      提示：点击右侧按钮或按 <strong>Cmd + P</strong>，选择「存储为 PDF」（建议勾选“背景图形”以保留标签颜色），即可导入 GoodNotes 或打印作答。
+    </div>
+    <button class="print-btn" onclick="window.print()">打印 / 导出 PDF</button>
+  </div>
+
+  <div class="paper">
+    <div class="exam-header">
+      <h1 class="exam-title">复变函数（Complex Variables）精选复习试卷</h1>
+      <p class="exam-subtitle">覆盖 HW1–HW9 全部题型与核心技巧 · 优先纳入全部错题与批注订正题（共 39 题）</p>
+      <div class="meta-row">
+        <span>姓名：__________________</span>
+        <span>学号：__________________</span>
+        <span>参考教材：Brown &amp; Churchill (9th ed.)</span>
+      </div>
+    </div>
+
+    <!-- ==================== 第一章 ==================== -->
+    <div class="chapter-title">一、第一章：复数与平面区域（第 1–5 题）</div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">1.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW1 · Sec. 6 Ex. 7]</span>
+        Show that $\bigl|\operatorname{Re}(2+\bar{z}+z^3)\bigr|\le 4$ when $|z|\le 1$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">2.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW1 · Sec. 11 Ex. 3]</span>
+        Find $(-8-8\sqrt{3}\,i)^{1/4}$, express the roots in rectangular coordinates, exhibit them as the vertices of a certain square, and point out which is the <strong>principal root</strong>.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">3.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW1 · Sec. 12 Ex. 7(b)(d)]</span>
+        Determine the accumulation points of each of the following sets:
+        $\quad\text{(b)}\ z_n=\dfrac{i^n}{n}\ (n=1,2,\dots);\qquad \text{(d)}\ z_n=(-1)^n\dfrac{(1+i)(n-1)}{n}\ (n=1,2,\dots).$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">4.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW1 · Sec. 9 Ex. 1(b) &amp; Ex. 5(d)]</span>
+        (1) Find the principal argument $\operatorname{Arg} z$ when $z=(\sqrt{3}-i)^6$.
+        (2) By writing the factor in exponential form, performing the needed operations, and changing back to rectangular coordinates, show that $(1+\sqrt{3}\,i)^{-10}=2^{-11}(-1+\sqrt{3}\,i)$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">5.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW1 · Sec. 12 Ex. 1(b)(e)(f)]</span>
+        Sketch the following sets and determine which are domains:
+        $\quad\text{(b)}\ |2z+3|>4;\qquad \text{(e)}\ 0\le \arg z\le \pi/4\ (z\ne 0);\qquad \text{(f)}\ |z-4|\ge |z|.$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <!-- ==================== 第二章 ==================== -->
+    <div class="chapter-title">二、第二章：映射、极限、导数与解析函数（第 6–15 题）</div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">6.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW2 · Sec. 17 Ex. 10(c)]</span>
+        Use the theorem in Sec. 17 to show that $\displaystyle\lim_{z\to\infty}\frac{z^2+1}{z-1}=\infty$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">7.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW3 · Sec. 20 Ex. 2(d)]</span>
+        Find $f'(z)$ when $\displaystyle f(z)=\frac{(1+z^2)^4}{z^2}\ (z\ne 0)$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">8.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW3 · Sec. 20 Ex. 4]</span>
+        Suppose that $f(z_0)=g(z_0)=0$ and that $f'(z_0)$ and $g'(z_0)$ exist, where $g'(z_0)\ne 0$. Use definition (1), Sec. 19, of derivative to show that
+        $$\lim_{z\to z_0}\frac{f(z)}{g(z)}=\frac{f'(z_0)}{g'(z_0)}.$$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">9.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW3 · Sec. 22 Ex. 3(b)(c)]</span>
+        From results obtained in Secs. 21 and 23, determine where $f'(z)$ exists and find its value when:
+        $\quad\text{(b)}\ f(z)=x^2+iy^2;\qquad \text{(c)}\ f(z)=z\,\operatorname{Im}\,z.$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">10.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW3 · Sec. 23 Ex. 3]</span>
+        State why a composition of two entire functions is entire. Also, state why any linear combination $c_1f_1(z)+c_2f_2(z)$ of two entire functions, where $c_1$ and $c_2$ are complex constants, is entire.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">11.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW4 · Ex. 7]</span>
+        Let a function $f$ be analytic everywhere in a domain $D$. Prove that if $f(z)$ is real-valued for all $z$ in $D$, then $f(z)$ must be constant throughout $D$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">12.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW2 · Sec. 14 Ex. 5]</span>
+        By referring to the discussion in Sec. 14, find a domain in the $z$ plane whose image under the transformation $w=z^2$ is the square domain in the $w$ plane bounded by the lines $u=1$, $u=2$, $v=1$, and $v=2$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">13.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW2 · Sec. 15 Ex. 1(c)]</span>
+        Use definition (2), Sec. 15, of limit to prove that $\displaystyle\lim_{z\to 0}\frac{\bar{z}^2}{z}=0$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">14.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW2 · Sec. 16 Ex. 5]</span>
+        Show that the function $f(z)=\left(\dfrac{z}{\bar{z}}\right)^2$ has the value $1$ at all nonzero points on the real and imaginary axes, where $z=(x,0)$ and $z=(0,y)$, respectively, but that it has the value $-1$ at all nonzero points on the line $y=x$, where $z=(x,x)$. Thus show that $\lim_{z\to 0}f(z)$ does not exist.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">15.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW3 Sec. 23 Ex. 2(a) &amp; HW4 Ex. 4(c)]</span>
+        (1) With the aid of the theorem in Sec. 21, show that $f(z)=xy+iy$ is nowhere analytic.
+        (2) Determine the singular points of $f(z)=\dfrac{z^2+1}{(z+2)(z^2+2z+2)}$ and state why the function is analytic everywhere else.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <!-- ==================== 第三章 ==================== -->
+    <div class="chapter-title">三、第三章：初等函数（第 16–20 题，全部为错题/订正题）</div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">16.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW4 · 复指数 Ex. 8(c)]</span>
+        Find all values of $z$ such that $\exp(2z-1)=1$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">17.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW4 · 复指数 Ex. 12]</span>
+        Write $\operatorname{Re}(e^{1/z})$ in terms of $x$ and $y$. Why is this function harmonic in every domain that does not contain the origin?
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">18.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW4 · 对数分支 Ex. 4]</span>
+        Show that $\log(i^2)\ne 2\log i$ when the branch $\log z=\ln r+i\theta\ \left(r>0,\ \dfrac{3\pi}{4}<\theta<\dfrac{11\pi}{4}\right)$ is used.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">19.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW4 · 对数分支 Ex. 9]</span>
+        Suppose that the point $z=x+iy$ lies in the horizontal strip $\alpha<y<\alpha+2\pi$. Show that when the branch $\log z=\ln r+i\theta\ (r>0,\ \alpha<\theta<\alpha+2\pi)$ of the logarithmic function is used, $\log(e^z)=z$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">20.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW4 · 复幂 Ex. 3]</span>
+        Use definition (1), Sec. 35, of $z^c$ to show that $(-1+\sqrt{3}\,i)^{3/2}=\pm 2\sqrt{2}$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <!-- ==================== 第四章 ==================== -->
+    <div class="chapter-title">四、第四章：复积分、柯西积分公式与柯西估计（第 21–34 题）</div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">21.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW7 · 积分估计 Ex. 2]</span>
+        Let $C$ denote the line segment from $z=i$ to $z=1$, and show that $\displaystyle\left|\int_C\frac{dz}{z^4}\right|\le 4\sqrt{2}$ without evaluating the integral.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">22.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW7 · 积分估计 Ex. 4]</span>
+        Let $C_R$ denote the upper half of the circle $|z|=R\ (R>2)$ taken in the counterclockwise direction. Show that
+        $$\left|\int_{C_R}\frac{2z^2-1}{z^4+5z^2+4}\,dz\right|\le\frac{\pi R(2R^2+1)}{(R^2-1)(R^2-4)}.$$
+        Then, by dividing the numerator and denominator on the right here by $R^4$, show that the value of the integral tends to zero as $R\to\infty$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">23.</span>
+        <span class="q-tag tag-err">错题优先</span>
+        <span class="q-src">[HW7 · 高斯积分 Ex. 4(a)(b)]</span>
+        Derive $\displaystyle\int_0^\infty e^{-x^2}\cos 2bx\,dx=\frac{\sqrt{\pi}}{2}e^{-b^2}\ (b>0)$ by integrating $e^{-z^2}$ around the positively oriented rectangular path with vertices $-a,\ a,\ a+bi,\ -a+bi$:
+        <br />(a) Show that the sums of the integrals along the horizontal legs and along the vertical legs are $2\int_0^a e^{-x^2}\,dx-2e^{b^2}\int_0^a e^{-x^2}\cos 2bx\,dx$ and $ie^{-a^2}\int_0^b e^{y^2}e^{-i2ay}\,dy-ie^{-a^2}\int_0^b e^{y^2}e^{i2ay}\,dy$, respectively; then use the Cauchy–Goursat theorem to derive the finite-$a$ identity.
+        <br />(b) Let $a\to\infty$ (accepting $\int_0^\infty e^{-x^2}\,dx=\frac{\sqrt{\pi}}{2}$) to obtain the desired formula.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">24.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW8 · Sec. 53 Ex. 3]</span>
+        Use $\oint_{C_0}(z-z_0)^{n-1}\,dz$ ($0$ for $n=\pm 1,\pm 2,\dots$; $2\pi i$ for $n=0$) and the corollary in Sec. 53 to show that if $C$ is the positively oriented boundary of the rectangle $0\le x\le 3,\ 0\le y\le 2$, then
+        $$\oint_C(z-2-i)^{n-1}\,dz=\begin{cases}0,& n=\pm 1,\pm 2,\dots,\\ 2\pi i,& n=0.\end{cases}$$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">25.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW8 · Sec. 53 Ex. 6]</span>
+        Let $C$ denote the positively oriented boundary of the half disk $0\le r\le 1,\ 0\le\theta\le\pi$, and let $f(z)$ be continuous on that half disk with $f(0)=0$ and $f(z)=\sqrt{r}\,e^{i\theta/2}\ (r>0,\ -\frac{\pi}{2}<\theta<\frac{3\pi}{2})$. Show that $\int_C f(z)\,dz=0$ by evaluating separately the integrals over the semicircle and the two radii. Why does the Cauchy–Goursat theorem not apply here?
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">26.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW8 · Sec. 54/55 Ex. 1(a)(c)(e)]</span>
+        Let $C$ denote the positively oriented boundary of the square whose sides lie along $x=\pm 2$ and $y=\pm 2$. Evaluate each of these integrals:
+        $$\text{(a)}\ \int_C\frac{e^{-z}\,dz}{z-(\pi i/2)};\qquad \text{(c)}\ \int_C\frac{z\,dz}{2z+1};\qquad \text{(e)}\ \int_C\frac{\tan(z/2)}{(z-x_0)^2}\,dz\ (-2<x_0<2).$$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">27.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW8 &amp; HW9 · Sec. 55 Ex. 2(a)(b)]</span>
+        Find the value of the integral of $g(z)$ around the circle $|z-i|=2$ in the positive sense when:
+        $\quad\text{(a)}\ g(z)=\dfrac{1}{z^2+4};\qquad \text{(b)}\ g(z)=\dfrac{1}{(z^2+4)^2}.$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">28.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW9 · Sec. 55 Ex. 7]</span>
+        Let $C$ be the unit circle $z=e^{i\theta}\ (-\pi\le\theta\le\pi)$. First show that for any real constant $a$, $\displaystyle\int_C\frac{e^{az}}{z}\,dz=2\pi i$. Then write this integral in terms of $\theta$ to derive $\displaystyle\int_0^\pi e^{a\cos\theta}\cos(a\sin\theta)\,d\theta=\pi$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">29.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW9 · Sec. 57 Ex. 10]</span>
+        Let $f$ be an entire function such that $|f(z)|\le A|z|$ for all $z$, where $A$ is a fixed positive number. Show that $f(z)=a_1 z$, where $a_1$ is a complex constant.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">30.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW6 · Sec. 43 Ex. 6(a)(b)]</span>
+        Let $y(x)=x^3\sin(\pi/x)$ when $0<x\le 1$, and $y(0)=0$.
+        (a) Show that $z=x+iy(x)\ (0\le x\le 1)$ represents an arc $C$ that intersects the real axis at $z=1/n\ (n=1,2,\dots)$ and $z=0$.
+        (b) Verify that $C$ is a smooth arc.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">31.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW6 · Sec. 46 Ex. 3]</span>
+        Use parametric representations to evaluate $\int_C f(z)\,dz$, where $f(z)=\pi\exp(\pi\bar{z})$ and $C$ is the positively (counterclockwise) oriented boundary of the square with vertices at $0,\ 1,\ 1+i$, and $i$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">32.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW6 · Sec. 46 Ex. 13]</span>
+        Let $C_0$ denote the circle centered at $z_0$ with radius $R$, parametrized by $z=z_0+Re^{i\theta}\ (-\pi\le\theta\le\pi)$. Show that
+        $$\int_{C_0}(z-z_0)^{n-1}\,dz=\begin{cases}0,& n=\pm 1,\pm 2,\dots,\\ 2\pi i,& n=0.\end{cases}$$
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">33.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW7 · 原函数 Ex. 2(b) &amp; Ex. 3]</span>
+        (1) By finding an antiderivative, evaluate $\displaystyle\int_0^{\pi+2i}\cos\left(\frac{z}{2}\right)dz$.
+        (2) Use the theorem in Sec. 48 to show that $\displaystyle\oint_{C_0}(z-z_0)^{n-1}\,dz=0\ (n=\pm 1,\pm 2,\dots)$ when $C_0$ is any closed contour which does not pass through $z_0$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">34.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW7 · 面积公式 Ex. 7]</span>
+        Show that if $C$ is a positively oriented simple closed contour, then the area of the region enclosed by $C$ can be written $\displaystyle\frac{1}{2i}\int_C\bar{z}\,dz$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <!-- ==================== 第五章 ==================== -->
+    <div class="chapter-title">五、第五章：数列、级数与 Taylor/Maclaurin 展开（第 35–39 题）</div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">35.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW9 · Sec. 60 Ex. 2]</span>
+        Let $\Theta_n\ (n=1,2,\dots)$ denote the principal arguments of the numbers $z_n=1+i\dfrac{(-1)^n}{n^2}\ (n=1,2,\dots)$, and point out why $\displaystyle\lim_{n\to\infty}\Theta_n=0$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">36.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW9 · Sec. 61 Ex. 9(a)]</span>
+        Let a sequence $z_n\ (n=1,2,\dots)$ converge to a number $z$. Show that there exists a positive number $M$ such that $|z_n|\le M$ holds for all $n$, using the fact that there is a positive integer $n_0$ such that $|z_n|=|z+(z_n-z)|<|z|+1$ whenever $n>n_0$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">37.</span>
+        <span class="q-tag tag-err">批注错题</span>
+        <span class="q-src">[HW9 · Sec. 64 Ex. 7]</span>
+        Show that if $f(z)=\sin z$, then $f^{(2n)}(0)=0$ and $f^{(2n+1)}(0)=(-1)^n\ (n=0,1,2,\dots)$. Thus give an alternative derivation of the Maclaurin series for $\sin z$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">38.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW9 · Sec. 61 Ex. 4]</span>
+        Write $z=re^{i\theta}$, where $0<r<1$, in $\displaystyle\sum_{n=0}^\infty z^n=\frac{1}{1-z}$ to show that
+        $$\sum_{n=1}^\infty r^n\cos n\theta=\frac{r\cos\theta-r^2}{1-2r\cos\theta+r^2}\quad\text{and}\quad\sum_{n=1}^\infty r^n\sin n\theta=\frac{r\sin\theta}{1-2r\cos\theta+r^2}$$
+        when $0\le r<1$.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question-stem">
+        <span class="q-num">39.</span>
+        <span class="q-tag tag-core">补齐题型</span>
+        <span class="q-src">[HW9 · Sec. 64 Ex. 3]</span>
+        Find the Maclaurin series expansion of the function $\displaystyle f(z)=\frac{z}{z^4+4}=\frac{z}{4}\cdot\frac{1}{1+(z^4/4)}$, and state where the expansion is valid.
+      </div>
+      <div class="answer-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
